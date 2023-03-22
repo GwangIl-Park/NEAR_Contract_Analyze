@@ -5,6 +5,7 @@ use workspaces::{Account, Contract};
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
+    println!("A");
     let wasm_arg: &str = &(env::args().nth(1).unwrap());
     let wasm_filepath = fs::canonicalize(env::current_dir()?.join(wasm_arg))?;
 

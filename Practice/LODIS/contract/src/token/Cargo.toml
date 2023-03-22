@@ -1,0 +1,10 @@
+[package]
+name = "token"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+near-sdk = "4.0.0"
+uint = { version = "0.9.3", default-features = false }
+serde = "1"
+serde_json = "1"

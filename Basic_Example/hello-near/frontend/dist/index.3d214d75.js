@@ -143,8 +143,8 @@
     }
   }
 })({"1xC6H":[function(require,module,exports) {
-var Refresh = require("5bc2566b2100ffd5");
-var ErrorOverlay = require("5b2bf574294fa4a2");
+var Refresh = require("9ae45cf31c7e9aad");
+var ErrorOverlay = require("8c679c060cb5072");
 Refresh.injectIntoGlobalHook(window);
 window.$RefreshReg$ = function() {};
 window.$RefreshSig$ = function() {
@@ -163,11 +163,11 @@ window.addEventListener("parcelhmraccept", ()=>{
     ErrorOverlay.dismissRuntimeErrors();
 });
 
-},{"5bc2566b2100ffd5":"786KC","5b2bf574294fa4a2":"1dldy"}],"786KC":[function(require,module,exports) {
+},{"9ae45cf31c7e9aad":"786KC","8c679c060cb5072":"1dldy"}],"786KC":[function(require,module,exports) {
 "use strict";
-module.exports = require("cb934cd698b55013");
+module.exports = require("8ae6a17bf171ed2f");
 
-},{"cb934cd698b55013":"hdge7"}],"hdge7":[function(require,module,exports) {
+},{"8ae6a17bf171ed2f":"hdge7"}],"hdge7":[function(require,module,exports) {
 /** @license React v0.9.0
  * react-refresh-runtime.development.js
  *
@@ -628,7 +628,7 @@ module.exports = require("cb934cd698b55013");
 })();
 
 },{}],"1dldy":[function(require,module,exports) {
-var process = require("b8356d7904350d40");
+var process = require("8fa301e0ed4dbfaa");
 !function(e, t) {
     module.exports = t();
 }(window, function() {
@@ -2358,7 +2358,7 @@ var process = require("b8356d7904350d40");
     ]);
 });
 
-},{"b8356d7904350d40":"d5jf4"}],"d5jf4":[function(require,module,exports) {
+},{"8fa301e0ed4dbfaa":"d5jf4"}],"d5jf4":[function(require,module,exports) {
 // shim for using process in browser
 var process = module.exports = {};
 // cached from whatever global is present so that test runners that stub it
@@ -2927,32 +2927,31 @@ try {
 // React
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactDom = require("react-dom");
-var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
+var _client = require("react-dom/client");
 var _app = require("./App");
 var _appDefault = parcelHelpers.interopDefault(_app);
 // NEAR
 var _nearWallet = require("./near-wallet");
-const CONTRACT_ADDRESS = "dev-1676357830945-61017432896015";
+const CONTRACT_ADDRESS = "dev-1677550025409-62335223615174";
 // When creating the wallet you can optionally ask to create an access key
 // Having the key enables to call non-payable methods without interrupting the user to sign
 const wallet = new (0, _nearWallet.Wallet)({
     createAccessKeyFor: CONTRACT_ADDRESS
 });
+const container = document.getElementById("root");
+const root = (0, _client.createRoot)(container); // createRoot(container!) if you use TypeScript
 // Setup on page load
 window.onload = async ()=>{
     const isSignedIn = await wallet.startUp();
-    (0, _reactDomDefault.default).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {
+    root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {
         isSignedIn: isSignedIn,
         contractId: CONTRACT_ADDRESS,
         wallet: wallet
     }, void 0, false, {
         fileName: "index.js",
-        lineNumber: 20,
+        lineNumber: 21,
         columnNumber: 5
-    }, undefined), document.getElementById("root"));
+    }, undefined));
 };
 
   $parcel$ReactRefreshHelpers$e4e3.postlude(module);
@@ -2960,11 +2959,11 @@ window.onload = async ()=>{
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","./App":"2Ew96","./near-wallet":"dg9wB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","./App":"2Ew96","./near-wallet":"dg9wB","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
-module.exports = require("4b99f725a041a653");
+module.exports = require("ffb5a3d2aa77f3c4");
 
-},{"4b99f725a041a653":"48uCM"}],"48uCM":[function(require,module,exports) {
+},{"ffb5a3d2aa77f3c4":"48uCM"}],"48uCM":[function(require,module,exports) {
 /**
  * @license React
  * react-jsx-dev-runtime.development.js
@@ -2976,7 +2975,7 @@ module.exports = require("4b99f725a041a653");
  */ "use strict";
 (function() {
     "use strict";
-    var React = require("cda8aa7d7cece5ed");
+    var React = require("a20a6174027a152b");
     // ATTENTION
     // When adding new symbols to this file,
     // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
@@ -3795,11 +3794,11 @@ module.exports = require("4b99f725a041a653");
     exports.jsxDEV = jsxDEV$1;
 })();
 
-},{"cda8aa7d7cece5ed":"21dqq"}],"21dqq":[function(require,module,exports) {
+},{"a20a6174027a152b":"21dqq"}],"21dqq":[function(require,module,exports) {
 "use strict";
-module.exports = require("503a5581e182d836");
+module.exports = require("207b087a58b7743a");
 
-},{"503a5581e182d836":"6YvXz"}],"6YvXz":[function(require,module,exports) {
+},{"207b087a58b7743a":"6YvXz"}],"6YvXz":[function(require,module,exports) {
 /**
  * @license React
  * react.development.js
@@ -5665,7 +5664,28 @@ module.exports = require("503a5581e182d836");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"j6uA9":[function(require,module,exports) {
+},{}],"lOjBx":[function(require,module,exports) {
+"use strict";
+var m = require("16468d520277beae");
+var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+exports.createRoot = function(c, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.createRoot(c, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
+};
+exports.hydrateRoot = function(c, h, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.hydrateRoot(c, h, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
+};
+
+},{"16468d520277beae":"j6uA9"}],"j6uA9":[function(require,module,exports) {
 "use strict";
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") return;
@@ -5679,9 +5699,9 @@ function checkDCE() {
     // a false positive.
     throw new Error("^_^");
 }
-module.exports = require("625f82f6b189ce3");
+module.exports = require("5ff80cc50beafbfc");
 
-},{"625f82f6b189ce3":"3iA9v"}],"3iA9v":[function(require,module,exports) {
+},{"5ff80cc50beafbfc":"3iA9v"}],"3iA9v":[function(require,module,exports) {
 /**
  * @license React
  * react-dom.development.js
@@ -5694,8 +5714,8 @@ module.exports = require("625f82f6b189ce3");
 (function() {
     "use strict";
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
-    var React = require("cb78dd07c481e7be");
-    var Scheduler = require("3ef873f4bbfc849b");
+    var React = require("4873fcd656f4dd49");
+    var Scheduler = require("f8ebb63c2407e1bf");
     var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
     var suppressWarning = false;
     function setSuppressWarning(newSuppressWarning) {
@@ -26666,11 +26686,11 @@ module.exports = require("625f82f6b189ce3");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{"cb78dd07c481e7be":"21dqq","3ef873f4bbfc849b":"juvHo"}],"juvHo":[function(require,module,exports) {
+},{"4873fcd656f4dd49":"21dqq","f8ebb63c2407e1bf":"juvHo"}],"juvHo":[function(require,module,exports) {
 "use strict";
-module.exports = require("a04fe5d6b7bb2051");
+module.exports = require("eb3a595c79941616");
 
-},{"a04fe5d6b7bb2051":"RqdIf"}],"RqdIf":[function(require,module,exports) {
+},{"eb3a595c79941616":"RqdIf"}],"RqdIf":[function(require,module,exports) {
 /**
  * @license React
  * scheduler.development.js
@@ -28195,7 +28215,7 @@ exports.export = function(dest, destName, get) {
 
 },{}],"km3Ru":[function(require,module,exports) {
 "use strict";
-var Refresh = require("bedc6164397f7c7b");
+var Refresh = require("72477e447731fae8");
 function debounce(func, delay) {
     {
         let timeout = undefined;
@@ -28326,7 +28346,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"bedc6164397f7c7b":"786KC"}],"dg9wB":[function(require,module,exports) {
+},{"72477e447731fae8":"786KC"}],"dg9wB":[function(require,module,exports) {
 /* A helper file that simplifies using the wallet selector */ // near api js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
@@ -28344,7 +28364,7 @@ var _myNearWalletIconPngDefault = parcelHelpers.interopDefault(_myNearWalletIcon
 var _core = require("@near-wallet-selector/core");
 var _ledger = require("@near-wallet-selector/ledger");
 var _myNearWallet = require("@near-wallet-selector/my-near-wallet");
-var Buffer = require("e69066525405e357").Buffer;
+var Buffer = require("42ed8262531e5107").Buffer;
 const THIRTY_TGAS = "30000000000000";
 const NO_DEPOSIT = "0";
 class Wallet {
@@ -28441,15 +28461,15 @@ class Wallet {
     }
 }
 
-},{"e69066525405e357":"5c7yX","near-api-js":"ohc3m","@near-wallet-selector/modal-ui/styles.css":"b4TAP","@near-wallet-selector/modal-ui":"1nDKo","@near-wallet-selector/ledger/assets/ledger-icon.png":"dGAA6","@near-wallet-selector/my-near-wallet/assets/my-near-wallet-icon.png":"aTHwi","@near-wallet-selector/core":"eEY3a","@near-wallet-selector/ledger":"9enQf","@near-wallet-selector/my-near-wallet":"bYYGG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5c7yX":[function(require,module,exports) {
+},{"42ed8262531e5107":"5heHz","near-api-js":"ohc3m","@near-wallet-selector/modal-ui/styles.css":"b4TAP","@near-wallet-selector/modal-ui":"1nDKo","@near-wallet-selector/ledger/assets/ledger-icon.png":"dGAA6","@near-wallet-selector/my-near-wallet/assets/my-near-wallet-icon.png":"aTHwi","@near-wallet-selector/core":"eEY3a","@near-wallet-selector/ledger":"9enQf","@near-wallet-selector/my-near-wallet":"bYYGG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5heHz":[function(require,module,exports) {
 /*!
  * The buffer module from node.js, for the browser.
  *
  * @author   Feross Aboukhadijeh <https://feross.org>
  * @license  MIT
  */ /* eslint-disable no-proto */ "use strict";
-var base64 = require("15a691321c192c1e");
-var ieee754 = require("6658e0d09bc5e2eb");
+var base64 = require("fafe20451382af");
+var ieee754 = require("2fcc3c2067c96f08");
 var customInspectSymbol = typeof Symbol === "function" && typeof Symbol["for"] === "function" // eslint-disable-line dot-notation
  ? Symbol["for"]("nodejs.util.inspect.custom") // eslint-disable-line dot-notation
  : null;
@@ -29671,7 +29691,7 @@ var hexSliceLookupTable = function() {
     return table;
 }();
 
-},{"15a691321c192c1e":"aMhEm","6658e0d09bc5e2eb":"4oOgE"}],"aMhEm":[function(require,module,exports) {
+},{"fafe20451382af":"6oJ09","2fcc3c2067c96f08":"8HXjX"}],"6oJ09":[function(require,module,exports) {
 "use strict";
 exports.byteLength = byteLength;
 exports.toByteArray = toByteArray;
@@ -29771,7 +29791,7 @@ function fromByteArray(uint8) {
     return parts.join("");
 }
 
-},{}],"4oOgE":[function(require,module,exports) {
+},{}],"8HXjX":[function(require,module,exports) {
 /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */ exports.read = function(buffer, offset, isLE, mLen, nBytes) {
     var e, m;
     var eLen = nBytes * 8 - mLen - 1;
@@ -29845,12 +29865,14 @@ exports.write = function(buffer, value, offset, isLE, mLen, nBytes) {
 "use strict";
 var __createBinding = this && this.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, {
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
         enumerable: true,
         get: function() {
             return m[k];
         }
-    });
+    };
+    Object.defineProperty(o, k2, desc);
 } : function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -29867,50 +29889,51 @@ var __importStar = this && this.__importStar || function(mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
     if (mod != null) {
-        for(var k in mod)if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+        for(var k in mod)if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     }
     __setModuleDefault(result, mod);
     return result;
 };
 var __exportStar = this && this.__exportStar || function(m, exports1) {
-    for(var p in m)if (p !== "default" && !exports1.hasOwnProperty(p)) __createBinding(exports1, m, p);
+    for(var p in m)if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports1, p)) __createBinding(exports1, m, p);
 };
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-/** @hidden @module */ exports.keyStores = __importStar(require("4c407ef1314470a0"));
-__exportStar(require("e918cdfce99ed7b6"), exports);
-__exportStar(require("849d8c253740bfb6"), exports);
-require("e6920483563285ee");
+exports.keyStores = void 0;
+/** @hidden @module */ exports.keyStores = __importStar(require("a6368955eef9833d"));
+__exportStar(require("b0135035c9c90096"), exports);
+__exportStar(require("adf1ec2e75d55785"), exports);
+require("a1bd82bcc0cffd8a");
 
-},{"4c407ef1314470a0":"aBfSM","e918cdfce99ed7b6":"gtZXS","849d8c253740bfb6":"7yTE6","e6920483563285ee":"2YFhR"}],"aBfSM":[function(require,module,exports) {
+},{"a6368955eef9833d":"aBfSM","b0135035c9c90096":"gtZXS","adf1ec2e75d55785":"7yTE6","a1bd82bcc0cffd8a":"2YFhR"}],"aBfSM":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.MergeKeyStore = exports.BrowserLocalStorageKeyStore = exports.InMemoryKeyStore = exports.KeyStore = void 0;
-/** @hidden @module */ const keystore_1 = require("571b59a0fc28b4b0");
+/** @hidden @module */ const keystore_1 = require("75dc4fb4b9b8c46e");
 Object.defineProperty(exports, "KeyStore", {
     enumerable: true,
     get: function() {
         return keystore_1.KeyStore;
     }
 });
-const in_memory_key_store_1 = require("ea680d33bf3e2b0a");
+const in_memory_key_store_1 = require("2ed18bef08672054");
 Object.defineProperty(exports, "InMemoryKeyStore", {
     enumerable: true,
     get: function() {
         return in_memory_key_store_1.InMemoryKeyStore;
     }
 });
-const browser_local_storage_key_store_1 = require("ed226972a91970c4");
+const browser_local_storage_key_store_1 = require("b700dedbf8bda");
 Object.defineProperty(exports, "BrowserLocalStorageKeyStore", {
     enumerable: true,
     get: function() {
         return browser_local_storage_key_store_1.BrowserLocalStorageKeyStore;
     }
 });
-const merge_key_store_1 = require("30c09cbd73c4691e");
+const merge_key_store_1 = require("989f601e3e474009");
 Object.defineProperty(exports, "MergeKeyStore", {
     enumerable: true,
     get: function() {
@@ -29918,33 +29941,60 @@ Object.defineProperty(exports, "MergeKeyStore", {
     }
 });
 
-},{"571b59a0fc28b4b0":"5Moei","ea680d33bf3e2b0a":"fTfs7","ed226972a91970c4":"l5Tuv","30c09cbd73c4691e":"kgqhu"}],"5Moei":[function(require,module,exports) {
+},{"75dc4fb4b9b8c46e":"5Moei","2ed18bef08672054":"fTfs7","b700dedbf8bda":"l5Tuv","989f601e3e474009":"kgqhu"}],"5Moei":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.KeyStore = void 0;
 /**
- * KeyStores are passed to {@link Near} via {@link NearConfig}
- * and are used by the {@link InMemorySigner} to sign transactions.
+ * KeyStores are passed to {@link near!Near} via {@link near!NearConfig}
+ * and are used by the {@link signer!InMemorySigner} to sign transactions.
  *
- * @example {@link connect}
+ * @see {@link connect}
  */ class KeyStore {
 }
 exports.KeyStore = KeyStore;
 
 },{}],"fTfs7":[function(require,module,exports) {
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.InMemoryKeyStore = void 0;
-const keystore_1 = require("b69d08a5cb641844");
-const key_pair_1 = require("3b27799f15300a8f");
+const keystore_1 = require("a073e5ad4600ffa7");
+const key_pair_1 = require("84418e082b268cc3");
 /**
  * Simple in-memory keystore for mainly for testing purposes.
  *
- * @example {@link https://docs.near.org/docs/develop/front-end/naj-quick-reference#key-store}
+ * @see [https://docs.near.org/docs/develop/front-end/naj-quick-reference#key-store](https://docs.near.org/docs/develop/front-end/naj-quick-reference#key-store)
  * @example
  * ```js
  * import { connect, keyStores, utils } from 'near-api-js';
@@ -29973,57 +30023,68 @@ const key_pair_1 = require("3b27799f15300a8f");
         this.keys = {};
     }
     /**
-     * Stores a {@KeyPair} in in-memory storage item
+     * Stores a {@link utils/key_pair!KeyPair} in in-memory storage item
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @param accountId The NEAR account tied to the key pair
      * @param keyPair The key pair to store in local storage
-     */ async setKey(networkId, accountId, keyPair) {
-        this.keys[`${accountId}:${networkId}`] = keyPair.toString();
+     */ setKey(networkId, accountId, keyPair) {
+        return __awaiter(this, void 0, void 0, function*() {
+            this.keys[`${accountId}:${networkId}`] = keyPair.toString();
+        });
     }
     /**
-     * Gets a {@link KeyPair} from in-memory storage
+     * Gets a {@link utils/key_pair!KeyPair} from in-memory storage
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @param accountId The NEAR account tied to the key pair
      * @returns {Promise<KeyPair>}
-     */ async getKey(networkId, accountId) {
-        const value = this.keys[`${accountId}:${networkId}`];
-        if (!value) return null;
-        return key_pair_1.KeyPair.fromString(value);
+     */ getKey(networkId, accountId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const value = this.keys[`${accountId}:${networkId}`];
+            if (!value) return null;
+            return key_pair_1.KeyPair.fromString(value);
+        });
     }
     /**
-     * Removes a {@link KeyPair} from in-memory storage
+     * Removes a {@link utils/key_pair!KeyPair} from in-memory storage
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @param accountId The NEAR account tied to the key pair
-     */ async removeKey(networkId, accountId) {
-        delete this.keys[`${accountId}:${networkId}`];
+     */ removeKey(networkId, accountId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            delete this.keys[`${accountId}:${networkId}`];
+        });
     }
     /**
-     * Removes all {@link KeyPairs} from in-memory storage
-     */ async clear() {
-        this.keys = {};
+     * Removes all {@link utils/key_pair!KeyPair} from in-memory storage
+     */ clear() {
+        return __awaiter(this, void 0, void 0, function*() {
+            this.keys = {};
+        });
     }
     /**
      * Get the network(s) from in-memory storage
      * @returns {Promise<string[]>}
-     */ async getNetworks() {
-        const result = new Set();
-        Object.keys(this.keys).forEach((key)=>{
-            const parts = key.split(":");
-            result.add(parts[1]);
+     */ getNetworks() {
+        return __awaiter(this, void 0, void 0, function*() {
+            const result = new Set();
+            Object.keys(this.keys).forEach((key)=>{
+                const parts = key.split(":");
+                result.add(parts[1]);
+            });
+            return Array.from(result.values());
         });
-        return Array.from(result.values());
     }
     /**
      * Gets the account(s) from in-memory storage
      * @param networkId The targeted network. (ex. default, betanet, etc…)
-     * @returns{Promise<string[]>}
-     */ async getAccounts(networkId) {
-        const result = new Array();
-        Object.keys(this.keys).forEach((key)=>{
-            const parts = key.split(":");
-            if (parts[parts.length - 1] === networkId) result.push(parts.slice(0, parts.length - 1).join(":"));
+     */ getAccounts(networkId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const result = new Array();
+            Object.keys(this.keys).forEach((key)=>{
+                const parts = key.split(":");
+                if (parts[parts.length - 1] === networkId) result.push(parts.slice(0, parts.length - 1).join(":"));
+            });
+            return result;
         });
-        return result;
     }
     /** @hidden */ toString() {
         return "InMemoryKeyStore";
@@ -30031,7 +30092,7 @@ const key_pair_1 = require("3b27799f15300a8f");
 }
 exports.InMemoryKeyStore = InMemoryKeyStore;
 
-},{"b69d08a5cb641844":"5Moei","3b27799f15300a8f":"kBQFP"}],"kBQFP":[function(require,module,exports) {
+},{"a073e5ad4600ffa7":"5Moei","84418e082b268cc3":"kBQFP"}],"kBQFP":[function(require,module,exports) {
 "use strict";
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
@@ -30042,9 +30103,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.KeyPairEd25519 = exports.KeyPair = exports.PublicKey = exports.KeyType = void 0;
-const tweetnacl_1 = __importDefault(require("374ca2550733f232"));
-const serialize_1 = require("26bb94e5dc9f8322");
-const enums_1 = require("971a3d3083f6094");
+const tweetnacl_1 = __importDefault(require("7257567c38f470b6"));
+const serialize_1 = require("eef597c2cb3c7f4e");
+const enums_1 = require("3f48568e335835c8");
 /** All supported key types */ var KeyType;
 (function(KeyType) {
     KeyType[KeyType["ED25519"] = 0] = "ED25519";
@@ -30076,16 +30137,16 @@ function str_to_key_type(keyType) {
         const parts = encodedKey.split(":");
         if (parts.length === 1) return new PublicKey({
             keyType: KeyType.ED25519,
-            data: serialize_1.base_decode(parts[0])
+            data: (0, serialize_1.base_decode)(parts[0])
         });
         else if (parts.length === 2) return new PublicKey({
             keyType: str_to_key_type(parts[0]),
-            data: serialize_1.base_decode(parts[1])
+            data: (0, serialize_1.base_decode)(parts[1])
         });
         else throw new Error("Invalid encoded key format, must be <curve>:<encoded key>");
     }
     toString() {
-        return `${key_type_to_str(this.keyType)}:${serialize_1.base_encode(this.data)}`;
+        return `${key_type_to_str(this.keyType)}:${(0, serialize_1.base_encode)(this.data)}`;
     }
     verify(message, signature) {
         switch(this.keyType){
@@ -30132,7 +30193,7 @@ exports.KeyPair = KeyPair;
      * @param {string} secretKey
      */ constructor(secretKey){
         super();
-        const keyPair = tweetnacl_1.default.sign.keyPair.fromSecretKey(serialize_1.base_decode(secretKey));
+        const keyPair = tweetnacl_1.default.sign.keyPair.fromSecretKey((0, serialize_1.base_decode)(secretKey));
         this.publicKey = new PublicKey({
             keyType: KeyType.ED25519,
             data: keyPair.publicKey
@@ -30150,10 +30211,10 @@ exports.KeyPair = KeyPair;
      * // returns [SECRET_KEY]
      */ static fromRandom() {
         const newKeyPair = tweetnacl_1.default.sign.keyPair();
-        return new KeyPairEd25519(serialize_1.base_encode(newKeyPair.secretKey));
+        return new KeyPairEd25519((0, serialize_1.base_encode)(newKeyPair.secretKey));
     }
     sign(message) {
-        const signature = tweetnacl_1.default.sign.detached(message, serialize_1.base_decode(this.secretKey));
+        const signature = tweetnacl_1.default.sign.detached(message, (0, serialize_1.base_decode)(this.secretKey));
         return {
             signature,
             publicKey: this.publicKey
@@ -30171,7 +30232,7 @@ exports.KeyPair = KeyPair;
 }
 exports.KeyPairEd25519 = KeyPairEd25519;
 
-},{"374ca2550733f232":"3J9rh","26bb94e5dc9f8322":"dUoM9","971a3d3083f6094":"kjmPo"}],"3J9rh":[function(require,module,exports) {
+},{"7257567c38f470b6":"3J9rh","eef597c2cb3c7f4e":"dUoM9","3f48568e335835c8":"kjmPo"}],"3J9rh":[function(require,module,exports) {
 (function(nacl) {
     "use strict";
     // Ported in 2014 by Dmitry Chestnykh and Devi Mandiri.
@@ -32569,7 +32630,7 @@ exports.KeyPairEd25519 = KeyPairEd25519;
             });
         } else {
             // Node.js.
-            crypto = require("f598cfff69d12db5");
+            crypto = require("7d0b2aab3e58387f");
             if (crypto && crypto.randomBytes) nacl.setPRNG(function(x, n) {
                 var i, v = crypto.randomBytes(n);
                 for(i = 0; i < n; i++)x[i] = v[i];
@@ -32579,7 +32640,7 @@ exports.KeyPairEd25519 = KeyPairEd25519;
     })();
 })((0, module.exports) ? module.exports : self.nacl = self.nacl || {});
 
-},{"f598cfff69d12db5":"jhUEF"}],"jhUEF":[function(require,module,exports) {
+},{"7d0b2aab3e58387f":"jhUEF"}],"jhUEF":[function(require,module,exports) {
 "use strict";
 
 },{}],"dUoM9":[function(require,module,exports) {
@@ -32587,7 +32648,8 @@ exports.KeyPairEd25519 = KeyPairEd25519;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var borsh_1 = require("372811601399b689");
+exports.BinaryReader = exports.BinaryWriter = exports.BorshError = exports.deserialize = exports.serialize = exports.base_decode = exports.base_encode = void 0;
+var borsh_1 = require("8e417fa60eb6180d");
 Object.defineProperty(exports, "base_encode", {
     enumerable: true,
     get: function() {
@@ -32631,9 +32693,8 @@ Object.defineProperty(exports, "BinaryReader", {
     }
 });
 
-},{"372811601399b689":"4JCmN"}],"4JCmN":[function(require,module,exports) {
-var Buffer = require("77072da3e91ce3da").Buffer;
-var global = arguments[3];
+},{"8e417fa60eb6180d":"4JCmN"}],"4JCmN":[function(require,module,exports) {
+var Buffer = require("66db3cbc4f52b1be").Buffer;
 "use strict";
 var __createBinding = this && this.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
@@ -32679,12 +32740,12 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.deserializeUnchecked = exports.deserialize = exports.serialize = exports.BinaryReader = exports.BinaryWriter = exports.BorshError = exports.baseDecode = exports.baseEncode = void 0;
-const bn_js_1 = __importDefault(require("903528b74324adcf"));
-const bs58_1 = __importDefault(require("25e814253e2f163c"));
+const bn_js_1 = __importDefault(require("fa8868f7df79c3a6"));
+const bs58_1 = __importDefault(require("3926d495cde32cd6"));
 // TODO: Make sure this polyfill not included when not required
-const encoding = __importStar(require("e1c19118b2faa38b"));
-const TextDecoder = typeof global.TextDecoder !== "function" ? encoding.TextDecoder : global.TextDecoder;
-const textDecoder = new TextDecoder("utf-8", {
+const encoding = __importStar(require("21cfc1c2987e7add"));
+const ResolvedTextDecoder = typeof TextDecoder !== "function" ? encoding.TextDecoder : TextDecoder;
+const textDecoder = new ResolvedTextDecoder("utf-8", {
     fatal: true
 });
 function baseEncode(value) {
@@ -32919,6 +32980,13 @@ function serializeField(schema, fieldName, value, fieldType, writer) {
                     serializeField(schema, fieldName, value, fieldType.type, writer);
                 }
                 break;
+            case "map":
+                writer.writeU32(value.size);
+                value.forEach((val, key)=>{
+                    serializeField(schema, fieldName, key, fieldType.key, writer);
+                    serializeField(schema, fieldName, val, fieldType.value, writer);
+                });
+                break;
             default:
                 throw new BorshError(`FieldType ${fieldType} unrecognized`);
         }
@@ -32974,6 +33042,16 @@ function deserializeField(schema, fieldName, fieldType, reader) {
             if (option) return deserializeField(schema, fieldName, fieldType.type, reader);
             return undefined;
         }
+        if (fieldType.kind === "map") {
+            let map = new Map();
+            const length = reader.readU32();
+            for(let i = 0; i < length; i++){
+                const key = deserializeField(schema, fieldName, fieldType.key, reader);
+                const val = deserializeField(schema, fieldName, fieldType.value, reader);
+                map.set(key, val);
+            }
+            return map;
+        }
         return deserializeStruct(schema, fieldType, reader);
     } catch (error) {
         if (error instanceof BorshError) error.addToFieldPath(fieldName);
@@ -33015,7 +33093,7 @@ function deserializeUnchecked(schema, classType, buffer, Reader = BinaryReader) 
 }
 exports.deserializeUnchecked = deserializeUnchecked;
 
-},{"77072da3e91ce3da":"5c7yX","903528b74324adcf":"VopIn","25e814253e2f163c":"4ji3p","e1c19118b2faa38b":"feCA6"}],"VopIn":[function(require,module,exports) {
+},{"66db3cbc4f52b1be":"5heHz","fa8868f7df79c3a6":"VopIn","3926d495cde32cd6":"4ji3p","21cfc1c2987e7add":"feCA6"}],"VopIn":[function(require,module,exports) {
 (function(module1, exports) {
     "use strict";
     // Utils
@@ -33054,7 +33132,7 @@ exports.deserializeUnchecked = deserializeUnchecked;
     var Buffer;
     try {
         if (typeof window !== "undefined" && typeof window.Buffer !== "undefined") Buffer = window.Buffer;
-        else Buffer = require("8eda96121f01af7").Buffer;
+        else Buffer = require("752370dc744dcc18").Buffer;
     } catch (e) {}
     BN.isBN = function isBN(num) {
         if (num instanceof BN) return true;
@@ -35778,12 +35856,12 @@ exports.deserializeUnchecked = deserializeUnchecked;
     };
 })(module, this);
 
-},{"8eda96121f01af7":"jhUEF"}],"4ji3p":[function(require,module,exports) {
-var basex = require("97efb0fe83a283e5");
+},{"752370dc744dcc18":"jhUEF"}],"4ji3p":[function(require,module,exports) {
+var basex = require("231308ca06182634");
 var ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
 module.exports = basex(ALPHABET);
 
-},{"97efb0fe83a283e5":"inVbl"}],"inVbl":[function(require,module,exports) {
+},{"231308ca06182634":"inVbl"}],"inVbl":[function(require,module,exports) {
 "use strict";
 // base-x encoding / decoding
 // Copyright (c) 2018 base-x contributors
@@ -35791,7 +35869,7 @@ module.exports = basex(ALPHABET);
 // Distributed under the MIT software license, see the accompanying
 // file LICENSE or http://www.opensource.org/licenses/mit-license.php.
 // @ts-ignore
-var _Buffer = require("ef2f182ee5b93e92").Buffer;
+var _Buffer = require("28d2c7e126940742").Buffer;
 function base(ALPHABET) {
     if (ALPHABET.length >= 255) throw new TypeError("Alphabet too long");
     var BASE_MAP = new Uint8Array(256);
@@ -35899,8 +35977,8 @@ function base(ALPHABET) {
 }
 module.exports = base;
 
-},{"ef2f182ee5b93e92":"eW7r9"}],"eW7r9":[function(require,module,exports) {
-/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */ /* eslint-disable node/no-deprecated-api */ var buffer = require("5065099a18f471ba");
+},{"28d2c7e126940742":"eW7r9"}],"eW7r9":[function(require,module,exports) {
+/*! safe-buffer. MIT License. Feross Aboukhadijeh <https://feross.org/opensource> */ /* eslint-disable node/no-deprecated-api */ var buffer = require("82cc17288dad19be");
 var Buffer = buffer.Buffer;
 // alternative to using Object.keys for old browsers
 function copyProps(src, dst) {
@@ -35940,7 +36018,7 @@ SafeBuffer.allocUnsafeSlow = function(size) {
     return buffer.SlowBuffer(size);
 };
 
-},{"5065099a18f471ba":"5c7yX"}],"feCA6":[function(require,module,exports) {
+},{"82cc17288dad19be":"5heHz"}],"feCA6":[function(require,module,exports) {
 "use strict";
 // This is free and unencumbered software released into the public domain.
 // See LICENSE.md for more information.
@@ -36424,17 +36502,44 @@ exports.Assignable = Assignable;
 
 },{}],"l5Tuv":[function(require,module,exports) {
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.BrowserLocalStorageKeyStore = void 0;
-const keystore_1 = require("3499d8e1b5205fed");
-const key_pair_1 = require("4c251e8d9d4c1aed");
+const keystore_1 = require("4a24230fef5aed43");
+const key_pair_1 = require("136a3ce079dc9e21");
 const LOCAL_STORAGE_KEY_PREFIX = "near-api-js:keystore:";
 /**
  * This class is used to store keys in the browsers local storage.
  *
- * @example {@link https://docs.near.org/docs/develop/front-end/naj-quick-reference#key-store}
+ * @see [https://docs.near.org/docs/develop/front-end/naj-quick-reference#key-store](https://docs.near.org/docs/develop/front-end/naj-quick-reference#key-store)
  * @example
  * ```js
  * import { connect, keyStores } from 'near-api-js';
@@ -36462,57 +36567,68 @@ const LOCAL_STORAGE_KEY_PREFIX = "near-api-js:keystore:";
         this.prefix = prefix;
     }
     /**
-     * Stores a {@link KeyPair} in local storage.
+     * Stores a {@link utils/key_pair!KeyPair} in local storage.
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @param accountId The NEAR account tied to the key pair
      * @param keyPair The key pair to store in local storage
-     */ async setKey(networkId, accountId, keyPair) {
-        this.localStorage.setItem(this.storageKeyForSecretKey(networkId, accountId), keyPair.toString());
+     */ setKey(networkId, accountId, keyPair) {
+        return __awaiter(this, void 0, void 0, function*() {
+            this.localStorage.setItem(this.storageKeyForSecretKey(networkId, accountId), keyPair.toString());
+        });
     }
     /**
-     * Gets a {@link KeyPair} from local storage
+     * Gets a {@link utils/key_pair!KeyPair} from local storage
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @param accountId The NEAR account tied to the key pair
      * @returns {Promise<KeyPair>}
-     */ async getKey(networkId, accountId) {
-        const value = this.localStorage.getItem(this.storageKeyForSecretKey(networkId, accountId));
-        if (!value) return null;
-        return key_pair_1.KeyPair.fromString(value);
+     */ getKey(networkId, accountId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const value = this.localStorage.getItem(this.storageKeyForSecretKey(networkId, accountId));
+            if (!value) return null;
+            return key_pair_1.KeyPair.fromString(value);
+        });
     }
     /**
-     * Removes a {@link KeyPair} from local storage
+     * Removes a {@link utils/key_pair!KeyPair} from local storage
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @param accountId The NEAR account tied to the key pair
-     */ async removeKey(networkId, accountId) {
-        this.localStorage.removeItem(this.storageKeyForSecretKey(networkId, accountId));
+     */ removeKey(networkId, accountId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            this.localStorage.removeItem(this.storageKeyForSecretKey(networkId, accountId));
+        });
     }
     /**
      * Removes all items that start with `prefix` from local storage
-     */ async clear() {
-        for (const key of this.storageKeys())if (key.startsWith(this.prefix)) this.localStorage.removeItem(key);
+     */ clear() {
+        return __awaiter(this, void 0, void 0, function*() {
+            for (const key of this.storageKeys())if (key.startsWith(this.prefix)) this.localStorage.removeItem(key);
+        });
     }
     /**
      * Get the network(s) from local storage
      * @returns {Promise<string[]>}
-     */ async getNetworks() {
-        const result = new Set();
-        for (const key of this.storageKeys())if (key.startsWith(this.prefix)) {
-            const parts = key.substring(this.prefix.length).split(":");
-            result.add(parts[1]);
-        }
-        return Array.from(result.values());
+     */ getNetworks() {
+        return __awaiter(this, void 0, void 0, function*() {
+            const result = new Set();
+            for (const key of this.storageKeys())if (key.startsWith(this.prefix)) {
+                const parts = key.substring(this.prefix.length).split(":");
+                result.add(parts[1]);
+            }
+            return Array.from(result.values());
+        });
     }
     /**
      * Gets the account(s) from local storage
      * @param networkId The targeted network. (ex. default, betanet, etc…)
-     * @returns{Promise<string[]>}
-     */ async getAccounts(networkId) {
-        const result = new Array();
-        for (const key of this.storageKeys())if (key.startsWith(this.prefix)) {
-            const parts = key.substring(this.prefix.length).split(":");
-            if (parts[1] === networkId) result.push(parts[0]);
-        }
-        return result;
+     */ getAccounts(networkId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const result = new Array();
+            for (const key of this.storageKeys())if (key.startsWith(this.prefix)) {
+                const parts = key.substring(this.prefix.length).split(":");
+                if (parts[1] === networkId) result.push(parts[0]);
+            }
+            return result;
+        });
     }
     /**
      * @hidden
@@ -36529,13 +36645,40 @@ const LOCAL_STORAGE_KEY_PREFIX = "near-api-js:keystore:";
 }
 exports.BrowserLocalStorageKeyStore = BrowserLocalStorageKeyStore;
 
-},{"3499d8e1b5205fed":"5Moei","4c251e8d9d4c1aed":"kBQFP"}],"kgqhu":[function(require,module,exports) {
+},{"4a24230fef5aed43":"5Moei","136a3ce079dc9e21":"kBQFP"}],"kgqhu":[function(require,module,exports) {
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.MergeKeyStore = void 0;
-const keystore_1 = require("b738c06388e28c50");
+const keystore_1 = require("40fe9efa1769502d");
 class MergeKeyStore extends keystore_1.KeyStore {
     /**
      * @param keyStores read calls are attempted from start to end of array
@@ -36548,53 +36691,64 @@ class MergeKeyStore extends keystore_1.KeyStore {
         this.keyStores = keyStores;
     }
     /**
-     * Store a {@link KeyPain} to the first index of a key store array
+     * Store a {@link utils/key_pair!KeyPair} to the first index of a key store array
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @param accountId The NEAR account tied to the key pair
      * @param keyPair The key pair to store in local storage
-     */ async setKey(networkId, accountId, keyPair) {
-        await this.keyStores[this.options.writeKeyStoreIndex].setKey(networkId, accountId, keyPair);
+     */ setKey(networkId, accountId, keyPair) {
+        return __awaiter(this, void 0, void 0, function*() {
+            yield this.keyStores[this.options.writeKeyStoreIndex].setKey(networkId, accountId, keyPair);
+        });
     }
     /**
-     * Gets a {@link KeyPair} from the array of key stores
+     * Gets a {@link utils/key_pair!KeyPair} from the array of key stores
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @param accountId The NEAR account tied to the key pair
      * @returns {Promise<KeyPair>}
-     */ async getKey(networkId, accountId) {
-        for (const keyStore of this.keyStores){
-            const keyPair = await keyStore.getKey(networkId, accountId);
-            if (keyPair) return keyPair;
-        }
-        return null;
+     */ getKey(networkId, accountId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            for (const keyStore of this.keyStores){
+                const keyPair = yield keyStore.getKey(networkId, accountId);
+                if (keyPair) return keyPair;
+            }
+            return null;
+        });
     }
     /**
-     * Removes a {@link KeyPair} from the array of key stores
+     * Removes a {@link utils/key_pair!KeyPair} from the array of key stores
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @param accountId The NEAR account tied to the key pair
-     */ async removeKey(networkId, accountId) {
-        for (const keyStore of this.keyStores)await keyStore.removeKey(networkId, accountId);
+     */ removeKey(networkId, accountId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            for (const keyStore of this.keyStores)yield keyStore.removeKey(networkId, accountId);
+        });
     }
     /**
      * Removes all items from each key store
-     */ async clear() {
-        for (const keyStore of this.keyStores)await keyStore.clear();
+     */ clear() {
+        return __awaiter(this, void 0, void 0, function*() {
+            for (const keyStore of this.keyStores)yield keyStore.clear();
+        });
     }
     /**
      * Get the network(s) from the array of key stores
      * @returns {Promise<string[]>}
-     */ async getNetworks() {
-        const result = new Set();
-        for (const keyStore of this.keyStores)for (const network of (await keyStore.getNetworks()))result.add(network);
-        return Array.from(result);
+     */ getNetworks() {
+        return __awaiter(this, void 0, void 0, function*() {
+            const result = new Set();
+            for (const keyStore of this.keyStores)for (const network of yield keyStore.getNetworks())result.add(network);
+            return Array.from(result);
+        });
     }
     /**
      * Gets the account(s) from the array of key stores
      * @param networkId The targeted network. (ex. default, betanet, etc…)
-     * @returns{Promise<string[]>}
-     */ async getAccounts(networkId) {
-        const result = new Set();
-        for (const keyStore of this.keyStores)for (const account of (await keyStore.getAccounts(networkId)))result.add(account);
-        return Array.from(result);
+     */ getAccounts(networkId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const result = new Set();
+            for (const keyStore of this.keyStores)for (const account of yield keyStore.getAccounts(networkId))result.add(account);
+            return Array.from(result);
+        });
     }
     /** @hidden */ toString() {
         return `MergeKeyStore(${this.keyStores.join(", ")})`;
@@ -36602,16 +36756,18 @@ class MergeKeyStore extends keystore_1.KeyStore {
 }
 exports.MergeKeyStore = MergeKeyStore;
 
-},{"b738c06388e28c50":"5Moei"}],"gtZXS":[function(require,module,exports) {
+},{"40fe9efa1769502d":"5Moei"}],"gtZXS":[function(require,module,exports) {
 "use strict";
 var __createBinding = this && this.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, {
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
         enumerable: true,
         get: function() {
             return m[k];
         }
-    });
+    };
+    Object.defineProperty(o, k2, desc);
 } : function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -36628,7 +36784,7 @@ var __importStar = this && this.__importStar || function(mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
     if (mod != null) {
-        for(var k in mod)if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+        for(var k in mod)if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     }
     __setModuleDefault(result, mod);
     return result;
@@ -36636,34 +36792,34 @@ var __importStar = this && this.__importStar || function(mod) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.WalletConnection = exports.WalletAccount = exports.ConnectedWalletAccount = exports.Near = exports.KeyPair = exports.Signer = exports.InMemorySigner = exports.Contract = exports.Connection = exports.Account = exports.multisig = exports.validators = exports.transactions = exports.utils = exports.providers = exports.accountCreator = void 0;
-/** @hidden @module */ const providers = __importStar(require("1ebdd042cc8dcb9e"));
+exports.WalletConnection = exports.ConnectedWalletAccount = exports.Near = exports.KeyPair = exports.Signer = exports.InMemorySigner = exports.Contract = exports.Connection = exports.Account = exports.multisig = exports.validators = exports.transactions = exports.utils = exports.providers = exports.accountCreator = void 0;
+/** @hidden @module */ const providers = __importStar(require("4d1e8d02eedfb0da"));
 exports.providers = providers;
-const utils = __importStar(require("6d57902769715f35"));
+const utils = __importStar(require("7ae2f5db24549146"));
 exports.utils = utils;
-const transactions = __importStar(require("feaa5591e8612140"));
+const transactions = __importStar(require("3208080461e88dca"));
 exports.transactions = transactions;
-const validators = __importStar(require("38df0386e0b838a6"));
+const validators = __importStar(require("1dd5d1cc5e1bc18f"));
 exports.validators = validators;
-const account_1 = require("6db168aaa9568675");
+const account_1 = require("9dd1eb75c907fead");
 Object.defineProperty(exports, "Account", {
     enumerable: true,
     get: function() {
         return account_1.Account;
     }
 });
-const multisig = __importStar(require("e7bc49f3bcee32d6"));
+const multisig = __importStar(require("75f6df8c07259849"));
 exports.multisig = multisig;
-const accountCreator = __importStar(require("45beea7cef50c4fb"));
+const accountCreator = __importStar(require("de022db46de8bb26"));
 exports.accountCreator = accountCreator;
-const connection_1 = require("67f01aedd6b9e831");
+const connection_1 = require("4e976c4c88326f6a");
 Object.defineProperty(exports, "Connection", {
     enumerable: true,
     get: function() {
         return connection_1.Connection;
     }
 });
-const signer_1 = require("a2b94c3756d727cc");
+const signer_1 = require("a640b411acb5fb9");
 Object.defineProperty(exports, "Signer", {
     enumerable: true,
     get: function() {
@@ -36676,39 +36832,32 @@ Object.defineProperty(exports, "InMemorySigner", {
         return signer_1.InMemorySigner;
     }
 });
-const contract_1 = require("891e323d74443917");
+const contract_1 = require("d40236fd9f4d9adf");
 Object.defineProperty(exports, "Contract", {
     enumerable: true,
     get: function() {
         return contract_1.Contract;
     }
 });
-const key_pair_1 = require("45d21c83916ec355");
+const key_pair_1 = require("1f08068a51da58");
 Object.defineProperty(exports, "KeyPair", {
     enumerable: true,
     get: function() {
         return key_pair_1.KeyPair;
     }
 });
-const near_1 = require("466257f0b0f7cba3");
+const near_1 = require("798b74f7ede173b2");
 Object.defineProperty(exports, "Near", {
     enumerable: true,
     get: function() {
         return near_1.Near;
     }
 });
-// TODO: Deprecate and remove WalletAccount
-const wallet_account_1 = require("2e24c01faaa6d5fe");
+const wallet_account_1 = require("48e30924f0fdf38e");
 Object.defineProperty(exports, "ConnectedWalletAccount", {
     enumerable: true,
     get: function() {
         return wallet_account_1.ConnectedWalletAccount;
-    }
-});
-Object.defineProperty(exports, "WalletAccount", {
-    enumerable: true,
-    get: function() {
-        return wallet_account_1.WalletAccount;
     }
 });
 Object.defineProperty(exports, "WalletConnection", {
@@ -36718,13 +36867,13 @@ Object.defineProperty(exports, "WalletConnection", {
     }
 });
 
-},{"1ebdd042cc8dcb9e":"gtL2a","6d57902769715f35":"jOCMH","feaa5591e8612140":"jJQ5a","38df0386e0b838a6":"6CFD9","6db168aaa9568675":"hxSQV","e7bc49f3bcee32d6":"7q1du","45beea7cef50c4fb":"aQbxV","67f01aedd6b9e831":"3ThJM","a2b94c3756d727cc":"a6bzI","891e323d74443917":"guo0T","45d21c83916ec355":"kBQFP","466257f0b0f7cba3":"9Ying","2e24c01faaa6d5fe":"dHM3Z"}],"gtL2a":[function(require,module,exports) {
+},{"4d1e8d02eedfb0da":"gtL2a","7ae2f5db24549146":"jOCMH","3208080461e88dca":"jJQ5a","1dd5d1cc5e1bc18f":"6CFD9","9dd1eb75c907fead":"hxSQV","75f6df8c07259849":"7q1du","de022db46de8bb26":"aQbxV","4e976c4c88326f6a":"3ThJM","a640b411acb5fb9":"a6bzI","d40236fd9f4d9adf":"guo0T","1f08068a51da58":"kBQFP","798b74f7ede173b2":"9Ying","48e30924f0fdf38e":"dHM3Z"}],"gtL2a":[function(require,module,exports) {
 "use strict";
 /** @hidden @module */ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.ErrorContext = exports.TypedError = exports.getTransactionLastResult = exports.FinalExecutionStatusBasic = exports.JsonRpcProvider = exports.Provider = void 0;
-const provider_1 = require("792cc09ec3ad4251");
+const provider_1 = require("11bab65205ad45cd");
 Object.defineProperty(exports, "Provider", {
     enumerable: true,
     get: function() {
@@ -36743,7 +36892,7 @@ Object.defineProperty(exports, "FinalExecutionStatusBasic", {
         return provider_1.FinalExecutionStatusBasic;
     }
 });
-const json_rpc_provider_1 = require("1576fc96d2a18fba");
+const json_rpc_provider_1 = require("bbf6b54d60b73187");
 Object.defineProperty(exports, "JsonRpcProvider", {
     enumerable: true,
     get: function() {
@@ -36763,8 +36912,8 @@ Object.defineProperty(exports, "ErrorContext", {
     }
 });
 
-},{"792cc09ec3ad4251":"cUEh0","1576fc96d2a18fba":"kzXVU"}],"cUEh0":[function(require,module,exports) {
-var Buffer = require("62d2d703a48a86e4").Buffer;
+},{"11bab65205ad45cd":"cUEh0","bbf6b54d60b73187":"kzXVU"}],"cUEh0":[function(require,module,exports) {
+var Buffer = require("652cee0009071266").Buffer;
 "use strict";
 /**
  * NEAR RPC API request types and responses
@@ -36806,9 +36955,44 @@ exports.Provider = Provider;
 }
 exports.getTransactionLastResult = getTransactionLastResult;
 
-},{"62d2d703a48a86e4":"5c7yX"}],"kzXVU":[function(require,module,exports) {
-var Buffer = require("e23955c4e3b585b7").Buffer;
+},{"652cee0009071266":"5heHz"}],"kzXVU":[function(require,module,exports) {
+var Buffer = require("8b4c37adc999e846").Buffer;
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+var __rest = this && this.__rest || function(s, e) {
+    var t = {};
+    for(var p in s)if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function") {
+        for(var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++)if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+    }
+    return t;
+};
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
         "default": mod
@@ -36819,13 +37003,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.JsonRpcProvider = exports.ErrorContext = exports.TypedError = void 0;
 /**
+ * @module
+ * @description
  * This module contains the {@link JsonRpcProvider} client class
- * which can be used to interact with the NEAR RPC API.
- * @see {@link providers/provider} for a list of request and response types
- */ const depd_1 = __importDefault(require("e3463364e0bda3d5"));
-const provider_1 = require("e59469de585fb393");
-const web_1 = require("e3bb709e66bc6047");
-const errors_1 = require("e0ff5a7a7d2b532");
+ * which can be used to interact with the [NEAR RPC API](https://docs.near.org/api/rpc/introduction).
+ * @see {@link providers/provider | providers} for a list of request and response types
+ */ const provider_1 = require("e0e07aa8d7098d2d");
+const web_1 = require("d7bb3b0dd93568c3");
+const errors_1 = require("9a24ee0e263692c5");
 Object.defineProperty(exports, "TypedError", {
     enumerable: true,
     get: function() {
@@ -36838,9 +37023,9 @@ Object.defineProperty(exports, "ErrorContext", {
         return errors_1.ErrorContext;
     }
 });
-const borsh_1 = require("ac8f70b783c1cabe");
-const exponential_backoff_1 = __importDefault(require("b5c6e85956982e6e"));
-const rpc_errors_1 = require("6e0ad7477125762f");
+const borsh_1 = require("959f68db7b54a4d9");
+const exponential_backoff_1 = __importDefault(require("1f2edb0ae171ff91"));
+const rpc_errors_1 = require("64bf3af5932e2ed6");
 // Default number of retries before giving up on a request.
 const REQUEST_RETRY_NUMBER = 12;
 // Default wait until next retry in millis.
@@ -36850,71 +37035,78 @@ const REQUEST_RETRY_WAIT_BACKOFF = 1.5;
 /// Keep ids unique across all connections.
 let _nextId = 123;
 /**
- * Client class to interact with the NEAR RPC API.
- * @see {@link https://github.com/near/nearcore/tree/master/chain/jsonrpc}
+ * Client class to interact with the [NEAR RPC API](https://docs.near.org/api/rpc/introduction).
+ * @see [https://github.com/near/nearcore/tree/master/chain/jsonrpc](https://github.com/near/nearcore/tree/master/chain/jsonrpc)
  */ class JsonRpcProvider extends provider_1.Provider {
     /**
-     * @param connectionInfoOrUrl ConnectionInfo or RPC API endpoint URL (deprecated)
-     */ constructor(connectionInfoOrUrl){
+     * @param connectionInfo Connection info
+     */ constructor(connectionInfo){
         super();
-        if (connectionInfoOrUrl != null && typeof connectionInfoOrUrl == "object") this.connection = connectionInfoOrUrl;
-        else {
-            const deprecate = depd_1.default("JsonRpcProvider(url?: string)");
-            deprecate("use `JsonRpcProvider(connectionInfo: ConnectionInfo)` instead");
-            this.connection = {
-                url: connectionInfoOrUrl
-            };
-        }
+        this.connection = connectionInfo || {
+            url: ""
+        };
     }
     /**
      * Gets the RPC's status
-     * @see {@link https://docs.near.org/docs/develop/front-end/rpc#general-validator-status}
-     */ async status() {
-        return this.sendJsonRpc("status", []);
+     * @see [https://docs.near.org/docs/develop/front-end/rpc#general-validator-status](https://docs.near.org/docs/develop/front-end/rpc#general-validator-status)
+     */ status() {
+        return __awaiter(this, void 0, void 0, function*() {
+            return this.sendJsonRpc("status", []);
+        });
     }
     /**
      * Sends a signed transaction to the RPC and waits until transaction is fully complete
-     * @see {@link https://docs.near.org/docs/develop/front-end/rpc#send-transaction-await}
+     * @see [https://docs.near.org/docs/develop/front-end/rpc#send-transaction-await](https://docs.near.org/docs/develop/front-end/rpc#general-validator-status)
      *
      * @param signedTransaction The signed transaction being sent
-     */ async sendTransaction(signedTransaction) {
-        const bytes = signedTransaction.encode();
-        return this.sendJsonRpc("broadcast_tx_commit", [
-            Buffer.from(bytes).toString("base64")
-        ]);
+     */ sendTransaction(signedTransaction) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const bytes = signedTransaction.encode();
+            return this.sendJsonRpc("broadcast_tx_commit", [
+                Buffer.from(bytes).toString("base64")
+            ]);
+        });
     }
     /**
      * Sends a signed transaction to the RPC and immediately returns transaction hash
      * See [docs for more info](https://docs.near.org/docs/develop/front-end/rpc#send-transaction-async)
      * @param signedTransaction The signed transaction being sent
      * @returns {Promise<FinalExecutionOutcome>}
-     */ async sendTransactionAsync(signedTransaction) {
-        const bytes = signedTransaction.encode();
-        return this.sendJsonRpc("broadcast_tx_async", [
-            Buffer.from(bytes).toString("base64")
-        ]);
+     */ sendTransactionAsync(signedTransaction) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const bytes = signedTransaction.encode();
+            return this.sendJsonRpc("broadcast_tx_async", [
+                Buffer.from(bytes).toString("base64")
+            ]);
+        });
     }
     /**
      * Gets a transaction's status from the RPC
-     * @see {@link https://docs.near.org/docs/develop/front-end/rpc#transaction-status}
+     * @see [https://docs.near.org/docs/develop/front-end/rpc#transaction-status](https://docs.near.org/docs/develop/front-end/rpc#general-validator-status)
      *
      * @param txHash A transaction hash as either a Uint8Array or a base58 encoded string
      * @param accountId The NEAR account that signed the transaction
-     */ async txStatus(txHash, accountId) {
-        if (typeof txHash === "string") return this.txStatusString(txHash, accountId);
-        else return this.txStatusUint8Array(txHash, accountId);
+     */ txStatus(txHash, accountId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            if (typeof txHash === "string") return this.txStatusString(txHash, accountId);
+            else return this.txStatusUint8Array(txHash, accountId);
+        });
     }
-    async txStatusUint8Array(txHash, accountId) {
-        return this.sendJsonRpc("tx", [
-            borsh_1.baseEncode(txHash),
-            accountId
-        ]);
+    txStatusUint8Array(txHash, accountId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            return this.sendJsonRpc("tx", [
+                (0, borsh_1.baseEncode)(txHash),
+                accountId
+            ]);
+        });
     }
-    async txStatusString(txHash, accountId) {
-        return this.sendJsonRpc("tx", [
-            txHash,
-            accountId
-        ]);
+    txStatusString(txHash, accountId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            return this.sendJsonRpc("tx", [
+                txHash,
+                accountId
+            ]);
+        });
     }
     /**
      * Gets a transaction's status from the RPC with receipts
@@ -36922,126 +37114,135 @@ let _nextId = 123;
      * @param txHash The hash of the transaction
      * @param accountId The NEAR account that signed the transaction
      * @returns {Promise<FinalExecutionOutcome>}
-     */ async txStatusReceipts(txHash, accountId) {
-        return this.sendJsonRpc("EXPERIMENTAL_tx_status", [
-            borsh_1.baseEncode(txHash),
-            accountId
-        ]);
+     */ txStatusReceipts(txHash, accountId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            if (typeof txHash === "string") return this.sendJsonRpc("EXPERIMENTAL_tx_status", [
+                txHash,
+                accountId
+            ]);
+            else return this.sendJsonRpc("EXPERIMENTAL_tx_status", [
+                (0, borsh_1.baseEncode)(txHash),
+                accountId
+            ]);
+        });
     }
     /**
-     * Query the RPC as [shown in the docs](https://docs.near.org/docs/develop/front-end/rpc#accounts--contracts)
-     * Query the RPC by passing an {@link RpcQueryRequest}
-     * @see {@link https://docs.near.org/docs/develop/front-end/rpc#accounts--contracts}
+     * Query the RPC by passing an {@link providers/provider!RpcQueryRequest}
+     * @see [https://docs.near.org/api/rpc/contracts](https://docs.near.org/api/rpc/contracts)
      *
      * @typeParam T the shape of the returned query response
-     */ async query(...args) {
-        let result;
-        if (args.length === 1) result = await this.sendJsonRpc("query", args[0]);
-        else {
-            const [path, data] = args;
-            result = await this.sendJsonRpc("query", [
-                path,
-                data
-            ]);
-        }
-        if (result && result.error) throw new errors_1.TypedError(`Querying ${args} failed: ${result.error}.\n${JSON.stringify(result, null, 2)}`, rpc_errors_1.getErrorTypeFromErrorMessage(result.error));
-        return result;
+     */ query(...args) {
+        return __awaiter(this, void 0, void 0, function*() {
+            let result;
+            if (args.length === 1) {
+                const _a = args[0], { block_id , blockId  } = _a, otherParams = __rest(_a, [
+                    "block_id",
+                    "blockId"
+                ]);
+                result = yield this.sendJsonRpc("query", Object.assign(Object.assign({}, otherParams), {
+                    block_id: block_id || blockId
+                }));
+            } else {
+                const [path, data] = args;
+                result = yield this.sendJsonRpc("query", [
+                    path,
+                    data
+                ]);
+            }
+            if (result && result.error) throw new errors_1.TypedError(`Querying failed: ${result.error}.\n${JSON.stringify(result, null, 2)}`, result.error.name);
+            return result;
+        });
     }
     /**
      * Query for block info from the RPC
      * pass block_id OR finality as blockQuery, not both
-     * @see {@link https://docs.near.org/docs/interaction/rpc#block}
+     * @see [https://docs.near.org/api/rpc/block-chunk](https://docs.near.org/api/rpc/block-chunk)
      *
-     * @param blockQuery {@link BlockReference} (passing a {@link BlockId} is deprecated)
-     */ async block(blockQuery) {
-        const { finality  } = blockQuery;
-        let { blockId  } = blockQuery;
-        if (typeof blockQuery !== "object") {
-            const deprecate = depd_1.default("JsonRpcProvider.block(blockId)");
-            deprecate("use `block({ blockId })` or `block({ finality })` instead");
-            blockId = blockQuery;
-        }
-        return this.sendJsonRpc("block", {
-            block_id: blockId,
-            finality
+     * @param blockQuery {@link providers/provider!BlockReference} (passing a {@link providers/provider!BlockId} is deprecated)
+     */ block(blockQuery) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { finality  } = blockQuery;
+            const { blockId  } = blockQuery;
+            return this.sendJsonRpc("block", {
+                block_id: blockId,
+                finality
+            });
         });
     }
     /**
      * Query changes in block from the RPC
      * pass block_id OR finality as blockQuery, not both
-     * See [docs for more info](https://docs.near.org/docs/develop/front-end/rpc#block-details)
-     */ async blockChanges(blockQuery) {
-        const { finality  } = blockQuery;
-        const { blockId  } = blockQuery;
-        return this.sendJsonRpc("EXPERIMENTAL_changes_in_block", {
-            block_id: blockId,
-            finality
+     * @see [https://docs.near.org/api/rpc/block-chunk](https://docs.near.org/api/rpc/block-chunk)
+     */ blockChanges(blockQuery) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { finality  } = blockQuery;
+            const { blockId  } = blockQuery;
+            return this.sendJsonRpc("EXPERIMENTAL_changes_in_block", {
+                block_id: blockId,
+                finality
+            });
         });
     }
     /**
      * Queries for details about a specific chunk appending details of receipts and transactions to the same chunk data provided by a block
-     * @see {@link https://docs.near.org/docs/interaction/rpc#chunk}
+     * @see [https://docs.near.org/api/rpc/block-chunk](https://docs.near.org/api/rpc/block-chunk)
      *
      * @param chunkId Hash of a chunk ID or shard ID
-     */ async chunk(chunkId) {
-        return this.sendJsonRpc("chunk", [
-            chunkId
-        ]);
+     */ chunk(chunkId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            return this.sendJsonRpc("chunk", [
+                chunkId
+            ]);
+        });
     }
     /**
      * Query validators of the epoch defined by the given block id.
-     * @see {@link https://docs.near.org/docs/develop/front-end/rpc#detailed-validator-status}
+     * @see [https://docs.near.org/api/rpc/network#validation-status](https://docs.near.org/api/rpc/network#validation-status)
      *
      * @param blockId Block hash or height, or null for latest.
-     */ async validators(blockId) {
-        return this.sendJsonRpc("validators", [
-            blockId
-        ]);
-    }
-    /**
-     * @deprecated
-     * Gets the genesis config from RPC
-     * @see {@link https://docs.near.org/docs/develop/front-end/rpc#genesis-config}
-     */ async experimental_genesisConfig() {
-        const deprecate = depd_1.default("JsonRpcProvider.experimental_protocolConfig()");
-        deprecate("use `experimental_protocolConfig({ sync_checkpoint: 'genesis' })` to fetch the up-to-date or genesis protocol config explicitly");
-        return await this.sendJsonRpc("EXPERIMENTAL_protocol_config", {
-            sync_checkpoint: "genesis"
+     */ validators(blockId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            return this.sendJsonRpc("validators", [
+                blockId
+            ]);
         });
     }
     /**
      * Gets the protocol config at a block from RPC
-     * @see {@link }
      *
      * @param blockReference specifies the block to get the protocol config for
-     */ async experimental_protocolConfig(blockReference) {
-        return await this.sendJsonRpc("EXPERIMENTAL_protocol_config", blockReference);
-    }
-    /**
-     * @deprecated Use {@link lightClientProof} instead
-     */ async experimental_lightClientProof(request) {
-        const deprecate = depd_1.default("JsonRpcProvider.experimental_lightClientProof(request)");
-        deprecate("use `lightClientProof` instead");
-        return await this.lightClientProof(request);
+     */ experimental_protocolConfig(blockReference) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const _a = blockReference, { blockId  } = _a, otherParams = __rest(_a, [
+                "blockId"
+            ]);
+            return yield this.sendJsonRpc("EXPERIMENTAL_protocol_config", Object.assign(Object.assign({}, otherParams), {
+                block_id: blockId
+            }));
+        });
     }
     /**
      * Gets a light client execution proof for verifying execution outcomes
-     * @see {@link https://github.com/nearprotocol/NEPs/blob/master/specs/ChainSpec/LightClient.md#light-client-proof}
-     */ async lightClientProof(request) {
-        return await this.sendJsonRpc("EXPERIMENTAL_light_client_proof", request);
+     * @see [https://github.com/nearprotocol/NEPs/blob/master/specs/ChainSpec/LightClient.md#light-client-proof](https://github.com/nearprotocol/NEPs/blob/master/specs/ChainSpec/LightClient.md#light-client-proof)
+     */ lightClientProof(request) {
+        return __awaiter(this, void 0, void 0, function*() {
+            return yield this.sendJsonRpc("EXPERIMENTAL_light_client_proof", request);
+        });
     }
     /**
      * Gets access key changes for a given array of accountIds
      * See [docs for more info](https://docs.near.org/docs/develop/front-end/rpc#view-access-key-changes-all)
      * @returns {Promise<ChangeResult>}
-     */ async accessKeyChanges(accountIdArray, blockQuery) {
-        const { finality  } = blockQuery;
-        const { blockId  } = blockQuery;
-        return this.sendJsonRpc("EXPERIMENTAL_changes", {
-            changes_type: "all_access_key_changes",
-            account_ids: accountIdArray,
-            block_id: blockId,
-            finality
+     */ accessKeyChanges(accountIdArray, blockQuery) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { finality  } = blockQuery;
+            const { blockId  } = blockQuery;
+            return this.sendJsonRpc("EXPERIMENTAL_changes", {
+                changes_type: "all_access_key_changes",
+                account_ids: accountIdArray,
+                block_id: blockId,
+                finality
+            });
         });
     }
     /**
@@ -37049,14 +37250,16 @@ let _nextId = 123;
      * pass block_id OR finality as blockQuery, not both
      * See [docs for more info](https://docs.near.org/docs/develop/front-end/rpc#view-access-key-changes-single)
      * @returns {Promise<ChangeResult>}
-     */ async singleAccessKeyChanges(accessKeyArray, blockQuery) {
-        const { finality  } = blockQuery;
-        const { blockId  } = blockQuery;
-        return this.sendJsonRpc("EXPERIMENTAL_changes", {
-            changes_type: "single_access_key_changes",
-            keys: accessKeyArray,
-            block_id: blockId,
-            finality
+     */ singleAccessKeyChanges(accessKeyArray, blockQuery) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { finality  } = blockQuery;
+            const { blockId  } = blockQuery;
+            return this.sendJsonRpc("EXPERIMENTAL_changes", {
+                changes_type: "single_access_key_changes",
+                keys: accessKeyArray,
+                block_id: blockId,
+                finality
+            });
         });
     }
     /**
@@ -37064,14 +37267,16 @@ let _nextId = 123;
      * pass block_id OR finality as blockQuery, not both
      * See [docs for more info](https://docs.near.org/docs/develop/front-end/rpc#view-account-changes)
      * @returns {Promise<ChangeResult>}
-     */ async accountChanges(accountIdArray, blockQuery) {
-        const { finality  } = blockQuery;
-        const { blockId  } = blockQuery;
-        return this.sendJsonRpc("EXPERIMENTAL_changes", {
-            changes_type: "account_changes",
-            account_ids: accountIdArray,
-            block_id: blockId,
-            finality
+     */ accountChanges(accountIdArray, blockQuery) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { finality  } = blockQuery;
+            const { blockId  } = blockQuery;
+            return this.sendJsonRpc("EXPERIMENTAL_changes", {
+                changes_type: "account_changes",
+                account_ids: accountIdArray,
+                block_id: blockId,
+                finality
+            });
         });
     }
     /**
@@ -37080,15 +37285,17 @@ let _nextId = 123;
      * Note: If you pass a keyPrefix it must be base64 encoded
      * See [docs for more info](https://docs.near.org/docs/develop/front-end/rpc#view-contract-state-changes)
      * @returns {Promise<ChangeResult>}
-     */ async contractStateChanges(accountIdArray, blockQuery, keyPrefix = "") {
-        const { finality  } = blockQuery;
-        const { blockId  } = blockQuery;
-        return this.sendJsonRpc("EXPERIMENTAL_changes", {
-            changes_type: "data_changes",
-            account_ids: accountIdArray,
-            key_prefix_base64: keyPrefix,
-            block_id: blockId,
-            finality
+     */ contractStateChanges(accountIdArray, blockQuery, keyPrefix = "") {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { finality  } = blockQuery;
+            const { blockId  } = blockQuery;
+            return this.sendJsonRpc("EXPERIMENTAL_changes", {
+                changes_type: "data_changes",
+                account_ids: accountIdArray,
+                key_prefix_base64: keyPrefix,
+                block_id: blockId,
+                finality
+            });
         });
     }
     /**
@@ -37097,124 +37304,110 @@ let _nextId = 123;
      * Note: Change is returned in a base64 encoded WASM file
      * See [docs for more info](https://docs.near.org/docs/develop/front-end/rpc#view-contract-code-changes)
      * @returns {Promise<ChangeResult>}
-     */ async contractCodeChanges(accountIdArray, blockQuery) {
-        const { finality  } = blockQuery;
-        const { blockId  } = blockQuery;
-        return this.sendJsonRpc("EXPERIMENTAL_changes", {
-            changes_type: "contract_code_changes",
-            account_ids: accountIdArray,
-            block_id: blockId,
-            finality
+     */ contractCodeChanges(accountIdArray, blockQuery) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { finality  } = blockQuery;
+            const { blockId  } = blockQuery;
+            return this.sendJsonRpc("EXPERIMENTAL_changes", {
+                changes_type: "contract_code_changes",
+                account_ids: accountIdArray,
+                block_id: blockId,
+                finality
+            });
         });
     }
     /**
      * Returns gas price for a specific block_height or block_hash.
-     * @see {@link https://docs.near.org/docs/develop/front-end/rpc#gas-price}
+     * @see [https://docs.near.org/api/rpc/gas](https://docs.near.org/api/rpc/gas)
      *
      * @param blockId Block hash or height, or null for latest.
-     */ async gasPrice(blockId) {
-        return await this.sendJsonRpc("gas_price", [
-            blockId
-        ]);
+     */ gasPrice(blockId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            return yield this.sendJsonRpc("gas_price", [
+                blockId
+            ]);
+        });
     }
     /**
      * Directly call the RPC specifying the method and params
      *
      * @param method RPC method
      * @param params Parameters to the method
-     */ async sendJsonRpc(method, params) {
-        const response = await exponential_backoff_1.default(REQUEST_RETRY_WAIT, REQUEST_RETRY_NUMBER, REQUEST_RETRY_WAIT_BACKOFF, async ()=>{
-            try {
-                const request = {
-                    method,
-                    params,
-                    id: _nextId++,
-                    jsonrpc: "2.0"
-                };
-                const response = await web_1.fetchJson(this.connection, JSON.stringify(request));
-                if (response.error) {
-                    if (typeof response.error.data === "object") {
-                        if (typeof response.error.data.error_message === "string" && typeof response.error.data.error_type === "string") // if error data has error_message and error_type properties, we consider that node returned an error in the old format
-                        throw new errors_1.TypedError(response.error.data.error_message, response.error.data.error_type);
-                        throw rpc_errors_1.parseRpcError(response.error.data);
-                    } else {
-                        const errorMessage = `[${response.error.code}] ${response.error.message}: ${response.error.data}`;
-                        // NOTE: All this hackery is happening because structured errors not implemented
-                        // TODO: Fix when https://github.com/nearprotocol/nearcore/issues/1839 gets resolved
-                        if (response.error.data === "Timeout" || errorMessage.includes("Timeout error") || errorMessage.includes("query has timed out")) throw new errors_1.TypedError(errorMessage, "TimeoutError");
-                        throw new errors_1.TypedError(errorMessage, rpc_errors_1.getErrorTypeFromErrorMessage(response.error.data));
+     */ sendJsonRpc(method, params) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const response = yield (0, exponential_backoff_1.default)(REQUEST_RETRY_WAIT, REQUEST_RETRY_NUMBER, REQUEST_RETRY_WAIT_BACKOFF, ()=>__awaiter(this, void 0, void 0, function*() {
+                    try {
+                        const request = {
+                            method,
+                            params,
+                            id: _nextId++,
+                            jsonrpc: "2.0"
+                        };
+                        const response = yield (0, web_1.fetchJson)(this.connection, JSON.stringify(request));
+                        if (response.error) {
+                            if (typeof response.error.data === "object") {
+                                if (typeof response.error.data.error_message === "string" && typeof response.error.data.error_type === "string") // if error data has error_message and error_type properties, we consider that node returned an error in the old format
+                                throw new errors_1.TypedError(response.error.data.error_message, response.error.data.error_type);
+                                throw (0, rpc_errors_1.parseRpcError)(response.error.data);
+                            } else {
+                                const errorMessage = `[${response.error.code}] ${response.error.message}: ${response.error.data}`;
+                                // NOTE: All this hackery is happening because structured errors not implemented
+                                // TODO: Fix when https://github.com/nearprotocol/nearcore/issues/1839 gets resolved
+                                if (response.error.data === "Timeout" || errorMessage.includes("Timeout error") || errorMessage.includes("query has timed out")) throw new errors_1.TypedError(errorMessage, "TimeoutError");
+                                throw new errors_1.TypedError(errorMessage, response.error.name);
+                            }
+                        }
+                        // Success when response.error is not exist
+                        return response;
+                    } catch (error) {
+                        if (error.type === "TimeoutError") {
+                            console.warn(`Retrying request to ${method} as it has timed out`, params);
+                            return null;
+                        }
+                        throw error;
                     }
-                }
-                // Success when response.error is not exist
-                return response;
-            } catch (error) {
-                if (error.type === "TimeoutError") {
-                    console.warn(`Retrying request to ${method} as it has timed out`, params);
-                    return null;
-                }
-                throw error;
-            }
+                }));
+            const { result  } = response;
+            // From jsonrpc spec:
+            // result
+            //   This member is REQUIRED on success.
+            //   This member MUST NOT exist if there was an error invoking the method.
+            if (typeof result === "undefined") throw new errors_1.TypedError(`Exceeded ${REQUEST_RETRY_NUMBER} attempts for request to ${method}.`, "RetriesExceeded");
+            return result;
         });
-        const { result  } = response;
-        // From jsonrpc spec:
-        // result
-        //   This member is REQUIRED on success.
-        //   This member MUST NOT exist if there was an error invoking the method.
-        if (typeof result === "undefined") throw new errors_1.TypedError(`Exceeded ${REQUEST_RETRY_NUMBER} attempts for request to ${method}.`, "RetriesExceeded");
-        return result;
     }
 }
 exports.JsonRpcProvider = JsonRpcProvider;
 
-},{"e23955c4e3b585b7":"5c7yX","e3463364e0bda3d5":"2jGeI","e59469de585fb393":"cUEh0","e3bb709e66bc6047":"iSqiB","e0ff5a7a7d2b532":"btMYy","ac8f70b783c1cabe":"4JCmN","b5c6e85956982e6e":"51I5X","6e0ad7477125762f":"1TB1L"}],"2jGeI":[function(require,module,exports) {
-/*!
- * depd
- * Copyright(c) 2015 Douglas Christopher Wilson
- * MIT Licensed
- */ "use strict";
-/**
- * Module exports.
- * @public
- */ module.exports = depd;
-/**
- * Create deprecate for namespace in caller.
- */ function depd(namespace) {
-    if (!namespace) throw new TypeError("argument namespace is required");
-    function deprecate(message) {
-    // no-op in browser
-    }
-    deprecate._file = undefined;
-    deprecate._ignored = true;
-    deprecate._namespace = namespace;
-    deprecate._traced = false;
-    deprecate._warned = Object.create(null);
-    deprecate.function = wrapfunction;
-    deprecate.property = wrapproperty;
-    return deprecate;
-}
-/**
- * Return a wrapped function in a deprecation message.
- *
- * This is a no-op version of the wrapper, which does nothing but call
- * validation.
- */ function wrapfunction(fn, message) {
-    if (typeof fn !== "function") throw new TypeError("argument fn must be a function");
-    return fn;
-}
-/**
- * Wrap property in a deprecation message.
- *
- * This is a no-op version of the wrapper, which does nothing but call
- * validation.
- */ function wrapproperty(obj, prop, message) {
-    if (!obj || typeof obj !== "object" && typeof obj !== "function") throw new TypeError("argument obj must be object");
-    var descriptor = Object.getOwnPropertyDescriptor(obj, prop);
-    if (!descriptor) throw new TypeError("must call property on owner object");
-    if (!descriptor.configurable) throw new TypeError("property must be configurable");
-}
-
-},{}],"iSqiB":[function(require,module,exports) {
+},{"8b4c37adc999e846":"5heHz","e0e07aa8d7098d2d":"cUEh0","d7bb3b0dd93568c3":"iSqiB","9a24ee0e263692c5":"btMYy","959f68db7b54a4d9":"4JCmN","1f2edb0ae171ff91":"51I5X","64bf3af5932e2ed6":"1TB1L"}],"iSqiB":[function(require,module,exports) {
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
         "default": mod
@@ -37224,51 +37417,52 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.fetchJson = void 0;
-const http_errors_1 = __importDefault(require("1da11d67c5384da4"));
-const exponential_backoff_1 = __importDefault(require("3e29df3d6658982b"));
-const providers_1 = require("2c8ebafeb3a5a8e8");
-const errors_1 = require("eac7d651fc2c2c84");
+const http_errors_1 = __importDefault(require("2059982c38e93b28"));
+const exponential_backoff_1 = __importDefault(require("d361a343dbe39908"));
+const providers_1 = require("7cb752345f50e937");
+const errors_1 = require("4a864d2d62df2be4");
 const START_WAIT_TIME_MS = 1000;
 const BACKOFF_MULTIPLIER = 1.5;
 const RETRY_NUMBER = 10;
-async function fetchJson(connectionInfoOrUrl, json) {
-    let connectionInfo = {
-        url: null
-    };
-    if (typeof connectionInfoOrUrl === "string") connectionInfo.url = connectionInfoOrUrl;
-    else connectionInfo = connectionInfoOrUrl;
-    const response = await exponential_backoff_1.default(START_WAIT_TIME_MS, RETRY_NUMBER, BACKOFF_MULTIPLIER, async ()=>{
-        try {
-            const response = await fetch(connectionInfo.url, {
-                method: json ? "POST" : "GET",
-                body: json ? json : undefined,
-                headers: {
-                    ...connectionInfo.headers,
-                    "Content-Type": "application/json"
+function fetchJson(connectionInfoOrUrl, json) {
+    return __awaiter(this, void 0, void 0, function*() {
+        let connectionInfo = {
+            url: null
+        };
+        if (typeof connectionInfoOrUrl === "string") connectionInfo.url = connectionInfoOrUrl;
+        else connectionInfo = connectionInfoOrUrl;
+        const response = yield (0, exponential_backoff_1.default)(START_WAIT_TIME_MS, RETRY_NUMBER, BACKOFF_MULTIPLIER, ()=>__awaiter(this, void 0, void 0, function*() {
+                try {
+                    const response = yield fetch(connectionInfo.url, {
+                        method: json ? "POST" : "GET",
+                        body: json ? json : undefined,
+                        headers: Object.assign(Object.assign({}, connectionInfo.headers), {
+                            "Content-Type": "application/json"
+                        })
+                    });
+                    if (!response.ok) {
+                        if (response.status === 503) {
+                            (0, errors_1.logWarning)(`Retrying HTTP request for ${connectionInfo.url} as it's not available now`);
+                            return null;
+                        }
+                        throw (0, http_errors_1.default)(response.status, (yield response.text()));
+                    }
+                    return response;
+                } catch (error) {
+                    if (error.toString().includes("FetchError") || error.toString().includes("Failed to fetch")) {
+                        (0, errors_1.logWarning)(`Retrying HTTP request for ${connectionInfo.url} because of error: ${error}`);
+                        return null;
+                    }
+                    throw error;
                 }
-            });
-            if (!response.ok) {
-                if (response.status === 503) {
-                    errors_1.logWarning(`Retrying HTTP request for ${connectionInfo.url} as it's not available now`);
-                    return null;
-                }
-                throw http_errors_1.default(response.status, await response.text());
-            }
-            return response;
-        } catch (error) {
-            if (error.toString().includes("FetchError") || error.toString().includes("Failed to fetch")) {
-                errors_1.logWarning(`Retrying HTTP request for ${connectionInfo.url} because of error: ${error}`);
-                return null;
-            }
-            throw error;
-        }
+            }));
+        if (!response) throw new providers_1.TypedError(`Exceeded ${RETRY_NUMBER} attempts for ${connectionInfo.url}.`, "RetriesExceeded");
+        return yield response.json();
     });
-    if (!response) throw new providers_1.TypedError(`Exceeded ${RETRY_NUMBER} attempts for ${connectionInfo.url}.`, "RetriesExceeded");
-    return await response.json();
 }
 exports.fetchJson = fetchJson;
 
-},{"1da11d67c5384da4":"a3NQ3","3e29df3d6658982b":"51I5X","2c8ebafeb3a5a8e8":"gtL2a","eac7d651fc2c2c84":"btMYy"}],"a3NQ3":[function(require,module,exports) {
+},{"2059982c38e93b28":"a3NQ3","d361a343dbe39908":"51I5X","7cb752345f50e937":"gtL2a","4a864d2d62df2be4":"btMYy"}],"a3NQ3":[function(require,module,exports) {
 /*!
  * http-errors
  * Copyright(c) 2014 Jonathan Ong
@@ -37278,11 +37472,11 @@ exports.fetchJson = fetchJson;
 /**
  * Module dependencies.
  * @private
- */ var deprecate = require("a8e4c8076f9b8d05")("http-errors");
-var setPrototypeOf = require("c6b2e2dad836663d");
-var statuses = require("a97cb4611b672638");
-var inherits = require("1f648f8dbfab5b3d");
-var toIdentifier = require("151cb315e3b81223");
+ */ var deprecate = require("ef4246ed2976cd6b")("http-errors");
+var setPrototypeOf = require("f181b0f6e3ed05d9");
+var statuses = require("57c0e407c0cc97fa");
+var inherits = require("d25d9d9110eb5f65");
+var toIdentifier = require("6b4bbea1e04c4829");
 /**
  * Module exports.
  * @public
@@ -37478,7 +37672,7 @@ populateConstructorExports(module.exports, statuses.codes, module.exports.HttpEr
     return name.substr(-5) !== "Error" ? name + "Error" : name;
 }
 
-},{"a8e4c8076f9b8d05":"hArTA","c6b2e2dad836663d":"7xKC9","a97cb4611b672638":"l1u37","1f648f8dbfab5b3d":"bRL3M","151cb315e3b81223":"gn15y"}],"hArTA":[function(require,module,exports) {
+},{"ef4246ed2976cd6b":"hArTA","f181b0f6e3ed05d9":"7xKC9","57c0e407c0cc97fa":"l1u37","d25d9d9110eb5f65":"bRL3M","6b4bbea1e04c4829":"gn15y"}],"hArTA":[function(require,module,exports) {
 /*!
  * depd
  * Copyright(c) 2015 Douglas Christopher Wilson
@@ -37549,7 +37743,7 @@ function mixinProperties(obj, proto) {
 /**
  * Module dependencies.
  * @private
- */ var codes = require("c75b9f37ec6435d4");
+ */ var codes = require("284a6dffd45b61a3");
 /**
  * Module exports.
  * @public
@@ -37626,7 +37820,7 @@ status.retry = {
     return n;
 }
 
-},{"c75b9f37ec6435d4":"8IptR"}],"8IptR":[function(require,module,exports) {
+},{"284a6dffd45b61a3":"8IptR"}],"8IptR":[function(require,module,exports) {
 module.exports = JSON.parse('{"100":"Continue","101":"Switching Protocols","102":"Processing","103":"Early Hints","200":"OK","201":"Created","202":"Accepted","203":"Non-Authoritative Information","204":"No Content","205":"Reset Content","206":"Partial Content","207":"Multi-Status","208":"Already Reported","226":"IM Used","300":"Multiple Choices","301":"Moved Permanently","302":"Found","303":"See Other","304":"Not Modified","305":"Use Proxy","306":"(Unused)","307":"Temporary Redirect","308":"Permanent Redirect","400":"Bad Request","401":"Unauthorized","402":"Payment Required","403":"Forbidden","404":"Not Found","405":"Method Not Allowed","406":"Not Acceptable","407":"Proxy Authentication Required","408":"Request Timeout","409":"Conflict","410":"Gone","411":"Length Required","412":"Precondition Failed","413":"Payload Too Large","414":"URI Too Long","415":"Unsupported Media Type","416":"Range Not Satisfiable","417":"Expectation Failed","418":"I\'m a teapot","421":"Misdirected Request","422":"Unprocessable Entity","423":"Locked","424":"Failed Dependency","425":"Unordered Collection","426":"Upgrade Required","428":"Precondition Required","429":"Too Many Requests","431":"Request Header Fields Too Large","451":"Unavailable For Legal Reasons","500":"Internal Server Error","501":"Not Implemented","502":"Bad Gateway","503":"Service Unavailable","504":"Gateway Timeout","505":"HTTP Version Not Supported","506":"Variant Also Negotiates","507":"Insufficient Storage","508":"Loop Detected","509":"Bandwidth Limit Exceeded","510":"Not Extended","511":"Network Authentication Required"}');
 
 },{}],"bRL3M":[function(require,module,exports) {
@@ -37679,19 +37873,48 @@ module.exports = function inherits(ctor, superCtor) {
 
 },{}],"51I5X":[function(require,module,exports) {
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-async function exponentialBackoff(startWaitTime, retryNumber, waitBackoff, getResult) {
-    // TODO: jitter?
-    let waitTime = startWaitTime;
-    for(let i = 0; i < retryNumber; i++){
-        const result = await getResult();
-        if (result) return result;
-        await sleep(waitTime);
-        waitTime *= waitBackoff;
-    }
-    return null;
+function exponentialBackoff(startWaitTime, retryNumber, waitBackoff, getResult) {
+    return __awaiter(this, void 0, void 0, function*() {
+        // TODO: jitter?
+        let waitTime = startWaitTime;
+        for(let i = 0; i < retryNumber; i++){
+            const result = yield getResult();
+            if (result) return result;
+            yield sleep(waitTime);
+            waitTime *= waitBackoff;
+        }
+        return null;
+    });
 }
 exports.default = exponentialBackoff;
 // Sleep given number of millis.
@@ -37746,12 +37969,12 @@ var __importDefault = this && this.__importDefault || function(mod) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.getErrorTypeFromErrorMessage = exports.formatError = exports.parseResultError = exports.parseRpcError = exports.ServerError = void 0;
-const mustache_1 = __importDefault(require("e1a454cee8b185aa"));
-const rpc_error_schema_json_1 = __importDefault(require("85bd44c25d03e7b4"));
-const error_messages_json_1 = __importDefault(require("e2d3b22743aeda73"));
-const common_index_1 = require("1afa3b7aa5d7170f");
-const errors_1 = require("2f959b89b0d75f3e");
+exports.formatError = exports.parseResultError = exports.parseRpcError = exports.ServerError = void 0;
+const mustache_1 = __importDefault(require("6a113ad5f0589e62"));
+const rpc_error_schema_json_1 = __importDefault(require("84e3dbce2fae03d5"));
+const error_messages_json_1 = __importDefault(require("d7494e58a4bdac9"));
+const common_index_1 = require("fce80a37876bdcb2");
+const errors_1 = require("3e9c6822e400983e");
 const mustacheHelpers = {
     formatNear: ()=>(n, render)=>common_index_1.utils.format.formatNearAmount(render(n))
 };
@@ -37780,10 +38003,7 @@ function parseResultError(result) {
 }
 exports.parseResultError = parseResultError;
 function formatError(errorClassName, errorData) {
-    if (typeof error_messages_json_1.default[errorClassName] === "string") return mustache_1.default.render(error_messages_json_1.default[errorClassName], {
-        ...errorData,
-        ...mustacheHelpers
-    });
+    if (typeof error_messages_json_1.default[errorClassName] === "string") return mustache_1.default.render(error_messages_json_1.default[errorClassName], Object.assign(Object.assign({}, errorData), mustacheHelpers));
     return JSON.stringify(errorData);
 }
 exports.formatError = formatError;
@@ -37819,24 +38039,6 @@ exports.formatError = formatError;
         return typeName;
     }
 }
-function getErrorTypeFromErrorMessage(errorMessage) {
-    // This function should be removed when JSON RPC starts returning typed errors.
-    switch(true){
-        case /^account .*? does not exist while viewing$/.test(errorMessage):
-            return "AccountDoesNotExist";
-        case /^Account .*? doesn't exist$/.test(errorMessage):
-            return "AccountDoesNotExist";
-        case /^access key .*? does not exist while viewing$/.test(errorMessage):
-            return "AccessKeyDoesNotExist";
-        case /wasm execution failed with error: FunctionCallError\(CompilationError\(CodeDoesNotExist/.test(errorMessage):
-            return "CodeDoesNotExist";
-        case /Transaction nonce \d+ must be larger than nonce of the used access key \d+/.test(errorMessage):
-            return "InvalidNonce";
-        default:
-            return "UntypedError";
-    }
-}
-exports.getErrorTypeFromErrorMessage = getErrorTypeFromErrorMessage;
 /**
  * Helper function determining if the argument is an object
  * @param n Value to check
@@ -37850,7 +38052,7 @@ exports.getErrorTypeFromErrorMessage = getErrorTypeFromErrorMessage;
     return Object.prototype.toString.call(n) === "[object String]";
 }
 
-},{"e1a454cee8b185aa":"izE6r","85bd44c25d03e7b4":"k81HS","e2d3b22743aeda73":"1Z5Hy","1afa3b7aa5d7170f":"gtZXS","2f959b89b0d75f3e":"btMYy"}],"izE6r":[function(require,module,exports) {
+},{"6a113ad5f0589e62":"izE6r","84e3dbce2fae03d5":"k81HS","d7494e58a4bdac9":"1Z5Hy","fce80a37876bdcb2":"gtZXS","3e9c6822e400983e":"btMYy"}],"izE6r":[function(require,module,exports) {
 (function(global, factory) {
     module.exports = factory();
 })(this, function() {
@@ -38454,12 +38656,14 @@ module.exports = JSON.parse('{"GasLimitExceeded":"Exceeded the maximum amount of
 "use strict";
 var __createBinding = this && this.__createBinding || (Object.create ? function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
-    Object.defineProperty(o, k2, {
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) desc = {
         enumerable: true,
         get: function() {
             return m[k];
         }
-    });
+    };
+    Object.defineProperty(o, k2, desc);
 } : function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     o[k2] = m[k];
@@ -38476,7 +38680,7 @@ var __importStar = this && this.__importStar || function(mod) {
     if (mod && mod.__esModule) return mod;
     var result = {};
     if (mod != null) {
-        for(var k in mod)if (k !== "default" && Object.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+        for(var k in mod)if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
     }
     __setModuleDefault(result, mod);
     return result;
@@ -38485,19 +38689,19 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.logWarning = exports.rpc_errors = exports.KeyPairEd25519 = exports.KeyPair = exports.PublicKey = exports.format = exports.enums = exports.web = exports.serialize = exports.key_pair = void 0;
-const key_pair = __importStar(require("11349b623d8a5244"));
+const key_pair = __importStar(require("d460d9f23498f4b0"));
 exports.key_pair = key_pair;
-const serialize = __importStar(require("8794f22a6721ba85"));
+const serialize = __importStar(require("6f8e62131f585ad6"));
 exports.serialize = serialize;
-const web = __importStar(require("d6e0fb9363e91bb9"));
+const web = __importStar(require("227f583901a67d8c"));
 exports.web = web;
-const enums = __importStar(require("3fec85b4ed5a5e4e"));
+const enums = __importStar(require("33ea82e25c08fe58"));
 exports.enums = enums;
-const format = __importStar(require("86f04c2052561897"));
+const format = __importStar(require("950924d685448e1d"));
 exports.format = format;
-const rpc_errors = __importStar(require("6a203d6ef90a82d1"));
+const rpc_errors = __importStar(require("5ffb977a2c36bc2c"));
 exports.rpc_errors = rpc_errors;
-const key_pair_1 = require("11349b623d8a5244");
+const key_pair_1 = require("d460d9f23498f4b0");
 Object.defineProperty(exports, "PublicKey", {
     enumerable: true,
     get: function() {
@@ -38516,7 +38720,7 @@ Object.defineProperty(exports, "KeyPairEd25519", {
         return key_pair_1.KeyPairEd25519;
     }
 });
-const errors_1 = require("d532f0e25ddf55f9");
+const errors_1 = require("8b48cfac38a0787a");
 Object.defineProperty(exports, "logWarning", {
     enumerable: true,
     get: function() {
@@ -38524,7 +38728,7 @@ Object.defineProperty(exports, "logWarning", {
     }
 });
 
-},{"11349b623d8a5244":"kBQFP","8794f22a6721ba85":"dUoM9","d6e0fb9363e91bb9":"iSqiB","3fec85b4ed5a5e4e":"kjmPo","86f04c2052561897":"16c5X","6a203d6ef90a82d1":"1TB1L","d532f0e25ddf55f9":"btMYy"}],"16c5X":[function(require,module,exports) {
+},{"d460d9f23498f4b0":"kBQFP","6f8e62131f585ad6":"dUoM9","227f583901a67d8c":"iSqiB","33ea82e25c08fe58":"kjmPo","950924d685448e1d":"16c5X","5ffb977a2c36bc2c":"1TB1L","8b48cfac38a0787a":"btMYy"}],"16c5X":[function(require,module,exports) {
 "use strict";
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
@@ -38535,7 +38739,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.parseNearAmount = exports.formatNearAmount = exports.NEAR_NOMINATION = exports.NEAR_NOMINATION_EXP = void 0;
-const bn_js_1 = __importDefault(require("25a42234f3bd0a84"));
+const bn_js_1 = __importDefault(require("b7408ba789dfd1d4"));
 /**
  * Exponent for calculating how many indivisible units are there in one NEAR. See {@link NEAR_NOMINATION}.
  */ exports.NEAR_NOMINATION_EXP = 24;
@@ -38615,2772 +38819,36 @@ exports.parseNearAmount = parseNearAmount;
     return value;
 }
 
-},{"25a42234f3bd0a84":"9pdNn"}],"9pdNn":[function(require,module,exports) {
-(function(module1, exports) {
-    "use strict";
-    // Utils
-    function assert(val, msg) {
-        if (!val) throw new Error(msg || "Assertion failed");
-    }
-    // Could use `inherits` module, but don't want to move from single file
-    // architecture yet.
-    function inherits(ctor, superCtor) {
-        ctor.super_ = superCtor;
-        var TempCtor = function() {};
-        TempCtor.prototype = superCtor.prototype;
-        ctor.prototype = new TempCtor();
-        ctor.prototype.constructor = ctor;
-    }
-    // BN
-    function BN(number, base, endian) {
-        if (BN.isBN(number)) return number;
-        this.negative = 0;
-        this.words = null;
-        this.length = 0;
-        // Reduction context
-        this.red = null;
-        if (number !== null) {
-            if (base === "le" || base === "be") {
-                endian = base;
-                base = 10;
-            }
-            this._init(number || 0, base || 10, endian || "be");
-        }
-    }
-    if (typeof module1 === "object") module1.exports = BN;
-    else exports.BN = BN;
-    BN.BN = BN;
-    BN.wordSize = 26;
-    var Buffer;
-    try {
-        if (typeof window !== "undefined" && typeof window.Buffer !== "undefined") Buffer = window.Buffer;
-        else Buffer = require("58c0d4bc9391e1e1").Buffer;
-    } catch (e) {}
-    BN.isBN = function isBN(num) {
-        if (num instanceof BN) return true;
-        return num !== null && typeof num === "object" && num.constructor.wordSize === BN.wordSize && Array.isArray(num.words);
-    };
-    BN.max = function max(left, right) {
-        if (left.cmp(right) > 0) return left;
-        return right;
-    };
-    BN.min = function min(left, right) {
-        if (left.cmp(right) < 0) return left;
-        return right;
-    };
-    BN.prototype._init = function init(number, base, endian) {
-        if (typeof number === "number") return this._initNumber(number, base, endian);
-        if (typeof number === "object") return this._initArray(number, base, endian);
-        if (base === "hex") base = 16;
-        assert(base === (base | 0) && base >= 2 && base <= 36);
-        number = number.toString().replace(/\s+/g, "");
-        var start = 0;
-        if (number[0] === "-") {
-            start++;
-            this.negative = 1;
-        }
-        if (start < number.length) {
-            if (base === 16) this._parseHex(number, start, endian);
-            else {
-                this._parseBase(number, base, start);
-                if (endian === "le") this._initArray(this.toArray(), base, endian);
-            }
-        }
-    };
-    BN.prototype._initNumber = function _initNumber(number, base, endian) {
-        if (number < 0) {
-            this.negative = 1;
-            number = -number;
-        }
-        if (number < 0x4000000) {
-            this.words = [
-                number & 0x3ffffff
-            ];
-            this.length = 1;
-        } else if (number < 0x10000000000000) {
-            this.words = [
-                number & 0x3ffffff,
-                number / 0x4000000 & 0x3ffffff
-            ];
-            this.length = 2;
-        } else {
-            assert(number < 0x20000000000000); // 2 ^ 53 (unsafe)
-            this.words = [
-                number & 0x3ffffff,
-                number / 0x4000000 & 0x3ffffff,
-                1
-            ];
-            this.length = 3;
-        }
-        if (endian !== "le") return;
-        // Reverse the bytes
-        this._initArray(this.toArray(), base, endian);
-    };
-    BN.prototype._initArray = function _initArray(number, base, endian) {
-        // Perhaps a Uint8Array
-        assert(typeof number.length === "number");
-        if (number.length <= 0) {
-            this.words = [
-                0
-            ];
-            this.length = 1;
-            return this;
-        }
-        this.length = Math.ceil(number.length / 3);
-        this.words = new Array(this.length);
-        for(var i = 0; i < this.length; i++)this.words[i] = 0;
-        var j, w;
-        var off = 0;
-        if (endian === "be") for(i = number.length - 1, j = 0; i >= 0; i -= 3){
-            w = number[i] | number[i - 1] << 8 | number[i - 2] << 16;
-            this.words[j] |= w << off & 0x3ffffff;
-            this.words[j + 1] = w >>> 26 - off & 0x3ffffff;
-            off += 24;
-            if (off >= 26) {
-                off -= 26;
-                j++;
-            }
-        }
-        else if (endian === "le") for(i = 0, j = 0; i < number.length; i += 3){
-            w = number[i] | number[i + 1] << 8 | number[i + 2] << 16;
-            this.words[j] |= w << off & 0x3ffffff;
-            this.words[j + 1] = w >>> 26 - off & 0x3ffffff;
-            off += 24;
-            if (off >= 26) {
-                off -= 26;
-                j++;
-            }
-        }
-        return this._strip();
-    };
-    function parseHex4Bits(string, index) {
-        var c = string.charCodeAt(index);
-        // '0' - '9'
-        if (c >= 48 && c <= 57) return c - 48;
-        else if (c >= 65 && c <= 70) return c - 55;
-        else if (c >= 97 && c <= 102) return c - 87;
-        else assert(false, "Invalid character in " + string);
-    }
-    function parseHexByte(string, lowerBound, index) {
-        var r = parseHex4Bits(string, index);
-        if (index - 1 >= lowerBound) r |= parseHex4Bits(string, index - 1) << 4;
-        return r;
-    }
-    BN.prototype._parseHex = function _parseHex(number, start, endian) {
-        // Create possibly bigger array to ensure that it fits the number
-        this.length = Math.ceil((number.length - start) / 6);
-        this.words = new Array(this.length);
-        for(var i = 0; i < this.length; i++)this.words[i] = 0;
-        // 24-bits chunks
-        var off = 0;
-        var j = 0;
-        var w;
-        if (endian === "be") for(i = number.length - 1; i >= start; i -= 2){
-            w = parseHexByte(number, start, i) << off;
-            this.words[j] |= w & 0x3ffffff;
-            if (off >= 18) {
-                off -= 18;
-                j += 1;
-                this.words[j] |= w >>> 26;
-            } else off += 8;
-        }
-        else {
-            var parseLength = number.length - start;
-            for(i = parseLength % 2 === 0 ? start + 1 : start; i < number.length; i += 2){
-                w = parseHexByte(number, start, i) << off;
-                this.words[j] |= w & 0x3ffffff;
-                if (off >= 18) {
-                    off -= 18;
-                    j += 1;
-                    this.words[j] |= w >>> 26;
-                } else off += 8;
-            }
-        }
-        this._strip();
-    };
-    function parseBase(str, start, end, mul) {
-        var r = 0;
-        var b = 0;
-        var len = Math.min(str.length, end);
-        for(var i = start; i < len; i++){
-            var c = str.charCodeAt(i) - 48;
-            r *= mul;
-            // 'a'
-            if (c >= 49) b = c - 49 + 0xa;
-            else if (c >= 17) b = c - 17 + 0xa;
-            else b = c;
-            assert(c >= 0 && b < mul, "Invalid character");
-            r += b;
-        }
-        return r;
-    }
-    BN.prototype._parseBase = function _parseBase(number, base, start) {
-        // Initialize as zero
-        this.words = [
-            0
-        ];
-        this.length = 1;
-        // Find length of limb in base
-        for(var limbLen = 0, limbPow = 1; limbPow <= 0x3ffffff; limbPow *= base)limbLen++;
-        limbLen--;
-        limbPow = limbPow / base | 0;
-        var total = number.length - start;
-        var mod = total % limbLen;
-        var end = Math.min(total, total - mod) + start;
-        var word = 0;
-        for(var i = start; i < end; i += limbLen){
-            word = parseBase(number, i, i + limbLen, base);
-            this.imuln(limbPow);
-            if (this.words[0] + word < 0x4000000) this.words[0] += word;
-            else this._iaddn(word);
-        }
-        if (mod !== 0) {
-            var pow = 1;
-            word = parseBase(number, i, number.length, base);
-            for(i = 0; i < mod; i++)pow *= base;
-            this.imuln(pow);
-            if (this.words[0] + word < 0x4000000) this.words[0] += word;
-            else this._iaddn(word);
-        }
-        this._strip();
-    };
-    BN.prototype.copy = function copy(dest) {
-        dest.words = new Array(this.length);
-        for(var i = 0; i < this.length; i++)dest.words[i] = this.words[i];
-        dest.length = this.length;
-        dest.negative = this.negative;
-        dest.red = this.red;
-    };
-    function move(dest, src) {
-        dest.words = src.words;
-        dest.length = src.length;
-        dest.negative = src.negative;
-        dest.red = src.red;
-    }
-    BN.prototype._move = function _move(dest) {
-        move(dest, this);
-    };
-    BN.prototype.clone = function clone() {
-        var r = new BN(null);
-        this.copy(r);
-        return r;
-    };
-    BN.prototype._expand = function _expand(size) {
-        while(this.length < size)this.words[this.length++] = 0;
-        return this;
-    };
-    // Remove leading `0` from `this`
-    BN.prototype._strip = function strip() {
-        while(this.length > 1 && this.words[this.length - 1] === 0)this.length--;
-        return this._normSign();
-    };
-    BN.prototype._normSign = function _normSign() {
-        // -0 = 0
-        if (this.length === 1 && this.words[0] === 0) this.negative = 0;
-        return this;
-    };
-    // Check Symbol.for because not everywhere where Symbol defined
-    // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#Browser_compatibility
-    if (typeof Symbol !== "undefined" && typeof Symbol.for === "function") try {
-        BN.prototype[Symbol.for("nodejs.util.inspect.custom")] = inspect;
-    } catch (e) {
-        BN.prototype.inspect = inspect;
-    }
-    else BN.prototype.inspect = inspect;
-    function inspect() {
-        return (this.red ? "<BN-R: " : "<BN: ") + this.toString(16) + ">";
-    }
-    /*
-
-  var zeros = [];
-  var groupSizes = [];
-  var groupBases = [];
-
-  var s = '';
-  var i = -1;
-  while (++i < BN.wordSize) {
-    zeros[i] = s;
-    s += '0';
-  }
-  groupSizes[0] = 0;
-  groupSizes[1] = 0;
-  groupBases[0] = 0;
-  groupBases[1] = 0;
-  var base = 2 - 1;
-  while (++base < 36 + 1) {
-    var groupSize = 0;
-    var groupBase = 1;
-    while (groupBase < (1 << BN.wordSize) / base) {
-      groupBase *= base;
-      groupSize += 1;
-    }
-    groupSizes[base] = groupSize;
-    groupBases[base] = groupBase;
-  }
-
-  */ var zeros = [
-        "",
-        "0",
-        "00",
-        "000",
-        "0000",
-        "00000",
-        "000000",
-        "0000000",
-        "00000000",
-        "000000000",
-        "0000000000",
-        "00000000000",
-        "000000000000",
-        "0000000000000",
-        "00000000000000",
-        "000000000000000",
-        "0000000000000000",
-        "00000000000000000",
-        "000000000000000000",
-        "0000000000000000000",
-        "00000000000000000000",
-        "000000000000000000000",
-        "0000000000000000000000",
-        "00000000000000000000000",
-        "000000000000000000000000",
-        "0000000000000000000000000"
-    ];
-    var groupSizes = [
-        0,
-        0,
-        25,
-        16,
-        12,
-        11,
-        10,
-        9,
-        8,
-        8,
-        7,
-        7,
-        7,
-        7,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        6,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5,
-        5
-    ];
-    var groupBases = [
-        0,
-        0,
-        33554432,
-        43046721,
-        16777216,
-        48828125,
-        60466176,
-        40353607,
-        16777216,
-        43046721,
-        10000000,
-        19487171,
-        35831808,
-        62748517,
-        7529536,
-        11390625,
-        16777216,
-        24137569,
-        34012224,
-        47045881,
-        64000000,
-        4084101,
-        5153632,
-        6436343,
-        7962624,
-        9765625,
-        11881376,
-        14348907,
-        17210368,
-        20511149,
-        24300000,
-        28629151,
-        33554432,
-        39135393,
-        45435424,
-        52521875,
-        60466176
-    ];
-    BN.prototype.toString = function toString(base, padding) {
-        base = base || 10;
-        padding = padding | 0 || 1;
-        var out;
-        if (base === 16 || base === "hex") {
-            out = "";
-            var off = 0;
-            var carry = 0;
-            for(var i = 0; i < this.length; i++){
-                var w = this.words[i];
-                var word = ((w << off | carry) & 0xffffff).toString(16);
-                carry = w >>> 24 - off & 0xffffff;
-                if (carry !== 0 || i !== this.length - 1) out = zeros[6 - word.length] + word + out;
-                else out = word + out;
-                off += 2;
-                if (off >= 26) {
-                    off -= 26;
-                    i--;
-                }
-            }
-            if (carry !== 0) out = carry.toString(16) + out;
-            while(out.length % padding !== 0)out = "0" + out;
-            if (this.negative !== 0) out = "-" + out;
-            return out;
-        }
-        if (base === (base | 0) && base >= 2 && base <= 36) {
-            // var groupSize = Math.floor(BN.wordSize * Math.LN2 / Math.log(base));
-            var groupSize = groupSizes[base];
-            // var groupBase = Math.pow(base, groupSize);
-            var groupBase = groupBases[base];
-            out = "";
-            var c = this.clone();
-            c.negative = 0;
-            while(!c.isZero()){
-                var r = c.modrn(groupBase).toString(base);
-                c = c.idivn(groupBase);
-                if (!c.isZero()) out = zeros[groupSize - r.length] + r + out;
-                else out = r + out;
-            }
-            if (this.isZero()) out = "0" + out;
-            while(out.length % padding !== 0)out = "0" + out;
-            if (this.negative !== 0) out = "-" + out;
-            return out;
-        }
-        assert(false, "Base should be between 2 and 36");
-    };
-    BN.prototype.toNumber = function toNumber() {
-        var ret = this.words[0];
-        if (this.length === 2) ret += this.words[1] * 0x4000000;
-        else if (this.length === 3 && this.words[2] === 0x01) // NOTE: at this stage it is known that the top bit is set
-        ret += 0x10000000000000 + this.words[1] * 0x4000000;
-        else if (this.length > 2) assert(false, "Number can only safely store up to 53 bits");
-        return this.negative !== 0 ? -ret : ret;
-    };
-    BN.prototype.toJSON = function toJSON() {
-        return this.toString(16, 2);
-    };
-    if (Buffer) BN.prototype.toBuffer = function toBuffer(endian, length) {
-        return this.toArrayLike(Buffer, endian, length);
-    };
-    BN.prototype.toArray = function toArray(endian, length) {
-        return this.toArrayLike(Array, endian, length);
-    };
-    var allocate = function allocate(ArrayType, size) {
-        if (ArrayType.allocUnsafe) return ArrayType.allocUnsafe(size);
-        return new ArrayType(size);
-    };
-    BN.prototype.toArrayLike = function toArrayLike(ArrayType, endian, length) {
-        this._strip();
-        var byteLength = this.byteLength();
-        var reqLength = length || Math.max(1, byteLength);
-        assert(byteLength <= reqLength, "byte array longer than desired length");
-        assert(reqLength > 0, "Requested array length <= 0");
-        var res = allocate(ArrayType, reqLength);
-        var postfix = endian === "le" ? "LE" : "BE";
-        this["_toArrayLike" + postfix](res, byteLength);
-        return res;
-    };
-    BN.prototype._toArrayLikeLE = function _toArrayLikeLE(res, byteLength) {
-        var position = 0;
-        var carry = 0;
-        for(var i = 0, shift = 0; i < this.length; i++){
-            var word = this.words[i] << shift | carry;
-            res[position++] = word & 0xff;
-            if (position < res.length) res[position++] = word >> 8 & 0xff;
-            if (position < res.length) res[position++] = word >> 16 & 0xff;
-            if (shift === 6) {
-                if (position < res.length) res[position++] = word >> 24 & 0xff;
-                carry = 0;
-                shift = 0;
-            } else {
-                carry = word >>> 24;
-                shift += 2;
-            }
-        }
-        if (position < res.length) {
-            res[position++] = carry;
-            while(position < res.length)res[position++] = 0;
-        }
-    };
-    BN.prototype._toArrayLikeBE = function _toArrayLikeBE(res, byteLength) {
-        var position = res.length - 1;
-        var carry = 0;
-        for(var i = 0, shift = 0; i < this.length; i++){
-            var word = this.words[i] << shift | carry;
-            res[position--] = word & 0xff;
-            if (position >= 0) res[position--] = word >> 8 & 0xff;
-            if (position >= 0) res[position--] = word >> 16 & 0xff;
-            if (shift === 6) {
-                if (position >= 0) res[position--] = word >> 24 & 0xff;
-                carry = 0;
-                shift = 0;
-            } else {
-                carry = word >>> 24;
-                shift += 2;
-            }
-        }
-        if (position >= 0) {
-            res[position--] = carry;
-            while(position >= 0)res[position--] = 0;
-        }
-    };
-    if (Math.clz32) BN.prototype._countBits = function _countBits(w) {
-        return 32 - Math.clz32(w);
-    };
-    else BN.prototype._countBits = function _countBits(w) {
-        var t = w;
-        var r = 0;
-        if (t >= 0x1000) {
-            r += 13;
-            t >>>= 13;
-        }
-        if (t >= 0x40) {
-            r += 7;
-            t >>>= 7;
-        }
-        if (t >= 0x8) {
-            r += 4;
-            t >>>= 4;
-        }
-        if (t >= 0x02) {
-            r += 2;
-            t >>>= 2;
-        }
-        return r + t;
-    };
-    BN.prototype._zeroBits = function _zeroBits(w) {
-        // Short-cut
-        if (w === 0) return 26;
-        var t = w;
-        var r = 0;
-        if ((t & 0x1fff) === 0) {
-            r += 13;
-            t >>>= 13;
-        }
-        if ((t & 0x7f) === 0) {
-            r += 7;
-            t >>>= 7;
-        }
-        if ((t & 0xf) === 0) {
-            r += 4;
-            t >>>= 4;
-        }
-        if ((t & 0x3) === 0) {
-            r += 2;
-            t >>>= 2;
-        }
-        if ((t & 0x1) === 0) r++;
-        return r;
-    };
-    // Return number of used bits in a BN
-    BN.prototype.bitLength = function bitLength() {
-        var w = this.words[this.length - 1];
-        var hi = this._countBits(w);
-        return (this.length - 1) * 26 + hi;
-    };
-    function toBitArray(num) {
-        var w = new Array(num.bitLength());
-        for(var bit = 0; bit < w.length; bit++){
-            var off = bit / 26 | 0;
-            var wbit = bit % 26;
-            w[bit] = num.words[off] >>> wbit & 0x01;
-        }
-        return w;
-    }
-    // Number of trailing zero bits
-    BN.prototype.zeroBits = function zeroBits() {
-        if (this.isZero()) return 0;
-        var r = 0;
-        for(var i = 0; i < this.length; i++){
-            var b = this._zeroBits(this.words[i]);
-            r += b;
-            if (b !== 26) break;
-        }
-        return r;
-    };
-    BN.prototype.byteLength = function byteLength() {
-        return Math.ceil(this.bitLength() / 8);
-    };
-    BN.prototype.toTwos = function toTwos(width) {
-        if (this.negative !== 0) return this.abs().inotn(width).iaddn(1);
-        return this.clone();
-    };
-    BN.prototype.fromTwos = function fromTwos(width) {
-        if (this.testn(width - 1)) return this.notn(width).iaddn(1).ineg();
-        return this.clone();
-    };
-    BN.prototype.isNeg = function isNeg() {
-        return this.negative !== 0;
-    };
-    // Return negative clone of `this`
-    BN.prototype.neg = function neg() {
-        return this.clone().ineg();
-    };
-    BN.prototype.ineg = function ineg() {
-        if (!this.isZero()) this.negative ^= 1;
-        return this;
-    };
-    // Or `num` with `this` in-place
-    BN.prototype.iuor = function iuor(num) {
-        while(this.length < num.length)this.words[this.length++] = 0;
-        for(var i = 0; i < num.length; i++)this.words[i] = this.words[i] | num.words[i];
-        return this._strip();
-    };
-    BN.prototype.ior = function ior(num) {
-        assert((this.negative | num.negative) === 0);
-        return this.iuor(num);
-    };
-    // Or `num` with `this`
-    BN.prototype.or = function or(num) {
-        if (this.length > num.length) return this.clone().ior(num);
-        return num.clone().ior(this);
-    };
-    BN.prototype.uor = function uor(num) {
-        if (this.length > num.length) return this.clone().iuor(num);
-        return num.clone().iuor(this);
-    };
-    // And `num` with `this` in-place
-    BN.prototype.iuand = function iuand(num) {
-        // b = min-length(num, this)
-        var b;
-        if (this.length > num.length) b = num;
-        else b = this;
-        for(var i = 0; i < b.length; i++)this.words[i] = this.words[i] & num.words[i];
-        this.length = b.length;
-        return this._strip();
-    };
-    BN.prototype.iand = function iand(num) {
-        assert((this.negative | num.negative) === 0);
-        return this.iuand(num);
-    };
-    // And `num` with `this`
-    BN.prototype.and = function and(num) {
-        if (this.length > num.length) return this.clone().iand(num);
-        return num.clone().iand(this);
-    };
-    BN.prototype.uand = function uand(num) {
-        if (this.length > num.length) return this.clone().iuand(num);
-        return num.clone().iuand(this);
-    };
-    // Xor `num` with `this` in-place
-    BN.prototype.iuxor = function iuxor(num) {
-        // a.length > b.length
-        var a;
-        var b;
-        if (this.length > num.length) {
-            a = this;
-            b = num;
-        } else {
-            a = num;
-            b = this;
-        }
-        for(var i = 0; i < b.length; i++)this.words[i] = a.words[i] ^ b.words[i];
-        if (this !== a) for(; i < a.length; i++)this.words[i] = a.words[i];
-        this.length = a.length;
-        return this._strip();
-    };
-    BN.prototype.ixor = function ixor(num) {
-        assert((this.negative | num.negative) === 0);
-        return this.iuxor(num);
-    };
-    // Xor `num` with `this`
-    BN.prototype.xor = function xor(num) {
-        if (this.length > num.length) return this.clone().ixor(num);
-        return num.clone().ixor(this);
-    };
-    BN.prototype.uxor = function uxor(num) {
-        if (this.length > num.length) return this.clone().iuxor(num);
-        return num.clone().iuxor(this);
-    };
-    // Not ``this`` with ``width`` bitwidth
-    BN.prototype.inotn = function inotn(width) {
-        assert(typeof width === "number" && width >= 0);
-        var bytesNeeded = Math.ceil(width / 26) | 0;
-        var bitsLeft = width % 26;
-        // Extend the buffer with leading zeroes
-        this._expand(bytesNeeded);
-        if (bitsLeft > 0) bytesNeeded--;
-        // Handle complete words
-        for(var i = 0; i < bytesNeeded; i++)this.words[i] = ~this.words[i] & 0x3ffffff;
-        // Handle the residue
-        if (bitsLeft > 0) this.words[i] = ~this.words[i] & 0x3ffffff >> 26 - bitsLeft;
-        // And remove leading zeroes
-        return this._strip();
-    };
-    BN.prototype.notn = function notn(width) {
-        return this.clone().inotn(width);
-    };
-    // Set `bit` of `this`
-    BN.prototype.setn = function setn(bit, val) {
-        assert(typeof bit === "number" && bit >= 0);
-        var off = bit / 26 | 0;
-        var wbit = bit % 26;
-        this._expand(off + 1);
-        if (val) this.words[off] = this.words[off] | 1 << wbit;
-        else this.words[off] = this.words[off] & ~(1 << wbit);
-        return this._strip();
-    };
-    // Add `num` to `this` in-place
-    BN.prototype.iadd = function iadd(num) {
-        var r;
-        // negative + positive
-        if (this.negative !== 0 && num.negative === 0) {
-            this.negative = 0;
-            r = this.isub(num);
-            this.negative ^= 1;
-            return this._normSign();
-        // positive + negative
-        } else if (this.negative === 0 && num.negative !== 0) {
-            num.negative = 0;
-            r = this.isub(num);
-            num.negative = 1;
-            return r._normSign();
-        }
-        // a.length > b.length
-        var a, b;
-        if (this.length > num.length) {
-            a = this;
-            b = num;
-        } else {
-            a = num;
-            b = this;
-        }
-        var carry = 0;
-        for(var i = 0; i < b.length; i++){
-            r = (a.words[i] | 0) + (b.words[i] | 0) + carry;
-            this.words[i] = r & 0x3ffffff;
-            carry = r >>> 26;
-        }
-        for(; carry !== 0 && i < a.length; i++){
-            r = (a.words[i] | 0) + carry;
-            this.words[i] = r & 0x3ffffff;
-            carry = r >>> 26;
-        }
-        this.length = a.length;
-        if (carry !== 0) {
-            this.words[this.length] = carry;
-            this.length++;
-        // Copy the rest of the words
-        } else if (a !== this) for(; i < a.length; i++)this.words[i] = a.words[i];
-        return this;
-    };
-    // Add `num` to `this`
-    BN.prototype.add = function add(num) {
-        var res;
-        if (num.negative !== 0 && this.negative === 0) {
-            num.negative = 0;
-            res = this.sub(num);
-            num.negative ^= 1;
-            return res;
-        } else if (num.negative === 0 && this.negative !== 0) {
-            this.negative = 0;
-            res = num.sub(this);
-            this.negative = 1;
-            return res;
-        }
-        if (this.length > num.length) return this.clone().iadd(num);
-        return num.clone().iadd(this);
-    };
-    // Subtract `num` from `this` in-place
-    BN.prototype.isub = function isub(num) {
-        // this - (-num) = this + num
-        if (num.negative !== 0) {
-            num.negative = 0;
-            var r = this.iadd(num);
-            num.negative = 1;
-            return r._normSign();
-        // -this - num = -(this + num)
-        } else if (this.negative !== 0) {
-            this.negative = 0;
-            this.iadd(num);
-            this.negative = 1;
-            return this._normSign();
-        }
-        // At this point both numbers are positive
-        var cmp = this.cmp(num);
-        // Optimization - zeroify
-        if (cmp === 0) {
-            this.negative = 0;
-            this.length = 1;
-            this.words[0] = 0;
-            return this;
-        }
-        // a > b
-        var a, b;
-        if (cmp > 0) {
-            a = this;
-            b = num;
-        } else {
-            a = num;
-            b = this;
-        }
-        var carry = 0;
-        for(var i = 0; i < b.length; i++){
-            r = (a.words[i] | 0) - (b.words[i] | 0) + carry;
-            carry = r >> 26;
-            this.words[i] = r & 0x3ffffff;
-        }
-        for(; carry !== 0 && i < a.length; i++){
-            r = (a.words[i] | 0) + carry;
-            carry = r >> 26;
-            this.words[i] = r & 0x3ffffff;
-        }
-        // Copy rest of the words
-        if (carry === 0 && i < a.length && a !== this) for(; i < a.length; i++)this.words[i] = a.words[i];
-        this.length = Math.max(this.length, i);
-        if (a !== this) this.negative = 1;
-        return this._strip();
-    };
-    // Subtract `num` from `this`
-    BN.prototype.sub = function sub(num) {
-        return this.clone().isub(num);
-    };
-    function smallMulTo(self, num, out) {
-        out.negative = num.negative ^ self.negative;
-        var len = self.length + num.length | 0;
-        out.length = len;
-        len = len - 1 | 0;
-        // Peel one iteration (compiler can't do it, because of code complexity)
-        var a = self.words[0] | 0;
-        var b = num.words[0] | 0;
-        var r = a * b;
-        var lo = r & 0x3ffffff;
-        var carry = r / 0x4000000 | 0;
-        out.words[0] = lo;
-        for(var k = 1; k < len; k++){
-            // Sum all words with the same `i + j = k` and accumulate `ncarry`,
-            // note that ncarry could be >= 0x3ffffff
-            var ncarry = carry >>> 26;
-            var rword = carry & 0x3ffffff;
-            var maxJ = Math.min(k, num.length - 1);
-            for(var j = Math.max(0, k - self.length + 1); j <= maxJ; j++){
-                var i = k - j | 0;
-                a = self.words[i] | 0;
-                b = num.words[j] | 0;
-                r = a * b + rword;
-                ncarry += r / 0x4000000 | 0;
-                rword = r & 0x3ffffff;
-            }
-            out.words[k] = rword | 0;
-            carry = ncarry | 0;
-        }
-        if (carry !== 0) out.words[k] = carry | 0;
-        else out.length--;
-        return out._strip();
-    }
-    // TODO(indutny): it may be reasonable to omit it for users who don't need
-    // to work with 256-bit numbers, otherwise it gives 20% improvement for 256-bit
-    // multiplication (like elliptic secp256k1).
-    var comb10MulTo = function comb10MulTo(self, num, out) {
-        var a = self.words;
-        var b = num.words;
-        var o = out.words;
-        var c = 0;
-        var lo;
-        var mid;
-        var hi;
-        var a0 = a[0] | 0;
-        var al0 = a0 & 0x1fff;
-        var ah0 = a0 >>> 13;
-        var a1 = a[1] | 0;
-        var al1 = a1 & 0x1fff;
-        var ah1 = a1 >>> 13;
-        var a2 = a[2] | 0;
-        var al2 = a2 & 0x1fff;
-        var ah2 = a2 >>> 13;
-        var a3 = a[3] | 0;
-        var al3 = a3 & 0x1fff;
-        var ah3 = a3 >>> 13;
-        var a4 = a[4] | 0;
-        var al4 = a4 & 0x1fff;
-        var ah4 = a4 >>> 13;
-        var a5 = a[5] | 0;
-        var al5 = a5 & 0x1fff;
-        var ah5 = a5 >>> 13;
-        var a6 = a[6] | 0;
-        var al6 = a6 & 0x1fff;
-        var ah6 = a6 >>> 13;
-        var a7 = a[7] | 0;
-        var al7 = a7 & 0x1fff;
-        var ah7 = a7 >>> 13;
-        var a8 = a[8] | 0;
-        var al8 = a8 & 0x1fff;
-        var ah8 = a8 >>> 13;
-        var a9 = a[9] | 0;
-        var al9 = a9 & 0x1fff;
-        var ah9 = a9 >>> 13;
-        var b0 = b[0] | 0;
-        var bl0 = b0 & 0x1fff;
-        var bh0 = b0 >>> 13;
-        var b1 = b[1] | 0;
-        var bl1 = b1 & 0x1fff;
-        var bh1 = b1 >>> 13;
-        var b2 = b[2] | 0;
-        var bl2 = b2 & 0x1fff;
-        var bh2 = b2 >>> 13;
-        var b3 = b[3] | 0;
-        var bl3 = b3 & 0x1fff;
-        var bh3 = b3 >>> 13;
-        var b4 = b[4] | 0;
-        var bl4 = b4 & 0x1fff;
-        var bh4 = b4 >>> 13;
-        var b5 = b[5] | 0;
-        var bl5 = b5 & 0x1fff;
-        var bh5 = b5 >>> 13;
-        var b6 = b[6] | 0;
-        var bl6 = b6 & 0x1fff;
-        var bh6 = b6 >>> 13;
-        var b7 = b[7] | 0;
-        var bl7 = b7 & 0x1fff;
-        var bh7 = b7 >>> 13;
-        var b8 = b[8] | 0;
-        var bl8 = b8 & 0x1fff;
-        var bh8 = b8 >>> 13;
-        var b9 = b[9] | 0;
-        var bl9 = b9 & 0x1fff;
-        var bh9 = b9 >>> 13;
-        out.negative = self.negative ^ num.negative;
-        out.length = 19;
-        /* k = 0 */ lo = Math.imul(al0, bl0);
-        mid = Math.imul(al0, bh0);
-        mid = mid + Math.imul(ah0, bl0) | 0;
-        hi = Math.imul(ah0, bh0);
-        var w0 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w0 >>> 26) | 0;
-        w0 &= 0x3ffffff;
-        /* k = 1 */ lo = Math.imul(al1, bl0);
-        mid = Math.imul(al1, bh0);
-        mid = mid + Math.imul(ah1, bl0) | 0;
-        hi = Math.imul(ah1, bh0);
-        lo = lo + Math.imul(al0, bl1) | 0;
-        mid = mid + Math.imul(al0, bh1) | 0;
-        mid = mid + Math.imul(ah0, bl1) | 0;
-        hi = hi + Math.imul(ah0, bh1) | 0;
-        var w1 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w1 >>> 26) | 0;
-        w1 &= 0x3ffffff;
-        /* k = 2 */ lo = Math.imul(al2, bl0);
-        mid = Math.imul(al2, bh0);
-        mid = mid + Math.imul(ah2, bl0) | 0;
-        hi = Math.imul(ah2, bh0);
-        lo = lo + Math.imul(al1, bl1) | 0;
-        mid = mid + Math.imul(al1, bh1) | 0;
-        mid = mid + Math.imul(ah1, bl1) | 0;
-        hi = hi + Math.imul(ah1, bh1) | 0;
-        lo = lo + Math.imul(al0, bl2) | 0;
-        mid = mid + Math.imul(al0, bh2) | 0;
-        mid = mid + Math.imul(ah0, bl2) | 0;
-        hi = hi + Math.imul(ah0, bh2) | 0;
-        var w2 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w2 >>> 26) | 0;
-        w2 &= 0x3ffffff;
-        /* k = 3 */ lo = Math.imul(al3, bl0);
-        mid = Math.imul(al3, bh0);
-        mid = mid + Math.imul(ah3, bl0) | 0;
-        hi = Math.imul(ah3, bh0);
-        lo = lo + Math.imul(al2, bl1) | 0;
-        mid = mid + Math.imul(al2, bh1) | 0;
-        mid = mid + Math.imul(ah2, bl1) | 0;
-        hi = hi + Math.imul(ah2, bh1) | 0;
-        lo = lo + Math.imul(al1, bl2) | 0;
-        mid = mid + Math.imul(al1, bh2) | 0;
-        mid = mid + Math.imul(ah1, bl2) | 0;
-        hi = hi + Math.imul(ah1, bh2) | 0;
-        lo = lo + Math.imul(al0, bl3) | 0;
-        mid = mid + Math.imul(al0, bh3) | 0;
-        mid = mid + Math.imul(ah0, bl3) | 0;
-        hi = hi + Math.imul(ah0, bh3) | 0;
-        var w3 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w3 >>> 26) | 0;
-        w3 &= 0x3ffffff;
-        /* k = 4 */ lo = Math.imul(al4, bl0);
-        mid = Math.imul(al4, bh0);
-        mid = mid + Math.imul(ah4, bl0) | 0;
-        hi = Math.imul(ah4, bh0);
-        lo = lo + Math.imul(al3, bl1) | 0;
-        mid = mid + Math.imul(al3, bh1) | 0;
-        mid = mid + Math.imul(ah3, bl1) | 0;
-        hi = hi + Math.imul(ah3, bh1) | 0;
-        lo = lo + Math.imul(al2, bl2) | 0;
-        mid = mid + Math.imul(al2, bh2) | 0;
-        mid = mid + Math.imul(ah2, bl2) | 0;
-        hi = hi + Math.imul(ah2, bh2) | 0;
-        lo = lo + Math.imul(al1, bl3) | 0;
-        mid = mid + Math.imul(al1, bh3) | 0;
-        mid = mid + Math.imul(ah1, bl3) | 0;
-        hi = hi + Math.imul(ah1, bh3) | 0;
-        lo = lo + Math.imul(al0, bl4) | 0;
-        mid = mid + Math.imul(al0, bh4) | 0;
-        mid = mid + Math.imul(ah0, bl4) | 0;
-        hi = hi + Math.imul(ah0, bh4) | 0;
-        var w4 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w4 >>> 26) | 0;
-        w4 &= 0x3ffffff;
-        /* k = 5 */ lo = Math.imul(al5, bl0);
-        mid = Math.imul(al5, bh0);
-        mid = mid + Math.imul(ah5, bl0) | 0;
-        hi = Math.imul(ah5, bh0);
-        lo = lo + Math.imul(al4, bl1) | 0;
-        mid = mid + Math.imul(al4, bh1) | 0;
-        mid = mid + Math.imul(ah4, bl1) | 0;
-        hi = hi + Math.imul(ah4, bh1) | 0;
-        lo = lo + Math.imul(al3, bl2) | 0;
-        mid = mid + Math.imul(al3, bh2) | 0;
-        mid = mid + Math.imul(ah3, bl2) | 0;
-        hi = hi + Math.imul(ah3, bh2) | 0;
-        lo = lo + Math.imul(al2, bl3) | 0;
-        mid = mid + Math.imul(al2, bh3) | 0;
-        mid = mid + Math.imul(ah2, bl3) | 0;
-        hi = hi + Math.imul(ah2, bh3) | 0;
-        lo = lo + Math.imul(al1, bl4) | 0;
-        mid = mid + Math.imul(al1, bh4) | 0;
-        mid = mid + Math.imul(ah1, bl4) | 0;
-        hi = hi + Math.imul(ah1, bh4) | 0;
-        lo = lo + Math.imul(al0, bl5) | 0;
-        mid = mid + Math.imul(al0, bh5) | 0;
-        mid = mid + Math.imul(ah0, bl5) | 0;
-        hi = hi + Math.imul(ah0, bh5) | 0;
-        var w5 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w5 >>> 26) | 0;
-        w5 &= 0x3ffffff;
-        /* k = 6 */ lo = Math.imul(al6, bl0);
-        mid = Math.imul(al6, bh0);
-        mid = mid + Math.imul(ah6, bl0) | 0;
-        hi = Math.imul(ah6, bh0);
-        lo = lo + Math.imul(al5, bl1) | 0;
-        mid = mid + Math.imul(al5, bh1) | 0;
-        mid = mid + Math.imul(ah5, bl1) | 0;
-        hi = hi + Math.imul(ah5, bh1) | 0;
-        lo = lo + Math.imul(al4, bl2) | 0;
-        mid = mid + Math.imul(al4, bh2) | 0;
-        mid = mid + Math.imul(ah4, bl2) | 0;
-        hi = hi + Math.imul(ah4, bh2) | 0;
-        lo = lo + Math.imul(al3, bl3) | 0;
-        mid = mid + Math.imul(al3, bh3) | 0;
-        mid = mid + Math.imul(ah3, bl3) | 0;
-        hi = hi + Math.imul(ah3, bh3) | 0;
-        lo = lo + Math.imul(al2, bl4) | 0;
-        mid = mid + Math.imul(al2, bh4) | 0;
-        mid = mid + Math.imul(ah2, bl4) | 0;
-        hi = hi + Math.imul(ah2, bh4) | 0;
-        lo = lo + Math.imul(al1, bl5) | 0;
-        mid = mid + Math.imul(al1, bh5) | 0;
-        mid = mid + Math.imul(ah1, bl5) | 0;
-        hi = hi + Math.imul(ah1, bh5) | 0;
-        lo = lo + Math.imul(al0, bl6) | 0;
-        mid = mid + Math.imul(al0, bh6) | 0;
-        mid = mid + Math.imul(ah0, bl6) | 0;
-        hi = hi + Math.imul(ah0, bh6) | 0;
-        var w6 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w6 >>> 26) | 0;
-        w6 &= 0x3ffffff;
-        /* k = 7 */ lo = Math.imul(al7, bl0);
-        mid = Math.imul(al7, bh0);
-        mid = mid + Math.imul(ah7, bl0) | 0;
-        hi = Math.imul(ah7, bh0);
-        lo = lo + Math.imul(al6, bl1) | 0;
-        mid = mid + Math.imul(al6, bh1) | 0;
-        mid = mid + Math.imul(ah6, bl1) | 0;
-        hi = hi + Math.imul(ah6, bh1) | 0;
-        lo = lo + Math.imul(al5, bl2) | 0;
-        mid = mid + Math.imul(al5, bh2) | 0;
-        mid = mid + Math.imul(ah5, bl2) | 0;
-        hi = hi + Math.imul(ah5, bh2) | 0;
-        lo = lo + Math.imul(al4, bl3) | 0;
-        mid = mid + Math.imul(al4, bh3) | 0;
-        mid = mid + Math.imul(ah4, bl3) | 0;
-        hi = hi + Math.imul(ah4, bh3) | 0;
-        lo = lo + Math.imul(al3, bl4) | 0;
-        mid = mid + Math.imul(al3, bh4) | 0;
-        mid = mid + Math.imul(ah3, bl4) | 0;
-        hi = hi + Math.imul(ah3, bh4) | 0;
-        lo = lo + Math.imul(al2, bl5) | 0;
-        mid = mid + Math.imul(al2, bh5) | 0;
-        mid = mid + Math.imul(ah2, bl5) | 0;
-        hi = hi + Math.imul(ah2, bh5) | 0;
-        lo = lo + Math.imul(al1, bl6) | 0;
-        mid = mid + Math.imul(al1, bh6) | 0;
-        mid = mid + Math.imul(ah1, bl6) | 0;
-        hi = hi + Math.imul(ah1, bh6) | 0;
-        lo = lo + Math.imul(al0, bl7) | 0;
-        mid = mid + Math.imul(al0, bh7) | 0;
-        mid = mid + Math.imul(ah0, bl7) | 0;
-        hi = hi + Math.imul(ah0, bh7) | 0;
-        var w7 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w7 >>> 26) | 0;
-        w7 &= 0x3ffffff;
-        /* k = 8 */ lo = Math.imul(al8, bl0);
-        mid = Math.imul(al8, bh0);
-        mid = mid + Math.imul(ah8, bl0) | 0;
-        hi = Math.imul(ah8, bh0);
-        lo = lo + Math.imul(al7, bl1) | 0;
-        mid = mid + Math.imul(al7, bh1) | 0;
-        mid = mid + Math.imul(ah7, bl1) | 0;
-        hi = hi + Math.imul(ah7, bh1) | 0;
-        lo = lo + Math.imul(al6, bl2) | 0;
-        mid = mid + Math.imul(al6, bh2) | 0;
-        mid = mid + Math.imul(ah6, bl2) | 0;
-        hi = hi + Math.imul(ah6, bh2) | 0;
-        lo = lo + Math.imul(al5, bl3) | 0;
-        mid = mid + Math.imul(al5, bh3) | 0;
-        mid = mid + Math.imul(ah5, bl3) | 0;
-        hi = hi + Math.imul(ah5, bh3) | 0;
-        lo = lo + Math.imul(al4, bl4) | 0;
-        mid = mid + Math.imul(al4, bh4) | 0;
-        mid = mid + Math.imul(ah4, bl4) | 0;
-        hi = hi + Math.imul(ah4, bh4) | 0;
-        lo = lo + Math.imul(al3, bl5) | 0;
-        mid = mid + Math.imul(al3, bh5) | 0;
-        mid = mid + Math.imul(ah3, bl5) | 0;
-        hi = hi + Math.imul(ah3, bh5) | 0;
-        lo = lo + Math.imul(al2, bl6) | 0;
-        mid = mid + Math.imul(al2, bh6) | 0;
-        mid = mid + Math.imul(ah2, bl6) | 0;
-        hi = hi + Math.imul(ah2, bh6) | 0;
-        lo = lo + Math.imul(al1, bl7) | 0;
-        mid = mid + Math.imul(al1, bh7) | 0;
-        mid = mid + Math.imul(ah1, bl7) | 0;
-        hi = hi + Math.imul(ah1, bh7) | 0;
-        lo = lo + Math.imul(al0, bl8) | 0;
-        mid = mid + Math.imul(al0, bh8) | 0;
-        mid = mid + Math.imul(ah0, bl8) | 0;
-        hi = hi + Math.imul(ah0, bh8) | 0;
-        var w8 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w8 >>> 26) | 0;
-        w8 &= 0x3ffffff;
-        /* k = 9 */ lo = Math.imul(al9, bl0);
-        mid = Math.imul(al9, bh0);
-        mid = mid + Math.imul(ah9, bl0) | 0;
-        hi = Math.imul(ah9, bh0);
-        lo = lo + Math.imul(al8, bl1) | 0;
-        mid = mid + Math.imul(al8, bh1) | 0;
-        mid = mid + Math.imul(ah8, bl1) | 0;
-        hi = hi + Math.imul(ah8, bh1) | 0;
-        lo = lo + Math.imul(al7, bl2) | 0;
-        mid = mid + Math.imul(al7, bh2) | 0;
-        mid = mid + Math.imul(ah7, bl2) | 0;
-        hi = hi + Math.imul(ah7, bh2) | 0;
-        lo = lo + Math.imul(al6, bl3) | 0;
-        mid = mid + Math.imul(al6, bh3) | 0;
-        mid = mid + Math.imul(ah6, bl3) | 0;
-        hi = hi + Math.imul(ah6, bh3) | 0;
-        lo = lo + Math.imul(al5, bl4) | 0;
-        mid = mid + Math.imul(al5, bh4) | 0;
-        mid = mid + Math.imul(ah5, bl4) | 0;
-        hi = hi + Math.imul(ah5, bh4) | 0;
-        lo = lo + Math.imul(al4, bl5) | 0;
-        mid = mid + Math.imul(al4, bh5) | 0;
-        mid = mid + Math.imul(ah4, bl5) | 0;
-        hi = hi + Math.imul(ah4, bh5) | 0;
-        lo = lo + Math.imul(al3, bl6) | 0;
-        mid = mid + Math.imul(al3, bh6) | 0;
-        mid = mid + Math.imul(ah3, bl6) | 0;
-        hi = hi + Math.imul(ah3, bh6) | 0;
-        lo = lo + Math.imul(al2, bl7) | 0;
-        mid = mid + Math.imul(al2, bh7) | 0;
-        mid = mid + Math.imul(ah2, bl7) | 0;
-        hi = hi + Math.imul(ah2, bh7) | 0;
-        lo = lo + Math.imul(al1, bl8) | 0;
-        mid = mid + Math.imul(al1, bh8) | 0;
-        mid = mid + Math.imul(ah1, bl8) | 0;
-        hi = hi + Math.imul(ah1, bh8) | 0;
-        lo = lo + Math.imul(al0, bl9) | 0;
-        mid = mid + Math.imul(al0, bh9) | 0;
-        mid = mid + Math.imul(ah0, bl9) | 0;
-        hi = hi + Math.imul(ah0, bh9) | 0;
-        var w9 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w9 >>> 26) | 0;
-        w9 &= 0x3ffffff;
-        /* k = 10 */ lo = Math.imul(al9, bl1);
-        mid = Math.imul(al9, bh1);
-        mid = mid + Math.imul(ah9, bl1) | 0;
-        hi = Math.imul(ah9, bh1);
-        lo = lo + Math.imul(al8, bl2) | 0;
-        mid = mid + Math.imul(al8, bh2) | 0;
-        mid = mid + Math.imul(ah8, bl2) | 0;
-        hi = hi + Math.imul(ah8, bh2) | 0;
-        lo = lo + Math.imul(al7, bl3) | 0;
-        mid = mid + Math.imul(al7, bh3) | 0;
-        mid = mid + Math.imul(ah7, bl3) | 0;
-        hi = hi + Math.imul(ah7, bh3) | 0;
-        lo = lo + Math.imul(al6, bl4) | 0;
-        mid = mid + Math.imul(al6, bh4) | 0;
-        mid = mid + Math.imul(ah6, bl4) | 0;
-        hi = hi + Math.imul(ah6, bh4) | 0;
-        lo = lo + Math.imul(al5, bl5) | 0;
-        mid = mid + Math.imul(al5, bh5) | 0;
-        mid = mid + Math.imul(ah5, bl5) | 0;
-        hi = hi + Math.imul(ah5, bh5) | 0;
-        lo = lo + Math.imul(al4, bl6) | 0;
-        mid = mid + Math.imul(al4, bh6) | 0;
-        mid = mid + Math.imul(ah4, bl6) | 0;
-        hi = hi + Math.imul(ah4, bh6) | 0;
-        lo = lo + Math.imul(al3, bl7) | 0;
-        mid = mid + Math.imul(al3, bh7) | 0;
-        mid = mid + Math.imul(ah3, bl7) | 0;
-        hi = hi + Math.imul(ah3, bh7) | 0;
-        lo = lo + Math.imul(al2, bl8) | 0;
-        mid = mid + Math.imul(al2, bh8) | 0;
-        mid = mid + Math.imul(ah2, bl8) | 0;
-        hi = hi + Math.imul(ah2, bh8) | 0;
-        lo = lo + Math.imul(al1, bl9) | 0;
-        mid = mid + Math.imul(al1, bh9) | 0;
-        mid = mid + Math.imul(ah1, bl9) | 0;
-        hi = hi + Math.imul(ah1, bh9) | 0;
-        var w10 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w10 >>> 26) | 0;
-        w10 &= 0x3ffffff;
-        /* k = 11 */ lo = Math.imul(al9, bl2);
-        mid = Math.imul(al9, bh2);
-        mid = mid + Math.imul(ah9, bl2) | 0;
-        hi = Math.imul(ah9, bh2);
-        lo = lo + Math.imul(al8, bl3) | 0;
-        mid = mid + Math.imul(al8, bh3) | 0;
-        mid = mid + Math.imul(ah8, bl3) | 0;
-        hi = hi + Math.imul(ah8, bh3) | 0;
-        lo = lo + Math.imul(al7, bl4) | 0;
-        mid = mid + Math.imul(al7, bh4) | 0;
-        mid = mid + Math.imul(ah7, bl4) | 0;
-        hi = hi + Math.imul(ah7, bh4) | 0;
-        lo = lo + Math.imul(al6, bl5) | 0;
-        mid = mid + Math.imul(al6, bh5) | 0;
-        mid = mid + Math.imul(ah6, bl5) | 0;
-        hi = hi + Math.imul(ah6, bh5) | 0;
-        lo = lo + Math.imul(al5, bl6) | 0;
-        mid = mid + Math.imul(al5, bh6) | 0;
-        mid = mid + Math.imul(ah5, bl6) | 0;
-        hi = hi + Math.imul(ah5, bh6) | 0;
-        lo = lo + Math.imul(al4, bl7) | 0;
-        mid = mid + Math.imul(al4, bh7) | 0;
-        mid = mid + Math.imul(ah4, bl7) | 0;
-        hi = hi + Math.imul(ah4, bh7) | 0;
-        lo = lo + Math.imul(al3, bl8) | 0;
-        mid = mid + Math.imul(al3, bh8) | 0;
-        mid = mid + Math.imul(ah3, bl8) | 0;
-        hi = hi + Math.imul(ah3, bh8) | 0;
-        lo = lo + Math.imul(al2, bl9) | 0;
-        mid = mid + Math.imul(al2, bh9) | 0;
-        mid = mid + Math.imul(ah2, bl9) | 0;
-        hi = hi + Math.imul(ah2, bh9) | 0;
-        var w11 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w11 >>> 26) | 0;
-        w11 &= 0x3ffffff;
-        /* k = 12 */ lo = Math.imul(al9, bl3);
-        mid = Math.imul(al9, bh3);
-        mid = mid + Math.imul(ah9, bl3) | 0;
-        hi = Math.imul(ah9, bh3);
-        lo = lo + Math.imul(al8, bl4) | 0;
-        mid = mid + Math.imul(al8, bh4) | 0;
-        mid = mid + Math.imul(ah8, bl4) | 0;
-        hi = hi + Math.imul(ah8, bh4) | 0;
-        lo = lo + Math.imul(al7, bl5) | 0;
-        mid = mid + Math.imul(al7, bh5) | 0;
-        mid = mid + Math.imul(ah7, bl5) | 0;
-        hi = hi + Math.imul(ah7, bh5) | 0;
-        lo = lo + Math.imul(al6, bl6) | 0;
-        mid = mid + Math.imul(al6, bh6) | 0;
-        mid = mid + Math.imul(ah6, bl6) | 0;
-        hi = hi + Math.imul(ah6, bh6) | 0;
-        lo = lo + Math.imul(al5, bl7) | 0;
-        mid = mid + Math.imul(al5, bh7) | 0;
-        mid = mid + Math.imul(ah5, bl7) | 0;
-        hi = hi + Math.imul(ah5, bh7) | 0;
-        lo = lo + Math.imul(al4, bl8) | 0;
-        mid = mid + Math.imul(al4, bh8) | 0;
-        mid = mid + Math.imul(ah4, bl8) | 0;
-        hi = hi + Math.imul(ah4, bh8) | 0;
-        lo = lo + Math.imul(al3, bl9) | 0;
-        mid = mid + Math.imul(al3, bh9) | 0;
-        mid = mid + Math.imul(ah3, bl9) | 0;
-        hi = hi + Math.imul(ah3, bh9) | 0;
-        var w12 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w12 >>> 26) | 0;
-        w12 &= 0x3ffffff;
-        /* k = 13 */ lo = Math.imul(al9, bl4);
-        mid = Math.imul(al9, bh4);
-        mid = mid + Math.imul(ah9, bl4) | 0;
-        hi = Math.imul(ah9, bh4);
-        lo = lo + Math.imul(al8, bl5) | 0;
-        mid = mid + Math.imul(al8, bh5) | 0;
-        mid = mid + Math.imul(ah8, bl5) | 0;
-        hi = hi + Math.imul(ah8, bh5) | 0;
-        lo = lo + Math.imul(al7, bl6) | 0;
-        mid = mid + Math.imul(al7, bh6) | 0;
-        mid = mid + Math.imul(ah7, bl6) | 0;
-        hi = hi + Math.imul(ah7, bh6) | 0;
-        lo = lo + Math.imul(al6, bl7) | 0;
-        mid = mid + Math.imul(al6, bh7) | 0;
-        mid = mid + Math.imul(ah6, bl7) | 0;
-        hi = hi + Math.imul(ah6, bh7) | 0;
-        lo = lo + Math.imul(al5, bl8) | 0;
-        mid = mid + Math.imul(al5, bh8) | 0;
-        mid = mid + Math.imul(ah5, bl8) | 0;
-        hi = hi + Math.imul(ah5, bh8) | 0;
-        lo = lo + Math.imul(al4, bl9) | 0;
-        mid = mid + Math.imul(al4, bh9) | 0;
-        mid = mid + Math.imul(ah4, bl9) | 0;
-        hi = hi + Math.imul(ah4, bh9) | 0;
-        var w13 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w13 >>> 26) | 0;
-        w13 &= 0x3ffffff;
-        /* k = 14 */ lo = Math.imul(al9, bl5);
-        mid = Math.imul(al9, bh5);
-        mid = mid + Math.imul(ah9, bl5) | 0;
-        hi = Math.imul(ah9, bh5);
-        lo = lo + Math.imul(al8, bl6) | 0;
-        mid = mid + Math.imul(al8, bh6) | 0;
-        mid = mid + Math.imul(ah8, bl6) | 0;
-        hi = hi + Math.imul(ah8, bh6) | 0;
-        lo = lo + Math.imul(al7, bl7) | 0;
-        mid = mid + Math.imul(al7, bh7) | 0;
-        mid = mid + Math.imul(ah7, bl7) | 0;
-        hi = hi + Math.imul(ah7, bh7) | 0;
-        lo = lo + Math.imul(al6, bl8) | 0;
-        mid = mid + Math.imul(al6, bh8) | 0;
-        mid = mid + Math.imul(ah6, bl8) | 0;
-        hi = hi + Math.imul(ah6, bh8) | 0;
-        lo = lo + Math.imul(al5, bl9) | 0;
-        mid = mid + Math.imul(al5, bh9) | 0;
-        mid = mid + Math.imul(ah5, bl9) | 0;
-        hi = hi + Math.imul(ah5, bh9) | 0;
-        var w14 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w14 >>> 26) | 0;
-        w14 &= 0x3ffffff;
-        /* k = 15 */ lo = Math.imul(al9, bl6);
-        mid = Math.imul(al9, bh6);
-        mid = mid + Math.imul(ah9, bl6) | 0;
-        hi = Math.imul(ah9, bh6);
-        lo = lo + Math.imul(al8, bl7) | 0;
-        mid = mid + Math.imul(al8, bh7) | 0;
-        mid = mid + Math.imul(ah8, bl7) | 0;
-        hi = hi + Math.imul(ah8, bh7) | 0;
-        lo = lo + Math.imul(al7, bl8) | 0;
-        mid = mid + Math.imul(al7, bh8) | 0;
-        mid = mid + Math.imul(ah7, bl8) | 0;
-        hi = hi + Math.imul(ah7, bh8) | 0;
-        lo = lo + Math.imul(al6, bl9) | 0;
-        mid = mid + Math.imul(al6, bh9) | 0;
-        mid = mid + Math.imul(ah6, bl9) | 0;
-        hi = hi + Math.imul(ah6, bh9) | 0;
-        var w15 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w15 >>> 26) | 0;
-        w15 &= 0x3ffffff;
-        /* k = 16 */ lo = Math.imul(al9, bl7);
-        mid = Math.imul(al9, bh7);
-        mid = mid + Math.imul(ah9, bl7) | 0;
-        hi = Math.imul(ah9, bh7);
-        lo = lo + Math.imul(al8, bl8) | 0;
-        mid = mid + Math.imul(al8, bh8) | 0;
-        mid = mid + Math.imul(ah8, bl8) | 0;
-        hi = hi + Math.imul(ah8, bh8) | 0;
-        lo = lo + Math.imul(al7, bl9) | 0;
-        mid = mid + Math.imul(al7, bh9) | 0;
-        mid = mid + Math.imul(ah7, bl9) | 0;
-        hi = hi + Math.imul(ah7, bh9) | 0;
-        var w16 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w16 >>> 26) | 0;
-        w16 &= 0x3ffffff;
-        /* k = 17 */ lo = Math.imul(al9, bl8);
-        mid = Math.imul(al9, bh8);
-        mid = mid + Math.imul(ah9, bl8) | 0;
-        hi = Math.imul(ah9, bh8);
-        lo = lo + Math.imul(al8, bl9) | 0;
-        mid = mid + Math.imul(al8, bh9) | 0;
-        mid = mid + Math.imul(ah8, bl9) | 0;
-        hi = hi + Math.imul(ah8, bh9) | 0;
-        var w17 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w17 >>> 26) | 0;
-        w17 &= 0x3ffffff;
-        /* k = 18 */ lo = Math.imul(al9, bl9);
-        mid = Math.imul(al9, bh9);
-        mid = mid + Math.imul(ah9, bl9) | 0;
-        hi = Math.imul(ah9, bh9);
-        var w18 = (c + lo | 0) + ((mid & 0x1fff) << 13) | 0;
-        c = (hi + (mid >>> 13) | 0) + (w18 >>> 26) | 0;
-        w18 &= 0x3ffffff;
-        o[0] = w0;
-        o[1] = w1;
-        o[2] = w2;
-        o[3] = w3;
-        o[4] = w4;
-        o[5] = w5;
-        o[6] = w6;
-        o[7] = w7;
-        o[8] = w8;
-        o[9] = w9;
-        o[10] = w10;
-        o[11] = w11;
-        o[12] = w12;
-        o[13] = w13;
-        o[14] = w14;
-        o[15] = w15;
-        o[16] = w16;
-        o[17] = w17;
-        o[18] = w18;
-        if (c !== 0) {
-            o[19] = c;
-            out.length++;
-        }
-        return out;
-    };
-    // Polyfill comb
-    if (!Math.imul) comb10MulTo = smallMulTo;
-    function bigMulTo(self, num, out) {
-        out.negative = num.negative ^ self.negative;
-        out.length = self.length + num.length;
-        var carry = 0;
-        var hncarry = 0;
-        for(var k = 0; k < out.length - 1; k++){
-            // Sum all words with the same `i + j = k` and accumulate `ncarry`,
-            // note that ncarry could be >= 0x3ffffff
-            var ncarry = hncarry;
-            hncarry = 0;
-            var rword = carry & 0x3ffffff;
-            var maxJ = Math.min(k, num.length - 1);
-            for(var j = Math.max(0, k - self.length + 1); j <= maxJ; j++){
-                var i = k - j;
-                var a = self.words[i] | 0;
-                var b = num.words[j] | 0;
-                var r = a * b;
-                var lo = r & 0x3ffffff;
-                ncarry = ncarry + (r / 0x4000000 | 0) | 0;
-                lo = lo + rword | 0;
-                rword = lo & 0x3ffffff;
-                ncarry = ncarry + (lo >>> 26) | 0;
-                hncarry += ncarry >>> 26;
-                ncarry &= 0x3ffffff;
-            }
-            out.words[k] = rword;
-            carry = ncarry;
-            ncarry = hncarry;
-        }
-        if (carry !== 0) out.words[k] = carry;
-        else out.length--;
-        return out._strip();
-    }
-    function jumboMulTo(self, num, out) {
-        // Temporary disable, see https://github.com/indutny/bn.js/issues/211
-        // var fftm = new FFTM();
-        // return fftm.mulp(self, num, out);
-        return bigMulTo(self, num, out);
-    }
-    BN.prototype.mulTo = function mulTo(num, out) {
-        var res;
-        var len = this.length + num.length;
-        if (this.length === 10 && num.length === 10) res = comb10MulTo(this, num, out);
-        else if (len < 63) res = smallMulTo(this, num, out);
-        else if (len < 1024) res = bigMulTo(this, num, out);
-        else res = jumboMulTo(this, num, out);
-        return res;
-    };
-    // Cooley-Tukey algorithm for FFT
-    // slightly revisited to rely on looping instead of recursion
-    function FFTM(x, y) {
-        this.x = x;
-        this.y = y;
-    }
-    FFTM.prototype.makeRBT = function makeRBT(N) {
-        var t = new Array(N);
-        var l = BN.prototype._countBits(N) - 1;
-        for(var i = 0; i < N; i++)t[i] = this.revBin(i, l, N);
-        return t;
-    };
-    // Returns binary-reversed representation of `x`
-    FFTM.prototype.revBin = function revBin(x, l, N) {
-        if (x === 0 || x === N - 1) return x;
-        var rb = 0;
-        for(var i = 0; i < l; i++){
-            rb |= (x & 1) << l - i - 1;
-            x >>= 1;
-        }
-        return rb;
-    };
-    // Performs "tweedling" phase, therefore 'emulating'
-    // behaviour of the recursive algorithm
-    FFTM.prototype.permute = function permute(rbt, rws, iws, rtws, itws, N) {
-        for(var i = 0; i < N; i++){
-            rtws[i] = rws[rbt[i]];
-            itws[i] = iws[rbt[i]];
-        }
-    };
-    FFTM.prototype.transform = function transform(rws, iws, rtws, itws, N, rbt) {
-        this.permute(rbt, rws, iws, rtws, itws, N);
-        for(var s = 1; s < N; s <<= 1){
-            var l = s << 1;
-            var rtwdf = Math.cos(2 * Math.PI / l);
-            var itwdf = Math.sin(2 * Math.PI / l);
-            for(var p = 0; p < N; p += l){
-                var rtwdf_ = rtwdf;
-                var itwdf_ = itwdf;
-                for(var j = 0; j < s; j++){
-                    var re = rtws[p + j];
-                    var ie = itws[p + j];
-                    var ro = rtws[p + j + s];
-                    var io = itws[p + j + s];
-                    var rx = rtwdf_ * ro - itwdf_ * io;
-                    io = rtwdf_ * io + itwdf_ * ro;
-                    ro = rx;
-                    rtws[p + j] = re + ro;
-                    itws[p + j] = ie + io;
-                    rtws[p + j + s] = re - ro;
-                    itws[p + j + s] = ie - io;
-                    /* jshint maxdepth : false */ if (j !== l) {
-                        rx = rtwdf * rtwdf_ - itwdf * itwdf_;
-                        itwdf_ = rtwdf * itwdf_ + itwdf * rtwdf_;
-                        rtwdf_ = rx;
-                    }
-                }
-            }
-        }
-    };
-    FFTM.prototype.guessLen13b = function guessLen13b(n, m) {
-        var N = Math.max(m, n) | 1;
-        var odd = N & 1;
-        var i = 0;
-        for(N = N / 2 | 0; N; N = N >>> 1)i++;
-        return 1 << i + 1 + odd;
-    };
-    FFTM.prototype.conjugate = function conjugate(rws, iws, N) {
-        if (N <= 1) return;
-        for(var i = 0; i < N / 2; i++){
-            var t = rws[i];
-            rws[i] = rws[N - i - 1];
-            rws[N - i - 1] = t;
-            t = iws[i];
-            iws[i] = -iws[N - i - 1];
-            iws[N - i - 1] = -t;
-        }
-    };
-    FFTM.prototype.normalize13b = function normalize13b(ws, N) {
-        var carry = 0;
-        for(var i = 0; i < N / 2; i++){
-            var w = Math.round(ws[2 * i + 1] / N) * 0x2000 + Math.round(ws[2 * i] / N) + carry;
-            ws[i] = w & 0x3ffffff;
-            if (w < 0x4000000) carry = 0;
-            else carry = w / 0x4000000 | 0;
-        }
-        return ws;
-    };
-    FFTM.prototype.convert13b = function convert13b(ws, len, rws, N) {
-        var carry = 0;
-        for(var i = 0; i < len; i++){
-            carry = carry + (ws[i] | 0);
-            rws[2 * i] = carry & 0x1fff;
-            carry = carry >>> 13;
-            rws[2 * i + 1] = carry & 0x1fff;
-            carry = carry >>> 13;
-        }
-        // Pad with zeroes
-        for(i = 2 * len; i < N; ++i)rws[i] = 0;
-        assert(carry === 0);
-        assert((carry & -8192) === 0);
-    };
-    FFTM.prototype.stub = function stub(N) {
-        var ph = new Array(N);
-        for(var i = 0; i < N; i++)ph[i] = 0;
-        return ph;
-    };
-    FFTM.prototype.mulp = function mulp(x, y, out) {
-        var N = 2 * this.guessLen13b(x.length, y.length);
-        var rbt = this.makeRBT(N);
-        var _ = this.stub(N);
-        var rws = new Array(N);
-        var rwst = new Array(N);
-        var iwst = new Array(N);
-        var nrws = new Array(N);
-        var nrwst = new Array(N);
-        var niwst = new Array(N);
-        var rmws = out.words;
-        rmws.length = N;
-        this.convert13b(x.words, x.length, rws, N);
-        this.convert13b(y.words, y.length, nrws, N);
-        this.transform(rws, _, rwst, iwst, N, rbt);
-        this.transform(nrws, _, nrwst, niwst, N, rbt);
-        for(var i = 0; i < N; i++){
-            var rx = rwst[i] * nrwst[i] - iwst[i] * niwst[i];
-            iwst[i] = rwst[i] * niwst[i] + iwst[i] * nrwst[i];
-            rwst[i] = rx;
-        }
-        this.conjugate(rwst, iwst, N);
-        this.transform(rwst, iwst, rmws, _, N, rbt);
-        this.conjugate(rmws, _, N);
-        this.normalize13b(rmws, N);
-        out.negative = x.negative ^ y.negative;
-        out.length = x.length + y.length;
-        return out._strip();
-    };
-    // Multiply `this` by `num`
-    BN.prototype.mul = function mul(num) {
-        var out = new BN(null);
-        out.words = new Array(this.length + num.length);
-        return this.mulTo(num, out);
-    };
-    // Multiply employing FFT
-    BN.prototype.mulf = function mulf(num) {
-        var out = new BN(null);
-        out.words = new Array(this.length + num.length);
-        return jumboMulTo(this, num, out);
-    };
-    // In-place Multiplication
-    BN.prototype.imul = function imul(num) {
-        return this.clone().mulTo(num, this);
-    };
-    BN.prototype.imuln = function imuln(num) {
-        var isNegNum = num < 0;
-        if (isNegNum) num = -num;
-        assert(typeof num === "number");
-        assert(num < 0x4000000);
-        // Carry
-        var carry = 0;
-        for(var i = 0; i < this.length; i++){
-            var w = (this.words[i] | 0) * num;
-            var lo = (w & 0x3ffffff) + (carry & 0x3ffffff);
-            carry >>= 26;
-            carry += w / 0x4000000 | 0;
-            // NOTE: lo is 27bit maximum
-            carry += lo >>> 26;
-            this.words[i] = lo & 0x3ffffff;
-        }
-        if (carry !== 0) {
-            this.words[i] = carry;
-            this.length++;
-        }
-        return isNegNum ? this.ineg() : this;
-    };
-    BN.prototype.muln = function muln(num) {
-        return this.clone().imuln(num);
-    };
-    // `this` * `this`
-    BN.prototype.sqr = function sqr() {
-        return this.mul(this);
-    };
-    // `this` * `this` in-place
-    BN.prototype.isqr = function isqr() {
-        return this.imul(this.clone());
-    };
-    // Math.pow(`this`, `num`)
-    BN.prototype.pow = function pow(num) {
-        var w = toBitArray(num);
-        if (w.length === 0) return new BN(1);
-        // Skip leading zeroes
-        var res = this;
-        for(var i = 0; i < w.length; i++, res = res.sqr()){
-            if (w[i] !== 0) break;
-        }
-        if (++i < w.length) for(var q = res.sqr(); i < w.length; i++, q = q.sqr()){
-            if (w[i] === 0) continue;
-            res = res.mul(q);
-        }
-        return res;
-    };
-    // Shift-left in-place
-    BN.prototype.iushln = function iushln(bits) {
-        assert(typeof bits === "number" && bits >= 0);
-        var r = bits % 26;
-        var s = (bits - r) / 26;
-        var carryMask = 0x3ffffff >>> 26 - r << 26 - r;
-        var i;
-        if (r !== 0) {
-            var carry = 0;
-            for(i = 0; i < this.length; i++){
-                var newCarry = this.words[i] & carryMask;
-                var c = (this.words[i] | 0) - newCarry << r;
-                this.words[i] = c | carry;
-                carry = newCarry >>> 26 - r;
-            }
-            if (carry) {
-                this.words[i] = carry;
-                this.length++;
-            }
-        }
-        if (s !== 0) {
-            for(i = this.length - 1; i >= 0; i--)this.words[i + s] = this.words[i];
-            for(i = 0; i < s; i++)this.words[i] = 0;
-            this.length += s;
-        }
-        return this._strip();
-    };
-    BN.prototype.ishln = function ishln(bits) {
-        // TODO(indutny): implement me
-        assert(this.negative === 0);
-        return this.iushln(bits);
-    };
-    // Shift-right in-place
-    // NOTE: `hint` is a lowest bit before trailing zeroes
-    // NOTE: if `extended` is present - it will be filled with destroyed bits
-    BN.prototype.iushrn = function iushrn(bits, hint, extended) {
-        assert(typeof bits === "number" && bits >= 0);
-        var h;
-        if (hint) h = (hint - hint % 26) / 26;
-        else h = 0;
-        var r = bits % 26;
-        var s = Math.min((bits - r) / 26, this.length);
-        var mask = 0x3ffffff ^ 0x3ffffff >>> r << r;
-        var maskedWords = extended;
-        h -= s;
-        h = Math.max(0, h);
-        // Extended mode, copy masked part
-        if (maskedWords) {
-            for(var i = 0; i < s; i++)maskedWords.words[i] = this.words[i];
-            maskedWords.length = s;
-        }
-        if (s === 0) ;
-        else if (this.length > s) {
-            this.length -= s;
-            for(i = 0; i < this.length; i++)this.words[i] = this.words[i + s];
-        } else {
-            this.words[0] = 0;
-            this.length = 1;
-        }
-        var carry = 0;
-        for(i = this.length - 1; i >= 0 && (carry !== 0 || i >= h); i--){
-            var word = this.words[i] | 0;
-            this.words[i] = carry << 26 - r | word >>> r;
-            carry = word & mask;
-        }
-        // Push carried bits as a mask
-        if (maskedWords && carry !== 0) maskedWords.words[maskedWords.length++] = carry;
-        if (this.length === 0) {
-            this.words[0] = 0;
-            this.length = 1;
-        }
-        return this._strip();
-    };
-    BN.prototype.ishrn = function ishrn(bits, hint, extended) {
-        // TODO(indutny): implement me
-        assert(this.negative === 0);
-        return this.iushrn(bits, hint, extended);
-    };
-    // Shift-left
-    BN.prototype.shln = function shln(bits) {
-        return this.clone().ishln(bits);
-    };
-    BN.prototype.ushln = function ushln(bits) {
-        return this.clone().iushln(bits);
-    };
-    // Shift-right
-    BN.prototype.shrn = function shrn(bits) {
-        return this.clone().ishrn(bits);
-    };
-    BN.prototype.ushrn = function ushrn(bits) {
-        return this.clone().iushrn(bits);
-    };
-    // Test if n bit is set
-    BN.prototype.testn = function testn(bit) {
-        assert(typeof bit === "number" && bit >= 0);
-        var r = bit % 26;
-        var s = (bit - r) / 26;
-        var q = 1 << r;
-        // Fast case: bit is much higher than all existing words
-        if (this.length <= s) return false;
-        // Check bit and return
-        var w = this.words[s];
-        return !!(w & q);
-    };
-    // Return only lowers bits of number (in-place)
-    BN.prototype.imaskn = function imaskn(bits) {
-        assert(typeof bits === "number" && bits >= 0);
-        var r = bits % 26;
-        var s = (bits - r) / 26;
-        assert(this.negative === 0, "imaskn works only with positive numbers");
-        if (this.length <= s) return this;
-        if (r !== 0) s++;
-        this.length = Math.min(s, this.length);
-        if (r !== 0) {
-            var mask = 0x3ffffff ^ 0x3ffffff >>> r << r;
-            this.words[this.length - 1] &= mask;
-        }
-        return this._strip();
-    };
-    // Return only lowers bits of number
-    BN.prototype.maskn = function maskn(bits) {
-        return this.clone().imaskn(bits);
-    };
-    // Add plain number `num` to `this`
-    BN.prototype.iaddn = function iaddn(num) {
-        assert(typeof num === "number");
-        assert(num < 0x4000000);
-        if (num < 0) return this.isubn(-num);
-        // Possible sign change
-        if (this.negative !== 0) {
-            if (this.length === 1 && (this.words[0] | 0) <= num) {
-                this.words[0] = num - (this.words[0] | 0);
-                this.negative = 0;
-                return this;
-            }
-            this.negative = 0;
-            this.isubn(num);
-            this.negative = 1;
-            return this;
-        }
-        // Add without checks
-        return this._iaddn(num);
-    };
-    BN.prototype._iaddn = function _iaddn(num) {
-        this.words[0] += num;
-        // Carry
-        for(var i = 0; i < this.length && this.words[i] >= 0x4000000; i++){
-            this.words[i] -= 0x4000000;
-            if (i === this.length - 1) this.words[i + 1] = 1;
-            else this.words[i + 1]++;
-        }
-        this.length = Math.max(this.length, i + 1);
-        return this;
-    };
-    // Subtract plain number `num` from `this`
-    BN.prototype.isubn = function isubn(num) {
-        assert(typeof num === "number");
-        assert(num < 0x4000000);
-        if (num < 0) return this.iaddn(-num);
-        if (this.negative !== 0) {
-            this.negative = 0;
-            this.iaddn(num);
-            this.negative = 1;
-            return this;
-        }
-        this.words[0] -= num;
-        if (this.length === 1 && this.words[0] < 0) {
-            this.words[0] = -this.words[0];
-            this.negative = 1;
-        } else // Carry
-        for(var i = 0; i < this.length && this.words[i] < 0; i++){
-            this.words[i] += 0x4000000;
-            this.words[i + 1] -= 1;
-        }
-        return this._strip();
-    };
-    BN.prototype.addn = function addn(num) {
-        return this.clone().iaddn(num);
-    };
-    BN.prototype.subn = function subn(num) {
-        return this.clone().isubn(num);
-    };
-    BN.prototype.iabs = function iabs() {
-        this.negative = 0;
-        return this;
-    };
-    BN.prototype.abs = function abs() {
-        return this.clone().iabs();
-    };
-    BN.prototype._ishlnsubmul = function _ishlnsubmul(num, mul, shift) {
-        var len = num.length + shift;
-        var i;
-        this._expand(len);
-        var w;
-        var carry = 0;
-        for(i = 0; i < num.length; i++){
-            w = (this.words[i + shift] | 0) + carry;
-            var right = (num.words[i] | 0) * mul;
-            w -= right & 0x3ffffff;
-            carry = (w >> 26) - (right / 0x4000000 | 0);
-            this.words[i + shift] = w & 0x3ffffff;
-        }
-        for(; i < this.length - shift; i++){
-            w = (this.words[i + shift] | 0) + carry;
-            carry = w >> 26;
-            this.words[i + shift] = w & 0x3ffffff;
-        }
-        if (carry === 0) return this._strip();
-        // Subtraction overflow
-        assert(carry === -1);
-        carry = 0;
-        for(i = 0; i < this.length; i++){
-            w = -(this.words[i] | 0) + carry;
-            carry = w >> 26;
-            this.words[i] = w & 0x3ffffff;
-        }
-        this.negative = 1;
-        return this._strip();
-    };
-    BN.prototype._wordDiv = function _wordDiv(num, mode) {
-        var shift = this.length - num.length;
-        var a = this.clone();
-        var b = num;
-        // Normalize
-        var bhi = b.words[b.length - 1] | 0;
-        var bhiBits = this._countBits(bhi);
-        shift = 26 - bhiBits;
-        if (shift !== 0) {
-            b = b.ushln(shift);
-            a.iushln(shift);
-            bhi = b.words[b.length - 1] | 0;
-        }
-        // Initialize quotient
-        var m = a.length - b.length;
-        var q;
-        if (mode !== "mod") {
-            q = new BN(null);
-            q.length = m + 1;
-            q.words = new Array(q.length);
-            for(var i = 0; i < q.length; i++)q.words[i] = 0;
-        }
-        var diff = a.clone()._ishlnsubmul(b, 1, m);
-        if (diff.negative === 0) {
-            a = diff;
-            if (q) q.words[m] = 1;
-        }
-        for(var j = m - 1; j >= 0; j--){
-            var qj = (a.words[b.length + j] | 0) * 0x4000000 + (a.words[b.length + j - 1] | 0);
-            // NOTE: (qj / bhi) is (0x3ffffff * 0x4000000 + 0x3ffffff) / 0x2000000 max
-            // (0x7ffffff)
-            qj = Math.min(qj / bhi | 0, 0x3ffffff);
-            a._ishlnsubmul(b, qj, j);
-            while(a.negative !== 0){
-                qj--;
-                a.negative = 0;
-                a._ishlnsubmul(b, 1, j);
-                if (!a.isZero()) a.negative ^= 1;
-            }
-            if (q) q.words[j] = qj;
-        }
-        if (q) q._strip();
-        a._strip();
-        // Denormalize
-        if (mode !== "div" && shift !== 0) a.iushrn(shift);
-        return {
-            div: q || null,
-            mod: a
-        };
-    };
-    // NOTE: 1) `mode` can be set to `mod` to request mod only,
-    //       to `div` to request div only, or be absent to
-    //       request both div & mod
-    //       2) `positive` is true if unsigned mod is requested
-    BN.prototype.divmod = function divmod(num, mode, positive) {
-        assert(!num.isZero());
-        if (this.isZero()) return {
-            div: new BN(0),
-            mod: new BN(0)
-        };
-        var div, mod, res;
-        if (this.negative !== 0 && num.negative === 0) {
-            res = this.neg().divmod(num, mode);
-            if (mode !== "mod") div = res.div.neg();
-            if (mode !== "div") {
-                mod = res.mod.neg();
-                if (positive && mod.negative !== 0) mod.iadd(num);
-            }
-            return {
-                div: div,
-                mod: mod
-            };
-        }
-        if (this.negative === 0 && num.negative !== 0) {
-            res = this.divmod(num.neg(), mode);
-            if (mode !== "mod") div = res.div.neg();
-            return {
-                div: div,
-                mod: res.mod
-            };
-        }
-        if ((this.negative & num.negative) !== 0) {
-            res = this.neg().divmod(num.neg(), mode);
-            if (mode !== "div") {
-                mod = res.mod.neg();
-                if (positive && mod.negative !== 0) mod.isub(num);
-            }
-            return {
-                div: res.div,
-                mod: mod
-            };
-        }
-        // Both numbers are positive at this point
-        // Strip both numbers to approximate shift value
-        if (num.length > this.length || this.cmp(num) < 0) return {
-            div: new BN(0),
-            mod: this
-        };
-        // Very short reduction
-        if (num.length === 1) {
-            if (mode === "div") return {
-                div: this.divn(num.words[0]),
-                mod: null
-            };
-            if (mode === "mod") return {
-                div: null,
-                mod: new BN(this.modrn(num.words[0]))
-            };
-            return {
-                div: this.divn(num.words[0]),
-                mod: new BN(this.modrn(num.words[0]))
-            };
-        }
-        return this._wordDiv(num, mode);
-    };
-    // Find `this` / `num`
-    BN.prototype.div = function div(num) {
-        return this.divmod(num, "div", false).div;
-    };
-    // Find `this` % `num`
-    BN.prototype.mod = function mod(num) {
-        return this.divmod(num, "mod", false).mod;
-    };
-    BN.prototype.umod = function umod(num) {
-        return this.divmod(num, "mod", true).mod;
-    };
-    // Find Round(`this` / `num`)
-    BN.prototype.divRound = function divRound(num) {
-        var dm = this.divmod(num);
-        // Fast case - exact division
-        if (dm.mod.isZero()) return dm.div;
-        var mod = dm.div.negative !== 0 ? dm.mod.isub(num) : dm.mod;
-        var half = num.ushrn(1);
-        var r2 = num.andln(1);
-        var cmp = mod.cmp(half);
-        // Round down
-        if (cmp < 0 || r2 === 1 && cmp === 0) return dm.div;
-        // Round up
-        return dm.div.negative !== 0 ? dm.div.isubn(1) : dm.div.iaddn(1);
-    };
-    BN.prototype.modrn = function modrn(num) {
-        var isNegNum = num < 0;
-        if (isNegNum) num = -num;
-        assert(num <= 0x3ffffff);
-        var p = 67108864 % num;
-        var acc = 0;
-        for(var i = this.length - 1; i >= 0; i--)acc = (p * acc + (this.words[i] | 0)) % num;
-        return isNegNum ? -acc : acc;
-    };
-    // WARNING: DEPRECATED
-    BN.prototype.modn = function modn(num) {
-        return this.modrn(num);
-    };
-    // In-place division by number
-    BN.prototype.idivn = function idivn(num) {
-        var isNegNum = num < 0;
-        if (isNegNum) num = -num;
-        assert(num <= 0x3ffffff);
-        var carry = 0;
-        for(var i = this.length - 1; i >= 0; i--){
-            var w = (this.words[i] | 0) + carry * 0x4000000;
-            this.words[i] = w / num | 0;
-            carry = w % num;
-        }
-        this._strip();
-        return isNegNum ? this.ineg() : this;
-    };
-    BN.prototype.divn = function divn(num) {
-        return this.clone().idivn(num);
-    };
-    BN.prototype.egcd = function egcd(p) {
-        assert(p.negative === 0);
-        assert(!p.isZero());
-        var x = this;
-        var y = p.clone();
-        if (x.negative !== 0) x = x.umod(p);
-        else x = x.clone();
-        // A * x + B * y = x
-        var A = new BN(1);
-        var B = new BN(0);
-        // C * x + D * y = y
-        var C = new BN(0);
-        var D = new BN(1);
-        var g = 0;
-        while(x.isEven() && y.isEven()){
-            x.iushrn(1);
-            y.iushrn(1);
-            ++g;
-        }
-        var yp = y.clone();
-        var xp = x.clone();
-        while(!x.isZero()){
-            for(var i = 0, im = 1; (x.words[0] & im) === 0 && i < 26; ++i, im <<= 1);
-            if (i > 0) {
-                x.iushrn(i);
-                while(i-- > 0){
-                    if (A.isOdd() || B.isOdd()) {
-                        A.iadd(yp);
-                        B.isub(xp);
-                    }
-                    A.iushrn(1);
-                    B.iushrn(1);
-                }
-            }
-            for(var j = 0, jm = 1; (y.words[0] & jm) === 0 && j < 26; ++j, jm <<= 1);
-            if (j > 0) {
-                y.iushrn(j);
-                while(j-- > 0){
-                    if (C.isOdd() || D.isOdd()) {
-                        C.iadd(yp);
-                        D.isub(xp);
-                    }
-                    C.iushrn(1);
-                    D.iushrn(1);
-                }
-            }
-            if (x.cmp(y) >= 0) {
-                x.isub(y);
-                A.isub(C);
-                B.isub(D);
-            } else {
-                y.isub(x);
-                C.isub(A);
-                D.isub(B);
-            }
-        }
-        return {
-            a: C,
-            b: D,
-            gcd: y.iushln(g)
-        };
-    };
-    // This is reduced incarnation of the binary EEA
-    // above, designated to invert members of the
-    // _prime_ fields F(p) at a maximal speed
-    BN.prototype._invmp = function _invmp(p) {
-        assert(p.negative === 0);
-        assert(!p.isZero());
-        var a = this;
-        var b = p.clone();
-        if (a.negative !== 0) a = a.umod(p);
-        else a = a.clone();
-        var x1 = new BN(1);
-        var x2 = new BN(0);
-        var delta = b.clone();
-        while(a.cmpn(1) > 0 && b.cmpn(1) > 0){
-            for(var i = 0, im = 1; (a.words[0] & im) === 0 && i < 26; ++i, im <<= 1);
-            if (i > 0) {
-                a.iushrn(i);
-                while(i-- > 0){
-                    if (x1.isOdd()) x1.iadd(delta);
-                    x1.iushrn(1);
-                }
-            }
-            for(var j = 0, jm = 1; (b.words[0] & jm) === 0 && j < 26; ++j, jm <<= 1);
-            if (j > 0) {
-                b.iushrn(j);
-                while(j-- > 0){
-                    if (x2.isOdd()) x2.iadd(delta);
-                    x2.iushrn(1);
-                }
-            }
-            if (a.cmp(b) >= 0) {
-                a.isub(b);
-                x1.isub(x2);
-            } else {
-                b.isub(a);
-                x2.isub(x1);
-            }
-        }
-        var res;
-        if (a.cmpn(1) === 0) res = x1;
-        else res = x2;
-        if (res.cmpn(0) < 0) res.iadd(p);
-        return res;
-    };
-    BN.prototype.gcd = function gcd(num) {
-        if (this.isZero()) return num.abs();
-        if (num.isZero()) return this.abs();
-        var a = this.clone();
-        var b = num.clone();
-        a.negative = 0;
-        b.negative = 0;
-        // Remove common factor of two
-        for(var shift = 0; a.isEven() && b.isEven(); shift++){
-            a.iushrn(1);
-            b.iushrn(1);
-        }
-        do {
-            while(a.isEven())a.iushrn(1);
-            while(b.isEven())b.iushrn(1);
-            var r = a.cmp(b);
-            if (r < 0) {
-                // Swap `a` and `b` to make `a` always bigger than `b`
-                var t = a;
-                a = b;
-                b = t;
-            } else if (r === 0 || b.cmpn(1) === 0) break;
-            a.isub(b);
-        }while (true);
-        return b.iushln(shift);
-    };
-    // Invert number in the field F(num)
-    BN.prototype.invm = function invm(num) {
-        return this.egcd(num).a.umod(num);
-    };
-    BN.prototype.isEven = function isEven() {
-        return (this.words[0] & 1) === 0;
-    };
-    BN.prototype.isOdd = function isOdd() {
-        return (this.words[0] & 1) === 1;
-    };
-    // And first word and num
-    BN.prototype.andln = function andln(num) {
-        return this.words[0] & num;
-    };
-    // Increment at the bit position in-line
-    BN.prototype.bincn = function bincn(bit) {
-        assert(typeof bit === "number");
-        var r = bit % 26;
-        var s = (bit - r) / 26;
-        var q = 1 << r;
-        // Fast case: bit is much higher than all existing words
-        if (this.length <= s) {
-            this._expand(s + 1);
-            this.words[s] |= q;
-            return this;
-        }
-        // Add bit and propagate, if needed
-        var carry = q;
-        for(var i = s; carry !== 0 && i < this.length; i++){
-            var w = this.words[i] | 0;
-            w += carry;
-            carry = w >>> 26;
-            w &= 0x3ffffff;
-            this.words[i] = w;
-        }
-        if (carry !== 0) {
-            this.words[i] = carry;
-            this.length++;
-        }
-        return this;
-    };
-    BN.prototype.isZero = function isZero() {
-        return this.length === 1 && this.words[0] === 0;
-    };
-    BN.prototype.cmpn = function cmpn(num) {
-        var negative = num < 0;
-        if (this.negative !== 0 && !negative) return -1;
-        if (this.negative === 0 && negative) return 1;
-        this._strip();
-        var res;
-        if (this.length > 1) res = 1;
-        else {
-            if (negative) num = -num;
-            assert(num <= 0x3ffffff, "Number is too big");
-            var w = this.words[0] | 0;
-            res = w === num ? 0 : w < num ? -1 : 1;
-        }
-        if (this.negative !== 0) return -res | 0;
-        return res;
-    };
-    // Compare two numbers and return:
-    // 1 - if `this` > `num`
-    // 0 - if `this` == `num`
-    // -1 - if `this` < `num`
-    BN.prototype.cmp = function cmp(num) {
-        if (this.negative !== 0 && num.negative === 0) return -1;
-        if (this.negative === 0 && num.negative !== 0) return 1;
-        var res = this.ucmp(num);
-        if (this.negative !== 0) return -res | 0;
-        return res;
-    };
-    // Unsigned comparison
-    BN.prototype.ucmp = function ucmp(num) {
-        // At this point both numbers have the same sign
-        if (this.length > num.length) return 1;
-        if (this.length < num.length) return -1;
-        var res = 0;
-        for(var i = this.length - 1; i >= 0; i--){
-            var a = this.words[i] | 0;
-            var b = num.words[i] | 0;
-            if (a === b) continue;
-            if (a < b) res = -1;
-            else if (a > b) res = 1;
-            break;
-        }
-        return res;
-    };
-    BN.prototype.gtn = function gtn(num) {
-        return this.cmpn(num) === 1;
-    };
-    BN.prototype.gt = function gt(num) {
-        return this.cmp(num) === 1;
-    };
-    BN.prototype.gten = function gten(num) {
-        return this.cmpn(num) >= 0;
-    };
-    BN.prototype.gte = function gte(num) {
-        return this.cmp(num) >= 0;
-    };
-    BN.prototype.ltn = function ltn(num) {
-        return this.cmpn(num) === -1;
-    };
-    BN.prototype.lt = function lt(num) {
-        return this.cmp(num) === -1;
-    };
-    BN.prototype.lten = function lten(num) {
-        return this.cmpn(num) <= 0;
-    };
-    BN.prototype.lte = function lte(num) {
-        return this.cmp(num) <= 0;
-    };
-    BN.prototype.eqn = function eqn(num) {
-        return this.cmpn(num) === 0;
-    };
-    BN.prototype.eq = function eq(num) {
-        return this.cmp(num) === 0;
-    };
-    //
-    // A reduce context, could be using montgomery or something better, depending
-    // on the `m` itself.
-    //
-    BN.red = function red(num) {
-        return new Red(num);
-    };
-    BN.prototype.toRed = function toRed(ctx) {
-        assert(!this.red, "Already a number in reduction context");
-        assert(this.negative === 0, "red works only with positives");
-        return ctx.convertTo(this)._forceRed(ctx);
-    };
-    BN.prototype.fromRed = function fromRed() {
-        assert(this.red, "fromRed works only with numbers in reduction context");
-        return this.red.convertFrom(this);
-    };
-    BN.prototype._forceRed = function _forceRed(ctx) {
-        this.red = ctx;
-        return this;
-    };
-    BN.prototype.forceRed = function forceRed(ctx) {
-        assert(!this.red, "Already a number in reduction context");
-        return this._forceRed(ctx);
-    };
-    BN.prototype.redAdd = function redAdd(num) {
-        assert(this.red, "redAdd works only with red numbers");
-        return this.red.add(this, num);
-    };
-    BN.prototype.redIAdd = function redIAdd(num) {
-        assert(this.red, "redIAdd works only with red numbers");
-        return this.red.iadd(this, num);
-    };
-    BN.prototype.redSub = function redSub(num) {
-        assert(this.red, "redSub works only with red numbers");
-        return this.red.sub(this, num);
-    };
-    BN.prototype.redISub = function redISub(num) {
-        assert(this.red, "redISub works only with red numbers");
-        return this.red.isub(this, num);
-    };
-    BN.prototype.redShl = function redShl(num) {
-        assert(this.red, "redShl works only with red numbers");
-        return this.red.shl(this, num);
-    };
-    BN.prototype.redMul = function redMul(num) {
-        assert(this.red, "redMul works only with red numbers");
-        this.red._verify2(this, num);
-        return this.red.mul(this, num);
-    };
-    BN.prototype.redIMul = function redIMul(num) {
-        assert(this.red, "redMul works only with red numbers");
-        this.red._verify2(this, num);
-        return this.red.imul(this, num);
-    };
-    BN.prototype.redSqr = function redSqr() {
-        assert(this.red, "redSqr works only with red numbers");
-        this.red._verify1(this);
-        return this.red.sqr(this);
-    };
-    BN.prototype.redISqr = function redISqr() {
-        assert(this.red, "redISqr works only with red numbers");
-        this.red._verify1(this);
-        return this.red.isqr(this);
-    };
-    // Square root over p
-    BN.prototype.redSqrt = function redSqrt() {
-        assert(this.red, "redSqrt works only with red numbers");
-        this.red._verify1(this);
-        return this.red.sqrt(this);
-    };
-    BN.prototype.redInvm = function redInvm() {
-        assert(this.red, "redInvm works only with red numbers");
-        this.red._verify1(this);
-        return this.red.invm(this);
-    };
-    // Return negative clone of `this` % `red modulo`
-    BN.prototype.redNeg = function redNeg() {
-        assert(this.red, "redNeg works only with red numbers");
-        this.red._verify1(this);
-        return this.red.neg(this);
-    };
-    BN.prototype.redPow = function redPow(num) {
-        assert(this.red && !num.red, "redPow(normalNum)");
-        this.red._verify1(this);
-        return this.red.pow(this, num);
-    };
-    // Prime numbers with efficient reduction
-    var primes = {
-        k256: null,
-        p224: null,
-        p192: null,
-        p25519: null
-    };
-    // Pseudo-Mersenne prime
-    function MPrime(name, p) {
-        // P = 2 ^ N - K
-        this.name = name;
-        this.p = new BN(p, 16);
-        this.n = this.p.bitLength();
-        this.k = new BN(1).iushln(this.n).isub(this.p);
-        this.tmp = this._tmp();
-    }
-    MPrime.prototype._tmp = function _tmp() {
-        var tmp = new BN(null);
-        tmp.words = new Array(Math.ceil(this.n / 13));
-        return tmp;
-    };
-    MPrime.prototype.ireduce = function ireduce(num) {
-        // Assumes that `num` is less than `P^2`
-        // num = HI * (2 ^ N - K) + HI * K + LO = HI * K + LO (mod P)
-        var r = num;
-        var rlen;
-        do {
-            this.split(r, this.tmp);
-            r = this.imulK(r);
-            r = r.iadd(this.tmp);
-            rlen = r.bitLength();
-        }while (rlen > this.n);
-        var cmp = rlen < this.n ? -1 : r.ucmp(this.p);
-        if (cmp === 0) {
-            r.words[0] = 0;
-            r.length = 1;
-        } else if (cmp > 0) r.isub(this.p);
-        else if (r.strip !== undefined) // r is a BN v4 instance
-        r.strip();
-        else // r is a BN v5 instance
-        r._strip();
-        return r;
-    };
-    MPrime.prototype.split = function split(input, out) {
-        input.iushrn(this.n, 0, out);
-    };
-    MPrime.prototype.imulK = function imulK(num) {
-        return num.imul(this.k);
-    };
-    function K256() {
-        MPrime.call(this, "k256", "ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff fffffffe fffffc2f");
-    }
-    inherits(K256, MPrime);
-    K256.prototype.split = function split(input, output) {
-        // 256 = 9 * 26 + 22
-        var mask = 0x3fffff;
-        var outLen = Math.min(input.length, 9);
-        for(var i = 0; i < outLen; i++)output.words[i] = input.words[i];
-        output.length = outLen;
-        if (input.length <= 9) {
-            input.words[0] = 0;
-            input.length = 1;
-            return;
-        }
-        // Shift by 9 limbs
-        var prev = input.words[9];
-        output.words[output.length++] = prev & mask;
-        for(i = 10; i < input.length; i++){
-            var next = input.words[i] | 0;
-            input.words[i - 10] = (next & mask) << 4 | prev >>> 22;
-            prev = next;
-        }
-        prev >>>= 22;
-        input.words[i - 10] = prev;
-        if (prev === 0 && input.length > 10) input.length -= 10;
-        else input.length -= 9;
-    };
-    K256.prototype.imulK = function imulK(num) {
-        // K = 0x1000003d1 = [ 0x40, 0x3d1 ]
-        num.words[num.length] = 0;
-        num.words[num.length + 1] = 0;
-        num.length += 2;
-        // bounded at: 0x40 * 0x3ffffff + 0x3d0 = 0x100000390
-        var lo = 0;
-        for(var i = 0; i < num.length; i++){
-            var w = num.words[i] | 0;
-            lo += w * 0x3d1;
-            num.words[i] = lo & 0x3ffffff;
-            lo = w * 0x40 + (lo / 0x4000000 | 0);
-        }
-        // Fast length reduction
-        if (num.words[num.length - 1] === 0) {
-            num.length--;
-            if (num.words[num.length - 1] === 0) num.length--;
-        }
-        return num;
-    };
-    function P224() {
-        MPrime.call(this, "p224", "ffffffff ffffffff ffffffff ffffffff 00000000 00000000 00000001");
-    }
-    inherits(P224, MPrime);
-    function P192() {
-        MPrime.call(this, "p192", "ffffffff ffffffff ffffffff fffffffe ffffffff ffffffff");
-    }
-    inherits(P192, MPrime);
-    function P25519() {
-        // 2 ^ 255 - 19
-        MPrime.call(this, "25519", "7fffffffffffffff ffffffffffffffff ffffffffffffffff ffffffffffffffed");
-    }
-    inherits(P25519, MPrime);
-    P25519.prototype.imulK = function imulK(num) {
-        // K = 0x13
-        var carry = 0;
-        for(var i = 0; i < num.length; i++){
-            var hi = (num.words[i] | 0) * 0x13 + carry;
-            var lo = hi & 0x3ffffff;
-            hi >>>= 26;
-            num.words[i] = lo;
-            carry = hi;
-        }
-        if (carry !== 0) num.words[num.length++] = carry;
-        return num;
-    };
-    // Exported mostly for testing purposes, use plain name instead
-    BN._prime = function prime(name) {
-        // Cached version of prime
-        if (primes[name]) return primes[name];
-        var prime;
-        if (name === "k256") prime = new K256();
-        else if (name === "p224") prime = new P224();
-        else if (name === "p192") prime = new P192();
-        else if (name === "p25519") prime = new P25519();
-        else throw new Error("Unknown prime " + name);
-        primes[name] = prime;
-        return prime;
-    };
-    //
-    // Base reduction engine
-    //
-    function Red(m) {
-        if (typeof m === "string") {
-            var prime = BN._prime(m);
-            this.m = prime.p;
-            this.prime = prime;
-        } else {
-            assert(m.gtn(1), "modulus must be greater than 1");
-            this.m = m;
-            this.prime = null;
-        }
-    }
-    Red.prototype._verify1 = function _verify1(a) {
-        assert(a.negative === 0, "red works only with positives");
-        assert(a.red, "red works only with red numbers");
-    };
-    Red.prototype._verify2 = function _verify2(a, b) {
-        assert((a.negative | b.negative) === 0, "red works only with positives");
-        assert(a.red && a.red === b.red, "red works only with red numbers");
-    };
-    Red.prototype.imod = function imod(a) {
-        if (this.prime) return this.prime.ireduce(a)._forceRed(this);
-        move(a, a.umod(this.m)._forceRed(this));
-        return a;
-    };
-    Red.prototype.neg = function neg(a) {
-        if (a.isZero()) return a.clone();
-        return this.m.sub(a)._forceRed(this);
-    };
-    Red.prototype.add = function add(a, b) {
-        this._verify2(a, b);
-        var res = a.add(b);
-        if (res.cmp(this.m) >= 0) res.isub(this.m);
-        return res._forceRed(this);
-    };
-    Red.prototype.iadd = function iadd(a, b) {
-        this._verify2(a, b);
-        var res = a.iadd(b);
-        if (res.cmp(this.m) >= 0) res.isub(this.m);
-        return res;
-    };
-    Red.prototype.sub = function sub(a, b) {
-        this._verify2(a, b);
-        var res = a.sub(b);
-        if (res.cmpn(0) < 0) res.iadd(this.m);
-        return res._forceRed(this);
-    };
-    Red.prototype.isub = function isub(a, b) {
-        this._verify2(a, b);
-        var res = a.isub(b);
-        if (res.cmpn(0) < 0) res.iadd(this.m);
-        return res;
-    };
-    Red.prototype.shl = function shl(a, num) {
-        this._verify1(a);
-        return this.imod(a.ushln(num));
-    };
-    Red.prototype.imul = function imul(a, b) {
-        this._verify2(a, b);
-        return this.imod(a.imul(b));
-    };
-    Red.prototype.mul = function mul(a, b) {
-        this._verify2(a, b);
-        return this.imod(a.mul(b));
-    };
-    Red.prototype.isqr = function isqr(a) {
-        return this.imul(a, a.clone());
-    };
-    Red.prototype.sqr = function sqr(a) {
-        return this.mul(a, a);
-    };
-    Red.prototype.sqrt = function sqrt(a) {
-        if (a.isZero()) return a.clone();
-        var mod3 = this.m.andln(3);
-        assert(mod3 % 2 === 1);
-        // Fast case
-        if (mod3 === 3) {
-            var pow = this.m.add(new BN(1)).iushrn(2);
-            return this.pow(a, pow);
-        }
-        // Tonelli-Shanks algorithm (Totally unoptimized and slow)
-        //
-        // Find Q and S, that Q * 2 ^ S = (P - 1)
-        var q = this.m.subn(1);
-        var s = 0;
-        while(!q.isZero() && q.andln(1) === 0){
-            s++;
-            q.iushrn(1);
-        }
-        assert(!q.isZero());
-        var one = new BN(1).toRed(this);
-        var nOne = one.redNeg();
-        // Find quadratic non-residue
-        // NOTE: Max is such because of generalized Riemann hypothesis.
-        var lpow = this.m.subn(1).iushrn(1);
-        var z = this.m.bitLength();
-        z = new BN(2 * z * z).toRed(this);
-        while(this.pow(z, lpow).cmp(nOne) !== 0)z.redIAdd(nOne);
-        var c = this.pow(z, q);
-        var r = this.pow(a, q.addn(1).iushrn(1));
-        var t = this.pow(a, q);
-        var m = s;
-        while(t.cmp(one) !== 0){
-            var tmp = t;
-            for(var i = 0; tmp.cmp(one) !== 0; i++)tmp = tmp.redSqr();
-            assert(i < m);
-            var b = this.pow(c, new BN(1).iushln(m - i - 1));
-            r = r.redMul(b);
-            c = b.redSqr();
-            t = t.redMul(c);
-            m = i;
-        }
-        return r;
-    };
-    Red.prototype.invm = function invm(a) {
-        var inv = a._invmp(this.m);
-        if (inv.negative !== 0) {
-            inv.negative = 0;
-            return this.imod(inv).redNeg();
-        } else return this.imod(inv);
-    };
-    Red.prototype.pow = function pow(a, num) {
-        if (num.isZero()) return new BN(1).toRed(this);
-        if (num.cmpn(1) === 0) return a.clone();
-        var windowSize = 4;
-        var wnd = new Array(1 << windowSize);
-        wnd[0] = new BN(1).toRed(this);
-        wnd[1] = a;
-        for(var i = 2; i < wnd.length; i++)wnd[i] = this.mul(wnd[i - 1], a);
-        var res = wnd[0];
-        var current = 0;
-        var currentLen = 0;
-        var start = num.bitLength() % 26;
-        if (start === 0) start = 26;
-        for(i = num.length - 1; i >= 0; i--){
-            var word = num.words[i];
-            for(var j = start - 1; j >= 0; j--){
-                var bit = word >> j & 1;
-                if (res !== wnd[0]) res = this.sqr(res);
-                if (bit === 0 && current === 0) {
-                    currentLen = 0;
-                    continue;
-                }
-                current <<= 1;
-                current |= bit;
-                currentLen++;
-                if (currentLen !== windowSize && (i !== 0 || j !== 0)) continue;
-                res = this.mul(res, wnd[current]);
-                currentLen = 0;
-                current = 0;
-            }
-            start = 26;
-        }
-        return res;
-    };
-    Red.prototype.convertTo = function convertTo(num) {
-        var r = num.umod(this.m);
-        return r === num ? r.clone() : r;
-    };
-    Red.prototype.convertFrom = function convertFrom(num) {
-        var res = num.clone();
-        res.red = null;
-        return res;
-    };
-    //
-    // Montgomery method engine
-    //
-    BN.mont = function mont(num) {
-        return new Mont(num);
-    };
-    function Mont(m) {
-        Red.call(this, m);
-        this.shift = this.m.bitLength();
-        if (this.shift % 26 !== 0) this.shift += 26 - this.shift % 26;
-        this.r = new BN(1).iushln(this.shift);
-        this.r2 = this.imod(this.r.sqr());
-        this.rinv = this.r._invmp(this.m);
-        this.minv = this.rinv.mul(this.r).isubn(1).div(this.m);
-        this.minv = this.minv.umod(this.r);
-        this.minv = this.r.sub(this.minv);
-    }
-    inherits(Mont, Red);
-    Mont.prototype.convertTo = function convertTo(num) {
-        return this.imod(num.ushln(this.shift));
-    };
-    Mont.prototype.convertFrom = function convertFrom(num) {
-        var r = this.imod(num.mul(this.rinv));
-        r.red = null;
-        return r;
-    };
-    Mont.prototype.imul = function imul(a, b) {
-        if (a.isZero() || b.isZero()) {
-            a.words[0] = 0;
-            a.length = 1;
-            return a;
-        }
-        var t = a.imul(b);
-        var c = t.maskn(this.shift).mul(this.minv).imaskn(this.shift).mul(this.m);
-        var u = t.isub(c).iushrn(this.shift);
-        var res = u;
-        if (u.cmp(this.m) >= 0) res = u.isub(this.m);
-        else if (u.cmpn(0) < 0) res = u.iadd(this.m);
-        return res._forceRed(this);
-    };
-    Mont.prototype.mul = function mul(a, b) {
-        if (a.isZero() || b.isZero()) return new BN(0)._forceRed(this);
-        var t = a.mul(b);
-        var c = t.maskn(this.shift).mul(this.minv).imaskn(this.shift).mul(this.m);
-        var u = t.isub(c).iushrn(this.shift);
-        var res = u;
-        if (u.cmp(this.m) >= 0) res = u.isub(this.m);
-        else if (u.cmpn(0) < 0) res = u.iadd(this.m);
-        return res._forceRed(this);
-    };
-    Mont.prototype.invm = function invm(a) {
-        // (AR)^-1 * R^2 = (A^-1 * R^-1) * R^2 = A^-1 * R
-        var res = this.imod(a._invmp(this.m).mul(this.r2));
-        return res._forceRed(this);
-    };
-})(module, this);
-
-},{"58c0d4bc9391e1e1":"jhUEF"}],"jJQ5a":[function(require,module,exports) {
-var Buffer = require("62307c300da0d24b").Buffer;
+},{"b7408ba789dfd1d4":"VopIn"}],"jJQ5a":[function(require,module,exports) {
+var Buffer = require("218df45f4bf13ae5").Buffer;
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
         "default": mod
@@ -41390,10 +38858,10 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.signTransaction = exports.createTransaction = exports.SCHEMA = exports.Action = exports.SignedTransaction = exports.Transaction = exports.Signature = exports.deleteAccount = exports.deleteKey = exports.addKey = exports.stake = exports.transfer = exports.functionCall = exports.stringifyJsonOrBytes = exports.deployContract = exports.createAccount = exports.DeleteAccount = exports.DeleteKey = exports.AddKey = exports.Stake = exports.Transfer = exports.FunctionCall = exports.DeployContract = exports.CreateAccount = exports.IAction = exports.functionCallAccessKey = exports.fullAccessKey = exports.AccessKey = exports.AccessKeyPermission = exports.FullAccessPermission = exports.FunctionCallPermission = void 0;
-const js_sha256_1 = __importDefault(require("8f05f6e49f459d7c"));
-const enums_1 = require("76f5fd8087aacb91");
-const borsh_1 = require("b17962811c2c518c");
-const key_pair_1 = require("e4a1635fea33fe89");
+const js_sha256_1 = __importDefault(require("ee1da3748b53c6c9"));
+const enums_1 = require("ffa5e162b451af3e");
+const borsh_1 = require("f251e62f3a366e41");
+const key_pair_1 = require("cc71e9c19ab32c20");
 class FunctionCallPermission extends enums_1.Assignable {
 }
 exports.FunctionCallPermission = FunctionCallPermission;
@@ -41408,7 +38876,6 @@ class AccessKey extends enums_1.Assignable {
 exports.AccessKey = AccessKey;
 function fullAccessKey() {
     return new AccessKey({
-        nonce: 0,
         permission: new AccessKeyPermission({
             fullAccess: new FullAccessPermission({})
         })
@@ -41417,7 +38884,6 @@ function fullAccessKey() {
 exports.fullAccessKey = fullAccessKey;
 function functionCallAccessKey(receiverId, methodNames, allowance) {
     return new AccessKey({
-        nonce: 0,
         permission: new AccessKeyPermission({
             functionCall: new FunctionCallPermission({
                 receiverId,
@@ -41484,7 +38950,16 @@ exports.stringifyJsonOrBytes = stringifyJsonOrBytes;
  * @param gas max amount of gas that method call can use
  * @param deposit amount of NEAR (in yoctoNEAR) to send together with the call
  * @param stringify Convert input arguments into bytes array.
- */ function functionCall(methodName, args, gas, deposit, stringify = stringifyJsonOrBytes) {
+ * @param jsContract  Is contract from JS SDK, skips stringification of arguments.
+ */ function functionCall(methodName, args, gas, deposit, stringify = stringifyJsonOrBytes, jsContract = false) {
+    if (jsContract) return new Action({
+        functionCall: new FunctionCall({
+            methodName,
+            args,
+            gas,
+            deposit
+        })
+    });
     return new Action({
         functionCall: new FunctionCall({
             methodName,
@@ -41542,19 +39017,19 @@ class Signature extends enums_1.Assignable {
 exports.Signature = Signature;
 class Transaction extends enums_1.Assignable {
     encode() {
-        return borsh_1.serialize(exports.SCHEMA, this);
+        return (0, borsh_1.serialize)(exports.SCHEMA, this);
     }
     static decode(bytes) {
-        return borsh_1.deserialize(exports.SCHEMA, Transaction, bytes);
+        return (0, borsh_1.deserialize)(exports.SCHEMA, Transaction, bytes);
     }
 }
 exports.Transaction = Transaction;
 class SignedTransaction extends enums_1.Assignable {
     encode() {
-        return borsh_1.serialize(exports.SCHEMA, this);
+        return (0, borsh_1.serialize)(exports.SCHEMA, this);
     }
     static decode(bytes) {
-        return borsh_1.deserialize(exports.SCHEMA, SignedTransaction, bytes);
+        return (0, borsh_1.deserialize)(exports.SCHEMA, SignedTransaction, bytes);
     }
 }
 exports.SignedTransaction = SignedTransaction;
@@ -41892,38 +39367,42 @@ exports.createTransaction = createTransaction;
  * @param signer The {Signer} object that assists with signing keys
  * @param accountId The human-readable NEAR account name
  * @param networkId The targeted network. (ex. default, betanet, etc…)
- */ async function signTransactionObject(transaction, signer, accountId, networkId) {
-    const message = borsh_1.serialize(exports.SCHEMA, transaction);
-    const hash = new Uint8Array(js_sha256_1.default.sha256.array(message));
-    const signature = await signer.signMessage(message, accountId, networkId);
-    const signedTx = new SignedTransaction({
-        transaction,
-        signature: new Signature({
-            keyType: transaction.publicKey.keyType,
-            data: signature.signature
-        })
+ */ function signTransactionObject(transaction, signer, accountId, networkId) {
+    return __awaiter(this, void 0, void 0, function*() {
+        const message = (0, borsh_1.serialize)(exports.SCHEMA, transaction);
+        const hash = new Uint8Array(js_sha256_1.default.sha256.array(message));
+        const signature = yield signer.signMessage(message, accountId, networkId);
+        const signedTx = new SignedTransaction({
+            transaction,
+            signature: new Signature({
+                keyType: transaction.publicKey.keyType,
+                data: signature.signature
+            })
+        });
+        return [
+            hash,
+            signedTx
+        ];
     });
-    return [
-        hash,
-        signedTx
-    ];
 }
-async function signTransaction(...args) {
-    if (args[0].constructor === Transaction) {
-        const [transaction, signer, accountId, networkId] = args;
-        return signTransactionObject(transaction, signer, accountId, networkId);
-    } else {
-        const [receiverId, nonce, actions, blockHash, signer, accountId, networkId] = args;
-        const publicKey = await signer.getPublicKey(accountId, networkId);
-        const transaction = createTransaction(accountId, publicKey, receiverId, nonce, actions, blockHash);
-        return signTransactionObject(transaction, signer, accountId, networkId);
-    }
+function signTransaction(...args) {
+    return __awaiter(this, void 0, void 0, function*() {
+        if (args[0].constructor === Transaction) {
+            const [transaction, signer, accountId, networkId] = args;
+            return signTransactionObject(transaction, signer, accountId, networkId);
+        } else {
+            const [receiverId, nonce, actions, blockHash, signer, accountId, networkId] = args;
+            const publicKey = yield signer.getPublicKey(accountId, networkId);
+            const transaction = createTransaction(accountId, publicKey, receiverId, nonce, actions, blockHash);
+            return signTransactionObject(transaction, signer, accountId, networkId);
+        }
+    });
 }
 exports.signTransaction = signTransaction;
 
-},{"62307c300da0d24b":"5c7yX","8f05f6e49f459d7c":"ahVaM","76f5fd8087aacb91":"kjmPo","b17962811c2c518c":"4JCmN","e4a1635fea33fe89":"kBQFP"}],"ahVaM":[function(require,module,exports) {
+},{"218df45f4bf13ae5":"5heHz","ee1da3748b53c6c9":"ahVaM","ffa5e162b451af3e":"kjmPo","f251e62f3a366e41":"4JCmN","cc71e9c19ab32c20":"kBQFP"}],"ahVaM":[function(require,module,exports) {
 var global = arguments[3];
-var process = require("c8fe8475ef781b23");
+var process = require("19dc1f25f71f94ea");
 /**
  * [js-sha256]{@link https://github.com/emn178/js-sha256}
  *
@@ -42411,7 +39890,7 @@ var process = require("c8fe8475ef781b23");
     }
 })();
 
-},{"c8fe8475ef781b23":"d5jf4"}],"6CFD9":[function(require,module,exports) {
+},{"19dc1f25f71f94ea":"d5jf4"}],"6CFD9":[function(require,module,exports) {
 "use strict";
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
@@ -42422,8 +39901,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.diffEpochValidators = exports.findSeatPrice = void 0;
-const bn_js_1 = __importDefault(require("247297ed0fb69ab7"));
-const depd_1 = __importDefault(require("759ba3576074f905"));
+const bn_js_1 = __importDefault(require("19b18ced45c16605"));
+const depd_1 = __importDefault(require("5e5fb9dd2b9bda78"));
 /** Finds seat price given validators stakes and number of seats.
  *  Calculation follow the spec: https://nomicon.io/Economics/README.html#validator-selection
  * @params validators: current or next epoch validators.
@@ -42433,7 +39912,7 @@ const depd_1 = __importDefault(require("759ba3576074f905"));
  */ function findSeatPrice(validators, maxNumberOfSeats, minimumStakeRatio, protocolVersion) {
     if (protocolVersion && protocolVersion < 49) return findSeatPriceForProtocolBefore49(validators, maxNumberOfSeats);
     if (!minimumStakeRatio) {
-        const deprecate = depd_1.default("findSeatPrice(validators, maxNumberOfSeats)");
+        const deprecate = (0, depd_1.default)("findSeatPrice(validators, maxNumberOfSeats)");
         deprecate("`use `findSeatPrice(validators, maxNumberOfSeats, minimumStakeRatio)` instead");
         minimumStakeRatio = [
             1,
@@ -42493,9 +39972,83 @@ function findSeatPriceForProtocolAfter49(validators, maxNumberOfSeats, minimumSt
 }
 exports.diffEpochValidators = diffEpochValidators;
 
-},{"247297ed0fb69ab7":"9pdNn","759ba3576074f905":"2jGeI"}],"hxSQV":[function(require,module,exports) {
-var Buffer = require("13faf2066b6d139a").Buffer;
+},{"19b18ced45c16605":"VopIn","5e5fb9dd2b9bda78":"2jGeI"}],"2jGeI":[function(require,module,exports) {
+/*!
+ * depd
+ * Copyright(c) 2015 Douglas Christopher Wilson
+ * MIT Licensed
+ */ "use strict";
+/**
+ * Module exports.
+ * @public
+ */ module.exports = depd;
+/**
+ * Create deprecate for namespace in caller.
+ */ function depd(namespace) {
+    if (!namespace) throw new TypeError("argument namespace is required");
+    function deprecate(message) {
+    // no-op in browser
+    }
+    deprecate._file = undefined;
+    deprecate._ignored = true;
+    deprecate._namespace = namespace;
+    deprecate._traced = false;
+    deprecate._warned = Object.create(null);
+    deprecate.function = wrapfunction;
+    deprecate.property = wrapproperty;
+    return deprecate;
+}
+/**
+ * Return a wrapped function in a deprecation message.
+ *
+ * This is a no-op version of the wrapper, which does nothing but call
+ * validation.
+ */ function wrapfunction(fn, message) {
+    if (typeof fn !== "function") throw new TypeError("argument fn must be a function");
+    return fn;
+}
+/**
+ * Wrap property in a deprecation message.
+ *
+ * This is a no-op version of the wrapper, which does nothing but call
+ * validation.
+ */ function wrapproperty(obj, prop, message) {
+    if (!obj || typeof obj !== "object" && typeof obj !== "function") throw new TypeError("argument obj must be object");
+    var descriptor = Object.getOwnPropertyDescriptor(obj, prop);
+    if (!descriptor) throw new TypeError("must call property on owner object");
+    if (!descriptor.configurable) throw new TypeError("property must be configurable");
+}
+
+},{}],"hxSQV":[function(require,module,exports) {
+var Buffer = require("af1f23a3d7dc6837").Buffer;
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
         "default": mod
@@ -42505,16 +40058,16 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.Account = void 0;
-const bn_js_1 = __importDefault(require("6601b7a60f2b5b2f"));
-const depd_1 = __importDefault(require("c231f415130b5df"));
-const transaction_1 = require("3319a3692dc0f26b");
-const providers_1 = require("9ad328e62b4a58cb");
-const borsh_1 = require("79d7b492aba92119");
-const key_pair_1 = require("34b7e40490d6a29b");
-const errors_1 = require("aeecaedc29f8eb1d");
-const rpc_errors_1 = require("cfa3ef3d261350da");
-const constants_1 = require("52e25a014e80e8d7");
-const exponential_backoff_1 = __importDefault(require("553c1c8b57079e03"));
+const bn_js_1 = __importDefault(require("4add4510ea93531e"));
+const depd_1 = __importDefault(require("c639d1ffcccdbc77"));
+const transaction_1 = require("f4665b6a59ca87fc");
+const providers_1 = require("ca432fe64b17aa67");
+const borsh_1 = require("fd8b761f9e519f4b");
+const key_pair_1 = require("b411bbb680e15a14");
+const errors_1 = require("e9cb6ff7e696dbb1");
+const rpc_errors_1 = require("453f6742005cacaf");
+const constants_1 = require("d9161d0a55228faf");
+const exponential_backoff_1 = __importDefault(require("92c4de732ea06e4d"));
 // Default number of retries with different nonce before giving up on a transaction.
 const TX_NONCE_RETRY_NUMBER = 12;
 // Default wait until next retry in millis.
@@ -42528,34 +40081,27 @@ function bytesJsonStringify(input) {
     return Buffer.from(JSON.stringify(input));
 }
 /**
- * This class provides common account related RPC calls including signing transactions with a {@link KeyPair}.
+ * This class provides common account related RPC calls including signing transactions with a {@link utils/key_pair!KeyPair}.
  *
- * @example {@link https://docs.near.org/docs/develop/front-end/naj-quick-reference#account}
- * @hint Use {@link WalletConnection} in the browser to redirect to {@link https://docs.near.org/docs/tools/near-wallet | NEAR Wallet} for Account/key management using the {@link BrowserLocalStorageKeyStore}.
- * @see {@link https://nomicon.io/DataStructures/Account.html | Account Spec}
+ * @hint Use {@link walletAccount!WalletConnection} in the browser to redirect to [NEAR Wallet](https://wallet.near.org/) for Account/key management using the {@link key_stores/browser_local_storage_key_store!BrowserLocalStorageKeyStore}.
+ * @see [https://docs.near.org/docs/develop/front-end/naj-quick-reference#account](https://docs.near.org/tools/near-api-js/quick-reference#account)
+ * @see [Account Spec](https://nomicon.io/DataStructures/Account.html)
  */ class Account {
     constructor(connection, accountId){
         /** @hidden */ this.accessKeyByPublicKeyCache = {};
         this.connection = connection;
         this.accountId = accountId;
     }
-    /** @hidden */ get ready() {
-        const deprecate = depd_1.default("Account.ready()");
-        deprecate("not needed anymore, always ready");
-        return Promise.resolve();
-    }
-    async fetchState() {
-        const deprecate = depd_1.default("Account.fetchState()");
-        deprecate("use `Account.state()` instead");
-    }
     /**
      * Returns basic NEAR account information via the `view_account` RPC query method
-     * @see {@link https://docs.near.org/docs/develop/front-end/rpc#view-account}
-     */ async state() {
-        return this.connection.provider.query({
-            request_type: "view_account",
-            account_id: this.accountId,
-            finality: "optimistic"
+     * @see [https://docs.near.org/api/rpc/contracts#view-account](https://docs.near.org/api/rpc/contracts#view-account)
+     */ state() {
+        return __awaiter(this, void 0, void 0, function*() {
+            return this.connection.provider.query({
+                request_type: "view_account",
+                account_id: this.accountId,
+                finality: "optimistic"
+            });
         });
     }
     /** @hidden */ printLogsAndFailures(contractId, results) {
@@ -42572,115 +40118,118 @@ function bytesJsonStringify(input) {
      * Create a signed transaction which can be broadcast to the network
      * @param receiverId NEAR account receiving the transaction
      * @param actions list of actions to perform as part of the transaction
-     * @see {@link JsonRpcProvider.sendTransaction}
-     */ async signTransaction(receiverId, actions) {
-        const accessKeyInfo = await this.findAccessKey(receiverId, actions);
-        if (!accessKeyInfo) throw new providers_1.TypedError(`Can not sign transactions for account ${this.accountId} on network ${this.connection.networkId}, no matching key pair found in ${this.connection.signer}.`, "KeyNotFound");
-        const { accessKey  } = accessKeyInfo;
-        const block = await this.connection.provider.block({
-            finality: "final"
-        });
-        const blockHash = block.header.hash;
-        const nonce = ++accessKey.nonce;
-        return await transaction_1.signTransaction(receiverId, nonce, actions, borsh_1.baseDecode(blockHash), this.connection.signer, this.accountId, this.connection.networkId);
-    }
-    signAndSendTransaction(...args) {
-        if (typeof args[0] === "string") return this.signAndSendTransactionV1(args[0], args[1]);
-        else return this.signAndSendTransactionV2(args[0]);
-    }
-    signAndSendTransactionV1(receiverId, actions) {
-        const deprecate = depd_1.default("Account.signAndSendTransaction(receiverId, actions");
-        deprecate("use `Account.signAndSendTransaction(SignAndSendTransactionOptions)` instead");
-        return this.signAndSendTransactionV2({
-            receiverId,
-            actions
-        });
-    }
-    async signAndSendTransactionV2({ receiverId , actions , returnError  }) {
-        let txHash, signedTx;
-        // TODO: TX_NONCE (different constants for different uses of exponentialBackoff?)
-        const result = await exponential_backoff_1.default(TX_NONCE_RETRY_WAIT, TX_NONCE_RETRY_NUMBER, TX_NONCE_RETRY_WAIT_BACKOFF, async ()=>{
-            [txHash, signedTx] = await this.signTransaction(receiverId, actions);
-            const publicKey = signedTx.transaction.publicKey;
-            try {
-                return await this.connection.provider.sendTransaction(signedTx);
-            } catch (error) {
-                if (error.type === "InvalidNonce") {
-                    errors_1.logWarning(`Retrying transaction ${receiverId}:${borsh_1.baseEncode(txHash)} with new nonce.`);
-                    delete this.accessKeyByPublicKeyCache[publicKey.toString()];
-                    return null;
-                }
-                if (error.type === "Expired") {
-                    errors_1.logWarning(`Retrying transaction ${receiverId}:${borsh_1.baseEncode(txHash)} due to expired block hash`);
-                    return null;
-                }
-                error.context = new providers_1.ErrorContext(borsh_1.baseEncode(txHash));
-                throw error;
-            }
-        });
-        if (!result) // TODO: This should have different code actually, as means "transaction not submitted for sure"
-        throw new providers_1.TypedError("nonce retries exceeded for transaction. This usually means there are too many parallel requests with the same access key.", "RetriesExceeded");
-        const flatLogs = [
-            result.transaction_outcome,
-            ...result.receipts_outcome
-        ].reduce((acc, it)=>{
-            if (it.outcome.logs.length || typeof it.outcome.status === "object" && typeof it.outcome.status.Failure === "object") return acc.concat({
-                "receiptIds": it.outcome.receipt_ids,
-                "logs": it.outcome.logs,
-                "failure": typeof it.outcome.status.Failure != "undefined" ? rpc_errors_1.parseRpcError(it.outcome.status.Failure) : null
+     * @see {@link providers/json-rpc-provider!JsonRpcProvider#sendTransaction | JsonRpcProvider.sendTransaction}
+     */ signTransaction(receiverId, actions) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const accessKeyInfo = yield this.findAccessKey(receiverId, actions);
+            if (!accessKeyInfo) throw new providers_1.TypedError(`Can not sign transactions for account ${this.accountId} on network ${this.connection.networkId}, no matching key pair exists for this account`, "KeyNotFound");
+            const { accessKey  } = accessKeyInfo;
+            const block = yield this.connection.provider.block({
+                finality: "final"
             });
-            else return acc;
-        }, []);
-        this.printLogsAndFailures(signedTx.transaction.receiverId, flatLogs);
-        if (!returnError && typeof result.status === "object" && typeof result.status.Failure === "object") {
-            // if error data has error_message and error_type properties, we consider that node returned an error in the old format
-            if (result.status.Failure.error_message && result.status.Failure.error_type) throw new providers_1.TypedError(`Transaction ${result.transaction_outcome.id} failed. ${result.status.Failure.error_message}`, result.status.Failure.error_type);
-            else throw rpc_errors_1.parseResultError(result);
-        }
-        // TODO: if Tx is Unknown or Started.
-        return result;
+            const blockHash = block.header.hash;
+            const nonce = accessKey.nonce.add(new bn_js_1.default(1));
+            return yield (0, transaction_1.signTransaction)(receiverId, nonce, actions, (0, borsh_1.baseDecode)(blockHash), this.connection.signer, this.accountId, this.connection.networkId);
+        });
     }
     /**
-     * Finds the {@link AccessKeyView} associated with the accounts {@link PublicKey} stored in the {@link KeyStore}.
+     * Sign a transaction to preform a list of actions and broadcast it using the RPC API.
+     * @see {@link providers/json-rpc-provider!JsonRpcProvider#sendTransaction | JsonRpcProvider.sendTransaction}
+     */ signAndSendTransaction({ receiverId , actions , returnError  }) {
+        return __awaiter(this, void 0, void 0, function*() {
+            let txHash, signedTx;
+            // TODO: TX_NONCE (different constants for different uses of exponentialBackoff?)
+            const result = yield (0, exponential_backoff_1.default)(TX_NONCE_RETRY_WAIT, TX_NONCE_RETRY_NUMBER, TX_NONCE_RETRY_WAIT_BACKOFF, ()=>__awaiter(this, void 0, void 0, function*() {
+                    [txHash, signedTx] = yield this.signTransaction(receiverId, actions);
+                    const publicKey = signedTx.transaction.publicKey;
+                    try {
+                        return yield this.connection.provider.sendTransaction(signedTx);
+                    } catch (error) {
+                        if (error.type === "InvalidNonce") {
+                            (0, errors_1.logWarning)(`Retrying transaction ${receiverId}:${(0, borsh_1.baseEncode)(txHash)} with new nonce.`);
+                            delete this.accessKeyByPublicKeyCache[publicKey.toString()];
+                            return null;
+                        }
+                        if (error.type === "Expired") {
+                            (0, errors_1.logWarning)(`Retrying transaction ${receiverId}:${(0, borsh_1.baseEncode)(txHash)} due to expired block hash`);
+                            return null;
+                        }
+                        error.context = new providers_1.ErrorContext((0, borsh_1.baseEncode)(txHash));
+                        throw error;
+                    }
+                }));
+            if (!result) // TODO: This should have different code actually, as means "transaction not submitted for sure"
+            throw new providers_1.TypedError("nonce retries exceeded for transaction. This usually means there are too many parallel requests with the same access key.", "RetriesExceeded");
+            const flatLogs = [
+                result.transaction_outcome,
+                ...result.receipts_outcome
+            ].reduce((acc, it)=>{
+                if (it.outcome.logs.length || typeof it.outcome.status === "object" && typeof it.outcome.status.Failure === "object") return acc.concat({
+                    "receiptIds": it.outcome.receipt_ids,
+                    "logs": it.outcome.logs,
+                    "failure": typeof it.outcome.status.Failure != "undefined" ? (0, rpc_errors_1.parseRpcError)(it.outcome.status.Failure) : null
+                });
+                else return acc;
+            }, []);
+            this.printLogsAndFailures(signedTx.transaction.receiverId, flatLogs);
+            // Should be falsy if result.status.Failure is null
+            if (!returnError && typeof result.status === "object" && typeof result.status.Failure === "object" && result.status.Failure !== null) {
+                // if error data has error_message and error_type properties, we consider that node returned an error in the old format
+                if (result.status.Failure.error_message && result.status.Failure.error_type) throw new providers_1.TypedError(`Transaction ${result.transaction_outcome.id} failed. ${result.status.Failure.error_message}`, result.status.Failure.error_type);
+                else throw (0, rpc_errors_1.parseResultError)(result);
+            }
+            // TODO: if Tx is Unknown or Started.
+            return result;
+        });
+    }
+    /**
+     * Finds the {@link providers/provider!AccessKeyView} associated with the accounts {@link utils/key_pair!PublicKey} stored in the {@link key_stores/keystore!KeyStore}.
      *
      * @todo Find matching access key based on transaction (i.e. receiverId and actions)
      *
      * @param receiverId currently unused (see todo)
      * @param actions currently unused (see todo)
      * @returns `{ publicKey PublicKey; accessKey: AccessKeyView }`
-     */ async findAccessKey(receiverId, actions) {
-        // TODO: Find matching access key based on transaction (i.e. receiverId and actions)
-        const publicKey = await this.connection.signer.getPublicKey(this.accountId, this.connection.networkId);
-        if (!publicKey) return null;
-        const cachedAccessKey = this.accessKeyByPublicKeyCache[publicKey.toString()];
-        if (cachedAccessKey !== undefined) return {
-            publicKey,
-            accessKey: cachedAccessKey
-        };
-        try {
-            const accessKey = await this.connection.provider.query({
-                request_type: "view_access_key",
-                account_id: this.accountId,
-                public_key: publicKey.toString(),
-                finality: "optimistic"
-            });
-            // this function can be called multiple times and retrieve the same access key
-            // this checks to see if the access key was already retrieved and cached while
-            // the above network call was in flight. To keep nonce values in line, we return
-            // the cached access key.
-            if (this.accessKeyByPublicKeyCache[publicKey.toString()]) return {
+     */ // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    findAccessKey(receiverId, actions) {
+        return __awaiter(this, void 0, void 0, function*() {
+            // TODO: Find matching access key based on transaction (i.e. receiverId and actions)
+            const publicKey = yield this.connection.signer.getPublicKey(this.accountId, this.connection.networkId);
+            if (!publicKey) throw new providers_1.TypedError(`no matching key pair found in ${this.connection.signer}`, "PublicKeyNotFound");
+            const cachedAccessKey = this.accessKeyByPublicKeyCache[publicKey.toString()];
+            if (cachedAccessKey !== undefined) return {
                 publicKey,
-                accessKey: this.accessKeyByPublicKeyCache[publicKey.toString()]
+                accessKey: cachedAccessKey
             };
-            this.accessKeyByPublicKeyCache[publicKey.toString()] = accessKey;
-            return {
-                publicKey,
-                accessKey
-            };
-        } catch (e) {
-            if (e.type == "AccessKeyDoesNotExist") return null;
-            throw e;
-        }
+            try {
+                const rawAccessKey = yield this.connection.provider.query({
+                    request_type: "view_access_key",
+                    account_id: this.accountId,
+                    public_key: publicKey.toString(),
+                    finality: "optimistic"
+                });
+                // store nonce as BN to preserve precision on big number
+                const accessKey = Object.assign(Object.assign({}, rawAccessKey), {
+                    nonce: new bn_js_1.default(rawAccessKey.nonce)
+                });
+                // this function can be called multiple times and retrieve the same access key
+                // this checks to see if the access key was already retrieved and cached while
+                // the above network call was in flight. To keep nonce values in line, we return
+                // the cached access key.
+                if (this.accessKeyByPublicKeyCache[publicKey.toString()]) return {
+                    publicKey,
+                    accessKey: this.accessKeyByPublicKeyCache[publicKey.toString()]
+                };
+                this.accessKeyByPublicKeyCache[publicKey.toString()] = accessKey;
+                return {
+                    publicKey,
+                    accessKey
+                };
+            } catch (e) {
+                if (e.type == "AccessKeyDoesNotExist") return null;
+                throw e;
+            }
+        });
     }
     /**
      * Create a new account and deploy a contract to it
@@ -42689,137 +40238,178 @@ function bytesJsonStringify(input) {
      * @param publicKey The public key to add to the created contract account
      * @param data The compiled contract code
      * @param amount of NEAR to transfer to the created contract account. Transfer enough to pay for storage https://docs.near.org/docs/concepts/storage-staking
-     */ async createAndDeployContract(contractId, publicKey, data, amount) {
-        const accessKey = transaction_1.fullAccessKey();
-        await this.signAndSendTransaction({
-            receiverId: contractId,
-            actions: [
-                transaction_1.createAccount(),
-                transaction_1.transfer(amount),
-                transaction_1.addKey(key_pair_1.PublicKey.from(publicKey), accessKey),
-                transaction_1.deployContract(data)
-            ]
+     */ createAndDeployContract(contractId, publicKey, data, amount) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const accessKey = (0, transaction_1.fullAccessKey)();
+            yield this.signAndSendTransaction({
+                receiverId: contractId,
+                actions: [
+                    (0, transaction_1.createAccount)(),
+                    (0, transaction_1.transfer)(amount),
+                    (0, transaction_1.addKey)(key_pair_1.PublicKey.from(publicKey), accessKey),
+                    (0, transaction_1.deployContract)(data)
+                ]
+            });
+            const contractAccount = new Account(this.connection, contractId);
+            return contractAccount;
         });
-        const contractAccount = new Account(this.connection, contractId);
-        return contractAccount;
     }
     /**
      * @param receiverId NEAR account receiving Ⓝ
      * @param amount Amount to send in yoctoⓃ
-     */ async sendMoney(receiverId, amount) {
-        return this.signAndSendTransaction({
-            receiverId,
-            actions: [
-                transaction_1.transfer(amount)
-            ]
+     */ sendMoney(receiverId, amount) {
+        return __awaiter(this, void 0, void 0, function*() {
+            return this.signAndSendTransaction({
+                receiverId,
+                actions: [
+                    (0, transaction_1.transfer)(amount)
+                ]
+            });
         });
     }
     /**
      * @param newAccountId NEAR account name to be created
      * @param publicKey A public key created from the masterAccount
-     */ async createAccount(newAccountId, publicKey, amount) {
-        const accessKey = transaction_1.fullAccessKey();
-        return this.signAndSendTransaction({
-            receiverId: newAccountId,
-            actions: [
-                transaction_1.createAccount(),
-                transaction_1.transfer(amount),
-                transaction_1.addKey(key_pair_1.PublicKey.from(publicKey), accessKey)
-            ]
+     */ createAccount(newAccountId, publicKey, amount) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const accessKey = (0, transaction_1.fullAccessKey)();
+            return this.signAndSendTransaction({
+                receiverId: newAccountId,
+                actions: [
+                    (0, transaction_1.createAccount)(),
+                    (0, transaction_1.transfer)(amount),
+                    (0, transaction_1.addKey)(key_pair_1.PublicKey.from(publicKey), accessKey)
+                ]
+            });
         });
     }
     /**
      * @param beneficiaryId The NEAR account that will receive the remaining Ⓝ balance from the account being deleted
-     */ async deleteAccount(beneficiaryId) {
-        return this.signAndSendTransaction({
-            receiverId: this.accountId,
-            actions: [
-                transaction_1.deleteAccount(beneficiaryId)
-            ]
+     */ deleteAccount(beneficiaryId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            console.log("Deleting an account does not automatically transfer NFTs and FTs to the beneficiary address. Ensure to transfer assets before deleting.");
+            return this.signAndSendTransaction({
+                receiverId: this.accountId,
+                actions: [
+                    (0, transaction_1.deleteAccount)(beneficiaryId)
+                ]
+            });
         });
     }
     /**
      * @param data The compiled contract code
-     */ async deployContract(data) {
-        return this.signAndSendTransaction({
-            receiverId: this.accountId,
-            actions: [
-                transaction_1.deployContract(data)
-            ]
+     */ deployContract(data) {
+        return __awaiter(this, void 0, void 0, function*() {
+            return this.signAndSendTransaction({
+                receiverId: this.accountId,
+                actions: [
+                    (0, transaction_1.deployContract)(data)
+                ]
+            });
         });
     }
-    async functionCall(...args) {
-        if (typeof args[0] === "string") return this.functionCallV1(args[0], args[1], args[2], args[3], args[4]);
-        else return this.functionCallV2(args[0]);
+    /** @hidden */ encodeJSContractArgs(contractId, method, args) {
+        return Buffer.concat([
+            Buffer.from(contractId),
+            Buffer.from([
+                0
+            ]),
+            Buffer.from(method),
+            Buffer.from([
+                0
+            ]),
+            Buffer.from(args)
+        ]);
     }
-    functionCallV1(contractId, methodName, args, gas, amount) {
-        const deprecate = depd_1.default("Account.functionCall(contractId, methodName, args, gas, amount)");
-        deprecate("use `Account.functionCall(FunctionCallOptions)` instead");
-        args = args || {};
-        this.validateArgs(args);
-        return this.signAndSendTransaction({
-            receiverId: contractId,
-            actions: [
-                transaction_1.functionCall(methodName, args, gas || constants_1.DEFAULT_FUNCTION_CALL_GAS, amount)
-            ]
-        });
-    }
-    functionCallV2({ contractId , methodName , args ={} , gas =constants_1.DEFAULT_FUNCTION_CALL_GAS , attachedDeposit , walletMeta , walletCallbackUrl , stringify  }) {
-        this.validateArgs(args);
-        const stringifyArg = stringify === undefined ? transaction_1.stringifyJsonOrBytes : stringify;
-        return this.signAndSendTransaction({
-            receiverId: contractId,
-            actions: [
-                transaction_1.functionCall(methodName, args, gas, attachedDeposit, stringifyArg)
-            ],
-            walletMeta,
-            walletCallbackUrl
+    /**
+     * Execute function call
+     * @returns {Promise<FinalExecutionOutcome>}
+     */ functionCall({ contractId , methodName , args ={} , gas =constants_1.DEFAULT_FUNCTION_CALL_GAS , attachedDeposit , walletMeta , walletCallbackUrl , stringify , jsContract  }) {
+        return __awaiter(this, void 0, void 0, function*() {
+            this.validateArgs(args);
+            let functionCallArgs;
+            if (jsContract) {
+                const encodedArgs = this.encodeJSContractArgs(contractId, methodName, JSON.stringify(args));
+                functionCallArgs = [
+                    "call_js_contract",
+                    encodedArgs,
+                    gas,
+                    attachedDeposit,
+                    null,
+                    true
+                ];
+            } else {
+                const stringifyArg = stringify === undefined ? transaction_1.stringifyJsonOrBytes : stringify;
+                functionCallArgs = [
+                    methodName,
+                    args,
+                    gas,
+                    attachedDeposit,
+                    stringifyArg,
+                    false
+                ];
+            }
+            return this.signAndSendTransaction({
+                receiverId: jsContract ? this.connection.jsvmAccountId : contractId,
+                // eslint-disable-next-line prefer-spread
+                actions: [
+                    transaction_1.functionCall.apply(void 0, functionCallArgs)
+                ],
+                walletMeta,
+                walletCallbackUrl
+            });
         });
     }
     /**
-     * @see {@link https://docs.near.org/docs/concepts/account#access-keys}
+     * @see [https://docs.near.org/concepts/basics/accounts/access-keys](https://docs.near.org/concepts/basics/accounts/access-keys)
      * @todo expand this API to support more options.
      * @param publicKey A public key to be associated with the contract
      * @param contractId NEAR account where the contract is deployed
      * @param methodNames The method names on the contract that should be allowed to be called. Pass null for no method names and '' or [] for any method names.
      * @param amount Payment in yoctoⓃ that is sent to the contract during this function call
-     */ async addKey(publicKey, contractId, methodNames, amount) {
-        if (!methodNames) methodNames = [];
-        if (!Array.isArray(methodNames)) methodNames = [
-            methodNames
-        ];
-        let accessKey;
-        if (!contractId) accessKey = transaction_1.fullAccessKey();
-        else accessKey = transaction_1.functionCallAccessKey(contractId, methodNames, amount);
-        return this.signAndSendTransaction({
-            receiverId: this.accountId,
-            actions: [
-                transaction_1.addKey(key_pair_1.PublicKey.from(publicKey), accessKey)
-            ]
+     */ addKey(publicKey, contractId, methodNames, amount) {
+        return __awaiter(this, void 0, void 0, function*() {
+            if (!methodNames) methodNames = [];
+            if (!Array.isArray(methodNames)) methodNames = [
+                methodNames
+            ];
+            let accessKey;
+            if (!contractId) accessKey = (0, transaction_1.fullAccessKey)();
+            else accessKey = (0, transaction_1.functionCallAccessKey)(contractId, methodNames, amount);
+            return this.signAndSendTransaction({
+                receiverId: this.accountId,
+                actions: [
+                    (0, transaction_1.addKey)(key_pair_1.PublicKey.from(publicKey), accessKey)
+                ]
+            });
         });
     }
     /**
      * @param publicKey The public key to be deleted
      * @returns {Promise<FinalExecutionOutcome>}
-     */ async deleteKey(publicKey) {
-        return this.signAndSendTransaction({
-            receiverId: this.accountId,
-            actions: [
-                transaction_1.deleteKey(key_pair_1.PublicKey.from(publicKey))
-            ]
+     */ deleteKey(publicKey) {
+        return __awaiter(this, void 0, void 0, function*() {
+            return this.signAndSendTransaction({
+                receiverId: this.accountId,
+                actions: [
+                    (0, transaction_1.deleteKey)(key_pair_1.PublicKey.from(publicKey))
+                ]
+            });
         });
     }
     /**
-     * @see {@link https://docs.near.org/docs/validator/staking-overview}
+     * @see [https://near-nodes.io/validator/staking-and-delegation](https://near-nodes.io/validator/staking-and-delegation)
      *
      * @param publicKey The public key for the account that's staking
      * @param amount The account to stake in yoctoⓃ
-     */ async stake(publicKey, amount) {
-        return this.signAndSendTransaction({
-            receiverId: this.accountId,
-            actions: [
-                transaction_1.stake(amount, key_pair_1.PublicKey.from(publicKey))
-            ]
+     */ stake(publicKey, amount) {
+        return __awaiter(this, void 0, void 0, function*() {
+            return this.signAndSendTransaction({
+                receiverId: this.accountId,
+                actions: [
+                    (0, transaction_1.stake)(amount, key_pair_1.PublicKey.from(publicKey))
+                ]
+            });
         });
     }
     /** @hidden */ validateArgs(args) {
@@ -42829,105 +40419,225 @@ function bytesJsonStringify(input) {
     }
     /**
      * Invoke a contract view function using the RPC API.
-     * @see {@link https://docs.near.org/docs/develop/front-end/rpc#call-a-contract-function}
+     * @see [https://docs.near.org/api/rpc/contracts#call-a-contract-function](https://docs.near.org/api/rpc/contracts#call-a-contract-function)
      *
      * @param contractId NEAR account where the contract is deployed
      * @param methodName The view-only method (no state mutations) name on the contract as it is written in the contract code
      * @param args Any arguments to the view contract method, wrapped in JSON
      * @param options.parse Parse the result of the call. Receives a Buffer (bytes array) and converts it to any object. By default result will be treated as json.
      * @param options.stringify Convert input arguments into a bytes array. By default the input is treated as a JSON.
+     * @param options.jsContract Is contract from JS SDK, automatically encodes args from JS SDK to binary.
+     * @param options.blockQuery specifies which block to query state at. By default returns last "optimistic" block (i.e. not necessarily finalized).
      * @returns {Promise<any>}
-     */ async viewFunction(contractId, methodName, args = {}, { parse =parseJsonFromRawResponse , stringify =bytesJsonStringify  } = {}) {
-        this.validateArgs(args);
-        const serializedArgs = stringify(args).toString("base64");
-        const result = await this.connection.provider.query({
-            request_type: "call_function",
-            account_id: contractId,
-            method_name: methodName,
-            args_base64: serializedArgs,
-            finality: "optimistic"
+     */ viewFunction(...restArgs) {
+        return __awaiter(this, void 0, void 0, function*() {
+            if (typeof restArgs[0] === "string") {
+                const contractId = restArgs[0];
+                const methodName = restArgs[1];
+                const args = restArgs[2];
+                const options = restArgs[3];
+                return yield this.viewFunctionV1(contractId, methodName, args, options);
+            } else return yield this.viewFunctionV2(restArgs[0]);
         });
-        if (result.logs) this.printLogs(contractId, result.logs);
-        return result.result && result.result.length > 0 && parse(Buffer.from(result.result));
+    }
+    viewFunctionV1(contractId, methodName, args = {}, { parse =parseJsonFromRawResponse , stringify =bytesJsonStringify , jsContract =false , blockQuery ={
+        finality: "optimistic"
+    }  } = {}) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const deprecate = (0, depd_1.default)("Account.viewFunction(contractId, methodName, args, options)");
+            deprecate("use `Account.viewFunction(ViewFunctionCallOptions)` instead");
+            return this.viewFunctionV2({
+                contractId,
+                methodName,
+                args,
+                parse,
+                stringify,
+                jsContract,
+                blockQuery
+            });
+        });
+    }
+    viewFunctionV2({ contractId , methodName , args , parse =parseJsonFromRawResponse , stringify =bytesJsonStringify , jsContract =false , blockQuery ={
+        finality: "optimistic"
+    }  }) {
+        return __awaiter(this, void 0, void 0, function*() {
+            let encodedArgs;
+            this.validateArgs(args);
+            if (jsContract) encodedArgs = this.encodeJSContractArgs(contractId, methodName, Object.keys(args).length > 0 ? JSON.stringify(args) : "");
+            else encodedArgs = stringify(args);
+            const result = yield this.connection.provider.query(Object.assign(Object.assign({
+                request_type: "call_function"
+            }, blockQuery), {
+                account_id: jsContract ? this.connection.jsvmAccountId : contractId,
+                method_name: jsContract ? "view_js_contract" : methodName,
+                args_base64: encodedArgs.toString("base64")
+            }));
+            if (result.logs) this.printLogs(contractId, result.logs);
+            return result.result && result.result.length > 0 && parse(Buffer.from(result.result));
+        });
     }
     /**
      * Returns the state (key value pairs) of this account's contract based on the key prefix.
      * Pass an empty string for prefix if you would like to return the entire state.
-     * @see {@link https://docs.near.org/docs/develop/front-end/rpc#view-contract-state}
+     * @see [https://docs.near.org/api/rpc/contracts#view-contract-state](https://docs.near.org/api/rpc/contracts#view-contract-state)
      *
      * @param prefix allows to filter which keys should be returned. Empty prefix means all keys. String prefix is utf-8 encoded.
      * @param blockQuery specifies which block to query state at. By default returns last "optimistic" block (i.e. not necessarily finalized).
-     */ async viewState(prefix, blockQuery = {
+     */ viewState(prefix, blockQuery = {
         finality: "optimistic"
     }) {
-        const { values  } = await this.connection.provider.query({
-            request_type: "view_state",
-            ...blockQuery,
-            account_id: this.accountId,
-            prefix_base64: Buffer.from(prefix).toString("base64")
-        });
-        return values.map(({ key , value  })=>({
-                key: Buffer.from(key, "base64"),
-                value: Buffer.from(value, "base64")
+        return __awaiter(this, void 0, void 0, function*() {
+            const { values  } = yield this.connection.provider.query(Object.assign(Object.assign({
+                request_type: "view_state"
+            }, blockQuery), {
+                account_id: this.accountId,
+                prefix_base64: Buffer.from(prefix).toString("base64")
             }));
+            return values.map(({ key , value  })=>({
+                    key: Buffer.from(key, "base64"),
+                    value: Buffer.from(value, "base64")
+                }));
+        });
     }
     /**
      * Get all access keys for the account
-     * @see {@link https://docs.near.org/docs/develop/front-end/rpc#view-access-key-list}
-     */ async getAccessKeys() {
-        const response = await this.connection.provider.query({
-            request_type: "view_access_key_list",
-            account_id: this.accountId,
-            finality: "optimistic"
+     * @see [https://docs.near.org/api/rpc/access-keys#view-access-key-list](https://docs.near.org/api/rpc/access-keys#view-access-key-list)
+     */ getAccessKeys() {
+        var _a;
+        return __awaiter(this, void 0, void 0, function*() {
+            const response = yield this.connection.provider.query({
+                request_type: "view_access_key_list",
+                account_id: this.accountId,
+                finality: "optimistic"
+            });
+            // Replace raw nonce into a new BN
+            return (_a = response === null || response === void 0 ? void 0 : response.keys) === null || _a === void 0 ? void 0 : _a.map((key)=>Object.assign(Object.assign({}, key), {
+                    access_key: Object.assign(Object.assign({}, key.access_key), {
+                        nonce: new bn_js_1.default(key.access_key.nonce)
+                    })
+                }));
         });
-        // A breaking API change introduced extra information into the
-        // response, so it now returns an object with a `keys` field instead
-        // of an array: https://github.com/nearprotocol/nearcore/pull/1789
-        if (Array.isArray(response)) return response;
-        return response.keys;
     }
     /**
      * Returns a list of authorized apps
      * @todo update the response value to return all the different keys, not just app keys.
-     */ async getAccountDetails() {
-        // TODO: update the response value to return all the different keys, not just app keys.
-        // Also if we need this function, or getAccessKeys is good enough.
-        const accessKeys = await this.getAccessKeys();
-        const authorizedApps = accessKeys.filter((item)=>item.access_key.permission !== "FullAccess").map((item)=>{
-            const perm = item.access_key.permission;
+     */ getAccountDetails() {
+        return __awaiter(this, void 0, void 0, function*() {
+            // TODO: update the response value to return all the different keys, not just app keys.
+            // Also if we need this function, or getAccessKeys is good enough.
+            const accessKeys = yield this.getAccessKeys();
+            const authorizedApps = accessKeys.filter((item)=>item.access_key.permission !== "FullAccess").map((item)=>{
+                const perm = item.access_key.permission;
+                return {
+                    contractId: perm.FunctionCall.receiver_id,
+                    amount: perm.FunctionCall.allowance,
+                    publicKey: item.public_key
+                };
+            });
             return {
-                contractId: perm.FunctionCall.receiver_id,
-                amount: perm.FunctionCall.allowance,
-                publicKey: item.public_key
+                authorizedApps
             };
         });
-        return {
-            authorizedApps
-        };
     }
     /**
      * Returns calculated account balance
-     */ async getAccountBalance() {
-        const protocolConfig = await this.connection.provider.experimental_protocolConfig({
-            finality: "final"
+     */ getAccountBalance() {
+        return __awaiter(this, void 0, void 0, function*() {
+            const protocolConfig = yield this.connection.provider.experimental_protocolConfig({
+                finality: "final"
+            });
+            const state = yield this.state();
+            const costPerByte = new bn_js_1.default(protocolConfig.runtime_config.storage_amount_per_byte);
+            const stateStaked = new bn_js_1.default(state.storage_usage).mul(costPerByte);
+            const staked = new bn_js_1.default(state.locked);
+            const totalBalance = new bn_js_1.default(state.amount).add(staked);
+            const availableBalance = totalBalance.sub(bn_js_1.default.max(staked, stateStaked));
+            return {
+                total: totalBalance.toString(),
+                stateStaked: stateStaked.toString(),
+                staked: staked.toString(),
+                available: availableBalance.toString()
+            };
         });
-        const state = await this.state();
-        const costPerByte = new bn_js_1.default(protocolConfig.runtime_config.storage_amount_per_byte);
-        const stateStaked = new bn_js_1.default(state.storage_usage).mul(costPerByte);
-        const staked = new bn_js_1.default(state.locked);
-        const totalBalance = new bn_js_1.default(state.amount).add(staked);
-        const availableBalance = totalBalance.sub(bn_js_1.default.max(staked, stateStaked));
-        return {
-            total: totalBalance.toString(),
-            stateStaked: stateStaked.toString(),
-            staked: staked.toString(),
-            available: availableBalance.toString()
-        };
+    }
+    /**
+     * Returns the NEAR tokens balance and validators of a given account that is delegated to the staking pools that are part of the validators set in the current epoch.
+     *
+     * NOTE: If the tokens are delegated to a staking pool that is currently on pause or does not have enough tokens to participate in validation, they won't be accounted for.
+     * @returns {Promise<ActiveDelegatedStakeBalance>}
+     */ getActiveDelegatedStakeBalance() {
+        return __awaiter(this, void 0, void 0, function*() {
+            const block = yield this.connection.provider.block({
+                finality: "final"
+            });
+            const blockHash = block.header.hash;
+            const epochId = block.header.epoch_id;
+            const { current_validators , next_validators , current_proposals  } = yield this.connection.provider.validators(epochId);
+            const pools = new Set();
+            [
+                ...current_validators,
+                ...next_validators,
+                ...current_proposals
+            ].forEach((validator)=>pools.add(validator.account_id));
+            const uniquePools = [
+                ...pools
+            ];
+            const promises = uniquePools.map((validator)=>this.viewFunction({
+                    contractId: validator,
+                    methodName: "get_account_total_balance",
+                    args: {
+                        account_id: this.accountId
+                    },
+                    blockQuery: {
+                        blockId: blockHash
+                    }
+                }));
+            const results = yield Promise.allSettled(promises);
+            const hasTimeoutError = results.some((result)=>{
+                if (result.status === "rejected" && result.reason.type === "TimeoutError") return true;
+                return false;
+            });
+            // When RPC is down and return timeout error, throw error
+            if (hasTimeoutError) throw new Error("Failed to get delegated stake balance");
+            const summary = results.reduce((result, state, index)=>{
+                const validatorId = uniquePools[index];
+                if (state.status === "fulfilled") {
+                    const currentBN = new bn_js_1.default(state.value);
+                    if (!currentBN.isZero()) return Object.assign(Object.assign({}, result), {
+                        stakedValidators: [
+                            ...result.stakedValidators,
+                            {
+                                validatorId,
+                                amount: currentBN.toString()
+                            }
+                        ],
+                        total: result.total.add(currentBN)
+                    });
+                }
+                if (state.status === "rejected") return Object.assign(Object.assign({}, result), {
+                    failedValidators: [
+                        ...result.failedValidators,
+                        {
+                            validatorId,
+                            error: state.reason
+                        }
+                    ]
+                });
+                return result;
+            }, {
+                stakedValidators: [],
+                failedValidators: [],
+                total: new bn_js_1.default(0)
+            });
+            return Object.assign(Object.assign({}, summary), {
+                total: summary.total.toString()
+            });
+        });
     }
 }
 exports.Account = Account;
 
-},{"13faf2066b6d139a":"5c7yX","6601b7a60f2b5b2f":"9pdNn","c231f415130b5df":"2jGeI","3319a3692dc0f26b":"jJQ5a","9ad328e62b4a58cb":"gtL2a","79d7b492aba92119":"4JCmN","34b7e40490d6a29b":"kBQFP","aeecaedc29f8eb1d":"btMYy","cfa3ef3d261350da":"1TB1L","52e25a014e80e8d7":"lUNnG","553c1c8b57079e03":"51I5X"}],"lUNnG":[function(require,module,exports) {
+},{"af1f23a3d7dc6837":"5heHz","4add4510ea93531e":"VopIn","c639d1ffcccdbc77":"2jGeI","f4665b6a59ca87fc":"jJQ5a","ca432fe64b17aa67":"gtL2a","fd8b761f9e519f4b":"4JCmN","b411bbb680e15a14":"kBQFP","e9cb6ff7e696dbb1":"btMYy","453f6742005cacaf":"1TB1L","d9161d0a55228faf":"lUNnG","92c4de732ea06e4d":"51I5X"}],"lUNnG":[function(require,module,exports) {
 "use strict";
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
@@ -42938,7 +40648,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.DEFAULT_FUNCTION_CALL_GAS = void 0;
-const bn_js_1 = __importDefault(require("f5c7ed1f8723e251"));
+const bn_js_1 = __importDefault(require("9c304f615f62fe34"));
 // Default amount of gas to be sent with the function calls. Used to pay for the fees
 // incurred while running the contract execution. The unused amount will be refunded back to
 // the originator.
@@ -42947,9 +40657,36 @@ const bn_js_1 = __importDefault(require("f5c7ed1f8723e251"));
 // For discussion see https://github.com/nearprotocol/NEPs/issues/67
 exports.DEFAULT_FUNCTION_CALL_GAS = new bn_js_1.default("30000000000000");
 
-},{"f5c7ed1f8723e251":"9pdNn"}],"7q1du":[function(require,module,exports) {
-var Buffer = require("ef4bf56ae66a1274").Buffer;
+},{"9c304f615f62fe34":"VopIn"}],"7q1du":[function(require,module,exports) {
+var Buffer = require("c2cf1474376ac7b2").Buffer;
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
         "default": mod
@@ -42958,16 +40695,16 @@ var __importDefault = this && this.__importDefault || function(mod) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Account2FA = exports.AccountMultisig = exports.MULTISIG_CONFIRM_METHODS = exports.MULTISIG_CHANGE_METHODS = exports.MULTISIG_DEPOSIT = exports.MULTISIG_GAS = exports.MULTISIG_ALLOWANCE = exports.MULTISIG_STORAGE_KEY = void 0;
-const bn_js_1 = __importDefault(require("3bed7f210e9124d3"));
-const depd_1 = __importDefault(require("675a3f7f0272878b"));
-const account_1 = require("8ee1083810a36977");
-const format_1 = require("85824b1b22b55954");
-const key_pair_1 = require("2d9c2d87b9c0f89d");
-const transaction_1 = require("738cd14a692931a1");
-const web_1 = require("3c48c0a2f24f39c8");
+exports.Account2FA = exports.AccountMultisig = exports.MultisigStateStatus = exports.MultisigDeleteRequestRejectionError = exports.MULTISIG_CONFIRM_METHODS = exports.MULTISIG_CHANGE_METHODS = exports.MULTISIG_DEPOSIT = exports.MULTISIG_GAS = exports.MULTISIG_ALLOWANCE = exports.MULTISIG_STORAGE_KEY = void 0;
+const bn_js_1 = __importDefault(require("9af43f611c6999c7"));
+const account_1 = require("d1248d54541de92");
+const format_1 = require("ccbf6522c7f60616");
+const key_pair_1 = require("d776c18060e80459");
+const transaction_1 = require("95d536722fd0e9d1");
+const providers_1 = require("b4e1b08fc380b6a8");
+const web_1 = require("4675a15cd19a38d");
 exports.MULTISIG_STORAGE_KEY = "__multisigRequest";
-exports.MULTISIG_ALLOWANCE = new bn_js_1.default(format_1.parseNearAmount("1"));
+exports.MULTISIG_ALLOWANCE = new bn_js_1.default((0, format_1.parseNearAmount)("1"));
 // TODO: Different gas value for different requests (can reduce gas usage dramatically)
 exports.MULTISIG_GAS = new bn_js_1.default("100000000000000");
 exports.MULTISIG_DEPOSIT = new bn_js_1.default("0");
@@ -42980,6 +40717,27 @@ exports.MULTISIG_CHANGE_METHODS = [
 exports.MULTISIG_CONFIRM_METHODS = [
     "confirm"
 ];
+var MultisigDeleteRequestRejectionError;
+(function(MultisigDeleteRequestRejectionError) {
+    MultisigDeleteRequestRejectionError["CANNOT_DESERIALIZE_STATE"] = "Cannot deserialize the contract state";
+    MultisigDeleteRequestRejectionError["MULTISIG_NOT_INITIALIZED"] = "Smart contract panicked: Multisig contract should be initialized before usage";
+    MultisigDeleteRequestRejectionError["NO_SUCH_REQUEST"] = "Smart contract panicked: panicked at 'No such request: either wrong number or already confirmed'";
+    MultisigDeleteRequestRejectionError["REQUEST_COOLDOWN_ERROR"] = "Request cannot be deleted immediately after creation.";
+    MultisigDeleteRequestRejectionError["METHOD_NOT_FOUND"] = "Contract method is not found";
+})(MultisigDeleteRequestRejectionError = exports.MultisigDeleteRequestRejectionError || (exports.MultisigDeleteRequestRejectionError = {}));
+var MultisigStateStatus;
+(function(MultisigStateStatus) {
+    MultisigStateStatus[MultisigStateStatus["INVALID_STATE"] = 0] = "INVALID_STATE";
+    MultisigStateStatus[MultisigStateStatus["STATE_NOT_INITIALIZED"] = 1] = "STATE_NOT_INITIALIZED";
+    MultisigStateStatus[MultisigStateStatus["VALID_STATE"] = 2] = "VALID_STATE";
+    MultisigStateStatus[MultisigStateStatus["UNKNOWN_STATE"] = 3] = "UNKNOWN_STATE";
+})(MultisigStateStatus = exports.MultisigStateStatus || (exports.MultisigStateStatus = {}));
+var MultisigCodeStatus;
+(function(MultisigCodeStatus) {
+    MultisigCodeStatus[MultisigCodeStatus["INVALID_CODE"] = 0] = "INVALID_CODE";
+    MultisigCodeStatus[MultisigCodeStatus["VALID_CODE"] = 1] = "VALID_CODE";
+    MultisigCodeStatus[MultisigCodeStatus["UNKNOWN_CODE"] = 2] = "UNKNOWN_CODE";
+})(MultisigCodeStatus || (MultisigCodeStatus = {}));
 // in memory request cache for node w/o localStorage
 const storageFallback = {
     [exports.MULTISIG_STORAGE_KEY]: null
@@ -42990,84 +40748,167 @@ class AccountMultisig extends account_1.Account {
         this.storage = options.storage;
         this.onAddRequestResult = options.onAddRequestResult;
     }
-    async signAndSendTransactionWithAccount(receiverId, actions) {
-        return super.signAndSendTransaction({
-            receiverId,
-            actions
-        });
-    }
-    signAndSendTransaction(...args) {
-        if (typeof args[0] === "string") return this._signAndSendTransaction({
-            receiverId: args[0],
-            actions: args[1]
-        });
-        return this._signAndSendTransaction(args[0]);
-    }
-    async _signAndSendTransaction({ receiverId , actions  }) {
-        const { accountId  } = this;
-        const args = Buffer.from(JSON.stringify({
-            request: {
-                receiver_id: receiverId,
-                actions: convertActions(actions, accountId, receiverId)
+    signAndSendTransactionWithAccount(receiverId, actions) {
+        const _super = Object.create(null, {
+            signAndSendTransaction: {
+                get: ()=>super.signAndSendTransaction
             }
-        }));
-        let result;
-        try {
-            result = await super.signAndSendTransaction({
-                receiverId: accountId,
-                actions: [
-                    transaction_1.functionCall("add_request_and_confirm", args, exports.MULTISIG_GAS, exports.MULTISIG_DEPOSIT)
-                ]
+        });
+        return __awaiter(this, void 0, void 0, function*() {
+            return _super.signAndSendTransaction.call(this, {
+                receiverId,
+                actions
             });
-        } catch (e) {
-            if (e.toString().includes("Account has too many active requests. Confirm or delete some")) {
-                await this.deleteUnconfirmedRequests();
-                return await this.signAndSendTransaction(receiverId, actions);
-            }
-            throw e;
-        }
-        // TODO: Are following even needed? Seems like it throws on error already
-        if (!result.status) throw new Error("Request failed");
-        const status = {
-            ...result.status
-        };
-        if (!status.SuccessValue || typeof status.SuccessValue !== "string") throw new Error("Request failed");
-        this.setRequest({
-            accountId,
-            actions,
-            requestId: parseInt(Buffer.from(status.SuccessValue, "base64").toString("ascii"), 10)
         });
-        if (this.onAddRequestResult) await this.onAddRequestResult(result);
-        // NOTE there is no await on purpose to avoid blocking for 2fa
-        this.deleteUnconfirmedRequests();
-        return result;
     }
-    async deleteUnconfirmedRequests() {
-        // TODO: Delete in batch, don't delete unexpired
-        // TODO: Delete in batch, don't delete unexpired (can reduce gas usage dramatically)
-        const request_ids = await this.getRequestIds();
-        const { requestId  } = this.getRequest();
-        for (const requestIdToDelete of request_ids){
-            if (requestIdToDelete == requestId) continue;
+    signAndSendTransaction({ receiverId , actions  }) {
+        const _super = Object.create(null, {
+            signAndSendTransaction: {
+                get: ()=>super.signAndSendTransaction
+            }
+        });
+        return __awaiter(this, void 0, void 0, function*() {
+            const { accountId  } = this;
+            const args = Buffer.from(JSON.stringify({
+                request: {
+                    receiver_id: receiverId,
+                    actions: convertActions(actions, accountId, receiverId)
+                }
+            }));
+            let result;
             try {
-                await super.signAndSendTransaction({
-                    receiverId: this.accountId,
+                result = yield _super.signAndSendTransaction.call(this, {
+                    receiverId: accountId,
                     actions: [
-                        transaction_1.functionCall("delete_request", {
-                            request_id: requestIdToDelete
-                        }, exports.MULTISIG_GAS, exports.MULTISIG_DEPOSIT)
+                        (0, transaction_1.functionCall)("add_request_and_confirm", args, exports.MULTISIG_GAS, exports.MULTISIG_DEPOSIT)
                     ]
                 });
             } catch (e) {
-                console.warn("Attempt to delete an earlier request before 15 minutes failed. Will try again.");
+                if (e.toString().includes("Account has too many active requests. Confirm or delete some")) {
+                    yield this.deleteUnconfirmedRequests();
+                    return yield this.signAndSendTransaction({
+                        receiverId,
+                        actions
+                    });
+                }
+                throw e;
             }
-        }
+            // TODO: Are following even needed? Seems like it throws on error already
+            if (!result.status) throw new Error("Request failed");
+            const status = Object.assign({}, result.status);
+            if (!status.SuccessValue || typeof status.SuccessValue !== "string") throw new Error("Request failed");
+            this.setRequest({
+                accountId,
+                actions,
+                requestId: parseInt(Buffer.from(status.SuccessValue, "base64").toString("ascii"), 10)
+            });
+            if (this.onAddRequestResult) yield this.onAddRequestResult(result);
+            // NOTE there is no await on purpose to avoid blocking for 2fa
+            this.deleteUnconfirmedRequests();
+            return result;
+        });
+    }
+    /*
+     * This method submits a canary transaction that is expected to always fail in order to determine whether the contract currently has valid multisig state
+     * and whether it is initialized. The canary transaction attempts to delete a request at index u32_max and will go through if a request exists at that index.
+     * a u32_max + 1 and -1 value cannot be used for the canary due to expected u32 error thrown before deserialization attempt.
+     */ checkMultisigCodeAndStateStatus(contractBytes) {
+        const _super = Object.create(null, {
+            signAndSendTransaction: {
+                get: ()=>super.signAndSendTransaction
+            }
+        });
+        return __awaiter(this, void 0, void 0, function*() {
+            const u32_max = 4294967295;
+            const validCodeStatusIfNoDeploy = contractBytes ? MultisigCodeStatus.UNKNOWN_CODE : MultisigCodeStatus.VALID_CODE;
+            try {
+                if (contractBytes) yield _super.signAndSendTransaction.call(this, {
+                    receiverId: this.accountId,
+                    actions: [
+                        (0, transaction_1.deployContract)(contractBytes),
+                        (0, transaction_1.functionCall)("delete_request", {
+                            request_id: u32_max
+                        }, exports.MULTISIG_GAS, exports.MULTISIG_DEPOSIT)
+                    ]
+                });
+                else yield this.deleteRequest(u32_max);
+                return {
+                    codeStatus: MultisigCodeStatus.VALID_CODE,
+                    stateStatus: MultisigStateStatus.VALID_STATE
+                };
+            } catch (e) {
+                if (new RegExp(MultisigDeleteRequestRejectionError.CANNOT_DESERIALIZE_STATE).test(e && e.kind && e.kind.ExecutionError)) return {
+                    codeStatus: validCodeStatusIfNoDeploy,
+                    stateStatus: MultisigStateStatus.INVALID_STATE
+                };
+                else if (new RegExp(MultisigDeleteRequestRejectionError.MULTISIG_NOT_INITIALIZED).test(e && e.kind && e.kind.ExecutionError)) return {
+                    codeStatus: validCodeStatusIfNoDeploy,
+                    stateStatus: MultisigStateStatus.STATE_NOT_INITIALIZED
+                };
+                else if (new RegExp(MultisigDeleteRequestRejectionError.NO_SUCH_REQUEST).test(e && e.kind && e.kind.ExecutionError)) return {
+                    codeStatus: validCodeStatusIfNoDeploy,
+                    stateStatus: MultisigStateStatus.VALID_STATE
+                };
+                else if (new RegExp(MultisigDeleteRequestRejectionError.METHOD_NOT_FOUND).test(e && e.message)) // not reachable if transaction included a deploy
+                return {
+                    codeStatus: MultisigCodeStatus.INVALID_CODE,
+                    stateStatus: MultisigStateStatus.UNKNOWN_STATE
+                };
+                throw e;
+            }
+        });
+    }
+    deleteRequest(request_id) {
+        return super.signAndSendTransaction({
+            receiverId: this.accountId,
+            actions: [
+                (0, transaction_1.functionCall)("delete_request", {
+                    request_id
+                }, exports.MULTISIG_GAS, exports.MULTISIG_DEPOSIT)
+            ]
+        });
+    }
+    deleteAllRequests() {
+        return __awaiter(this, void 0, void 0, function*() {
+            const request_ids = yield this.getRequestIds();
+            if (request_ids.length) yield Promise.all(request_ids.map((id)=>this.deleteRequest(id)));
+        });
+    }
+    deleteUnconfirmedRequests() {
+        const _super = Object.create(null, {
+            signAndSendTransaction: {
+                get: ()=>super.signAndSendTransaction
+            }
+        });
+        return __awaiter(this, void 0, void 0, function*() {
+            // TODO: Delete in batch, don't delete unexpired
+            // TODO: Delete in batch, don't delete unexpired (can reduce gas usage dramatically)
+            const request_ids = yield this.getRequestIds();
+            const { requestId  } = this.getRequest();
+            for (const requestIdToDelete of request_ids){
+                if (requestIdToDelete == requestId) continue;
+                try {
+                    yield _super.signAndSendTransaction.call(this, {
+                        receiverId: this.accountId,
+                        actions: [
+                            (0, transaction_1.functionCall)("delete_request", {
+                                request_id: requestIdToDelete
+                            }, exports.MULTISIG_GAS, exports.MULTISIG_DEPOSIT)
+                        ]
+                    });
+                } catch (e) {
+                    console.warn("Attempt to delete an earlier request before 15 minutes failed. Will try again.");
+                }
+            }
+        });
     }
     // helpers
-    async getRequestIds() {
-        // TODO: Read requests from state to allow filtering by expiration time
-        // TODO: https://github.com/near/core-contracts/blob/305d1db4f4f2cf5ce4c1ef3479f7544957381f11/multisig/src/lib.rs#L84
-        return this.viewFunction(this.accountId, "list_request_ids");
+    getRequestIds() {
+        return __awaiter(this, void 0, void 0, function*() {
+            // TODO: Read requests from state to allow filtering by expiration time
+            // TODO: https://github.com/near/core-contracts/blob/305d1db4f4f2cf5ce4c1ef3479f7544957381f11/multisig/src/lib.rs#L84
+            return this.viewFunction(this.accountId, "list_request_ids");
+        });
     }
     getRequest() {
         if (this.storage) return JSON.parse(this.storage.getItem(exports.MULTISIG_STORAGE_KEY) || "{}");
@@ -43090,145 +40931,231 @@ class Account2FA extends AccountMultisig {
         this.verifyCode = options.verifyCode || this.verifyCodeDefault;
         this.onConfirmResult = options.onConfirmResult;
     }
-    async signAndSendTransaction(...args) {
-        if (typeof args[0] === "string") {
-            const deprecate = depd_1.default("Account.signAndSendTransaction(receiverId, actions");
-            deprecate("use `Account2FA.signAndSendTransaction(SignAndSendTransactionOptions)` instead");
-            return this.__signAndSendTransaction({
-                receiverId: args[0],
-                actions: args[1]
-            });
-        } else return this.__signAndSendTransaction(args[0]);
-    }
-    async __signAndSendTransaction({ receiverId , actions  }) {
-        await super.signAndSendTransaction({
-            receiverId,
-            actions
+    /**
+     * Sign a transaction to preform a list of actions and broadcast it using the RPC API.
+     * @see {@link providers/json-rpc-provider!JsonRpcProvider#sendTransaction | JsonRpcProvider.sendTransaction}
+     */ signAndSendTransaction({ receiverId , actions  }) {
+        const _super = Object.create(null, {
+            signAndSendTransaction: {
+                get: ()=>super.signAndSendTransaction
+            }
         });
-        // TODO: Should following override onRequestResult in superclass instead of doing custom signAndSendTransaction?
-        await this.sendCode();
-        const result = await this.promptAndVerify();
-        if (this.onConfirmResult) await this.onConfirmResult(result);
-        return result;
+        return __awaiter(this, void 0, void 0, function*() {
+            yield _super.signAndSendTransaction.call(this, {
+                receiverId,
+                actions
+            });
+            // TODO: Should following override onRequestResult in superclass instead of doing custom signAndSendTransaction?
+            yield this.sendCode();
+            const result = yield this.promptAndVerify();
+            if (this.onConfirmResult) yield this.onConfirmResult(result);
+            return result;
+        });
     }
     // default helpers for CH deployments of multisig
-    async deployMultisig(contractBytes) {
-        const { accountId  } = this;
-        const seedOrLedgerKey = (await this.getRecoveryMethods()).data.filter(({ kind , publicKey  })=>(kind === "phrase" || kind === "ledger") && publicKey !== null).map((rm)=>rm.publicKey);
-        const fak2lak = (await this.getAccessKeys()).filter(({ public_key , access_key: { permission  }  })=>permission === "FullAccess" && !seedOrLedgerKey.includes(public_key)).map((ak)=>ak.public_key).map(toPK);
-        const confirmOnlyKey = toPK((await this.postSignedJson("/2fa/getAccessKey", {
-            accountId
-        })).publicKey);
-        const newArgs = Buffer.from(JSON.stringify({
-            "num_confirmations": 2
-        }));
-        const actions = [
-            ...fak2lak.map((pk)=>transaction_1.deleteKey(pk)),
-            ...fak2lak.map((pk)=>transaction_1.addKey(pk, transaction_1.functionCallAccessKey(accountId, exports.MULTISIG_CHANGE_METHODS, null))),
-            transaction_1.addKey(confirmOnlyKey, transaction_1.functionCallAccessKey(accountId, exports.MULTISIG_CONFIRM_METHODS, null)),
-            transaction_1.deployContract(contractBytes)
-        ];
-        if ((await this.state()).code_hash === "11111111111111111111111111111111") actions.push(transaction_1.functionCall("new", newArgs, exports.MULTISIG_GAS, exports.MULTISIG_DEPOSIT));
-        console.log("deploying multisig contract for", accountId);
-        return await super.signAndSendTransactionWithAccount(accountId, actions);
-    }
-    async disable(contractBytes) {
-        const { accountId  } = this;
-        const accessKeys = await this.getAccessKeys();
-        const lak2fak = accessKeys.filter(({ access_key  })=>access_key.permission !== "FullAccess").filter(({ access_key  })=>{
-            const perm = access_key.permission.FunctionCall;
-            return perm.receiver_id === accountId && perm.method_names.length === 4 && perm.method_names.includes("add_request_and_confirm");
+    deployMultisig(contractBytes) {
+        const _super = Object.create(null, {
+            signAndSendTransactionWithAccount: {
+                get: ()=>super.signAndSendTransactionWithAccount
+            }
         });
-        const confirmOnlyKey = key_pair_1.PublicKey.from((await this.postSignedJson("/2fa/getAccessKey", {
-            accountId
-        })).publicKey);
-        const actions = [
-            transaction_1.deleteKey(confirmOnlyKey),
-            ...lak2fak.map(({ public_key  })=>transaction_1.deleteKey(key_pair_1.PublicKey.from(public_key))),
-            ...lak2fak.map(({ public_key  })=>transaction_1.addKey(key_pair_1.PublicKey.from(public_key), null)),
-            transaction_1.deployContract(contractBytes)
-        ];
-        console.log("disabling 2fa for", accountId);
-        return await this.signAndSendTransaction({
-            receiverId: accountId,
-            actions
-        });
-    }
-    async sendCodeDefault() {
-        const { accountId  } = this;
-        const { requestId  } = this.getRequest();
-        const method = await this.get2faMethod();
-        await this.postSignedJson("/2fa/send", {
-            accountId,
-            method,
-            requestId
-        });
-        return requestId;
-    }
-    async getCodeDefault(method) {
-        throw new Error('There is no getCode callback provided. Please provide your own in AccountMultisig constructor options. It has a parameter method where method.kind is "email" or "phone".');
-    }
-    async promptAndVerify() {
-        const method = await this.get2faMethod();
-        const securityCode = await this.getCode(method);
-        try {
-            const result = await this.verifyCode(securityCode);
-            // TODO: Parse error from result for real (like in normal account.signAndSendTransaction)
-            return result;
-        } catch (e) {
-            console.warn("Error validating security code:", e);
-            if (e.toString().includes("invalid 2fa code provided") || e.toString().includes("2fa code not valid")) return await this.promptAndVerify();
-            throw e;
-        }
-    }
-    async verifyCodeDefault(securityCode) {
-        const { accountId  } = this;
-        const request = this.getRequest();
-        if (!request) throw new Error("no request pending");
-        const { requestId  } = request;
-        return await this.postSignedJson("/2fa/verify", {
-            accountId,
-            securityCode,
-            requestId
-        });
-    }
-    async getRecoveryMethods() {
-        const { accountId  } = this;
-        return {
-            accountId,
-            data: await this.postSignedJson("/account/recoveryMethods", {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { accountId  } = this;
+            const seedOrLedgerKey = (yield this.getRecoveryMethods()).data.filter(({ kind , publicKey  })=>(kind === "phrase" || kind === "ledger") && publicKey !== null).map((rm)=>rm.publicKey);
+            const fak2lak = (yield this.getAccessKeys()).filter(({ public_key , access_key: { permission  }  })=>permission === "FullAccess" && !seedOrLedgerKey.includes(public_key)).map((ak)=>ak.public_key).map(toPK);
+            const confirmOnlyKey = toPK((yield this.postSignedJson("/2fa/getAccessKey", {
                 accountId
-            })
-        };
-    }
-    async get2faMethod() {
-        let { data  } = await this.getRecoveryMethods();
-        if (data && data.length) data = data.find((m)=>m.kind.indexOf("2fa-") === 0);
-        if (!data) return null;
-        const { kind , detail  } = data;
-        return {
-            kind,
-            detail
-        };
-    }
-    async signatureFor() {
-        const { accountId  } = this;
-        const block = await this.connection.provider.block({
-            finality: "final"
+            })).publicKey);
+            const newArgs = Buffer.from(JSON.stringify({
+                "num_confirmations": 2
+            }));
+            const actions = [
+                ...fak2lak.map((pk)=>(0, transaction_1.deleteKey)(pk)),
+                ...fak2lak.map((pk)=>(0, transaction_1.addKey)(pk, (0, transaction_1.functionCallAccessKey)(accountId, exports.MULTISIG_CHANGE_METHODS, null))),
+                (0, transaction_1.addKey)(confirmOnlyKey, (0, transaction_1.functionCallAccessKey)(accountId, exports.MULTISIG_CONFIRM_METHODS, null)),
+                (0, transaction_1.deployContract)(contractBytes)
+            ];
+            const newFunctionCallActionBatch = actions.concat((0, transaction_1.functionCall)("new", newArgs, exports.MULTISIG_GAS, exports.MULTISIG_DEPOSIT));
+            console.log("deploying multisig contract for", accountId);
+            const { stateStatus: multisigStateStatus  } = yield this.checkMultisigCodeAndStateStatus(contractBytes);
+            switch(multisigStateStatus){
+                case MultisigStateStatus.STATE_NOT_INITIALIZED:
+                    return yield _super.signAndSendTransactionWithAccount.call(this, accountId, newFunctionCallActionBatch);
+                case MultisigStateStatus.VALID_STATE:
+                    return yield _super.signAndSendTransactionWithAccount.call(this, accountId, actions);
+                case MultisigStateStatus.INVALID_STATE:
+                    throw new providers_1.TypedError(`Can not deploy a contract to account ${this.accountId} on network ${this.connection.networkId}, the account has existing state.`, "ContractHasExistingState");
+                default:
+                    throw new providers_1.TypedError(`Can not deploy a contract to account ${this.accountId} on network ${this.connection.networkId}, the account state could not be verified.`, "ContractStateUnknown");
+            }
         });
-        const blockNumber = block.header.height.toString();
-        const signed = await this.connection.signer.signMessage(Buffer.from(blockNumber), accountId, this.connection.networkId);
-        const blockNumberSignature = Buffer.from(signed.signature).toString("base64");
-        return {
-            blockNumber,
-            blockNumberSignature
-        };
     }
-    async postSignedJson(path, body) {
-        return await web_1.fetchJson(this.helperUrl + path, JSON.stringify({
-            ...body,
-            ...await this.signatureFor()
-        }));
+    disableWithFAK({ contractBytes , cleanupContractBytes  }) {
+        return __awaiter(this, void 0, void 0, function*() {
+            let cleanupActions = [];
+            if (cleanupContractBytes) {
+                yield this.deleteAllRequests().catch((e)=>e);
+                cleanupActions = yield this.get2faDisableCleanupActions(cleanupContractBytes);
+            }
+            const keyConversionActions = yield this.get2faDisableKeyConversionActions();
+            const actions = [
+                ...cleanupActions,
+                ...keyConversionActions,
+                (0, transaction_1.deployContract)(contractBytes)
+            ];
+            const accessKeyInfo = yield this.findAccessKey(this.accountId, actions);
+            if (accessKeyInfo && accessKeyInfo.accessKey && accessKeyInfo.accessKey.permission !== "FullAccess") throw new providers_1.TypedError("No full access key found in keystore. Unable to bypass multisig", "NoFAKFound");
+            return this.signAndSendTransactionWithAccount(this.accountId, actions);
+        });
+    }
+    get2faDisableCleanupActions(cleanupContractBytes) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const currentAccountState = yield this.viewState("").catch((error)=>{
+                const cause = error.cause && error.cause.name;
+                if (cause == "NO_CONTRACT_CODE") return [];
+                throw cause == "TOO_LARGE_CONTRACT_STATE" ? new providers_1.TypedError(`Can not deploy a contract to account ${this.accountId} on network ${this.connection.networkId}, the account has existing state.`, "ContractHasExistingState") : error;
+            });
+            const currentAccountStateKeys = currentAccountState.map(({ key  })=>key.toString("base64"));
+            return currentAccountState.length ? [
+                (0, transaction_1.deployContract)(cleanupContractBytes),
+                (0, transaction_1.functionCall)("clean", {
+                    keys: currentAccountStateKeys
+                }, exports.MULTISIG_GAS, new bn_js_1.default("0"))
+            ] : [];
+        });
+    }
+    get2faDisableKeyConversionActions() {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { accountId  } = this;
+            const accessKeys = yield this.getAccessKeys();
+            const lak2fak = accessKeys.filter(({ access_key  })=>access_key.permission !== "FullAccess").filter(({ access_key  })=>{
+                const perm = access_key.permission.FunctionCall;
+                return perm.receiver_id === accountId && perm.method_names.length === 4 && perm.method_names.includes("add_request_and_confirm");
+            });
+            const confirmOnlyKey = key_pair_1.PublicKey.from((yield this.postSignedJson("/2fa/getAccessKey", {
+                accountId
+            })).publicKey);
+            return [
+                (0, transaction_1.deleteKey)(confirmOnlyKey),
+                ...lak2fak.map(({ public_key  })=>(0, transaction_1.deleteKey)(key_pair_1.PublicKey.from(public_key))),
+                ...lak2fak.map(({ public_key  })=>(0, transaction_1.addKey)(key_pair_1.PublicKey.from(public_key), (0, transaction_1.fullAccessKey)()))
+            ];
+        });
+    }
+    /**
+     * This method converts LAKs back to FAKs, clears state and deploys an 'empty' contract (contractBytes param)
+     * @param [contractBytes]{@link https://github.com/near/near-wallet/blob/master/packages/frontend/src/wasm/main.wasm?raw=true}
+     * @param [cleanupContractBytes]{@link https://github.com/near/core-contracts/blob/master/state-cleanup/res/state_cleanup.wasm?raw=true}
+     */ disable(contractBytes, cleanupContractBytes) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { stateStatus  } = yield this.checkMultisigCodeAndStateStatus();
+            if (stateStatus !== MultisigStateStatus.VALID_STATE && stateStatus !== MultisigStateStatus.STATE_NOT_INITIALIZED) throw new providers_1.TypedError(`Can not deploy a contract to account ${this.accountId} on network ${this.connection.networkId}, the account state could not be verified.`, "ContractStateUnknown");
+            let deleteAllRequestsError;
+            yield this.deleteAllRequests().catch((e)=>deleteAllRequestsError = e);
+            const cleanupActions = yield this.get2faDisableCleanupActions(cleanupContractBytes).catch((e)=>{
+                if (e.type === "ContractHasExistingState") throw deleteAllRequestsError || e;
+                throw e;
+            });
+            const actions = [
+                ...cleanupActions,
+                ...yield this.get2faDisableKeyConversionActions(),
+                (0, transaction_1.deployContract)(contractBytes)
+            ];
+            console.log("disabling 2fa for", this.accountId);
+            return yield this.signAndSendTransaction({
+                receiverId: this.accountId,
+                actions
+            });
+        });
+    }
+    sendCodeDefault() {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { accountId  } = this;
+            const { requestId  } = this.getRequest();
+            const method = yield this.get2faMethod();
+            yield this.postSignedJson("/2fa/send", {
+                accountId,
+                method,
+                requestId
+            });
+            return requestId;
+        });
+    }
+    getCodeDefault() {
+        return __awaiter(this, void 0, void 0, function*() {
+            throw new Error('There is no getCode callback provided. Please provide your own in AccountMultisig constructor options. It has a parameter method where method.kind is "email" or "phone".');
+        });
+    }
+    promptAndVerify() {
+        return __awaiter(this, void 0, void 0, function*() {
+            const method = yield this.get2faMethod();
+            const securityCode = yield this.getCode(method);
+            try {
+                const result = yield this.verifyCode(securityCode);
+                // TODO: Parse error from result for real (like in normal account.signAndSendTransaction)
+                return result;
+            } catch (e) {
+                console.warn("Error validating security code:", e);
+                if (e.toString().includes("invalid 2fa code provided") || e.toString().includes("2fa code not valid")) return yield this.promptAndVerify();
+                throw e;
+            }
+        });
+    }
+    verifyCodeDefault(securityCode) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { accountId  } = this;
+            const request = this.getRequest();
+            if (!request) throw new Error("no request pending");
+            const { requestId  } = request;
+            return yield this.postSignedJson("/2fa/verify", {
+                accountId,
+                securityCode,
+                requestId
+            });
+        });
+    }
+    getRecoveryMethods() {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { accountId  } = this;
+            return {
+                accountId,
+                data: yield this.postSignedJson("/account/recoveryMethods", {
+                    accountId
+                })
+            };
+        });
+    }
+    get2faMethod() {
+        return __awaiter(this, void 0, void 0, function*() {
+            let { data  } = yield this.getRecoveryMethods();
+            if (data && data.length) data = data.find((m)=>m.kind.indexOf("2fa-") === 0);
+            if (!data) return null;
+            const { kind , detail  } = data;
+            return {
+                kind,
+                detail
+            };
+        });
+    }
+    signatureFor() {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { accountId  } = this;
+            const block = yield this.connection.provider.block({
+                finality: "final"
+            });
+            const blockNumber = block.header.height.toString();
+            const signed = yield this.connection.signer.signMessage(Buffer.from(blockNumber), accountId, this.connection.networkId);
+            const blockNumberSignature = Buffer.from(signed.signature).toString("base64");
+            return {
+                blockNumber,
+                blockNumberSignature
+            };
+        });
+    }
+    postSignedJson(path, body) {
+        return __awaiter(this, void 0, void 0, function*() {
+            return yield (0, web_1.fetchJson)(this.helperUrl + path, JSON.stringify(Object.assign(Object.assign({}, body), (yield this.signatureFor()))));
+        });
     }
 }
 exports.Account2FA = Account2FA;
@@ -43267,13 +41194,40 @@ const convertActions = (actions, accountId, receiverId)=>actions.map((a)=>{
         return action;
     });
 
-},{"ef4bf56ae66a1274":"5c7yX","3bed7f210e9124d3":"9pdNn","675a3f7f0272878b":"2jGeI","8ee1083810a36977":"hxSQV","85824b1b22b55954":"16c5X","2d9c2d87b9c0f89d":"kBQFP","738cd14a692931a1":"jJQ5a","3c48c0a2f24f39c8":"iSqiB"}],"aQbxV":[function(require,module,exports) {
+},{"c2cf1474376ac7b2":"5heHz","9af43f611c6999c7":"VopIn","d1248d54541de92":"hxSQV","ccbf6522c7f60616":"16c5X","d776c18060e80459":"kBQFP","95d536722fd0e9d1":"jJQ5a","b4e1b08fc380b6a8":"gtL2a","4675a15cd19a38d":"iSqiB"}],"aQbxV":[function(require,module,exports) {
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.UrlAccountCreator = exports.LocalAccountCreator = exports.AccountCreator = void 0;
-const web_1 = require("11c426362eaed89f");
+const web_1 = require("c0a8adf4841c2dd5");
 /**
  * Account creator provides an interface for implementations to actually create accounts
  */ class AccountCreator {
@@ -43290,8 +41244,10 @@ class LocalAccountCreator extends AccountCreator {
      * @param newAccountId The name of the NEAR account to be created
      * @param publicKey The public key from the masterAccount used to create this account
      * @returns {Promise<void>}
-     */ async createAccount(newAccountId, publicKey) {
-        await this.masterAccount.createAccount(newAccountId, publicKey, this.initialBalance);
+     */ createAccount(newAccountId, publicKey) {
+        return __awaiter(this, void 0, void 0, function*() {
+            yield this.masterAccount.createAccount(newAccountId, publicKey, this.initialBalance);
+        });
     }
 }
 exports.LocalAccountCreator = LocalAccountCreator;
@@ -43307,23 +41263,25 @@ class UrlAccountCreator extends AccountCreator {
      * @param newAccountId The name of the NEAR account to be created
      * @param publicKey The public key from the masterAccount used to create this account
      * @returns {Promise<void>}
-     */ async createAccount(newAccountId, publicKey) {
-        await web_1.fetchJson(`${this.helperUrl}/account`, JSON.stringify({
-            newAccountId,
-            newAccountPublicKey: publicKey.toString()
-        }));
+     */ createAccount(newAccountId, publicKey) {
+        return __awaiter(this, void 0, void 0, function*() {
+            yield (0, web_1.fetchJson)(`${this.helperUrl}/account`, JSON.stringify({
+                newAccountId,
+                newAccountPublicKey: publicKey.toString()
+            }));
+        });
     }
 }
 exports.UrlAccountCreator = UrlAccountCreator;
 
-},{"11c426362eaed89f":"iSqiB"}],"3ThJM":[function(require,module,exports) {
+},{"c0a8adf4841c2dd5":"iSqiB"}],"3ThJM":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.Connection = void 0;
-const providers_1 = require("de5af429bab760c");
-const signer_1 = require("3bda1b9a1c163273");
+const providers_1 = require("ca9607aa23778d3d");
+const signer_1 = require("60369f9bc2e8c179");
 /**
  * @param config Contains connection info details
  * @returns {Provider}
@@ -43332,9 +41290,7 @@ const signer_1 = require("3bda1b9a1c163273");
         case undefined:
             return config;
         case "JsonRpcProvider":
-            return new providers_1.JsonRpcProvider({
-                ...config.args
-            });
+            return new providers_1.JsonRpcProvider(Object.assign({}, config.args));
         default:
             throw new Error(`Unknown provider type ${config.type}`);
     }
@@ -43355,23 +41311,51 @@ const signer_1 = require("3bda1b9a1c163273");
 /**
  * Connects an account to a given network via a given provider
  */ class Connection {
-    constructor(networkId, provider, signer){
+    constructor(networkId, provider, signer, jsvmAccountId){
         this.networkId = networkId;
         this.provider = provider;
         this.signer = signer;
+        this.jsvmAccountId = jsvmAccountId;
     }
     /**
      * @param config Contains connection info details
      */ static fromConfig(config) {
         const provider = getProvider(config.provider);
         const signer = getSigner(config.signer);
-        return new Connection(config.networkId, provider, signer);
+        return new Connection(config.networkId, provider, signer, config.jsvmAccountId);
     }
 }
 exports.Connection = Connection;
 
-},{"de5af429bab760c":"gtL2a","3bda1b9a1c163273":"a6bzI"}],"a6bzI":[function(require,module,exports) {
+},{"ca9607aa23778d3d":"gtL2a","60369f9bc2e8c179":"a6bzI"}],"a6bzI":[function(require,module,exports) {
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
         "default": mod
@@ -43381,9 +41365,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.InMemorySigner = exports.Signer = void 0;
-const js_sha256_1 = __importDefault(require("5d4084dd9cddf981"));
-const key_pair_1 = require("c1edc1d281dc4edb");
-const in_memory_key_store_1 = require("20e00f1f5c4a938");
+const js_sha256_1 = __importDefault(require("ca491d857c2dc988"));
+const key_pair_1 = require("4b58fac31fffe1e3");
+const in_memory_key_store_1 = require("a4bd4a369c9fc842");
 /**
  * General signing interface, can be used for in memory signing, RPC singing, external wallet, HSM, etc.
  */ class Signer {
@@ -43404,42 +41388,50 @@ exports.Signer = Signer;
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @param accountId The NEAR account to assign the key pair to
      * @param keyPair The keyPair to use for signing
-     */ static async fromKeyPair(networkId, accountId, keyPair) {
-        const keyStore = new in_memory_key_store_1.InMemoryKeyStore();
-        await keyStore.setKey(networkId, accountId, keyPair);
-        return new InMemorySigner(keyStore);
+     */ static fromKeyPair(networkId, accountId, keyPair) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const keyStore = new in_memory_key_store_1.InMemoryKeyStore();
+            yield keyStore.setKey(networkId, accountId, keyPair);
+            return new InMemorySigner(keyStore);
+        });
     }
     /**
      * Creates a public key for the account given
      * @param accountId The NEAR account to assign a public key to
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @returns {Promise<PublicKey>}
-     */ async createKey(accountId, networkId) {
-        const keyPair = key_pair_1.KeyPair.fromRandom("ed25519");
-        await this.keyStore.setKey(networkId, accountId, keyPair);
-        return keyPair.getPublicKey();
+     */ createKey(accountId, networkId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const keyPair = key_pair_1.KeyPair.fromRandom("ed25519");
+            yield this.keyStore.setKey(networkId, accountId, keyPair);
+            return keyPair.getPublicKey();
+        });
     }
     /**
      * Gets the existing public key for a given account
      * @param accountId The NEAR account to assign a public key to
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @returns {Promise<PublicKey>} Returns the public key or null if not found
-     */ async getPublicKey(accountId, networkId) {
-        const keyPair = await this.keyStore.getKey(networkId, accountId);
-        if (keyPair === null) return null;
-        return keyPair.getPublicKey();
+     */ getPublicKey(accountId, networkId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const keyPair = yield this.keyStore.getKey(networkId, accountId);
+            if (keyPair === null) return null;
+            return keyPair.getPublicKey();
+        });
     }
     /**
      * @param message A message to be signed, typically a serialized transaction
      * @param accountId the NEAR account signing the message
      * @param networkId The targeted network. (ex. default, betanet, etc…)
      * @returns {Promise<Signature>}
-     */ async signMessage(message, accountId, networkId) {
-        const hash = new Uint8Array(js_sha256_1.default.sha256.array(message));
-        if (!accountId) throw new Error("InMemorySigner requires provided account id");
-        const keyPair = await this.keyStore.getKey(networkId, accountId);
-        if (keyPair === null) throw new Error(`Key for ${accountId} not found in ${networkId}`);
-        return keyPair.sign(hash);
+     */ signMessage(message, accountId, networkId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const hash = new Uint8Array(js_sha256_1.default.sha256.array(message));
+            if (!accountId) throw new Error("InMemorySigner requires provided account id");
+            const keyPair = yield this.keyStore.getKey(networkId, accountId);
+            if (keyPair === null) throw new Error(`Key for ${accountId} not found in ${networkId}`);
+            return keyPair.sign(hash);
+        });
     }
     toString() {
         return `InMemorySigner(${this.keyStore})`;
@@ -43447,8 +41439,35 @@ exports.Signer = Signer;
 }
 exports.InMemorySigner = InMemorySigner;
 
-},{"5d4084dd9cddf981":"ahVaM","c1edc1d281dc4edb":"kBQFP","20e00f1f5c4a938":"fTfs7"}],"guo0T":[function(require,module,exports) {
+},{"ca491d857c2dc988":"ahVaM","4b58fac31fffe1e3":"kBQFP","a4bd4a369c9fc842":"fTfs7"}],"guo0T":[function(require,module,exports) {
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
         "default": mod
@@ -43458,10 +41477,10 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.Contract = void 0;
-const bn_js_1 = __importDefault(require("1f5663a571e63c71"));
-const depd_1 = __importDefault(require("fe7c1b76a0480a9c"));
-const providers_1 = require("543a45b1bb42224d");
-const errors_1 = require("2a2bec061102a639");
+const bn_js_1 = __importDefault(require("bb0b3360068a444f"));
+const depd_1 = __importDefault(require("276b6af2dc7ee66c"));
+const providers_1 = require("40b8861717e6250f");
+const errors_1 = require("a16e44c908560e91");
 // Makes `function.name` return given name
 function nameFunction(name, body) {
     return ({
@@ -43475,7 +41494,7 @@ const isObject = (x)=>Object.prototype.toString.call(x) === "[object Object]";
 /**
  * Defines a smart contract on NEAR including the change (mutable) and view (non-mutable) methods
  *
- * @example {@link https://docs.near.org/docs/develop/front-end/naj-quick-reference#contract}
+ * @see [https://docs.near.org/tools/near-api-js/quick-reference#contract](https://docs.near.org/tools/near-api-js/quick-reference#contract)
  * @example
  * ```js
  * import { Contract } from 'near-api-js';
@@ -43518,51 +41537,52 @@ const isObject = (x)=>Object.prototype.toString.call(x) === "[object Object]";
             Object.defineProperty(this, methodName, {
                 writable: false,
                 enumerable: true,
-                value: nameFunction(methodName, async (args = {}, options = {}, ...ignored)=>{
-                    if (ignored.length || !(isObject(args) || isUint8Array(args)) || !isObject(options)) throw new errors_1.PositionalArgsError();
-                    return this.account.viewFunction(this.contractId, methodName, args, options);
-                })
+                value: nameFunction(methodName, (args = {}, options = {}, ...ignored)=>__awaiter(this, void 0, void 0, function*() {
+                        if (ignored.length || !(isObject(args) || isUint8Array(args)) || !isObject(options)) throw new errors_1.PositionalArgsError();
+                        return this.account.viewFunction(this.contractId, methodName, args, options);
+                    }))
             });
         });
         changeMethods.forEach((methodName)=>{
             Object.defineProperty(this, methodName, {
                 writable: false,
                 enumerable: true,
-                value: nameFunction(methodName, async (...args)=>{
-                    if (args.length && (args.length > 3 || !(isObject(args[0]) || isUint8Array(args[0])))) throw new errors_1.PositionalArgsError();
-                    if (args.length > 1 || !(args[0] && args[0].args)) {
-                        const deprecate = depd_1.default("contract.methodName(args, gas, amount)");
-                        deprecate("use `contract.methodName({ args, gas?, amount?, callbackUrl?, meta? })` instead");
-                        return this._changeMethod({
-                            methodName,
-                            args: args[0],
-                            gas: args[1],
-                            amount: args[2]
-                        });
-                    }
-                    return this._changeMethod({
-                        methodName,
-                        ...args[0]
-                    });
-                })
+                value: nameFunction(methodName, (...args)=>__awaiter(this, void 0, void 0, function*() {
+                        if (args.length && (args.length > 3 || !(isObject(args[0]) || isUint8Array(args[0])))) throw new errors_1.PositionalArgsError();
+                        if (args.length > 1 || !(args[0] && args[0].args)) {
+                            const deprecate = (0, depd_1.default)("contract.methodName(args, gas, amount)");
+                            deprecate("use `contract.methodName({ args, gas?, amount?, callbackUrl?, meta? })` instead");
+                            return this._changeMethod({
+                                methodName,
+                                args: args[0],
+                                gas: args[1],
+                                amount: args[2]
+                            });
+                        }
+                        return this._changeMethod(Object.assign({
+                            methodName
+                        }, args[0]));
+                    }))
             });
         });
     }
-    async _changeMethod({ args , methodName , gas , amount , meta , callbackUrl  }) {
-        validateBNLike({
-            gas,
-            amount
+    _changeMethod({ args , methodName , gas , amount , meta , callbackUrl  }) {
+        return __awaiter(this, void 0, void 0, function*() {
+            validateBNLike({
+                gas,
+                amount
+            });
+            const rawResult = yield this.account.functionCall({
+                contractId: this.contractId,
+                methodName,
+                args,
+                gas,
+                attachedDeposit: amount,
+                walletMeta: meta,
+                walletCallbackUrl: callbackUrl
+            });
+            return (0, providers_1.getTransactionLastResult)(rawResult);
         });
-        const rawResult = await this.account.functionCall({
-            contractId: this.contractId,
-            methodName,
-            args,
-            gas,
-            attachedDeposit: amount,
-            walletMeta: meta,
-            walletCallbackUrl: callbackUrl
-        });
-        return providers_1.getTransactionLastResult(rawResult);
     }
 }
 exports.Contract = Contract;
@@ -43578,8 +41598,35 @@ exports.Contract = Contract;
     }
 }
 
-},{"1f5663a571e63c71":"9pdNn","fe7c1b76a0480a9c":"2jGeI","543a45b1bb42224d":"gtL2a","2a2bec061102a639":"btMYy"}],"9Ying":[function(require,module,exports) {
+},{"bb0b3360068a444f":"VopIn","276b6af2dc7ee66c":"2jGeI","40b8861717e6250f":"gtL2a","a16e44c908560e91":"btMYy"}],"9Ying":[function(require,module,exports) {
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
         "default": mod
@@ -43591,17 +41638,16 @@ Object.defineProperty(exports, "__esModule", {
 exports.Near = void 0;
 /**
  * This module contains the main class developers will use to interact with NEAR.
- * The {@link Near} class is used to interact with {@link Account | Accounts} through the {@link JsonRpcProvider.JsonRpcProvider | JsonRpcProvider}.
+ * The {@link Near} class is used to interact with {@link account!Account | Accounts} through the {@link providers/json-rpc-provider!JsonRpcProvider}.
  * It is configured via the {@link NearConfig}.
  *
- * @example {@link https://docs.near.org/docs/develop/front-end/naj-quick-reference#account}
+ * @see [https://docs.near.org/tools/near-api-js/quick-reference#account](https://docs.near.org/tools/near-api-js/quick-reference#account)
  *
  * @module near
- */ const bn_js_1 = __importDefault(require("624d6bfec84b1dc2"));
-const account_1 = require("f4cd6e8097882fdc");
-const connection_1 = require("c8e7fdddc39ac8a2");
-const contract_1 = require("ca5a53f19019b1f5");
-const account_creator_1 = require("afbd52c01676c8b4");
+ */ const bn_js_1 = __importDefault(require("6847a5f7ce9f4c34"));
+const account_1 = require("dba1416e61628b96");
+const connection_1 = require("65efc8d62d17f460");
+const account_creator_1 = require("1382522fda75b23c");
 /**
  * This is the main class developers should use to interact with NEAR.
  * @example
@@ -43622,8 +41668,9 @@ const account_creator_1 = require("afbd52c01676c8b4");
             },
             signer: config.signer || {
                 type: "InMemorySigner",
-                keyStore: config.keyStore || config.deps.keyStore
-            }
+                keyStore: config.keyStore
+            },
+            jsvmAccountId: config.jsvmAccountId || `jsvm.${config.networkId}`
         });
         if (config.masterAccount) {
             // TODO: figure out better way of specifiying initial balance.
@@ -43635,48 +41682,60 @@ const account_creator_1 = require("afbd52c01676c8b4");
     }
     /**
      * @param accountId near accountId used to interact with the network.
-     */ async account(accountId) {
-        const account = new account_1.Account(this.connection, accountId);
-        return account;
+     */ account(accountId) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const account = new account_1.Account(this.connection, accountId);
+            return account;
+        });
     }
     /**
-     * Create an account using the {@link AccountCreator}. Either:
-     * * using a masterAccount with {@link LocalAccountCreator}
-     * * using the helperUrl with {@link UrlAccountCreator}
-     * @see {@link NearConfig.masterAccount} and {@link NearConfig.helperUrl}-
+     * Create an account using the {@link account_creator!AccountCreator}. Either:
+     * * using a masterAccount with {@link account_creator!LocalAccountCreator}
+     * * using the helperUrl with {@link account_creator!UrlAccountCreator}
+     * @see {@link NearConfig.masterAccount} and {@link NearConfig.helperUrl}
      *
      * @param accountId
      * @param publicKey
-     */ async createAccount(accountId, publicKey) {
-        if (!this.accountCreator) throw new Error("Must specify account creator, either via masterAccount or helperUrl configuration settings.");
-        await this.accountCreator.createAccount(accountId, publicKey);
-        return new account_1.Account(this.connection, accountId);
-    }
-    /**
-     * @deprecated Use {@link Contract} instead.
-     * @param contractId
-     * @param options
-     */ async loadContract(contractId, options) {
-        const account = new account_1.Account(this.connection, options.sender);
-        return new contract_1.Contract(account, contractId, options);
-    }
-    /**
-     * @deprecated Use {@link Account.sendMoney} instead.
-     * @param amount
-     * @param originator
-     * @param receiver
-     */ async sendTokens(amount, originator, receiver) {
-        console.warn("near.sendTokens is deprecated. Use `yourAccount.sendMoney` instead.");
-        const account = new account_1.Account(this.connection, originator);
-        const result = await account.sendMoney(receiver, amount);
-        return result.transaction_outcome.id;
+     */ createAccount(accountId, publicKey) {
+        return __awaiter(this, void 0, void 0, function*() {
+            if (!this.accountCreator) throw new Error("Must specify account creator, either via masterAccount or helperUrl configuration settings.");
+            yield this.accountCreator.createAccount(accountId, publicKey);
+            return new account_1.Account(this.connection, accountId);
+        });
     }
 }
 exports.Near = Near;
 
-},{"624d6bfec84b1dc2":"9pdNn","f4cd6e8097882fdc":"hxSQV","c8e7fdddc39ac8a2":"3ThJM","ca5a53f19019b1f5":"guo0T","afbd52c01676c8b4":"aQbxV"}],"dHM3Z":[function(require,module,exports) {
-var Buffer = require("860e65b16bcd59c4").Buffer;
+},{"6847a5f7ce9f4c34":"VopIn","dba1416e61628b96":"hxSQV","65efc8d62d17f460":"3ThJM","1382522fda75b23c":"aQbxV"}],"dHM3Z":[function(require,module,exports) {
+var Buffer = require("204eb53c8f84c4b9").Buffer;
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 var __importDefault = this && this.__importDefault || function(mod) {
     return mod && mod.__esModule ? mod : {
         "default": mod
@@ -43685,28 +41744,30 @@ var __importDefault = this && this.__importDefault || function(mod) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.ConnectedWalletAccount = exports.WalletAccount = exports.WalletConnection = void 0;
+exports.ConnectedWalletAccount = exports.WalletConnection = void 0;
 /**
- * The classes in this module are used in conjunction with the {@link BrowserLocalStorageKeyStore}. This module exposes two classes:
- * * {@link WalletConnection} which redirects users to {@link https://docs.near.org/docs/tools/near-wallet | NEAR Wallet} for key management.
- * * {@link ConnectedWalletAccount} is an {@link Account} implementation that uses {@link WalletConnection} to get keys
+ * The classes in this module are used in conjunction with the {@link key_stores/browser_local_storage_key_store!BrowserLocalStorageKeyStore}.
+ * This module exposes two classes:
+ * * {@link WalletConnection} which redirects users to [NEAR Wallet](https://wallet.near.org/) for key management.
+ * * {@link ConnectedWalletAccount} is an {@link account!Account} implementation that uses {@link WalletConnection} to get keys
  *
  * @module walletAccount
- */ const depd_1 = __importDefault(require("7bfffa6bee19c181"));
-const account_1 = require("dbb5db234afd6a6d");
-const transaction_1 = require("54a92f2afc900eca");
-const utils_1 = require("384c16024233958f");
-const borsh_1 = require("1ea4f0f7871d8e28");
-const borsh_2 = require("1ea4f0f7871d8e28");
+ */ const account_1 = require("aa5506c754b99d19");
+const transaction_1 = require("daa947f9a79429a1");
+const utils_1 = require("e2f7275f9e84578c");
+const borsh_1 = require("2f7c3c26f322b8a2");
+const borsh_2 = require("2f7c3c26f322b8a2");
+const bn_js_1 = __importDefault(require("7a750920e94b3e36"));
 const LOGIN_WALLET_URL_SUFFIX = "/login/";
 const MULTISIG_HAS_METHOD = "add_request_and_confirm";
 const LOCAL_STORAGE_KEY_SUFFIX = "_wallet_auth_key";
 const PENDING_ACCESS_KEY_PREFIX = "pending_key"; // browser storage key for a pending access key (i.e. key has been generated but we are not sure it was added yet)
 /**
- * This class is used in conjunction with the {@link BrowserLocalStorageKeyStore}.
- * It redirects users to {@link https://docs.near.org/docs/tools/near-wallet | NEAR Wallet} for key management.
+ * This class is used in conjunction with the {@link key_stores/browser_local_storage_key_store!BrowserLocalStorageKeyStore}.
+ * It redirects users to [NEAR Wallet](https://wallet.near.org) for key management.
+ * This class is not intended for use outside the browser. Without `window` (i.e. in server contexts), it will instantiate but will throw a clear error when used.
  *
- * @example {@link https://docs.near.org/docs/develop/front-end/naj-quick-reference#wallet}
+ * @see [https://docs.near.org/tools/near-api-js/quick-reference#wallet](https://docs.near.org/tools/near-api-js/quick-reference#wallet)
  * @example
  * ```js
  * // create new WalletConnection instance
@@ -43714,10 +41775,20 @@ const PENDING_ACCESS_KEY_PREFIX = "pending_key"; // browser storage key for a pe
  *
  * // If not signed in redirect to the NEAR wallet to sign in
  * // keys will be stored in the BrowserLocalStorageKeyStore
- * if(!wallet.isSingnedIn()) return wallet.requestSignIn()
+ * if(!wallet.isSignedIn()) return wallet.requestSignIn()
  * ```
  */ class WalletConnection {
     constructor(near, appKeyPrefix){
+        if (typeof window === "undefined") return new Proxy(this, {
+            get (target, property) {
+                if (property === "isSignedIn") return ()=>false;
+                if (property === "getAccountId") return ()=>"";
+                if (target[property] && typeof target[property] === "function") return ()=>{
+                    throw new Error("No window found in context, please ensure you are using WalletConnection on the browser");
+                };
+                return target[property];
+            }
+        });
         this._near = near;
         const authDataKey = appKeyPrefix + LOCAL_STORAGE_KEY_SUFFIX;
         const authData = JSON.parse(window.localStorage.getItem(authDataKey));
@@ -43729,10 +41800,10 @@ const PENDING_ACCESS_KEY_PREFIX = "pending_key"; // browser storage key for a pe
             allKeys: []
         };
         this._authDataKey = authDataKey;
-        if (!this.isSignedIn()) this._completeSignInWithAccessKey();
+        if (!this.isSignedIn()) this._completeSignInPromise = this._completeSignInWithAccessKey();
     }
     /**
-     * Returns true, if this WalletAccount is authorized with the wallet.
+     * Returns true, if this WalletConnection is authorized with the wallet.
      * @example
      * ```js
      * const wallet = new WalletConnection(near, 'my-app');
@@ -43740,6 +41811,22 @@ const PENDING_ACCESS_KEY_PREFIX = "pending_key"; // browser storage key for a pe
      * ```
      */ isSignedIn() {
         return !!this._authData.accountId;
+    }
+    /**
+     * Returns promise of completing signing in after redirecting from wallet
+     * @example
+     * ```js
+     * // on login callback page
+     * const wallet = new WalletConnection(near, 'my-app');
+     * wallet.isSignedIn(); // false
+     * await wallet.isSignedInAsync(); // true
+     * ```
+     */ isSignedInAsync() {
+        return __awaiter(this, void 0, void 0, function*() {
+            if (!this._completeSignInPromise) return this.isSignedIn();
+            yield this._completeSignInPromise;
+            return this.isSignedIn();
+        });
     }
     /**
      * Returns authorized Account ID.
@@ -43764,91 +41851,80 @@ const PENDING_ACCESS_KEY_PREFIX = "pending_key"; // browser storage key for a pe
      * // redirects to the NEAR Wallet
      * wallet.requestSignIn({ contractId: 'account-with-deploy-contract.near' });
      * ```
-     */ async requestSignIn(contractIdOrOptions = {}, title, successUrl, failureUrl) {
-        let options;
-        if (typeof contractIdOrOptions === "string") {
-            const deprecate = depd_1.default("requestSignIn(contractId, title)");
-            deprecate("`title` ignored; use `requestSignIn({ contractId, methodNames, successUrl, failureUrl })` instead");
-            options = {
-                contractId: contractIdOrOptions,
-                successUrl,
-                failureUrl
-            };
-        } else options = contractIdOrOptions;
-        const currentUrl = new URL(window.location.href);
-        const newUrl = new URL(this._walletBaseUrl + LOGIN_WALLET_URL_SUFFIX);
-        newUrl.searchParams.set("success_url", options.successUrl || currentUrl.href);
-        newUrl.searchParams.set("failure_url", options.failureUrl || currentUrl.href);
-        if (options.contractId) {
-            /* Throws exception if contract account does not exist */ const contractAccount = await this._near.account(options.contractId);
-            await contractAccount.state();
-            newUrl.searchParams.set("contract_id", options.contractId);
-            const accessKey = utils_1.KeyPair.fromRandom("ed25519");
-            newUrl.searchParams.set("public_key", accessKey.getPublicKey().toString());
-            await this._keyStore.setKey(this._networkId, PENDING_ACCESS_KEY_PREFIX + accessKey.getPublicKey(), accessKey);
-        }
-        if (options.methodNames) options.methodNames.forEach((methodName)=>{
-            newUrl.searchParams.append("methodNames", methodName);
-        });
-        window.location.assign(newUrl.toString());
-    }
-    async requestSignTransactions(...args) {
-        if (Array.isArray(args[0])) {
-            const deprecate = depd_1.default("WalletConnection.requestSignTransactions(transactions, callbackUrl, meta)");
-            deprecate("use `WalletConnection.requestSignTransactions(RequestSignTransactionsOptions)` instead");
-            return this._requestSignTransactions({
-                transactions: args[0],
-                callbackUrl: args[1],
-                meta: args[2]
+     */ requestSignIn({ contractId , methodNames , successUrl , failureUrl  }) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const currentUrl = new URL(window.location.href);
+            const newUrl = new URL(this._walletBaseUrl + LOGIN_WALLET_URL_SUFFIX);
+            newUrl.searchParams.set("success_url", successUrl || currentUrl.href);
+            newUrl.searchParams.set("failure_url", failureUrl || currentUrl.href);
+            if (contractId) {
+                /* Throws exception if contract account does not exist */ const contractAccount = yield this._near.account(contractId);
+                yield contractAccount.state();
+                newUrl.searchParams.set("contract_id", contractId);
+                const accessKey = utils_1.KeyPair.fromRandom("ed25519");
+                newUrl.searchParams.set("public_key", accessKey.getPublicKey().toString());
+                yield this._keyStore.setKey(this._networkId, PENDING_ACCESS_KEY_PREFIX + accessKey.getPublicKey(), accessKey);
+            }
+            if (methodNames) methodNames.forEach((methodName)=>{
+                newUrl.searchParams.append("methodNames", methodName);
             });
-        }
-        return this._requestSignTransactions(args[0]);
+            window.location.assign(newUrl.toString());
+        });
     }
-    async _requestSignTransactions({ transactions , meta , callbackUrl  }) {
-        const currentUrl = new URL(window.location.href);
-        const newUrl = new URL("sign", this._walletBaseUrl);
-        newUrl.searchParams.set("transactions", transactions.map((transaction)=>borsh_2.serialize(transaction_1.SCHEMA, transaction)).map((serialized)=>Buffer.from(serialized).toString("base64")).join(","));
-        newUrl.searchParams.set("callbackUrl", callbackUrl || currentUrl.href);
-        if (meta) newUrl.searchParams.set("meta", meta);
-        window.location.assign(newUrl.toString());
+    /**
+     * Requests the user to quickly sign for a transaction or batch of transactions by redirecting to the NEAR wallet.
+     */ requestSignTransactions({ transactions , meta , callbackUrl  }) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const currentUrl = new URL(window.location.href);
+            const newUrl = new URL("sign", this._walletBaseUrl);
+            newUrl.searchParams.set("transactions", transactions.map((transaction)=>(0, borsh_2.serialize)(transaction_1.SCHEMA, transaction)).map((serialized)=>Buffer.from(serialized).toString("base64")).join(","));
+            newUrl.searchParams.set("callbackUrl", callbackUrl || currentUrl.href);
+            if (meta) newUrl.searchParams.set("meta", meta);
+            window.location.assign(newUrl.toString());
+        });
     }
     /**
      * @hidden
      * Complete sign in for a given account id and public key. To be invoked by the app when getting a callback from the wallet.
-     */ async _completeSignInWithAccessKey() {
-        const currentUrl = new URL(window.location.href);
-        const publicKey = currentUrl.searchParams.get("public_key") || "";
-        const allKeys = (currentUrl.searchParams.get("all_keys") || "").split(",");
-        const accountId = currentUrl.searchParams.get("account_id") || "";
-        // TODO: Handle errors during login
-        if (accountId) {
-            this._authData = {
-                accountId,
-                allKeys
-            };
-            window.localStorage.setItem(this._authDataKey, JSON.stringify(this._authData));
-            if (publicKey) await this._moveKeyFromTempToPermanent(accountId, publicKey);
-        }
-        currentUrl.searchParams.delete("public_key");
-        currentUrl.searchParams.delete("all_keys");
-        currentUrl.searchParams.delete("account_id");
-        currentUrl.searchParams.delete("meta");
-        currentUrl.searchParams.delete("transactionHashes");
-        window.history.replaceState({}, document.title, currentUrl.toString());
+     */ _completeSignInWithAccessKey() {
+        return __awaiter(this, void 0, void 0, function*() {
+            const currentUrl = new URL(window.location.href);
+            const publicKey = currentUrl.searchParams.get("public_key") || "";
+            const allKeys = (currentUrl.searchParams.get("all_keys") || "").split(",");
+            const accountId = currentUrl.searchParams.get("account_id") || "";
+            // TODO: Handle errors during login
+            if (accountId) {
+                const authData = {
+                    accountId,
+                    allKeys
+                };
+                window.localStorage.setItem(this._authDataKey, JSON.stringify(authData));
+                if (publicKey) yield this._moveKeyFromTempToPermanent(accountId, publicKey);
+                this._authData = authData;
+            }
+            currentUrl.searchParams.delete("public_key");
+            currentUrl.searchParams.delete("all_keys");
+            currentUrl.searchParams.delete("account_id");
+            currentUrl.searchParams.delete("meta");
+            currentUrl.searchParams.delete("transactionHashes");
+            window.history.replaceState({}, document.title, currentUrl.toString());
+        });
     }
     /**
      * @hidden
      * @param accountId The NEAR account owning the given public key
      * @param publicKey The public key being set to the key store
-     */ async _moveKeyFromTempToPermanent(accountId, publicKey) {
-        const keyPair = await this._keyStore.getKey(this._networkId, PENDING_ACCESS_KEY_PREFIX + publicKey);
-        await this._keyStore.setKey(this._networkId, accountId, keyPair);
-        await this._keyStore.removeKey(this._networkId, PENDING_ACCESS_KEY_PREFIX + publicKey);
+     */ _moveKeyFromTempToPermanent(accountId, publicKey) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const keyPair = yield this._keyStore.getKey(this._networkId, PENDING_ACCESS_KEY_PREFIX + publicKey);
+            yield this._keyStore.setKey(this._networkId, accountId, keyPair);
+            yield this._keyStore.removeKey(this._networkId, PENDING_ACCESS_KEY_PREFIX + publicKey);
+        });
     }
     /**
      * Sign out from the current account
      * @example
-     * walletAccount.signOut();
+     * walletConnection.signOut();
      */ signOut() {
         this._authData = {};
         window.localStorage.removeItem(this._authDataKey);
@@ -43861,9 +41937,8 @@ const PENDING_ACCESS_KEY_PREFIX = "pending_key"; // browser storage key for a pe
     }
 }
 exports.WalletConnection = WalletConnection;
-exports.WalletAccount = WalletConnection;
 /**
- * {@link Account} implementation which redirects to wallet using {@link WalletConnection} when no local key is available.
+ * {@link account!Account} implementation which redirects to wallet using {@link WalletConnection} when no local key is available.
  */ class ConnectedWalletAccount extends account_1.Account {
     constructor(walletConnection, connection, accountId){
         super(connection, accountId);
@@ -43873,97 +41948,127 @@ exports.WalletAccount = WalletConnection;
     /**
      * Sign a transaction by redirecting to the NEAR Wallet
      * @see {@link WalletConnection.requestSignTransactions}
-     */ signAndSendTransaction(...args) {
-        if (typeof args[0] === "string") return this._signAndSendTransaction({
-            receiverId: args[0],
-            actions: args[1]
+     */ signAndSendTransaction({ receiverId , actions , walletMeta , walletCallbackUrl =window.location.href  }) {
+        const _super = Object.create(null, {
+            signAndSendTransaction: {
+                get: ()=>super.signAndSendTransaction
+            }
         });
-        return this._signAndSendTransaction(args[0]);
-    }
-    async _signAndSendTransaction({ receiverId , actions , walletMeta , walletCallbackUrl =window.location.href  }) {
-        const localKey = await this.connection.signer.getPublicKey(this.accountId, this.connection.networkId);
-        let accessKey = await this.accessKeyForTransaction(receiverId, actions, localKey);
-        if (!accessKey) throw new Error(`Cannot find matching key for transaction sent to ${receiverId}`);
-        if (localKey && localKey.toString() === accessKey.public_key) try {
-            return await super.signAndSendTransaction({
-                receiverId,
-                actions
+        return __awaiter(this, void 0, void 0, function*() {
+            const localKey = yield this.connection.signer.getPublicKey(this.accountId, this.connection.networkId);
+            let accessKey = yield this.accessKeyForTransaction(receiverId, actions, localKey);
+            if (!accessKey) throw new Error(`Cannot find matching key for transaction sent to ${receiverId}`);
+            if (localKey && localKey.toString() === accessKey.public_key) try {
+                return yield _super.signAndSendTransaction.call(this, {
+                    receiverId,
+                    actions
+                });
+            } catch (e) {
+                if (e.type === "NotEnoughAllowance") accessKey = yield this.accessKeyForTransaction(receiverId, actions);
+                else throw e;
+            }
+            const block = yield this.connection.provider.block({
+                finality: "final"
             });
-        } catch (e) {
-            if (e.type === "NotEnoughAllowance") accessKey = await this.accessKeyForTransaction(receiverId, actions);
-            else throw e;
-        }
-        const block = await this.connection.provider.block({
-            finality: "final"
+            const blockHash = (0, borsh_1.baseDecode)(block.header.hash);
+            const publicKey = utils_1.PublicKey.from(accessKey.public_key);
+            // TODO: Cache & listen for nonce updates for given access key
+            const nonce = accessKey.access_key.nonce.add(new bn_js_1.default(1));
+            const transaction = (0, transaction_1.createTransaction)(this.accountId, publicKey, receiverId, nonce, actions, blockHash);
+            yield this.walletConnection.requestSignTransactions({
+                transactions: [
+                    transaction
+                ],
+                meta: walletMeta,
+                callbackUrl: walletCallbackUrl
+            });
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    reject(new Error("Failed to redirect to sign transaction"));
+                }, 1000);
+            });
+        // TODO: Aggregate multiple transaction request with "debounce".
+        // TODO: Introduce TrasactionQueue which also can be used to watch for status?
         });
-        const blockHash = borsh_1.baseDecode(block.header.hash);
-        const publicKey = utils_1.PublicKey.from(accessKey.public_key);
-        // TODO: Cache & listen for nonce updates for given access key
-        const nonce = accessKey.access_key.nonce + 1;
-        const transaction = transaction_1.createTransaction(this.accountId, publicKey, receiverId, nonce, actions, blockHash);
-        await this.walletConnection.requestSignTransactions({
-            transactions: [
-                transaction
-            ],
-            meta: walletMeta,
-            callbackUrl: walletCallbackUrl
-        });
-        return new Promise((resolve, reject)=>{
-            setTimeout(()=>{
-                reject(new Error("Failed to redirect to sign transaction"));
-            }, 1000);
-        });
-    // TODO: Aggregate multiple transaction request with "debounce".
-    // TODO: Introduce TrasactionQueue which also can be used to watch for status?
     }
     /**
      * Check if given access key allows the function call or method attempted in transaction
-     * @param accessKey Array of {access_key: AccessKey, public_key: PublicKey} items
+     * @param accessKey Array of \{access_key: AccessKey, public_key: PublicKey\} items
      * @param receiverId The NEAR account attempting to have access
      * @param actions The action(s) needed to be checked for access
-     */ async accessKeyMatchesTransaction(accessKey, receiverId, actions) {
-        const { access_key: { permission  }  } = accessKey;
-        if (permission === "FullAccess") return true;
-        if (permission.FunctionCall) {
-            const { receiver_id: allowedReceiverId , method_names: allowedMethods  } = permission.FunctionCall;
-            /********************************
-            Accept multisig access keys and let wallets attempt to signAndSendTransaction
-            If an access key has itself as receiverId and method permission add_request_and_confirm, then it is being used in a wallet with multisig contract: https://github.com/near/core-contracts/blob/671c05f09abecabe7a7e58efe942550a35fc3292/multisig/src/lib.rs#L149-L153
-            ********************************/ if (allowedReceiverId === this.accountId && allowedMethods.includes(MULTISIG_HAS_METHOD)) return true;
-            if (allowedReceiverId === receiverId) {
-                if (actions.length !== 1) return false;
-                const [{ functionCall  }] = actions;
-                return functionCall && (!functionCall.deposit || functionCall.deposit.toString() === "0") && // TODO: Should support charging amount smaller than allowance?
-                (allowedMethods.length === 0 || allowedMethods.includes(functionCall.methodName));
-            // TODO: Handle cases when allowance doesn't have enough to pay for gas
+     */ accessKeyMatchesTransaction(accessKey, receiverId, actions) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const { access_key: { permission  }  } = accessKey;
+            if (permission === "FullAccess") return true;
+            if (permission.FunctionCall) {
+                const { receiver_id: allowedReceiverId , method_names: allowedMethods  } = permission.FunctionCall;
+                /********************************
+                Accept multisig access keys and let wallets attempt to signAndSendTransaction
+                If an access key has itself as receiverId and method permission add_request_and_confirm, then it is being used in a wallet with multisig contract: https://github.com/near/core-contracts/blob/671c05f09abecabe7a7e58efe942550a35fc3292/multisig/src/lib.rs#L149-L153
+                ********************************/ if (allowedReceiverId === this.accountId && allowedMethods.includes(MULTISIG_HAS_METHOD)) return true;
+                if (allowedReceiverId === receiverId) {
+                    if (actions.length !== 1) return false;
+                    const [{ functionCall  }] = actions;
+                    return functionCall && (!functionCall.deposit || functionCall.deposit.toString() === "0") && // TODO: Should support charging amount smaller than allowance?
+                    (allowedMethods.length === 0 || allowedMethods.includes(functionCall.methodName));
+                // TODO: Handle cases when allowance doesn't have enough to pay for gas
+                }
             }
-        }
-        // TODO: Support other permissions than FunctionCall
-        return false;
+            // TODO: Support other permissions than FunctionCall
+            return false;
+        });
     }
     /**
      * Helper function returning the access key (if it exists) to the receiver that grants the designated permission
      * @param receiverId The NEAR account seeking the access key for a transaction
      * @param actions The action(s) sought to gain access to
      * @param localKey A local public key provided to check for access
-     * @returns Promise<any>
-     */ async accessKeyForTransaction(receiverId, actions, localKey) {
-        const accessKeys = await this.getAccessKeys();
-        if (localKey) {
-            const accessKey = accessKeys.find((key)=>key.public_key.toString() === localKey.toString());
-            if (accessKey && await this.accessKeyMatchesTransaction(accessKey, receiverId, actions)) return accessKey;
-        }
-        const walletKeys = this.walletConnection._authData.allKeys;
-        for (const accessKey of accessKeys){
-            if (walletKeys.indexOf(accessKey.public_key) !== -1 && await this.accessKeyMatchesTransaction(accessKey, receiverId, actions)) return accessKey;
-        }
-        return null;
+     */ accessKeyForTransaction(receiverId, actions, localKey) {
+        return __awaiter(this, void 0, void 0, function*() {
+            const accessKeys = yield this.getAccessKeys();
+            if (localKey) {
+                const accessKey = accessKeys.find((key)=>key.public_key.toString() === localKey.toString());
+                if (accessKey && (yield this.accessKeyMatchesTransaction(accessKey, receiverId, actions))) return accessKey;
+            }
+            const walletKeys = this.walletConnection._authData.allKeys;
+            for (const accessKey of accessKeys){
+                if (walletKeys.indexOf(accessKey.public_key) !== -1 && (yield this.accessKeyMatchesTransaction(accessKey, receiverId, actions))) return accessKey;
+            }
+            return null;
+        });
     }
 }
 exports.ConnectedWalletAccount = ConnectedWalletAccount;
 
-},{"860e65b16bcd59c4":"5c7yX","7bfffa6bee19c181":"2jGeI","dbb5db234afd6a6d":"hxSQV","54a92f2afc900eca":"jJQ5a","384c16024233958f":"jOCMH","1ea4f0f7871d8e28":"4JCmN"}],"7yTE6":[function(require,module,exports) {
+},{"204eb53c8f84c4b9":"5heHz","aa5506c754b99d19":"hxSQV","daa947f9a79429a1":"jJQ5a","e2f7275f9e84578c":"jOCMH","2f7c3c26f322b8a2":"4JCmN","7a750920e94b3e36":"VopIn"}],"7yTE6":[function(require,module,exports) {
 "use strict";
+var __awaiter = this && this.__awaiter || function(thisArg, _arguments, P, generator) {
+    function adopt(value) {
+        return value instanceof P ? value : new P(function(resolve) {
+            resolve(value);
+        });
+    }
+    return new (P || (P = Promise))(function(resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
@@ -43989,35 +42094,37 @@ exports.connect = void 0;
  * ```
  *
  * @module browserConnect
- */ const near_1 = require("cbb1c20e90425c45");
+ */ const near_1 = require("c4e1a1e9e45d0d07");
 /**
  * Initialize connection to Near network.
- */ async function connect(config) {
-    return new near_1.Near(config);
+ */ function connect(config) {
+    return __awaiter(this, void 0, void 0, function*() {
+        return new near_1.Near(config);
+    });
 }
 exports.connect = connect;
 
-},{"cbb1c20e90425c45":"9Ying"}],"2YFhR":[function(require,module,exports) {
-module.exports = require("172748dd5e0f60a8");
+},{"c4e1a1e9e45d0d07":"9Ying"}],"2YFhR":[function(require,module,exports) {
+module.exports = require("aa6777be40f90c9");
 
-},{"172748dd5e0f60a8":"hDD9L"}],"hDD9L":[function(require,module,exports) {
-require("9964283571fa70d1");
-var capability = require("6f88c027f87615b9");
+},{"aa6777be40f90c9":"hDD9L"}],"hDD9L":[function(require,module,exports) {
+require("3eaa655da9e962d5");
+var capability = require("8fc5e739b787f401");
 var polyfill;
-if (capability("Error.captureStackTrace")) polyfill = require("868f908a203424a7");
-else if (capability("Error.prototype.stack")) polyfill = require("4c3e7ebcacee0b3b");
-else polyfill = require("68f1617c71277e18");
+if (capability("Error.captureStackTrace")) polyfill = require("1b2d5855298fb1f4");
+else if (capability("Error.prototype.stack")) polyfill = require("3a5217d7b53f281");
+else polyfill = require("74e2cf2bb2c305df");
 module.exports = polyfill();
 
-},{"9964283571fa70d1":"5bger","6f88c027f87615b9":"45xjX","868f908a203424a7":"a0VmX","4c3e7ebcacee0b3b":"dx0bf","68f1617c71277e18":"75e5c"}],"5bger":[function(require,module,exports) {
-require("cb938ca554b7e806").check("es5");
+},{"3eaa655da9e962d5":"5bger","8fc5e739b787f401":"45xjX","1b2d5855298fb1f4":"a0VmX","3a5217d7b53f281":"dx0bf","74e2cf2bb2c305df":"75e5c"}],"5bger":[function(require,module,exports) {
+require("ed00ce702bfb0867").check("es5");
 
-},{"cb938ca554b7e806":"45xjX"}],"45xjX":[function(require,module,exports) {
-require("5ea8426902419f94");
-module.exports = require("98d1a5ba0ab8d31b");
+},{"ed00ce702bfb0867":"45xjX"}],"45xjX":[function(require,module,exports) {
+require("9aa32885aa1ed1d5");
+module.exports = require("bfde753404bbc08b");
 
-},{"5ea8426902419f94":"k0u9C","98d1a5ba0ab8d31b":"4EqFb"}],"k0u9C":[function(require,module,exports) {
-var capability = require("751ee0248cc9fa0f"), define = capability.define, test = capability.test;
+},{"9aa32885aa1ed1d5":"k0u9C","bfde753404bbc08b":"4EqFb"}],"k0u9C":[function(require,module,exports) {
+var capability = require("ed4e94289f342ff6"), define = capability.define, test = capability.test;
 define("strict mode", function() {
     return this === undefined;
 });
@@ -44065,8 +42172,8 @@ define("Error.prototype.stack", function() {
     }
 });
 
-},{"751ee0248cc9fa0f":"4EqFb"}],"4EqFb":[function(require,module,exports) {
-var CapabilityDetector = require("7cd078900ecc823b");
+},{"ed4e94289f342ff6":"4EqFb"}],"4EqFb":[function(require,module,exports) {
+var CapabilityDetector = require("13be9093d9822b85");
 var detector = new CapabilityDetector();
 var capability = function(name) {
     return detector.test(name);
@@ -44080,7 +42187,7 @@ capability.check = function(name) {
 capability.test = capability;
 module.exports = capability;
 
-},{"7cd078900ecc823b":"csHRg"}],"csHRg":[function(require,module,exports) {
+},{"13be9093d9822b85":"csHRg"}],"csHRg":[function(require,module,exports) {
 var CapabilityDetector = function() {
     this.tests = {};
     this.cache = {};
@@ -44106,7 +42213,7 @@ CapabilityDetector.prototype = {
 module.exports = CapabilityDetector;
 
 },{}],"a0VmX":[function(require,module,exports) {
-var prepareStackTrace = require("8e0cb258ccd7369e");
+var prepareStackTrace = require("16b3f79ba47360f3");
 module.exports = function() {
     Error.getStackTrace = function(throwable) {
         return throwable.stack;
@@ -44116,7 +42223,7 @@ module.exports = function() {
     };
 };
 
-},{"8e0cb258ccd7369e":"85RZD"}],"85RZD":[function(require,module,exports) {
+},{"16b3f79ba47360f3":"85RZD"}],"85RZD":[function(require,module,exports) {
 var prepareStackTrace = function(throwable, frames, warnings) {
     var string = "";
     string += throwable.name || "Error";
@@ -44134,7 +42241,7 @@ var prepareStackTrace = function(throwable, frames, warnings) {
 module.exports = prepareStackTrace;
 
 },{}],"dx0bf":[function(require,module,exports) {
-var FrameStringSource = require("568ad5e46e31704b"), FrameStringParser = require("877e6998fdab58"), cache = require("4aa28463d6a096f2").cache, prepareStackTrace = require("f0bf2deb432c5444");
+var FrameStringSource = require("e8c3e584773c3435"), FrameStringParser = require("42d6750be7cc97f1"), cache = require("6edd502b1f731622").cache, prepareStackTrace = require("39c5ad9365e7a162");
 module.exports = function() {
     Error.captureStackTrace = function captureStackTrace(throwable, terminator) {
         var warnings;
@@ -44192,8 +42299,8 @@ module.exports = function() {
     };
 };
 
-},{"568ad5e46e31704b":"8enMo","877e6998fdab58":"kqj4M","4aa28463d6a096f2":"dIyaj","f0bf2deb432c5444":"85RZD"}],"8enMo":[function(require,module,exports) {
-var Class = require("d9f11a09a88bcbbf").Class, abstractMethod = require("d9f11a09a88bcbbf").abstractMethod, eachCombination = require("46d241a9526cadb6").eachCombination, cache = require("46d241a9526cadb6").cache, capability = require("f0958ea9e71840a8");
+},{"e8c3e584773c3435":"8enMo","42d6750be7cc97f1":"kqj4M","6edd502b1f731622":"dIyaj","39c5ad9365e7a162":"85RZD"}],"8enMo":[function(require,module,exports) {
+var Class = require("3e9a058e3c5797c2").Class, abstractMethod = require("3e9a058e3c5797c2").abstractMethod, eachCombination = require("3e19b06bd76e0a85").eachCombination, cache = require("3e19b06bd76e0a85").cache, capability = require("3a1a4ff04c33158e");
 var AbstractFrameStringSource = Class(Object, {
     prototype: {
         captureFrameStrings: function(frameShifts) {
@@ -44309,17 +42416,17 @@ module.exports = {
     })
 };
 
-},{"d9f11a09a88bcbbf":"gP4B7","46d241a9526cadb6":"dIyaj","f0958ea9e71840a8":"45xjX"}],"gP4B7":[function(require,module,exports) {
-require("da77119eca6126e8");
-module.exports = require("cc7e4d1fcd463094");
+},{"3e9a058e3c5797c2":"gP4B7","3e19b06bd76e0a85":"dIyaj","3a1a4ff04c33158e":"45xjX"}],"gP4B7":[function(require,module,exports) {
+require("74c794104d865cae");
+module.exports = require("328435f88da5cac1");
 
-},{"da77119eca6126e8":"5bger","cc7e4d1fcd463094":"eoeZx"}],"eoeZx":[function(require,module,exports) {
+},{"74c794104d865cae":"5bger","328435f88da5cac1":"eoeZx"}],"eoeZx":[function(require,module,exports) {
 module.exports = {
-    Class: require("776dbf01dd394b05"),
-    abstractMethod: require("7c0996840a71ad4e")
+    Class: require("59fb2befdaa0bb09"),
+    abstractMethod: require("def3898aed7ce993")
 };
 
-},{"776dbf01dd394b05":"k4Z0U","7c0996840a71ad4e":"d1LMy"}],"k4Z0U":[function(require,module,exports) {
+},{"59fb2befdaa0bb09":"k4Z0U","def3898aed7ce993":"d1LMy"}],"k4Z0U":[function(require,module,exports) {
 var Class = function() {
     var options = Object.create({
         Source: Object,
@@ -44417,15 +42524,15 @@ module.exports = function() {
 };
 
 },{}],"dIyaj":[function(require,module,exports) {
-module.exports = require("80c24635cf19596b");
+module.exports = require("93bf1d695cbf3364");
 
-},{"80c24635cf19596b":"9JH8M"}],"9JH8M":[function(require,module,exports) {
+},{"93bf1d695cbf3364":"9JH8M"}],"9JH8M":[function(require,module,exports) {
 module.exports = {
-    cache: require("264adcd00380decf"),
-    eachCombination: require("cfb41148a0b41bda")
+    cache: require("bb046c98d0eb0a6c"),
+    eachCombination: require("cf5a4766b8416f38")
 };
 
-},{"264adcd00380decf":"3mu2N","cfb41148a0b41bda":"i1liH"}],"3mu2N":[function(require,module,exports) {
+},{"bb046c98d0eb0a6c":"3mu2N","cf5a4766b8416f38":"i1liH"}],"3mu2N":[function(require,module,exports) {
 var cache = function(fn) {
     var called = false, store;
     if (!(fn instanceof Function)) {
@@ -44458,7 +42565,7 @@ module.exports = function eachCombination(alternativesByDimension, callback, com
 };
 
 },{}],"kqj4M":[function(require,module,exports) {
-var Class = require("8cf36c3a2717488d").Class, Frame = require("7fdae3b15eb5b081"), cache = require("15b0bb9f7a0ecda5").cache;
+var Class = require("3e5974efe2223552").Class, Frame = require("2e64c9e212c02e9e"), cache = require("782a456a6afa70a8").cache;
 var FrameStringParser = Class(Object, {
     prototype: {
         stackParser: null,
@@ -44492,8 +42599,8 @@ module.exports = {
     })
 };
 
-},{"8cf36c3a2717488d":"gP4B7","7fdae3b15eb5b081":"gHN0E","15b0bb9f7a0ecda5":"dIyaj"}],"gHN0E":[function(require,module,exports) {
-var Class = require("b23348878236df52").Class, abstractMethod = require("b23348878236df52").abstractMethod;
+},{"3e5974efe2223552":"gP4B7","2e64c9e212c02e9e":"gHN0E","782a456a6afa70a8":"dIyaj"}],"gHN0E":[function(require,module,exports) {
+var Class = require("144df75d914b8ad3").Class, abstractMethod = require("144df75d914b8ad3").abstractMethod;
 var Frame = Class(Object, {
     prototype: {
         init: Class.prototype.merge,
@@ -44521,8 +42628,8 @@ var Frame = Class(Object, {
 });
 module.exports = Frame;
 
-},{"b23348878236df52":"gP4B7"}],"75e5c":[function(require,module,exports) {
-var cache = require("859afab6faf830b7").cache, prepareStackTrace = require("dc39d9d9d9e290b3");
+},{"144df75d914b8ad3":"gP4B7"}],"75e5c":[function(require,module,exports) {
+var cache = require("405d025acfda22d2").cache, prepareStackTrace = require("21b1a53407becc42");
 module.exports = function() {
     Error.captureStackTrace = function(throwable, terminator) {
         Object.defineProperties(throwable, {
@@ -44566,7 +42673,7 @@ module.exports = function() {
     };
 };
 
-},{"859afab6faf830b7":"dIyaj","dc39d9d9d9e290b3":"85RZD"}],"b4TAP":[function() {},{}],"1nDKo":[function(require,module,exports) {
+},{"405d025acfda22d2":"dIyaj","21b1a53407becc42":"85RZD"}],"b4TAP":[function() {},{}],"1nDKo":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "setupModal", ()=>setupModal);
@@ -48892,9 +46999,11 @@ const WalletConnected = ({ module , onCloseModal  })=>{
                 className: "nws-modal-header"
             }, {
                 children: [
-                    (0, _jsxRuntime.jsx)("h3", {
+                    (0, _jsxRuntime.jsx)("h3", Object.assign({
                         className: "middleTitle"
-                    }),
+                    }, {
+                        children: ``
+                    })),
                     (0, _jsxRuntime.jsx)(CloseButton, {
                         onClick: onCloseModal
                     })
@@ -49184,7 +47293,8 @@ const Modal = ({ selector , options , visible , hide , emitter  })=>{
         });
         hide();
     }, [
-        hide
+        hide,
+        emitter
     ]);
     (0, _react.useEffect)(()=>{
         const close = (e)=>{
@@ -49481,9 +47591,9 @@ const setupModal = (selector, options)=>{
 
 },{"react/jsx-runtime":"6AEwr","react-dom/client":"lOjBx","react":"21dqq","@near-wallet-selector/core":"eEY3a","qrcode":"lB7MY","copy-to-clipboard":"fLPFI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6AEwr":[function(require,module,exports) {
 "use strict";
-module.exports = require("e76ad5fdec8f6b08");
+module.exports = require("b9f428a6c250696a");
 
-},{"e76ad5fdec8f6b08":"kujY4"}],"kujY4":[function(require,module,exports) {
+},{"b9f428a6c250696a":"kujY4"}],"kujY4":[function(require,module,exports) {
 /**
  * @license React
  * react-jsx-runtime.development.js
@@ -49495,7 +47605,7 @@ module.exports = require("e76ad5fdec8f6b08");
  */ "use strict";
 (function() {
     "use strict";
-    var React = require("23a0a6b82ad24c31");
+    var React = require("c1e955d00de96fc5");
     // ATTENTION
     // When adding new symbols to this file,
     // Please consider also adding to 'react-devtools-shared/src/backend/ReactSymbols'
@@ -50326,28 +48436,7 @@ module.exports = require("e76ad5fdec8f6b08");
     exports.jsxs = jsxs;
 })();
 
-},{"23a0a6b82ad24c31":"21dqq"}],"lOjBx":[function(require,module,exports) {
-"use strict";
-var m = require("2ae9d54d47d5f388");
-var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
-exports.createRoot = function(c, o) {
-    i.usingClientEntryPoint = true;
-    try {
-        return m.createRoot(c, o);
-    } finally{
-        i.usingClientEntryPoint = false;
-    }
-};
-exports.hydrateRoot = function(c, h, o) {
-    i.usingClientEntryPoint = true;
-    try {
-        return m.hydrateRoot(c, h, o);
-    } finally{
-        i.usingClientEntryPoint = false;
-    }
-};
-
-},{"2ae9d54d47d5f388":"j6uA9"}],"eEY3a":[function(require,module,exports) {
+},{"c1e955d00de96fc5":"21dqq"}],"eEY3a":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "EventEmitter", ()=>EventEmitter);
@@ -56446,10 +54535,10 @@ var OperatorSubscriber = function(_super) {
 }((0, _subscriber.Subscriber));
 
 },{"tslib":"99ylF","../Subscriber":"1VFFQ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lB7MY":[function(require,module,exports) {
-const canPromise = require("3411e364965f6065");
-const QRCode = require("f762bba16e466ef3");
-const CanvasRenderer = require("e396b9673cd4edef");
-const SvgRenderer = require("39316970f64e353b");
+const canPromise = require("62db1f5f5b1d169");
+const QRCode = require("2b7db97b387b72e3");
+const CanvasRenderer = require("eaf19ebc2a60b89");
+const SvgRenderer = require("a2dff4b8c6a12f90");
 function renderCanvas(renderFunc, canvas, text, opts, cb) {
     const args = [].slice.call(arguments, 1);
     const argsNum = args.length;
@@ -56506,7 +54595,7 @@ exports.toString = renderCanvas.bind(null, function(data, _, opts) {
     return SvgRenderer.render(data, opts);
 });
 
-},{"3411e364965f6065":"9FrZa","f762bba16e466ef3":"20hbG","e396b9673cd4edef":"2oGFV","39316970f64e353b":"7Akrj"}],"9FrZa":[function(require,module,exports) {
+},{"62db1f5f5b1d169":"9FrZa","2b7db97b387b72e3":"20hbG","eaf19ebc2a60b89":"2oGFV","a2dff4b8c6a12f90":"7Akrj"}],"9FrZa":[function(require,module,exports) {
 // can-promise has a crash in some versions of react native that dont have
 // standard global objects
 // https://github.com/soldair/node-qrcode/issues/157
@@ -56515,19 +54604,19 @@ module.exports = function() {
 };
 
 },{}],"20hbG":[function(require,module,exports) {
-const Utils = require("f0693261223cf6a0");
-const ECLevel = require("3dcc1adeec81b254");
-const BitBuffer = require("d0d401002f4d6b59");
-const BitMatrix = require("450496f54c9f1e14");
-const AlignmentPattern = require("5b44026adefe1662");
-const FinderPattern = require("1568df0c17d94bdb");
-const MaskPattern = require("ac1bdbd4ffb02af1");
-const ECCode = require("7b24664f7110e79e");
-const ReedSolomonEncoder = require("618f9f32573095bd");
-const Version = require("c7a8862936b06990");
-const FormatInfo = require("e4d129ba4224c1b4");
-const Mode = require("5c911acd9de53ede");
-const Segments = require("cf6a57ed3ded3102");
+const Utils = require("48c963849f30615");
+const ECLevel = require("33fe8e2da6a832bb");
+const BitBuffer = require("f683b36d52d1fbc6");
+const BitMatrix = require("b7b186ea409d2b4c");
+const AlignmentPattern = require("a46f106047644ccf");
+const FinderPattern = require("ee7c2abbf46f70fa");
+const MaskPattern = require("a2afc54904d9468f");
+const ECCode = require("ab423e6328a0eae1");
+const ReedSolomonEncoder = require("d73844d246024664");
+const Version = require("1b660757c9e1b03");
+const FormatInfo = require("b81851903772969b");
+const Mode = require("b4abe0dcac3ecbb0");
+const Segments = require("e1f17c6e2a233775");
 /**
  * QRCode for JavaScript
  *
@@ -56863,7 +54952,7 @@ const Segments = require("cf6a57ed3ded3102");
     return createSymbol(data, version, errorCorrectionLevel, mask);
 };
 
-},{"f0693261223cf6a0":"iXLHI","3dcc1adeec81b254":"kbPwo","d0d401002f4d6b59":"kiPfj","450496f54c9f1e14":"fTjkX","5b44026adefe1662":"1o9KB","1568df0c17d94bdb":"dc6Ma","ac1bdbd4ffb02af1":"fyimH","7b24664f7110e79e":"5yWYH","618f9f32573095bd":"47Qq0","c7a8862936b06990":"a8ag2","e4d129ba4224c1b4":"iThdR","5c911acd9de53ede":"f1e9A","cf6a57ed3ded3102":"4tKki"}],"iXLHI":[function(require,module,exports) {
+},{"48c963849f30615":"iXLHI","33fe8e2da6a832bb":"kbPwo","f683b36d52d1fbc6":"kiPfj","b7b186ea409d2b4c":"fTjkX","a46f106047644ccf":"1o9KB","ee7c2abbf46f70fa":"dc6Ma","a2afc54904d9468f":"fyimH","ab423e6328a0eae1":"5yWYH","d73844d246024664":"47Qq0","1b660757c9e1b03":"a8ag2","b81851903772969b":"iThdR","b4abe0dcac3ecbb0":"f1e9A","e1f17c6e2a233775":"4tKki"}],"iXLHI":[function(require,module,exports) {
 let toSJISFunction;
 const CODEWORDS_COUNT = [
     0,
@@ -57083,7 +55172,7 @@ module.exports = BitMatrix;
  *
  * Alignment patterns are present only in QR Code symbols of version 2 or larger
  * and their number depends on the symbol version.
- */ const getSymbolSize = require("ed3bd12bd1aaea0").getSymbolSize;
+ */ const getSymbolSize = require("60e58622e2ccb35e").getSymbolSize;
 /**
  * Calculate the row/column coordinates of the center module of each alignment pattern
  * for the specified QR Code version.
@@ -57147,8 +55236,8 @@ module.exports = BitMatrix;
     return coords;
 };
 
-},{"ed3bd12bd1aaea0":"iXLHI"}],"dc6Ma":[function(require,module,exports) {
-const getSymbolSize = require("531a942dc64437c0").getSymbolSize;
+},{"60e58622e2ccb35e":"iXLHI"}],"dc6Ma":[function(require,module,exports) {
+const getSymbolSize = require("49a23bd9a8c667e5").getSymbolSize;
 const FINDER_PATTERN_SIZE = 7;
 /**
  * Returns an array containing the positions of each finder pattern.
@@ -57177,7 +55266,7 @@ const FINDER_PATTERN_SIZE = 7;
     ];
 };
 
-},{"531a942dc64437c0":"iXLHI"}],"fyimH":[function(require,module,exports) {
+},{"49a23bd9a8c667e5":"iXLHI"}],"fyimH":[function(require,module,exports) {
 /**
  * Data mask pattern reference
  * @type {Object}
@@ -57368,7 +55457,7 @@ const FINDER_PATTERN_SIZE = 7;
 };
 
 },{}],"5yWYH":[function(require,module,exports) {
-const ECLevel = require("f420f9ddfa0801f9");
+const ECLevel = require("9479c68ddb27e735");
 const EC_BLOCKS_TABLE = [
     // L  M  Q  H
     1,
@@ -57738,8 +55827,8 @@ const EC_CODEWORDS_TABLE = [
     }
 };
 
-},{"f420f9ddfa0801f9":"kbPwo"}],"47Qq0":[function(require,module,exports) {
-const Polynomial = require("bc4e94b566e28a2a");
+},{"9479c68ddb27e735":"kbPwo"}],"47Qq0":[function(require,module,exports) {
+const Polynomial = require("51c5ad3f5dec6b96");
 function ReedSolomonEncoder(degree) {
     this.genPoly = undefined;
     this.degree = degree;
@@ -57782,8 +55871,8 @@ function ReedSolomonEncoder(degree) {
 };
 module.exports = ReedSolomonEncoder;
 
-},{"bc4e94b566e28a2a":"dxhHI"}],"dxhHI":[function(require,module,exports) {
-const GF = require("2783f1fa4b4e4e32");
+},{"51c5ad3f5dec6b96":"dxhHI"}],"dxhHI":[function(require,module,exports) {
+const GF = require("be12b7aa199d139c");
 /**
  * Multiplies two polynomials inside Galois Field
  *
@@ -57830,7 +55919,7 @@ const GF = require("2783f1fa4b4e4e32");
     return poly;
 };
 
-},{"2783f1fa4b4e4e32":"2JC5s"}],"2JC5s":[function(require,module,exports) {
+},{"be12b7aa199d139c":"2JC5s"}],"2JC5s":[function(require,module,exports) {
 const EXP_TABLE = new Uint8Array(512);
 const LOG_TABLE = new Uint8Array(256) /**
  * Precompute the log and anti-log tables for faster computation later
@@ -57888,11 +55977,11 @@ const LOG_TABLE = new Uint8Array(256) /**
 };
 
 },{}],"a8ag2":[function(require,module,exports) {
-const Utils = require("c4de7bbf6fa74d93");
-const ECCode = require("de4d9079eed76979");
-const ECLevel = require("8d601e779c968a20");
-const Mode = require("24371a695b68af35");
-const VersionCheck = require("eb904f62d1358aaf");
+const Utils = require("1c68ac0bb692a0b4");
+const ECCode = require("7ab76f02e2fd9a38");
+const ECLevel = require("576a27750cf8d524");
+const Mode = require("79b2ed1673044732");
+const VersionCheck = require("1b96019c5799c8be");
 // Generator polynomial used to encode version information
 const G18 = 7973;
 const G18_BCH = Utils.getBCHDigit(G18);
@@ -57998,9 +56087,9 @@ function getBestVersionForMixedData(segments, errorCorrectionLevel) {
     return version << 12 | d;
 };
 
-},{"c4de7bbf6fa74d93":"iXLHI","de4d9079eed76979":"5yWYH","8d601e779c968a20":"kbPwo","24371a695b68af35":"f1e9A","eb904f62d1358aaf":"enfTX"}],"f1e9A":[function(require,module,exports) {
-const VersionCheck = require("cd426d747926debb");
-const Regex = require("24c69a0e59025a42");
+},{"1c68ac0bb692a0b4":"iXLHI","7ab76f02e2fd9a38":"5yWYH","576a27750cf8d524":"kbPwo","79b2ed1673044732":"f1e9A","1b96019c5799c8be":"enfTX"}],"f1e9A":[function(require,module,exports) {
+const VersionCheck = require("3418da935f3b27dd");
+const Regex = require("394624f7563adb6");
 /**
  * Numeric mode encodes data from the decimal digit set (0 - 9)
  * (byte values 30HEX to 39HEX).
@@ -58150,7 +56239,7 @@ const Regex = require("24c69a0e59025a42");
     }
 };
 
-},{"cd426d747926debb":"enfTX","24c69a0e59025a42":"3Bqru"}],"enfTX":[function(require,module,exports) {
+},{"3418da935f3b27dd":"enfTX","394624f7563adb6":"3Bqru"}],"enfTX":[function(require,module,exports) {
 /**
  * Check if QR Code version is valid
  *
@@ -58185,7 +56274,7 @@ exports.testAlphanumeric = function testAlphanumeric(str) {
 };
 
 },{}],"iThdR":[function(require,module,exports) {
-const Utils = require("fed80a8d36d9bac4");
+const Utils = require("5ae7cdc14ae86f9b");
 const G15 = 1335;
 const G15_MASK = 21522;
 const G15_BCH = Utils.getBCHDigit(G15);
@@ -58208,15 +56297,15 @@ const G15_BCH = Utils.getBCHDigit(G15);
     return (data << 10 | d) ^ G15_MASK;
 };
 
-},{"fed80a8d36d9bac4":"iXLHI"}],"4tKki":[function(require,module,exports) {
-const Mode = require("92805a28722d7a2a");
-const NumericData = require("e889c834e6bdf5fc");
-const AlphanumericData = require("5d5d1f723f3510f");
-const ByteData = require("c841a88a1f3ce0c7");
-const KanjiData = require("5b30c721a4482d41");
-const Regex = require("e42fed7cf7d1d6bb");
-const Utils = require("74b9a86b52b3d098");
-const dijkstra = require("ed84d6b15bb0cccb");
+},{"5ae7cdc14ae86f9b":"iXLHI"}],"4tKki":[function(require,module,exports) {
+const Mode = require("5318ad53e765fd1c");
+const NumericData = require("e739f525a0721bfd");
+const AlphanumericData = require("61c74476495f0f18");
+const ByteData = require("6e6dae8d73ea4922");
+const KanjiData = require("ace741207075ee25");
+const Regex = require("c9316ba94237bda9");
+const Utils = require("df47d16124222f0a");
+const dijkstra = require("a84c56eaedbf8f48");
 /**
  * Returns UTF8 byte length
  *
@@ -58501,8 +56590,8 @@ const dijkstra = require("ed84d6b15bb0cccb");
     return exports.fromArray(getSegmentsFromString(data, Utils.isKanjiModeEnabled()));
 };
 
-},{"92805a28722d7a2a":"f1e9A","e889c834e6bdf5fc":"c44F8","5d5d1f723f3510f":"cdBOf","c841a88a1f3ce0c7":"ediQ9","5b30c721a4482d41":"gphIw","e42fed7cf7d1d6bb":"3Bqru","74b9a86b52b3d098":"iXLHI","ed84d6b15bb0cccb":"lDJz9"}],"c44F8":[function(require,module,exports) {
-const Mode = require("b1b9b1471e6c0f73");
+},{"5318ad53e765fd1c":"f1e9A","e739f525a0721bfd":"c44F8","61c74476495f0f18":"cdBOf","6e6dae8d73ea4922":"ediQ9","ace741207075ee25":"gphIw","c9316ba94237bda9":"3Bqru","df47d16124222f0a":"iXLHI","a84c56eaedbf8f48":"lDJz9"}],"c44F8":[function(require,module,exports) {
+const Mode = require("61f0ebbf5f120ff4");
 function NumericData(data) {
     this.mode = Mode.NUMERIC;
     this.data = data.toString();
@@ -58536,8 +56625,8 @@ NumericData.prototype.write = function write(bitBuffer) {
 };
 module.exports = NumericData;
 
-},{"b1b9b1471e6c0f73":"f1e9A"}],"cdBOf":[function(require,module,exports) {
-const Mode = require("e6e34439ec4b1e16");
+},{"61f0ebbf5f120ff4":"f1e9A"}],"cdBOf":[function(require,module,exports) {
+const Mode = require("fe09c1794c536ac4");
 /**
  * Array of characters available in alphanumeric mode
  *
@@ -58624,9 +56713,9 @@ AlphanumericData.prototype.write = function write(bitBuffer) {
 };
 module.exports = AlphanumericData;
 
-},{"e6e34439ec4b1e16":"f1e9A"}],"ediQ9":[function(require,module,exports) {
-const encodeUtf8 = require("a996693b9d12b369");
-const Mode = require("1cf41e929c8edab4");
+},{"fe09c1794c536ac4":"f1e9A"}],"ediQ9":[function(require,module,exports) {
+const encodeUtf8 = require("98af0d0b0c24426b");
+const Mode = require("de3c3c024aba09b6");
 function ByteData(data) {
     this.mode = Mode.BYTE;
     if (typeof data === "string") data = encodeUtf8(data);
@@ -58646,7 +56735,7 @@ ByteData.prototype.write = function(bitBuffer) {
 };
 module.exports = ByteData;
 
-},{"a996693b9d12b369":"3UdK6","1cf41e929c8edab4":"f1e9A"}],"3UdK6":[function(require,module,exports) {
+},{"98af0d0b0c24426b":"3UdK6","de3c3c024aba09b6":"f1e9A"}],"3UdK6":[function(require,module,exports) {
 "use strict";
 module.exports = function encodeUtf8(input) {
     var result = [];
@@ -58694,8 +56783,8 @@ module.exports = function encodeUtf8(input) {
 };
 
 },{}],"gphIw":[function(require,module,exports) {
-const Mode = require("2bf8c91aef50ad22");
-const Utils = require("c58831d9a8016030");
+const Mode = require("285f75a07d7a68e3");
+const Utils = require("7bf9d2b3f6e877a9");
 function KanjiData(data) {
     this.mode = Mode.KANJI;
     this.data = data;
@@ -58731,7 +56820,7 @@ KanjiData.prototype.write = function(bitBuffer) {
 };
 module.exports = KanjiData;
 
-},{"2bf8c91aef50ad22":"f1e9A","c58831d9a8016030":"iXLHI"}],"lDJz9":[function(require,module,exports) {
+},{"285f75a07d7a68e3":"f1e9A","7bf9d2b3f6e877a9":"iXLHI"}],"lDJz9":[function(require,module,exports) {
 "use strict";
 /******************************************************************************
  * Created 2008-08-19.
@@ -58866,7 +56955,7 @@ module.exports = KanjiData;
 module.exports = dijkstra;
 
 },{}],"2oGFV":[function(require,module,exports) {
-const Utils = require("ffcde5e69a4e6eec");
+const Utils = require("677152f0b3c7628");
 function clearCanvas(ctx, canvas, size) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     if (!canvas.style) canvas.style = {};
@@ -58912,7 +57001,7 @@ exports.renderToDataURL = function renderToDataURL(qrData, canvas, options) {
     return canvasEl.toDataURL(type, rendererOpts.quality);
 };
 
-},{"ffcde5e69a4e6eec":"6rMWz"}],"6rMWz":[function(require,module,exports) {
+},{"677152f0b3c7628":"6rMWz"}],"6rMWz":[function(require,module,exports) {
 function hex2rgba(hex) {
     if (typeof hex === "number") hex = hex.toString();
     if (typeof hex !== "string") throw new Error("Color should be defined as hex string");
@@ -58987,7 +57076,7 @@ exports.qrToImageData = function qrToImageData(imgData, qr, opts) {
 };
 
 },{}],"7Akrj":[function(require,module,exports) {
-const Utils = require("c47bce2d12d2e904");
+const Utils = require("26c876d775c1ffbb");
 function getColorAttrib(color, attrib) {
     const alpha = color.a / 255;
     const str = attrib + '="' + color.hex + '"';
@@ -59036,9 +57125,9 @@ exports.render = function render(qrData, options, cb) {
     return svgTag;
 };
 
-},{"c47bce2d12d2e904":"6rMWz"}],"fLPFI":[function(require,module,exports) {
+},{"26c876d775c1ffbb":"6rMWz"}],"fLPFI":[function(require,module,exports) {
 "use strict";
-var deselectCurrent = require("9fc0f3bd0d162695");
+var deselectCurrent = require("d0266f1d84abaf42");
 var clipboardToIE11Formatting = {
     "text/plain": "Text",
     "text/html": "Url",
@@ -59125,7 +57214,7 @@ function copy(text, options) {
 }
 module.exports = copy;
 
-},{"9fc0f3bd0d162695":"jmaua"}],"jmaua":[function(require,module,exports) {
+},{"d0266f1d84abaf42":"jmaua"}],"jmaua":[function(require,module,exports) {
 module.exports = function() {
     var selection = document.getSelection();
     if (!selection.rangeCount) return function() {};
@@ -59152,9 +57241,9 @@ module.exports = function() {
 };
 
 },{}],"dGAA6":[function(require,module,exports) {
-module.exports = require("64d5401d07ae2c76").getBundleURL("UckoE") + "ledger-icon.a0186cc1.png" + "?" + Date.now();
+module.exports = require("ab8fd41adfadb964").getBundleURL("UckoE") + "ledger-icon.a0186cc1.png" + "?" + Date.now();
 
-},{"64d5401d07ae2c76":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+},{"ab8fd41adfadb964":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
 var bundleURL = {};
 function getBundleURLCached(id) {
@@ -59189,9 +57278,9 @@ exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
 },{}],"aTHwi":[function(require,module,exports) {
-module.exports = require("cacdf5e495d8ddb0").getBundleURL("UckoE") + "my-near-wallet-icon.ebfed669.png" + "?" + Date.now();
+module.exports = require("1e5e76ef18068fe6").getBundleURL("UckoE") + "my-near-wallet-icon.ebfed669.png" + "?" + Date.now();
 
-},{"cacdf5e495d8ddb0":"lgJ39"}],"9enQf":[function(require,module,exports) {
+},{"1e5e76ef18068fe6":"lgJ39"}],"9enQf":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "setupLedger", ()=>setupLedger);
@@ -59202,7 +57291,7 @@ var _hwTransportWebhid = require("@ledgerhq/hw-transport-webhid");
 var _hwTransportWebhidDefault = parcelHelpers.interopDefault(_hwTransportWebhid);
 var _nearApiJs = require("near-api-js");
 var global = arguments[3];
-var Buffer = require("ea6122ed1cf62061").Buffer;
+var Buffer = require("50987ffc1a20ed8a").Buffer;
 /******************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -61460,7 +59549,7 @@ function setupLedger({ iconUrl =icon , deprecated =false  } = {}) {
         });
 }
 
-},{"ea6122ed1cf62061":"5c7yX","is-mobile":"2AVrM","@near-wallet-selector/wallet-utils":"5gEB8","@near-wallet-selector/core":"eEY3a","@ledgerhq/hw-transport-webhid":"8O295","near-api-js":"ohc3m","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2AVrM":[function(require,module,exports) {
+},{"50987ffc1a20ed8a":"5heHz","is-mobile":"2AVrM","@near-wallet-selector/wallet-utils":"5gEB8","@near-wallet-selector/core":"eEY3a","@ledgerhq/hw-transport-webhid":"8O295","near-api-js":"ohc3m","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2AVrM":[function(require,module,exports) {
 "use strict";
 module.exports = isMobile;
 module.exports.isMobile = isMobile;
@@ -63922,7 +62011,7 @@ var _hidFramingDefault = parcelHelpers.interopDefault(_hidFraming);
 var _devices = require("@ledgerhq/devices");
 var _logs = require("@ledgerhq/logs");
 var _errors = require("@ledgerhq/errors");
-var Buffer = require("89c9f12820b4de9e").Buffer;
+var Buffer = require("9b6bff95b108dc72").Buffer;
 var __extends = undefined && undefined.__extends || function() {
     var extendStatics = function(d, b) {
         extendStatics = Object.setPrototypeOf || ({
@@ -64448,7 +62537,7 @@ function getFirstLedgerDevice() {
 }((0, _hwTransportDefault.default));
 exports.default = TransportWebHID;
 
-},{"89c9f12820b4de9e":"5c7yX","@ledgerhq/hw-transport":"59Ey9","@ledgerhq/devices/lib/hid-framing":"fvgJh","@ledgerhq/devices":"fnHxP","@ledgerhq/logs":"i4OI0","@ledgerhq/errors":"EVZMy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"59Ey9":[function(require,module,exports) {
+},{"9b6bff95b108dc72":"5heHz","@ledgerhq/hw-transport":"59Ey9","@ledgerhq/devices/lib/hid-framing":"fvgJh","@ledgerhq/devices":"fnHxP","@ledgerhq/logs":"i4OI0","@ledgerhq/errors":"EVZMy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"59Ey9":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "TransportError", ()=>(0, _errors.TransportError));
@@ -64458,7 +62547,7 @@ parcelHelpers.export(exports, "getAltStatusMessage", ()=>(0, _errors.getAltStatu
 var _events = require("events");
 var _eventsDefault = parcelHelpers.interopDefault(_events);
 var _errors = require("@ledgerhq/errors");
-var Buffer = require("9266f77ced4c5f6b").Buffer;
+var Buffer = require("48f94d6534e49767").Buffer;
 var __awaiter = undefined && undefined.__awaiter || function(thisArg, _arguments, P, generator) {
     function adopt(value) {
         return value instanceof P ? value : new P(function(resolve) {
@@ -64897,7 +62986,7 @@ var __values = undefined && undefined.__values || function(o) {
 }();
 exports.default = Transport;
 
-},{"9266f77ced4c5f6b":"5c7yX","events":"1VQLm","@ledgerhq/errors":"EVZMy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1VQLm":[function(require,module,exports) {
+},{"48f94d6534e49767":"5heHz","events":"1VQLm","@ledgerhq/errors":"EVZMy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1VQLm":[function(require,module,exports) {
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -65774,10 +63863,10 @@ function destroyCircular(from, seen) {
 }
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fvgJh":[function(require,module,exports) {
-var Buffer = require("b51d5dd71a8c33eb").Buffer;
+var Buffer = require("9b71a318682d6124").Buffer;
 "use strict";
 exports.__esModule = true;
-var errors_1 = require("da12e2da5bbc5e31");
+var errors_1 = require("fd69bfd1e0041480");
 var Tag = 0x05;
 function asUInt16BE(value) {
     var b = Buffer.alloc(2);
@@ -65844,7 +63933,7 @@ var initialAcc = {
 };
 exports["default"] = createHIDframing;
 
-},{"b51d5dd71a8c33eb":"5c7yX","da12e2da5bbc5e31":"EVZMy"}],"fnHxP":[function(require,module,exports) {
+},{"9b71a318682d6124":"5heHz","fd69bfd1e0041480":"EVZMy"}],"fnHxP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "IIGenericHID", ()=>IIGenericHID);
@@ -66032,47 +64121,47 @@ var getInfosForServiceUuid = function(uuid) {
 
 },{"semver":"1bOrY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1bOrY":[function(require,module,exports) {
 // just pre-load all the stuff that index.js lazily exports
-const internalRe = require("eafb4f9210e8b7e6");
-const constants = require("bbef6e6e78204962");
-const SemVer = require("9cb85a6324b9ff03");
-const identifiers = require("f46c7e0b9b9f02ff");
-const parse = require("af39f23efe151c30");
-const valid = require("a7e06eb60e53ad37");
-const clean = require("6aa63db69d4bb52d");
-const inc = require("bf44523709731e80");
-const diff = require("7ae35e488fe67f4");
-const major = require("935d7da4d5a38e70");
-const minor = require("783b3740aca1484");
-const patch = require("eab9c4be5b266b53");
-const prerelease = require("8e9185a1bdaf1483");
-const compare = require("f3b3e83296b4cc79");
-const rcompare = require("66d4743ff53cbd6e");
-const compareLoose = require("4605ba2ffed718b3");
-const compareBuild = require("92bfbe884ad446d");
-const sort = require("5140c2df407f8f07");
-const rsort = require("ec3a7de814b49b9f");
-const gt = require("cbf8b995dbc877a8");
-const lt = require("ccf1009c652cee22");
-const eq = require("f76d9e2ae0e36754");
-const neq = require("f2b5bf7a1d829c95");
-const gte = require("b85f2d70bb299fac");
-const lte = require("ba6e01ed82b36f40");
-const cmp = require("871db7a2944d2794");
-const coerce = require("efde6949ab8169f7");
-const Comparator = require("f35ba35a707d277b");
-const Range = require("9f79fe23c44e48c5");
-const satisfies = require("8a02a449c03c48f8");
-const toComparators = require("5e82a1474c1c588b");
-const maxSatisfying = require("15a671ddc03b89b0");
-const minSatisfying = require("7844bac9b89cf69");
-const minVersion = require("4b1f2b1dd67d1b86");
-const validRange = require("8bd26593695dada0");
-const outside = require("a37f7b708d7a8b42");
-const gtr = require("2acd0b94d5f0c904");
-const ltr = require("32073318175ac5b0");
-const intersects = require("859ee9b82c4a80de");
-const simplifyRange = require("30430568cb13176a");
-const subset = require("476596674dc7cb01");
+const internalRe = require("11f88db4283522db");
+const constants = require("bf811b1f7d22bb55");
+const SemVer = require("3af16eb9a636f58f");
+const identifiers = require("a089d961db285d54");
+const parse = require("b270a751c224b601");
+const valid = require("b68f14f57a825b4e");
+const clean = require("8ee2c4b8f10f19d2");
+const inc = require("4e587408a89e310a");
+const diff = require("3bf927042647803f");
+const major = require("1abab577576cb1de");
+const minor = require("b17afdc9419f7862");
+const patch = require("c95b2f1f05c89bb0");
+const prerelease = require("bced8e52475b75a9");
+const compare = require("191a6abd3963e842");
+const rcompare = require("783a451f0be9c165");
+const compareLoose = require("7b14809be51ec56d");
+const compareBuild = require("8565823f5351c225");
+const sort = require("29b41350a6f43a5c");
+const rsort = require("4a8daadfa955ae1c");
+const gt = require("50a92d15456ac8a");
+const lt = require("99824c217daf6bf2");
+const eq = require("e1f977ec70714134");
+const neq = require("81f96847259c1d8d");
+const gte = require("37b0b4ed2219241a");
+const lte = require("ec42bc761a832e15");
+const cmp = require("b24d25a00799a17a");
+const coerce = require("ea1fe809d830cd68");
+const Comparator = require("639744e4f8a6609d");
+const Range = require("e84a6cc1f4d7c360");
+const satisfies = require("40dd0b00bc224154");
+const toComparators = require("446108626d289a99");
+const maxSatisfying = require("98778d0c6aa292d6");
+const minSatisfying = require("8acd3e7560095574");
+const minVersion = require("ac4b40eca5231ce7");
+const validRange = require("98ef56550e5d5651");
+const outside = require("6068b8ce0c8f599f");
+const gtr = require("c8f566d205de4d36");
+const ltr = require("5743182f93cce580");
+const intersects = require("bea8ac988e847260");
+const simplifyRange = require("8e70504783f1fe81");
+const subset = require("a3b1ba94d0092620");
 module.exports = {
     parse,
     valid,
@@ -66120,9 +64209,9 @@ module.exports = {
     rcompareIdentifiers: identifiers.rcompareIdentifiers
 };
 
-},{"eafb4f9210e8b7e6":"fM3gb","bbef6e6e78204962":"36kox","9cb85a6324b9ff03":"kgTdE","f46c7e0b9b9f02ff":"gfu2O","af39f23efe151c30":"gcpPf","a7e06eb60e53ad37":"gWiRZ","6aa63db69d4bb52d":"aiTKa","bf44523709731e80":"aJfKw","7ae35e488fe67f4":"4hrxk","935d7da4d5a38e70":"8P6hj","783b3740aca1484":"jpEiD","eab9c4be5b266b53":"9pRhW","8e9185a1bdaf1483":"luzbM","f3b3e83296b4cc79":"1VfgV","66d4743ff53cbd6e":"cgrtc","4605ba2ffed718b3":"Q3pnc","92bfbe884ad446d":"eYE5A","5140c2df407f8f07":"8TvEb","ec3a7de814b49b9f":"4isEq","cbf8b995dbc877a8":"h68v7","ccf1009c652cee22":"6ucE6","f76d9e2ae0e36754":"k1aRj","f2b5bf7a1d829c95":"7Y3tc","b85f2d70bb299fac":"ehmrd","ba6e01ed82b36f40":"2J3QH","871db7a2944d2794":"1k1O9","efde6949ab8169f7":"iXNTl","f35ba35a707d277b":"5Yodu","9f79fe23c44e48c5":"f4j9g","8a02a449c03c48f8":"7OcsV","5e82a1474c1c588b":"iR5Mh","15a671ddc03b89b0":"jPYT1","7844bac9b89cf69":"juckF","4b1f2b1dd67d1b86":"5VviM","8bd26593695dada0":"d8BN4","a37f7b708d7a8b42":"jz7Jf","2acd0b94d5f0c904":"kboF2","32073318175ac5b0":"4bUsl","859ee9b82c4a80de":"hpFPQ","30430568cb13176a":"kb0TI","476596674dc7cb01":"lNExW"}],"fM3gb":[function(require,module,exports) {
-const { MAX_SAFE_COMPONENT_LENGTH  } = require("3e629483e7af5d65");
-const debug = require("1f3fb3c9679bdfe5");
+},{"11f88db4283522db":"fM3gb","bf811b1f7d22bb55":"36kox","3af16eb9a636f58f":"kgTdE","a089d961db285d54":"gfu2O","b270a751c224b601":"gcpPf","b68f14f57a825b4e":"gWiRZ","8ee2c4b8f10f19d2":"aiTKa","4e587408a89e310a":"aJfKw","3bf927042647803f":"4hrxk","1abab577576cb1de":"8P6hj","b17afdc9419f7862":"jpEiD","c95b2f1f05c89bb0":"9pRhW","bced8e52475b75a9":"luzbM","191a6abd3963e842":"1VfgV","783a451f0be9c165":"cgrtc","7b14809be51ec56d":"Q3pnc","8565823f5351c225":"eYE5A","29b41350a6f43a5c":"8TvEb","4a8daadfa955ae1c":"4isEq","50a92d15456ac8a":"h68v7","99824c217daf6bf2":"6ucE6","e1f977ec70714134":"k1aRj","81f96847259c1d8d":"7Y3tc","37b0b4ed2219241a":"ehmrd","ec42bc761a832e15":"2J3QH","b24d25a00799a17a":"1k1O9","ea1fe809d830cd68":"iXNTl","639744e4f8a6609d":"5Yodu","e84a6cc1f4d7c360":"f4j9g","40dd0b00bc224154":"7OcsV","446108626d289a99":"iR5Mh","98778d0c6aa292d6":"jPYT1","8acd3e7560095574":"juckF","ac4b40eca5231ce7":"5VviM","98ef56550e5d5651":"d8BN4","6068b8ce0c8f599f":"jz7Jf","c8f566d205de4d36":"kboF2","5743182f93cce580":"4bUsl","bea8ac988e847260":"hpFPQ","8e70504783f1fe81":"kb0TI","a3b1ba94d0092620":"lNExW"}],"fM3gb":[function(require,module,exports) {
+const { MAX_SAFE_COMPONENT_LENGTH  } = require("504d79d11d7dbb8d");
+const debug = require("ede7030d36db842a");
 exports = module.exports = {};
 // The actual regexps go on exports.re
 const re = exports.re = [];
@@ -66227,7 +64316,7 @@ createToken("STAR", "(<|>)?=?\\s*\\*");
 createToken("GTE0", "^\\s*>=\\s*0\\.0\\.0\\s*$");
 createToken("GTE0PRE", "^\\s*>=\\s*0\\.0\\.0-0\\s*$");
 
-},{"3e629483e7af5d65":"36kox","1f3fb3c9679bdfe5":"5sQBx"}],"36kox":[function(require,module,exports) {
+},{"504d79d11d7dbb8d":"36kox","ede7030d36db842a":"5sQBx"}],"36kox":[function(require,module,exports) {
 // Note: this is the semver.org version of the spec that it implements
 // Not necessarily the package version of this code.
 const SEMVER_SPEC_VERSION = "2.0.0";
@@ -66243,16 +64332,16 @@ module.exports = {
 };
 
 },{}],"5sQBx":[function(require,module,exports) {
-var process = require("8176d366951737d6");
+var process = require("3a5a123d79b1950c");
 const debug = (typeof process === "object" && process.env && undefined, ()=>{});
 module.exports = debug;
 
-},{"8176d366951737d6":"d5jf4"}],"kgTdE":[function(require,module,exports) {
-const debug = require("c4185c8b344f5b65");
-const { MAX_LENGTH , MAX_SAFE_INTEGER  } = require("907aa6c778e6f4e4");
-const { re , t  } = require("b8658f13df94a555");
-const parseOptions = require("daa9649c344e5a84");
-const { compareIdentifiers  } = require("3e7814afba02b311");
+},{"3a5a123d79b1950c":"d5jf4"}],"kgTdE":[function(require,module,exports) {
+const debug = require("d73e5147a4c4f35");
+const { MAX_LENGTH , MAX_SAFE_INTEGER  } = require("33af5bd5e1274e2d");
+const { re , t  } = require("27c6d297a235cbbc");
+const parseOptions = require("d5f8bcba80f1f016");
+const { compareIdentifiers  } = require("f351991b40169559");
 class SemVer {
     constructor(version, options){
         options = parseOptions(options);
@@ -66439,7 +64528,7 @@ class SemVer {
 }
 module.exports = SemVer;
 
-},{"c4185c8b344f5b65":"5sQBx","907aa6c778e6f4e4":"36kox","b8658f13df94a555":"fM3gb","daa9649c344e5a84":"aIQkG","3e7814afba02b311":"gfu2O"}],"aIQkG":[function(require,module,exports) {
+},{"d73e5147a4c4f35":"5sQBx","33af5bd5e1274e2d":"36kox","27c6d297a235cbbc":"fM3gb","d5f8bcba80f1f016":"aIQkG","f351991b40169559":"gfu2O"}],"aIQkG":[function(require,module,exports) {
 // parse out just the options we care about so we always get a consistent
 // obj with keys in a consistent order.
 const opts = [
@@ -66473,10 +64562,10 @@ module.exports = {
 };
 
 },{}],"gcpPf":[function(require,module,exports) {
-const { MAX_LENGTH  } = require("22d9112f861178ad");
-const { re , t  } = require("1c30b8d693a25624");
-const SemVer = require("7e28f9f3b7516c91");
-const parseOptions = require("345a1c8f09749260");
+const { MAX_LENGTH  } = require("bbb4f0409ba72119");
+const { re , t  } = require("e005b9cbd536321d");
+const SemVer = require("342f35fd87021f1b");
+const parseOptions = require("70ac0c5b877e9fd1");
 const parse = (version, options)=>{
     options = parseOptions(options);
     if (version instanceof SemVer) return version;
@@ -66492,24 +64581,24 @@ const parse = (version, options)=>{
 };
 module.exports = parse;
 
-},{"22d9112f861178ad":"36kox","1c30b8d693a25624":"fM3gb","7e28f9f3b7516c91":"kgTdE","345a1c8f09749260":"aIQkG"}],"gWiRZ":[function(require,module,exports) {
-const parse = require("f5fa20af6e6cc966");
+},{"bbb4f0409ba72119":"36kox","e005b9cbd536321d":"fM3gb","342f35fd87021f1b":"kgTdE","70ac0c5b877e9fd1":"aIQkG"}],"gWiRZ":[function(require,module,exports) {
+const parse = require("bbda853d2d5bef8b");
 const valid = (version, options)=>{
     const v = parse(version, options);
     return v ? v.version : null;
 };
 module.exports = valid;
 
-},{"f5fa20af6e6cc966":"gcpPf"}],"aiTKa":[function(require,module,exports) {
-const parse = require("c693ef4c8cb803ff");
+},{"bbda853d2d5bef8b":"gcpPf"}],"aiTKa":[function(require,module,exports) {
+const parse = require("a76a18a9c4341b1e");
 const clean = (version, options)=>{
     const s = parse(version.trim().replace(/^[=v]+/, ""), options);
     return s ? s.version : null;
 };
 module.exports = clean;
 
-},{"c693ef4c8cb803ff":"gcpPf"}],"aJfKw":[function(require,module,exports) {
-const SemVer = require("4bcdcd064108d1eb");
+},{"a76a18a9c4341b1e":"gcpPf"}],"aJfKw":[function(require,module,exports) {
+const SemVer = require("3cc7c21d789145df");
 const inc = (version, release, options, identifier)=>{
     if (typeof options === "string") {
         identifier = options;
@@ -66523,9 +64612,9 @@ const inc = (version, release, options, identifier)=>{
 };
 module.exports = inc;
 
-},{"4bcdcd064108d1eb":"kgTdE"}],"4hrxk":[function(require,module,exports) {
-const parse = require("543524b0c47ffa26");
-const eq = require("93220b851e915d64");
+},{"3cc7c21d789145df":"kgTdE"}],"4hrxk":[function(require,module,exports) {
+const parse = require("c3293961de660d5b");
+const eq = require("40f6f5d9bf42db0f");
 const diff = (version1, version2)=>{
     if (eq(version1, version2)) return null;
     else {
@@ -66543,51 +64632,51 @@ const diff = (version1, version2)=>{
 };
 module.exports = diff;
 
-},{"543524b0c47ffa26":"gcpPf","93220b851e915d64":"k1aRj"}],"k1aRj":[function(require,module,exports) {
-const compare = require("55c7f0fd93373de1");
+},{"c3293961de660d5b":"gcpPf","40f6f5d9bf42db0f":"k1aRj"}],"k1aRj":[function(require,module,exports) {
+const compare = require("f4287e104fcffaa9");
 const eq = (a, b, loose)=>compare(a, b, loose) === 0;
 module.exports = eq;
 
-},{"55c7f0fd93373de1":"1VfgV"}],"1VfgV":[function(require,module,exports) {
-const SemVer = require("d2d104c7811a4e51");
+},{"f4287e104fcffaa9":"1VfgV"}],"1VfgV":[function(require,module,exports) {
+const SemVer = require("75da5536c0f2bcc4");
 const compare = (a, b, loose)=>new SemVer(a, loose).compare(new SemVer(b, loose));
 module.exports = compare;
 
-},{"d2d104c7811a4e51":"kgTdE"}],"8P6hj":[function(require,module,exports) {
-const SemVer = require("8735930e9c38fd25");
+},{"75da5536c0f2bcc4":"kgTdE"}],"8P6hj":[function(require,module,exports) {
+const SemVer = require("8a879b0f90afca2b");
 const major = (a, loose)=>new SemVer(a, loose).major;
 module.exports = major;
 
-},{"8735930e9c38fd25":"kgTdE"}],"jpEiD":[function(require,module,exports) {
-const SemVer = require("5059a014b70b46eb");
+},{"8a879b0f90afca2b":"kgTdE"}],"jpEiD":[function(require,module,exports) {
+const SemVer = require("8149f42ae3552976");
 const minor = (a, loose)=>new SemVer(a, loose).minor;
 module.exports = minor;
 
-},{"5059a014b70b46eb":"kgTdE"}],"9pRhW":[function(require,module,exports) {
-const SemVer = require("c7d6ebac8c6833c1");
+},{"8149f42ae3552976":"kgTdE"}],"9pRhW":[function(require,module,exports) {
+const SemVer = require("7383f7f049a907");
 const patch = (a, loose)=>new SemVer(a, loose).patch;
 module.exports = patch;
 
-},{"c7d6ebac8c6833c1":"kgTdE"}],"luzbM":[function(require,module,exports) {
-const parse = require("218904868656f039");
+},{"7383f7f049a907":"kgTdE"}],"luzbM":[function(require,module,exports) {
+const parse = require("24670ea1fed0ec96");
 const prerelease = (version, options)=>{
     const parsed = parse(version, options);
     return parsed && parsed.prerelease.length ? parsed.prerelease : null;
 };
 module.exports = prerelease;
 
-},{"218904868656f039":"gcpPf"}],"cgrtc":[function(require,module,exports) {
-const compare = require("5dd43f04aa8acbd1");
+},{"24670ea1fed0ec96":"gcpPf"}],"cgrtc":[function(require,module,exports) {
+const compare = require("f2aa1204ef5cf5de");
 const rcompare = (a, b, loose)=>compare(b, a, loose);
 module.exports = rcompare;
 
-},{"5dd43f04aa8acbd1":"1VfgV"}],"Q3pnc":[function(require,module,exports) {
-const compare = require("a7f798195cfeae5e");
+},{"f2aa1204ef5cf5de":"1VfgV"}],"Q3pnc":[function(require,module,exports) {
+const compare = require("ff0201b5b768e49a");
 const compareLoose = (a, b)=>compare(a, b, true);
 module.exports = compareLoose;
 
-},{"a7f798195cfeae5e":"1VfgV"}],"eYE5A":[function(require,module,exports) {
-const SemVer = require("d63d9acb95c561f7");
+},{"ff0201b5b768e49a":"1VfgV"}],"eYE5A":[function(require,module,exports) {
+const SemVer = require("6061151275f20802");
 const compareBuild = (a, b, loose)=>{
     const versionA = new SemVer(a, loose);
     const versionB = new SemVer(b, loose);
@@ -66595,48 +64684,48 @@ const compareBuild = (a, b, loose)=>{
 };
 module.exports = compareBuild;
 
-},{"d63d9acb95c561f7":"kgTdE"}],"8TvEb":[function(require,module,exports) {
-const compareBuild = require("bbb2e67d941e66b9");
+},{"6061151275f20802":"kgTdE"}],"8TvEb":[function(require,module,exports) {
+const compareBuild = require("ef5aaba2982dd38e");
 const sort = (list, loose)=>list.sort((a, b)=>compareBuild(a, b, loose));
 module.exports = sort;
 
-},{"bbb2e67d941e66b9":"eYE5A"}],"4isEq":[function(require,module,exports) {
-const compareBuild = require("55ea893336463b77");
+},{"ef5aaba2982dd38e":"eYE5A"}],"4isEq":[function(require,module,exports) {
+const compareBuild = require("6c479e31efca4aa");
 const rsort = (list, loose)=>list.sort((a, b)=>compareBuild(b, a, loose));
 module.exports = rsort;
 
-},{"55ea893336463b77":"eYE5A"}],"h68v7":[function(require,module,exports) {
-const compare = require("b0e51da4894ebb9c");
+},{"6c479e31efca4aa":"eYE5A"}],"h68v7":[function(require,module,exports) {
+const compare = require("de5f779f2ee2f532");
 const gt = (a, b, loose)=>compare(a, b, loose) > 0;
 module.exports = gt;
 
-},{"b0e51da4894ebb9c":"1VfgV"}],"6ucE6":[function(require,module,exports) {
-const compare = require("eb7a166f2bec69cb");
+},{"de5f779f2ee2f532":"1VfgV"}],"6ucE6":[function(require,module,exports) {
+const compare = require("41de689e46020325");
 const lt = (a, b, loose)=>compare(a, b, loose) < 0;
 module.exports = lt;
 
-},{"eb7a166f2bec69cb":"1VfgV"}],"7Y3tc":[function(require,module,exports) {
-const compare = require("f73ce0777559f9d5");
+},{"41de689e46020325":"1VfgV"}],"7Y3tc":[function(require,module,exports) {
+const compare = require("272455b5d53cbdca");
 const neq = (a, b, loose)=>compare(a, b, loose) !== 0;
 module.exports = neq;
 
-},{"f73ce0777559f9d5":"1VfgV"}],"ehmrd":[function(require,module,exports) {
-const compare = require("61da78d9960f5c7b");
+},{"272455b5d53cbdca":"1VfgV"}],"ehmrd":[function(require,module,exports) {
+const compare = require("418e3cb455bb7b1b");
 const gte = (a, b, loose)=>compare(a, b, loose) >= 0;
 module.exports = gte;
 
-},{"61da78d9960f5c7b":"1VfgV"}],"2J3QH":[function(require,module,exports) {
-const compare = require("d9335e9a5e5530f3");
+},{"418e3cb455bb7b1b":"1VfgV"}],"2J3QH":[function(require,module,exports) {
+const compare = require("2bb6c0837130aad1");
 const lte = (a, b, loose)=>compare(a, b, loose) <= 0;
 module.exports = lte;
 
-},{"d9335e9a5e5530f3":"1VfgV"}],"1k1O9":[function(require,module,exports) {
-const eq = require("8382cc9cde293214");
-const neq = require("3d5278d9282009ab");
-const gt = require("8f0e5f2b97a9df0f");
-const gte = require("b1d68b383308458b");
-const lt = require("8908a4af79df62e6");
-const lte = require("5d6ea71530c7aa51");
+},{"2bb6c0837130aad1":"1VfgV"}],"1k1O9":[function(require,module,exports) {
+const eq = require("3bdef97ae2e2fc3d");
+const neq = require("c9496171997cd8e9");
+const gt = require("f2d33eec4a82921f");
+const gte = require("5de9614ec85c76c9");
+const lt = require("29df18e23f769634");
+const lte = require("87df712183ed3796");
 const cmp = (a, op, b, loose)=>{
     switch(op){
         case "===":
@@ -66667,10 +64756,10 @@ const cmp = (a, op, b, loose)=>{
 };
 module.exports = cmp;
 
-},{"8382cc9cde293214":"k1aRj","3d5278d9282009ab":"7Y3tc","8f0e5f2b97a9df0f":"h68v7","b1d68b383308458b":"ehmrd","8908a4af79df62e6":"6ucE6","5d6ea71530c7aa51":"2J3QH"}],"iXNTl":[function(require,module,exports) {
-const SemVer = require("24e7f4798a7ebee6");
-const parse = require("b1eb561d240f7953");
-const { re , t  } = require("80e34f00cb75084a");
+},{"3bdef97ae2e2fc3d":"k1aRj","c9496171997cd8e9":"7Y3tc","f2d33eec4a82921f":"h68v7","5de9614ec85c76c9":"ehmrd","29df18e23f769634":"6ucE6","87df712183ed3796":"2J3QH"}],"iXNTl":[function(require,module,exports) {
+const SemVer = require("7589bc0b48a5affb");
+const parse = require("18230a4ecc28ab50");
+const { re , t  } = require("997bd2128452c571");
 const coerce = (version, options)=>{
     if (version instanceof SemVer) return version;
     if (typeof version === "number") version = String(version);
@@ -66700,7 +64789,7 @@ const coerce = (version, options)=>{
 };
 module.exports = coerce;
 
-},{"24e7f4798a7ebee6":"kgTdE","b1eb561d240f7953":"gcpPf","80e34f00cb75084a":"fM3gb"}],"5Yodu":[function(require,module,exports) {
+},{"7589bc0b48a5affb":"kgTdE","18230a4ecc28ab50":"gcpPf","997bd2128452c571":"fM3gb"}],"5Yodu":[function(require,module,exports) {
 const ANY = Symbol("SemVer ANY");
 // hoisted class for cyclic dependency
 class Comparator {
@@ -66767,14 +64856,14 @@ class Comparator {
     }
 }
 module.exports = Comparator;
-const parseOptions = require("e279ab8c2199e430");
-const { re , t  } = require("ffa1e23860338aa1");
-const cmp = require("9951ca384d58686b");
-const debug = require("36a2b0b4fc9048ce");
-const SemVer = require("a26321655265747b");
-const Range = require("7569fe4135559c28");
+const parseOptions = require("858a143ba7c5ea6c");
+const { re , t  } = require("c13162468423339d");
+const cmp = require("cafd76454b6e5e9f");
+const debug = require("b43d5788c242106f");
+const SemVer = require("e307c715e806f87");
+const Range = require("dde14d547278a151");
 
-},{"e279ab8c2199e430":"aIQkG","ffa1e23860338aa1":"fM3gb","9951ca384d58686b":"1k1O9","36a2b0b4fc9048ce":"5sQBx","a26321655265747b":"kgTdE","7569fe4135559c28":"f4j9g"}],"f4j9g":[function(require,module,exports) {
+},{"858a143ba7c5ea6c":"aIQkG","c13162468423339d":"fM3gb","cafd76454b6e5e9f":"1k1O9","b43d5788c242106f":"5sQBx","e307c715e806f87":"kgTdE","dde14d547278a151":"f4j9g"}],"f4j9g":[function(require,module,exports) {
 // hoisted class for cyclic dependency
 class Range {
     constructor(range, options){
@@ -66911,15 +65000,15 @@ class Range {
     }
 }
 module.exports = Range;
-const LRU = require("43e2584a3d79ea96");
+const LRU = require("31ace1a309b6b19f");
 const cache = new LRU({
     max: 1000
 });
-const parseOptions = require("582a177a5a47d11c");
-const Comparator = require("8d420a53d4d3099e");
-const debug = require("f8f0efc1828090b3");
-const SemVer = require("5a426ecad22712fd");
-const { re , t , comparatorTrimReplace , tildeTrimReplace , caretTrimReplace  } = require("9e671c92446191d6");
+const parseOptions = require("e1784ff164e08edc");
+const Comparator = require("5e3e025c974e0c67");
+const debug = require("9afbc79815904d58");
+const SemVer = require("7baf3899c8424cc7");
+const { re , t , comparatorTrimReplace , tildeTrimReplace , caretTrimReplace  } = require("c5debe6826ff7093");
 const isNullSet = (c)=>c.value === "<0.0.0-0";
 const isAny = (c)=>c.value === "";
 // take a set of comparators and determine whether there
@@ -67130,10 +65219,10 @@ const testSet = (set, version, options)=>{
     return true;
 };
 
-},{"43e2584a3d79ea96":"JVw6S","582a177a5a47d11c":"aIQkG","8d420a53d4d3099e":"5Yodu","f8f0efc1828090b3":"5sQBx","5a426ecad22712fd":"kgTdE","9e671c92446191d6":"fM3gb"}],"JVw6S":[function(require,module,exports) {
+},{"31ace1a309b6b19f":"JVw6S","e1784ff164e08edc":"aIQkG","5e3e025c974e0c67":"5Yodu","9afbc79815904d58":"5sQBx","7baf3899c8424cc7":"kgTdE","c5debe6826ff7093":"fM3gb"}],"JVw6S":[function(require,module,exports) {
 "use strict";
 // A linked list to keep track of recently-used-ness
-const Yallist = require("89ac0e8f61536d7f");
+const Yallist = require("18044590ba360517");
 const MAX = Symbol("max");
 const LENGTH = Symbol("length");
 const LENGTH_CALCULATOR = Symbol("lengthCalculator");
@@ -67394,7 +65483,7 @@ const forEachStep = (self, fn, node, thisp)=>{
 };
 module.exports = LRUCache;
 
-},{"89ac0e8f61536d7f":"d9kUa"}],"d9kUa":[function(require,module,exports) {
+},{"18044590ba360517":"d9kUa"}],"d9kUa":[function(require,module,exports) {
 "use strict";
 module.exports = Yallist;
 Yallist.Node = Node;
@@ -67643,10 +65732,10 @@ function Node(value, prev, next, list) {
 }
 try {
     // add if support for Symbol.iterator is present
-    require("42dde942c84bc62d")(Yallist);
+    require("ee1e7db9313f934e")(Yallist);
 } catch (er) {}
 
-},{"42dde942c84bc62d":"9psHD"}],"9psHD":[function(require,module,exports) {
+},{"ee1e7db9313f934e":"9psHD"}],"9psHD":[function(require,module,exports) {
 "use strict";
 module.exports = function(Yallist) {
     Yallist.prototype[Symbol.iterator] = function*() {
@@ -67655,7 +65744,7 @@ module.exports = function(Yallist) {
 };
 
 },{}],"7OcsV":[function(require,module,exports) {
-const Range = require("48c61f3c1540f6b1");
+const Range = require("d52a6ae0ef090f98");
 const satisfies = (version, range, options)=>{
     try {
         range = new Range(range, options);
@@ -67666,15 +65755,15 @@ const satisfies = (version, range, options)=>{
 };
 module.exports = satisfies;
 
-},{"48c61f3c1540f6b1":"f4j9g"}],"iR5Mh":[function(require,module,exports) {
-const Range = require("72d39a0beee1b716");
+},{"d52a6ae0ef090f98":"f4j9g"}],"iR5Mh":[function(require,module,exports) {
+const Range = require("aa6d2ac4cae3bf48");
 // Mostly just for testing and legacy API reasons
 const toComparators = (range, options)=>new Range(range, options).set.map((comp)=>comp.map((c)=>c.value).join(" ").trim().split(" "));
 module.exports = toComparators;
 
-},{"72d39a0beee1b716":"f4j9g"}],"jPYT1":[function(require,module,exports) {
-const SemVer = require("3af12c79fa118993");
-const Range = require("2db6ed664ce07f75");
+},{"aa6d2ac4cae3bf48":"f4j9g"}],"jPYT1":[function(require,module,exports) {
+const SemVer = require("6f2f9531ffe48c0f");
+const Range = require("f224cb5d8c92387b");
 const maxSatisfying = (versions, range, options)=>{
     let max = null;
     let maxSV = null;
@@ -67698,9 +65787,9 @@ const maxSatisfying = (versions, range, options)=>{
 };
 module.exports = maxSatisfying;
 
-},{"3af12c79fa118993":"kgTdE","2db6ed664ce07f75":"f4j9g"}],"juckF":[function(require,module,exports) {
-const SemVer = require("270f10a41ff54a69");
-const Range = require("4375221a762c2ce1");
+},{"6f2f9531ffe48c0f":"kgTdE","f224cb5d8c92387b":"f4j9g"}],"juckF":[function(require,module,exports) {
+const SemVer = require("39fa3b5c87af31b");
+const Range = require("9cddb52bf780749");
 const minSatisfying = (versions, range, options)=>{
     let min = null;
     let minSV = null;
@@ -67724,10 +65813,10 @@ const minSatisfying = (versions, range, options)=>{
 };
 module.exports = minSatisfying;
 
-},{"270f10a41ff54a69":"kgTdE","4375221a762c2ce1":"f4j9g"}],"5VviM":[function(require,module,exports) {
-const SemVer = require("3c57b4f812627543");
-const Range = require("1467b878b7ebe73a");
-const gt = require("8ec18d15acdfd9fa");
+},{"39fa3b5c87af31b":"kgTdE","9cddb52bf780749":"f4j9g"}],"5VviM":[function(require,module,exports) {
+const SemVer = require("baa5b6c4fbb978ec");
+const Range = require("3da67db525e93696");
+const gt = require("527fda57065f2e1f");
 const minVersion = (range, loose)=>{
     range = new Range(range, loose);
     let minver = new SemVer("0.0.0");
@@ -67764,8 +65853,8 @@ const minVersion = (range, loose)=>{
 };
 module.exports = minVersion;
 
-},{"3c57b4f812627543":"kgTdE","1467b878b7ebe73a":"f4j9g","8ec18d15acdfd9fa":"h68v7"}],"d8BN4":[function(require,module,exports) {
-const Range = require("dc082b134ea1041f");
+},{"baa5b6c4fbb978ec":"kgTdE","3da67db525e93696":"f4j9g","527fda57065f2e1f":"h68v7"}],"d8BN4":[function(require,module,exports) {
+const Range = require("649115a3ec470d35");
 const validRange = (range, options)=>{
     try {
         // Return '*' instead of '' so that truthiness works.
@@ -67777,16 +65866,16 @@ const validRange = (range, options)=>{
 };
 module.exports = validRange;
 
-},{"dc082b134ea1041f":"f4j9g"}],"jz7Jf":[function(require,module,exports) {
-const SemVer = require("7f5b6b2c612f1b41");
-const Comparator = require("fd37cfee4b655604");
+},{"649115a3ec470d35":"f4j9g"}],"jz7Jf":[function(require,module,exports) {
+const SemVer = require("db63f65eb824b334");
+const Comparator = require("3e15755410b98c3c");
 const { ANY  } = Comparator;
-const Range = require("f50d555b2a636c44");
-const satisfies = require("1c6b38da8b16e3d4");
-const gt = require("27c800e136158632");
-const lt = require("3a174f39913b8496");
-const lte = require("d852ba2bd7f45463");
-const gte = require("f3a1bc6ea73f50bf");
+const Range = require("f4a186fc9c7c8a82");
+const satisfies = require("cce0c45e95a543a0");
+const gt = require("51be64c8d70e6203");
+const lt = require("cf98809d3a3ab4c");
+const lte = require("6bc23d600608d806");
+const gte = require("932eb0aeb95bf9e6");
 const outside = (version, range, hilo, options)=>{
     version = new SemVer(version, options);
     range = new Range(range, options);
@@ -67836,20 +65925,20 @@ const outside = (version, range, hilo, options)=>{
 };
 module.exports = outside;
 
-},{"7f5b6b2c612f1b41":"kgTdE","fd37cfee4b655604":"5Yodu","f50d555b2a636c44":"f4j9g","1c6b38da8b16e3d4":"7OcsV","27c800e136158632":"h68v7","3a174f39913b8496":"6ucE6","d852ba2bd7f45463":"2J3QH","f3a1bc6ea73f50bf":"ehmrd"}],"kboF2":[function(require,module,exports) {
+},{"db63f65eb824b334":"kgTdE","3e15755410b98c3c":"5Yodu","f4a186fc9c7c8a82":"f4j9g","cce0c45e95a543a0":"7OcsV","51be64c8d70e6203":"h68v7","cf98809d3a3ab4c":"6ucE6","6bc23d600608d806":"2J3QH","932eb0aeb95bf9e6":"ehmrd"}],"kboF2":[function(require,module,exports) {
 // Determine if version is greater than all the versions possible in the range.
-const outside = require("7d30f4292a82f62d");
+const outside = require("bd22cd84d9109942");
 const gtr = (version, range, options)=>outside(version, range, ">", options);
 module.exports = gtr;
 
-},{"7d30f4292a82f62d":"jz7Jf"}],"4bUsl":[function(require,module,exports) {
-const outside = require("73f977e3beaf79a3");
+},{"bd22cd84d9109942":"jz7Jf"}],"4bUsl":[function(require,module,exports) {
+const outside = require("3bdf3d65df4f2c55");
 // Determine if version is less than all the versions possible in the range
 const ltr = (version, range, options)=>outside(version, range, "<", options);
 module.exports = ltr;
 
-},{"73f977e3beaf79a3":"jz7Jf"}],"hpFPQ":[function(require,module,exports) {
-const Range = require("29646c7f96e73927");
+},{"3bdf3d65df4f2c55":"jz7Jf"}],"hpFPQ":[function(require,module,exports) {
+const Range = require("e51fc2adc7e1060a");
 const intersects = (r1, r2, options)=>{
     r1 = new Range(r1, options);
     r2 = new Range(r2, options);
@@ -67857,12 +65946,12 @@ const intersects = (r1, r2, options)=>{
 };
 module.exports = intersects;
 
-},{"29646c7f96e73927":"f4j9g"}],"kb0TI":[function(require,module,exports) {
+},{"e51fc2adc7e1060a":"f4j9g"}],"kb0TI":[function(require,module,exports) {
 // given a set of versions and a range, create a "simplified" range
 // that includes the same versions that the original range does
 // If the original range is shorter than the simplified one, return that.
-const satisfies = require("c080fef45bff02b7");
-const compare = require("5544f742b66fcb2a");
+const satisfies = require("573dc49320cd491b");
+const compare = require("459c5f2a40364ef8");
 module.exports = (versions, range, options)=>{
     const set = [];
     let first = null;
@@ -67899,12 +65988,12 @@ module.exports = (versions, range, options)=>{
     return simplified.length < original.length ? simplified : range;
 };
 
-},{"c080fef45bff02b7":"7OcsV","5544f742b66fcb2a":"1VfgV"}],"lNExW":[function(require,module,exports) {
-const Range = require("91b25c6342e91a4a");
-const Comparator = require("e748034e6b7e5056");
+},{"573dc49320cd491b":"7OcsV","459c5f2a40364ef8":"1VfgV"}],"lNExW":[function(require,module,exports) {
+const Range = require("60041356f6c3d9");
+const Comparator = require("a2b478a046772f95");
 const { ANY  } = Comparator;
-const satisfies = require("3f7ce390d8746604");
-const compare = require("f866c0d8eb9cf479");
+const satisfies = require("45d65386fb12d30f");
+const compare = require("5cd90f87a416ddec");
 // Complex range `r1 || r2 || ...` is a subset of `R1 || R2 || ...` iff:
 // - Every simple range `r1, r2, ...` is a null set, OR
 // - Every simple range `r1, r2, ...` which is not a null set is a subset of
@@ -68055,7 +66144,7 @@ const lowerLT = (a, b, options)=>{
 };
 module.exports = subset;
 
-},{"91b25c6342e91a4a":"f4j9g","e748034e6b7e5056":"5Yodu","3f7ce390d8746604":"7OcsV","f866c0d8eb9cf479":"1VfgV"}],"i4OI0":[function(require,module,exports) {
+},{"60041356f6c3d9":"f4j9g","a2b478a046772f95":"5Yodu","45d65386fb12d30f":"7OcsV","5cd90f87a416ddec":"1VfgV"}],"i4OI0":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "log", ()=>log);
@@ -70975,22 +69064,13 @@ const MyNearWallet = ({ metadata , options , store , params , logger  })=>__awai
                 const accountId = _state.wallet.getAccountId();
                 const account = _state.wallet.account();
                 if (!accountId || !account) return [];
-                try {
-                    const publicKey = yield account.connection.signer.getPublicKey(account.accountId, options.network.networkId);
-                    return [
-                        {
-                            accountId,
-                            publicKey: publicKey.toString()
-                        }
-                    ];
-                } catch (e) {
-                    return [
-                        {
-                            accountId,
-                            publicKey: undefined
-                        }
-                    ];
-                }
+                const publicKey = yield account.connection.signer.getPublicKey(account.accountId, options.network.networkId);
+                return [
+                    {
+                        accountId,
+                        publicKey: publicKey ? publicKey.toString() : ""
+                    }
+                ];
             });
         const transformTransactions = (transactions$1)=>__awaiter(void 0, void 0, void 0, function*() {
                 const account = _state.wallet.account();
