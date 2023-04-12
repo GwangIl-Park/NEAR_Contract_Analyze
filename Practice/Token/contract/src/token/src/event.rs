@@ -12,10 +12,21 @@ pub(crate) enum NearEvent<'a> {
     //Nep171(crate::non_fungible_token::events::Nep171Event<'a>),
 }
 
+// {
+//     "standard":"nep141"
+//     "version": "1.0.0",
+//     "event":"ft_burn"
+//     "data":{
+//         "owner_id":"aaa",
+//         "amount":"11",
+//         "memo":"asdad"
+//     }
+// }
+
 impl<'a> NearEvent<'a> {
     fn to_json_string(&self) -> String {
         #[allow(clippy::redundant_closure)]
-        serde_json::to_string(self)
+        serde_json::to_string(self) //serialize된 json을 string으로 출력
             .ok()
             .unwrap_or_else(|| env::abort())
     }
@@ -28,19 +39,3 @@ impl<'a> NearEvent<'a> {
         near_sdk::env::log_str(&self.to_json_event_string());
     }
 }
-
-// lifetime 예제
-// fn main() {
-//     let s1 = "hello";
-//     let s2 = "world";
-//     let result = longest(s1, s2);
-//     println!("The longest string is {}", result);
-// }
-
-// fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
-//     if x.len() > y.len() {
-//         x
-//     } else {
-//         y
-//     }
-// }

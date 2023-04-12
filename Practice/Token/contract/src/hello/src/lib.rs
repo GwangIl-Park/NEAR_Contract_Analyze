@@ -51,7 +51,7 @@ impl FungibleTokenReceiver for Hello {
         amount: U128,
         msg: String,
     ) -> PromiseOrValue<U128> {
-        let split_messages: Vec<&str> = msg.split(",").collect();
+        let split_messages: Vec<&str> = msg.split(",").collect(); //ex) set_message,Hello
         log!(
             "in {} tokens from @{} ft_on_transfer, msg = {}",
             amount.0,

@@ -2,8 +2,8 @@ import { Wallet, Mail, Person } from './wallet';
 
 async function runProc() {
 
-  const wallet = new Wallet("ed25519:2CH8v4LQD2o4RDoMx1ZXuo6mJCPNbDCyXHMhirLdotMW714ZxuWxjxxtZ6tMRmarudrNMjR18jQofp5F8obSMWwc", 
-  "dev-1679374959912-95659865680232");
+  const wallet = new Wallet("ed25519:3UTtEW3K3vpgU13iriTKw62mQPa23Jq55NLw2ue4VMoVwfVfPiuepYCr8PxA2aUR7oCKnNrUzD5nYtsnGGTz4Y7n", 
+  "dev-1679486636127-69282739867644");
   let from :Person = {
     name:"gipark",
     wallet:"giparktest.testnet"
@@ -22,7 +22,9 @@ async function runProc() {
     recipient:"giparktest.testnet",
     nonce:Buffer.from(Array.from(Array(32).keys())),
     callbackUrl:""});
-    console.log(signature)
+    console.log(`accountId : ${accountId}`)
+    console.log(`publicKey : ${publicKey}`)
+    console.log(`signature : ${signature}`)
 }
 
 runProc()

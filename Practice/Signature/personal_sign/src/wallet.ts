@@ -11,14 +11,14 @@ interface SignMessageParams {
 }
 
 class Payload {
-  @field({ type: 'u32' })
-  tag: number; // Always the same tag: 2**31 + 413
+  @field({ type: 'u32' })  //해당 속성이 어떤 형식으로 정의되는지 명시하는 decorator
+  tag: number;
   @field({ type: 'string' })
-  message: string; // The same message passed in `SignMessageParams.message`
+  message: string;
   @field({ type: fixedArray('u8', 32) })
-  nonce: number[]; // The same nonce passed in `SignMessageParams.nonce`
+  nonce: number[];
   @field({ type: 'string' })
-  recipient: string; // The same recipient passed in `SignMessageParams.recipient`
+  recipient: string;
   @field({ type: option('string') })
   callbackUrl?: string;
 
@@ -73,7 +73,7 @@ export class Wallet {
     this.printPayload(payload)
     const borshPayload = Borsh.serialize(payload);
     const hashedPayload = js_sha256.sha256.array(borshPayload)
-    console.log(hashedPayload)
+    console.log(`message Hash\n${hashedPayload}`)
     const { signature } = Key.sign(Uint8Array.from(hashedPayload))
 
     const encoded: string = Buffer.from(signature).toString('base64')

@@ -1,0 +1,19 @@
+[package]
+name = "nep_171"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["lib"]
+
+[dependencies]
+near-sdk = "4.1.1"
+serde = "1"
+serde_json = "1"
+nep_177={path="../nep_177"}
+nep_297={path="../nep_297"}
+schemars = "0.8"
+
+[features]
+default = ["abi"]
+abi = ["near-sdk/abi"]

@@ -1,0 +1,16 @@
+[package]
+name = "ft"
+version = "1.0.0"
+authors = ["Near Inc <hello@near.org>"]
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = "4.1.1"
+uint = { version = "0.9.3", default-features = false }
+nep_141 = { path="../../NEPs/nep_141" }
+nep_145 = { path="../../NEPs/nep_145" }
+nep_148 = { path="../../NEPs/nep_148" }
+nep_297 = { path="../../NEPs/nep_297" }

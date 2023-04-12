@@ -1,5 +1,8 @@
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
-use near_sdk::{log, near_bindgen};
+use near_sdk::collections::LookupMap;
+use near_sdk::{env, log, near_bindgen, AccountId, Balance};
+use std::thread;
+use std::time::Duration;
 
 const DEFAULT_MESSAGE: &str = "Hello";
 

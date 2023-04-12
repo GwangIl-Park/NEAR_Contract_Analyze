@@ -107,7 +107,7 @@ class messagePayload {
   @field({type:'string'})
   hashMail:string;
   constructor({ hashMail }: messagePayload) {
-    this.typehash=EIP712DOMAIN_TYPEHASH;
+    this.typehash=DOMAIN_SEPARATOR;
     this.hashMail=hashMail
   }
 }
@@ -131,6 +131,9 @@ export class Wallet {
     const hashedWallet = js_sha256.sha256.hex(person.wallet)
     const payload = new personPayload({typehash:PERSON_TYPEHASH, name:hashedName, wallet:hashedWallet});
     const borshPayload = Borsh.serialize(payload);
+    console.log(console.log(JSON.stringify(borshPayload)))
+    
+    console.log(js_sha256.sha256.array(borshPayload))
     return js_sha256.sha256.hex(borshPayload);
   }
 
@@ -173,7 +176,7 @@ export class Wallet {
 
     const borshPayload = Borsh.serialize(payload);
     const hashedPayload = js_sha256.sha256.array(borshPayload)
-    console.log(hashedPayload)
+    console.log(`message Hash\n${hashedPayload}`)
     const { signature } = Key.sign(Uint8Array.from(hashedPayload))
 
     const encoded: string = Buffer.from(signature).toString('base64')

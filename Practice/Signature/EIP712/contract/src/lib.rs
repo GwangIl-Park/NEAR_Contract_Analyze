@@ -2,15 +2,16 @@ use std::convert::TryFrom;
 
 use ed25519_dalek::Verifier;
 
+use hex;
 use near_sdk::base64::decode as decode64;
 use near_sdk::base64::encode as encode64;
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
 use near_sdk::bs58::decode as decode58;
-use near_sdk::env::sha256_array;
+use near_sdk::env::{sha256_array};
 use near_sdk::serde::{Deserialize, Serialize};
 use near_sdk::{log, near_bindgen, AccountId};
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, BorshSerialize)]
 #[serde(crate = "near_sdk::serde")]
 struct EIP712Domain {
     name: String,
@@ -19,14 +20,38 @@ struct EIP712Domain {
     verifying_contract: AccountId,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, BorshSerialize)]
+#[serde(crate = "near_sdk::serde")]
+pub struct PersonPayload {
+    typehash: [u8; 32],
+    name: String,
+    wallet: AccountId,
+}
+
+#[derive(Serialize, Deserialize, BorshSerialize)]
+#[serde(crate = "near_sdk::serde")]
+pub struct MailPayload {
+    typehash: [u8; 32],
+    from: String,
+    to: String,
+    contents: String,
+}
+
+#[derive(Serialize, Deserialize, BorshSerialize)]
+#[serde(crate = "near_sdk::serde")]
+pub struct MessagePayload {
+    typehash: [u8; 32],
+    mail: String,
+}
+
+#[derive(Serialize, Deserialize, BorshSerialize)]
 #[serde(crate = "near_sdk::serde")]
 pub struct Person {
     name: String,
     wallet: AccountId,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, BorshSerialize)]
 #[serde(crate = "near_sdk::serde")]
 pub struct Mail {
     from: Person,
@@ -38,7 +63,7 @@ pub struct Mail {
 #[serde(crate = "near_sdk::serde")]
 pub struct Payload {
     tag: u32,
-    message: [u8; 32],
+    message: String,
     nonce: [u8; 32],
     receipient: AccountId,
     callbackUrl: String,
@@ -94,36 +119,44 @@ pub struct EIP712 {}
 
 #[near_bindgen]
 impl EIP712 {
-    fn hash_person(&self, person: &Person) -> [u8; 32] {
+    fn hash_person(&self, person: &Person) -> String {
         let mut encoded_input = vec![];
-        let input = [
-            PERSON_TYPEHASH,
-            sha256_array(person.name.as_bytes()),
-            sha256_array(person.wallet.as_bytes()),
-        ]
-        .concat();
-        BorshSerialize::serialize(&input, &mut encoded_input);
-        sha256_array(&encoded_input)
+
+        let person_input = PersonPayload {
+            typehash: PERSON_TYPEHASH,
+            name: person.name.clone(),
+            wallet: person.wallet.clone(),
+        };
+
+        BorshSerialize::serialize(&person_input, &mut encoded_input);
+        log!("{:?}", encoded_input);
+        log!("person {:?}", sha256_array(&encoded_input));
+        hex::encode(sha256_array(&encoded_input))
     }
 
-    fn hash_mail(&self, mail: &Mail) -> [u8; 32] {
+    fn hash_mail(&self, mail: &Mail) -> String {
         let mut encoded_input = vec![];
-        let input = [
-            MAIL_TYPEHASH,
-            self.hash_person(&mail.from),
-            self.hash_person(&mail.to),
-            sha256_array(mail.contents.as_bytes()),
-        ]
-        .concat();
-        BorshSerialize::serialize(&input, &mut encoded_input);
-        sha256_array(&encoded_input)
+
+        let mail_input = MailPayload {
+            typehash: MAIL_TYPEHASH,
+            from: self.hash_person(&mail.from),
+            to: self.hash_person(&mail.to),
+            contents: hex::encode(sha256_array(mail.contents.as_bytes())),
+        };
+
+        BorshSerialize::serialize(&mail_input, &mut encoded_input);
+        hex::encode(sha256_array(&encoded_input))
     }
 
-    fn hash_message(&self, mail: &Mail) -> [u8; 32] {
+    fn hash_message(&self, mail: &Mail) -> String {
         let mut encoded_input = vec![];
-        let input = [DOMAIN_SEPARATOR, self.hash_mail(mail)].concat();
-        BorshSerialize::serialize(&input, &mut encoded_input);
-        sha256_array(&encoded_input)
+
+        let message_input = MessagePayload {
+            typehash: DOMAIN_SEPARATOR,
+            mail: self.hash_mail(mail),
+        };
+        BorshSerialize::serialize(&message_input, &mut encoded_input);
+        hex::encode(sha256_array(&encoded_input))
     }
 
     pub fn verify(
@@ -145,7 +178,7 @@ impl EIP712 {
                 .unwrap();
 
         let hash_message = self.hash_message(&mail);
-
+        log!("message {}", hash_message);
         let payload = Payload {
             tag: PREFIX_TAG,
             message: hash_message,
@@ -153,10 +186,8 @@ impl EIP712 {
             receipient,
             callbackUrl: "".to_string(),
         };
-
         let mut encoded_input = vec![];
         BorshSerialize::serialize(&payload, &mut encoded_input);
-        sha256_array(&encoded_input);
 
         if let Ok(_) = public_key.verify(&sha256_array(&encoded_input), &signature) {
             log!("success")

@@ -13,8 +13,6 @@ pub struct VerifyContract {}
 #[near_bindgen]
 impl VerifyContract {
     pub fn verify(&mut self, message_hash: &[u8; 32], public_key_param: String, signature: String) {
-        // let signature =
-        //     ed25519_dalek::Signature::try_from(decode64(signature).unwrap().as_slice()).unwrap();
         let signature =
             ed25519_dalek::Signature::try_from(decode64(signature).unwrap().as_ref()).unwrap();
         // let public_key2 = near_sdk::env::signer_account_pk();

@@ -1,0 +1,9 @@
+[package]
+name = "nep_178"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+near-sdk = "4.1.1"
+
+nep_171={path="../nep_171"}

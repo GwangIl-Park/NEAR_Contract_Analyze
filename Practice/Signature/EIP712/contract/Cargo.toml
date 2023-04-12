@@ -14,6 +14,7 @@ eip712 = "0.1.0"
 ed25519 = "2.2.0"
 sha256 = "1.1.2"
 ed25519-dalek = "1.0.1"
+hex = "0.4.3"
 
 [profile.release]
 codegen-units = 1

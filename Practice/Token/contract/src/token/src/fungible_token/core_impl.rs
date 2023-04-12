@@ -195,7 +195,7 @@ impl FungibleToken {
         if unused_amount > 0 {
             let receiver_balance = self.balance_map.get(&receiver_id).unwrap_or(0);
             if receiver_balance > 0 {
-                let refund_amount = std::cmp::min(receiver_balance, unused_amount);
+                let refund_amount = std::cmp::min(receiver_balance, unused_amount); //receiver balance 처리
                 if let Some(new_receiver_balance) = receiver_balance.checked_sub(refund_amount) {
                     self.balance_map.insert(&receiver_id, &new_receiver_balance);
                 } else {
@@ -204,6 +204,7 @@ impl FungibleToken {
 
                 if let Some(sender_balance) = self.balance_map.get(sender_id) {
                     if let Some(new_sender_balance) = sender_balance.checked_add(refund_amount) {
+                        //sender balance 처리
                         self.balance_map.insert(sender_id, &new_sender_balance);
                     } else {
                         env::panic_str("Sender balance overflow");
@@ -221,6 +222,7 @@ impl FungibleToken {
                         .unwrap_or_else(|| env::panic_str(ERR_TOTAL_SUPPLY_OVERFLOW));
                     return (used_amount, 0);
                 } else {
+                    //sender가 삭제된 경우
                     // Sender's account was deleted, so we need to burn tokens.
                     self.total_supply = self
                         .total_supply

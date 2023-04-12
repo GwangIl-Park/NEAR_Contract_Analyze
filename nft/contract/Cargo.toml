@@ -1,0 +1,20 @@
+[package]
+name = "nft"
+version = "1.0.0"
+authors = ["Near Inc <hello@near.org>"]
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+near-sdk = "4.0.0"
+uint = { version = "0.9.3", default-features = false }
+nep_171 = { path="../../NEPs/nep_171" }
+nep_177 = { path="../../NEPs/nep_177" }
+nep_178 = { path="../../NEPs/nep_178" }
+nep_181 = { path="../../NEPs/nep_181" }
+nep_297 = { path="../../NEPs/nep_297" }
+
+[workspace]
+members = []
