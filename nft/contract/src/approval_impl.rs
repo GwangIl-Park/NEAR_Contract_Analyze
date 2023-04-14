@@ -28,11 +28,14 @@ impl NonFungibleTokenApproval for NonFungibleToken {
         msg: Option<String>,
     ) -> Option<Promise> {
         assert_at_least_one_yocto();
+
+        //NFT가 approval을 지원하는지 체크
         let approvals_by_id = self
             .approvals_by_id
             .as_mut()
             .unwrap_or_else(|| env::panic_str("NFT does not support Approval Management"));
 
+        //tokenId로 owner_id 가져옴
         let owner_id = expect_token_found(self.owner_by_id.get(&token_id));
 
         require!(
@@ -40,21 +43,22 @@ impl NonFungibleTokenApproval for NonFungibleToken {
             "Predecessor must be token owner."
         );
 
+        //next_approval_by_id필드가 있는지 체크
         let next_approval_id_by_id = expect_approval(self.next_approval_id_by_id.as_mut());
-        // update HashMap of approvals for this token
+        // token_id에 대한 approval맵 가져옴
         let approved_account_ids = &mut approvals_by_id.get(&token_id).unwrap_or_default();
+        //token_id에 대한 next_approval_id 가져옴
         let approval_id: u64 = next_approval_id_by_id.get(&token_id).unwrap_or(1u64);
+        // account에 next_approval_id를 넣음 (기존 값 리턴)
         let old_approval_id = approved_account_ids.insert(account_id.clone(), approval_id);
 
-        // save updated approvals HashMap to contract's LookupMap
+        // token_id에 대한 approve맵을 업데이트
         approvals_by_id.insert(&token_id, approved_account_ids);
 
-        // increment next_approval_id for this token
+        // 토큰에 대한 next_approval_id +1
         next_approval_id_by_id.insert(&token_id, &(approval_id + 1));
 
-        // If this approval replaced existing for same account, no storage was used.
-        // Otherwise, require that enough deposit was attached to pay for storage, and refund
-        // excess.
+        // 새로운 account가 등록된 경우 추가
         let storage_used = if old_approval_id.is_none() {
             bytes_for_approved_account_id(&account_id)
         } else {
@@ -62,7 +66,7 @@ impl NonFungibleTokenApproval for NonFungibleToken {
         };
         refund_deposit(storage_used);
 
-        // if given `msg`, schedule call to `nft_on_approve` and return it. Else, return None.
+        // msg가 있으면 nft_on_approve 실행
         msg.map(|msg| {
             ext_nft_approval_receiver::ext(account_id)
                 .with_static_gas(env::prepaid_gas() - GAS_FOR_NFT_APPROVE)

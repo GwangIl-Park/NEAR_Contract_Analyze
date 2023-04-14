@@ -806,10 +806,43 @@ dependencies = [
 ]
 
 [[package]]
-name = "nep_148"
-version = "1.0.0"
+name = "nep_171"
+version = "0.1.0"
 dependencies = [
  "near-sdk",
+ "nep_177",
+ "nep_297",
+ "schemars",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "nep_177"
+version = "0.1.0"
+dependencies = [
+ "near-sdk",
+ "schemars",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "nep_199"
+version = "0.1.0"
+dependencies = [
+ "near-sdk",
+ "nep_171",
+ "serde",
+]
+
+[[package]]
+name = "nep_297"
+version = "0.1.0"
+dependencies = [
+ "near-sdk",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
@@ -1150,9 +1183,9 @@ dependencies = [
 
 [[package]]
 name = "serde_json"
-version = "1.0.95"
+version = "1.0.96"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d721eca97ac802aa7777b701877c8004d950fc142651367300d21c1cc0194744"
+checksum = "057d394a50403bcac12672b2b18fb387ab6d289d957dab67dd201875391e52f1"
 dependencies = [
  "itoa",
  "ryu",

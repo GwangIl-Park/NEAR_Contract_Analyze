@@ -138,3 +138,41 @@ macro_rules! impl_non_fungible_token_enumeration {
         }
     };
 }
+
+#[macro_export]
+macro_rules! impl_non_fungible_token_royalty {
+    ($contract: ident, $token: ident) => {
+        use nep_199::payout::Payout;
+        use nep_199::payout::Payouts;
+        #[near_bindgen]
+        impl Payouts for $contract {
+            fn nft_payout(
+                &self,
+                token_id: String,
+                balance: U128,
+                max_len_payout: Option<u32>,
+            ) -> Payout {
+                self.$token.nft_payout(token_id, balance, max_len_payout)
+            }
+            #[payable]
+            fn nft_transfer_payout(
+                &mut self,
+                receiver_id: AccountId,
+                token_id: String,
+                approval_id: Option<u64>,
+                memo: Option<String>,
+                balance: U128,
+                max_len_payout: Option<u32>,
+            ) -> Payout {
+                self.$token.nft_transfer_payout(
+                    receiver_id,
+                    token_id,
+                    approval_id,
+                    memo,
+                    balance,
+                    max_len_payout,
+                )
+            }
+        }
+    };
+}

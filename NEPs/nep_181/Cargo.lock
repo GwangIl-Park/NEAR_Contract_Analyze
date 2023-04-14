@@ -9,45 +9,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fe438c63458706e03479442743baae6c88256498e6431708f6dfc520a26515d3"
 
 [[package]]
-name = "NEP-171"
-version = "0.1.0"
-dependencies = [
- "NEP-177",
- "NEP-297",
- "near-sdk",
- "schemars",
- "serde",
- "serde_json",
-]
-
-[[package]]
-name = "NEP-177"
-version = "0.1.0"
-dependencies = [
- "near-sdk",
- "schemars",
- "serde",
- "serde_json",
-]
-
-[[package]]
-name = "NEP-181"
-version = "0.1.0"
-dependencies = [
- "NEP-171",
- "near-sdk",
-]
-
-[[package]]
-name = "NEP-297"
-version = "0.1.0"
-dependencies = [
- "near-sdk",
- "serde",
- "serde_json",
-]
-
-[[package]]
 name = "ahash"
 version = "0.7.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -842,6 +803,45 @@ dependencies = [
  "sha2 0.10.6",
  "sha3",
  "zeropool-bn",
+]
+
+[[package]]
+name = "nep_171"
+version = "0.1.0"
+dependencies = [
+ "near-sdk",
+ "nep_177",
+ "nep_297",
+ "schemars",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "nep_177"
+version = "0.1.0"
+dependencies = [
+ "near-sdk",
+ "schemars",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "nep_181"
+version = "0.1.0"
+dependencies = [
+ "near-sdk",
+ "nep_171",
+]
+
+[[package]]
+name = "nep_297"
+version = "0.1.0"
+dependencies = [
+ "near-sdk",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]

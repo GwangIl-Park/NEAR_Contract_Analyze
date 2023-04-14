@@ -3,6 +3,7 @@ use near_sdk::json_types::U128;
 use near_sdk::{env, require, AccountId};
 use nep_171::token::Token;
 use nep_181::enumeration::NonFungibleTokenEnumeration;
+use std::collections::HashMap;
 
 type TokenId = String;
 
@@ -19,12 +20,18 @@ impl NonFungibleToken {
                 .get(&token_id.to_string())
                 .unwrap_or_default()
         });
+        let payout = self.royalty_by_id.as_ref().map(|royalty_by_id| {
+            royalty_by_id
+                .get(&token_id.to_string())
+                .unwrap_or(HashMap::new())
+        });
 
         Token {
             token_id,
             owner_id,
             metadata,
             approved_account_ids,
+            payout,
         }
     }
 }

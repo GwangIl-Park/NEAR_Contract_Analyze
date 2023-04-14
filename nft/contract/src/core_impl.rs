@@ -1,6 +1,6 @@
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
 use near_sdk::collections::{LookupMap, TreeMap, UnorderedSet};
-use near_sdk::json_types::Base64VecU8;
+use near_sdk::json_types::{Base64VecU8, U128};
 use near_sdk::{
     assert_one_yocto, env, log, require, AccountId, BorshStorageKey, Gas, IntoStorageKey,
     PromiseOrValue, PromiseResult, StorageUsage,
@@ -36,6 +36,9 @@ pub struct NonFungibleToken {
 
     //NEP-178
     pub next_approval_id_by_id: Option<LookupMap<TokenId, u64>>,
+
+    //NEP-199
+    pub royalty_by_id: Option<LookupMap<TokenId, HashMap<AccountId, U128>>>,
 }
 
 #[derive(BorshStorageKey, BorshSerialize)]
@@ -44,18 +47,21 @@ pub enum StorageKey {
 }
 
 impl NonFungibleToken {
-    pub fn new<Q, R, S, T>(
+    //prefix가 있는 변수만 생성됨
+    pub fn new<Q, R, S, T, U>(
         owner_by_id_prefix: Q,
         owner_id: AccountId,
         token_metadata_prefix: Option<R>,
         enumeration_prefix: Option<S>,
         approval_prefix: Option<T>,
+        royalty_prefix: Option<U>,
     ) -> Self
     where
         Q: IntoStorageKey,
         R: IntoStorageKey,
         S: IntoStorageKey,
         T: IntoStorageKey,
+        U: IntoStorageKey,
     {
         let (approvals_by_id, next_approval_id_by_id) = if let Some(prefix) = approval_prefix {
             let prefix: Vec<u8> = prefix.into_storage_key();
@@ -75,12 +81,14 @@ impl NonFungibleToken {
             tokens_per_owner: enumeration_prefix.map(LookupMap::new),
             approvals_by_id,
             next_approval_id_by_id,
+            royalty_by_id: royalty_prefix.map(LookupMap::new),
         };
         this.measure_min_token_storage_cost();
         this
     }
 
     // TODO: does this seem reasonable?
+    // 실제로 사용하진 않음
     fn measure_min_token_storage_cost(&mut self) {
         let initial_storage_usage = env::storage_usage();
         // 64 Length because this is the max account id length
@@ -152,6 +160,7 @@ impl NonFungibleToken {
         from: &AccountId,
         to: &AccountId,
     ) {
+        //token_id의 소유자를 to로 변경
         self.owner_by_id.insert(token_id, to);
 
         //NEP-181 (enumeration 지원할 경우), from에서 token을 삭제하고 to에 추가한다.
@@ -196,22 +205,20 @@ impl NonFungibleToken {
             .get(token_id)
             .unwrap_or_else(|| env::panic_str("Token not found"));
 
-        // clear approvals, if using Approval Management extension
-        // this will be rolled back by a panic if sending fails
-        // token_id의 approve를 삭제한다.
+        // token_id의 approve를 삭제한다. 전송이 실패하면 롤백된다.
         let approved_account_ids = self
             .approvals_by_id
             .as_mut()
             .and_then(|by_id| by_id.remove(token_id));
 
-        // check if authorized
+        // sender가 owner가 아닌 경우, approve체크
         let sender_id = if sender_id != &owner_id {
-            // if approval extension is NOT being used, or if token has no approved accounts
+            // approve extension 체크
             let app_acc_ids = approved_account_ids
                 .as_ref()
                 .unwrap_or_else(|| env::panic_str("Unauthorized"));
 
-            // Approval extension is being used; get approval_id for sender.
+            // approve account
             let actual_approval_id = app_acc_ids.get(sender_id);
 
             // Panic if sender not approved at all
@@ -219,7 +226,7 @@ impl NonFungibleToken {
                 env::panic_str("Sender not approved");
             }
 
-            // If approval_id included, check that it matches
+            // argument approveid가 sender의 accountID와 같은지 확인
             require!(
                 approval_id.is_none() || actual_approval_id == approval_id.as_ref(),
                 format!(
@@ -253,7 +260,7 @@ impl NonFungibleToken {
         memo: Option<String>,
     ) {
         // log!(
-        //     r#"EVENT_JSON:{"standard": "nep171", "version": "1.0.0", "event": "nft_transfer", "data":{"old_owner_id": "{}", "new_owner_id": "{}", "token_ids": "{}", "authorized_id": "{}", "memo": "{}"}}"#,
+        //     r##"EVENT_JSON:{"standard": "nep171", "version": "1.0.0", "event": "nft_transfer", "data":{"old_owner_id": "{}", "new_owner_id": "{}", "token_ids": "{}", "authorized_id": "{}", "memo": "{}"}}"##,
         //     owner_id,
         //     receiver_id,
         //     &[token_id],
@@ -270,17 +277,16 @@ impl NonFungibleToken {
         .emit();
     }
 
-    /// Mint a new token. Not part of official standard, but needed in most situations.
-    /// Consuming contract expected to wrap this with an `nft_mint` function.
+    /// 표준은 아니다.
+    /// `nft_mint` 함수로 쌓여서 처리된다.
     ///
     /// Requirements:
-    /// * Caller must be the `owner_id` set during contract initialization.
-    /// * Caller of the method must attach a deposit of 1 yoctoⓃ for security purposes.
-    /// * If contract is using Metadata extension (by having provided `metadata_prefix` during
-    ///   contract initialization), `token_metadata` must be given.
-    /// * token_id must be unique
+    /// * caller는 컨트랙트 소유자여야 한다.
+    /// * caller는 최소 1yoctoNEAR를 첨부해야 한다.
+    /// * metadata extension을 사용한다면 metadata를 주어야 한다.
+    /// * token_id는 유일해야 한다
     ///
-    /// Returns the newly minted token
+    /// 새로 민팅된 토큰을 리턴한다.
     #[deprecated(
         since = "4.0.0",
         note = "mint is deprecated, please use internal_mint instead."
@@ -290,28 +296,31 @@ impl NonFungibleToken {
         token_id: TokenId,
         token_owner_id: AccountId,
         token_metadata: Option<TokenMetadata>,
+        royalties: Option<HashMap<AccountId, U128>>,
     ) -> Token {
         assert_eq!(env::predecessor_account_id(), self.owner_id, "Unauthorized");
 
-        self.internal_mint(token_id, token_owner_id, token_metadata)
+        self.internal_mint(token_id, token_owner_id, token_metadata, royalties)
     }
 
-    /// Mint a new token without checking:
-    /// * Whether the caller id is equal to the `owner_id`
-    /// * Assumes there will be a refund to the predecessor after covering the storage costs
+    /// 체크하지 않고 민팅한다.:
+    /// * caller는 owner_id여야 한다.
+    /// * 호출자가 storage비용을 cover하고 남은 비용을 refund해야 한다.
     ///
-    /// Returns the newly minted token and emits the mint event
+    /// 새로운 민팅된 토큰을 리턴하고 event를 emit한다.
     pub fn internal_mint(
         &mut self,
         token_id: TokenId,
         token_owner_id: AccountId,
         token_metadata: Option<TokenMetadata>,
+        royalties: Option<HashMap<AccountId, U128>>,
     ) -> Token {
         let token = self.internal_mint_with_refund(
             token_id,
             token_owner_id,
             token_metadata,
             Some(env::predecessor_account_id()),
+            royalties,
         );
         NftMint {
             owner_id: &token.owner_id,
@@ -322,19 +331,20 @@ impl NonFungibleToken {
         token
     }
 
-    /// Mint a new token without checking:
-    /// * Whether the caller id is equal to the `owner_id`
-    /// * `refund_id` will transfer the left over balance after storage costs are calculated to the provided account.
-    ///   Typically the account will be the owner. If `None`, will not refund. This is useful for delaying refunding
-    ///   until multiple tokens have been minted.
+    /// 체크없이 민팅한다.:
+    /// * caller는 owner_id여야 한다.
+    /// *
+    /// * `refund_id`는 남은 비용을 전송할 account이다.
+    ///   일반적으로 owner이다. None이면 환불하지 않는다. 여러 토큰이 발행될 때까지 환불을 지연시키는데 유용하다.
     ///
-    /// Returns the newly minted token and does not emit the mint event. This allows minting multiple before emitting.
+    /// 민팅 토큰을 리턴하고 mint이벤트를 발생시키지 않는다. 이를 통해 이벤트 전에 여러 민팅이 될 수 있다.
     pub fn internal_mint_with_refund(
         &mut self,
         token_id: TokenId,
         token_owner_id: AccountId,
         token_metadata: Option<TokenMetadata>,
         refund_id: Option<AccountId>,
+        royalties: Option<HashMap<AccountId, U128>>,
     ) -> Token {
         // Remember current storage usage if refund_id is Some
         let initial_storage_usage = refund_id.map(|account_id| (account_id, env::storage_usage()));
@@ -351,14 +361,12 @@ impl NonFungibleToken {
         // Core behavior: every token must have an owner
         self.owner_by_id.insert(&token_id, &owner_id);
 
-        // Metadata extension: Save metadata, keep variable around to return later.
-        // Note that check above already panicked if metadata extension in use but no metadata
-        // provided to call.
+        // metadata_extension
         self.token_metadata_by_id
             .as_mut()
             .and_then(|by_id| by_id.insert(&token_id, token_metadata.as_ref().unwrap()));
 
-        // Enumeration extension: Record tokens_per_owner for use with enumeration view methods.
+        // Enumeration extension
         if let Some(tokens_per_owner) = &mut self.tokens_per_owner {
             let mut token_ids = tokens_per_owner.get(&owner_id).unwrap_or_else(|| {
                 UnorderedSet::new(StorageKey::TokensPerOwner {
@@ -369,13 +377,20 @@ impl NonFungibleToken {
             tokens_per_owner.insert(&owner_id, &token_ids);
         }
 
-        // Approval Management extension: return empty HashMap as part of Token
+        // Approval Management extension
         let approved_account_ids = if self.approvals_by_id.is_some() {
             Some(HashMap::new())
         } else {
             None
         };
 
+        let payout = if self.royalty_by_id.is_some() {
+            Some(royalties.unwrap_or(HashMap::new()))
+        } else {
+            None
+        };
+
+        //남은 비용 refund
         if let Some((id, storage_usage)) = initial_storage_usage {
             refund_deposit_to_account(env::storage_usage() - storage_usage, id)
         }
@@ -387,6 +402,7 @@ impl NonFungibleToken {
             owner_id,
             metadata: token_metadata,
             approved_account_ids,
+            payout,
         }
     }
 }
@@ -442,11 +458,16 @@ impl NonFungibleTokenCore for NonFungibleToken {
             .approvals_by_id
             .as_ref()
             .and_then(|by_id| by_id.get(&token_id).or_else(|| Some(HashMap::new())));
+        let payout = self
+            .royalty_by_id
+            .as_ref()
+            .and_then(|by_id| by_id.get(&token_id).or_else(|| Some(HashMap::new())));
         Some(Token {
             token_id,
             owner_id,
             metadata,
             approved_account_ids,
+            payout,
         })
     }
 }
@@ -473,22 +494,21 @@ impl NonFungibleTokenResolver for NonFungibleToken {
             PromiseResult::Failed => true,
         };
 
-        // if call succeeded, return early
+        // 성공이면 리턴
         if !must_revert {
             return true;
         }
 
         // OTHERWISE, try to set owner back to previous_owner_id and restore approved_account_ids
 
-        // Check that receiver didn't already transfer it away or burn it.
+        // receiver가 이미 전송해버렸는지 혹은 소각했는지 확인
         if let Some(current_owner) = self.owner_by_id.get(&token_id) {
             if current_owner != receiver_id {
-                // The token is not owned by the receiver anymore. Can't return it.
                 return true;
             }
         } else {
-            // The token was burned and doesn't exist anymore.
-            // Refund storage cost for storing approvals to original owner and return early.
+            // 토큰이 소각되어 버림
+            // 소각되었으므로 스토리지 비용 환불
             if let Some(approved_account_ids) = approved_account_ids {
                 refund_approved_account_ids(previous_owner_id, &approved_account_ids);
             }
@@ -497,13 +517,13 @@ impl NonFungibleTokenResolver for NonFungibleToken {
 
         self.internal_transfer_unguarded(&token_id, &receiver_id, &previous_owner_id);
 
-        // If using Approval Management extension,
-        // 1. revert any approvals receiver already set, refunding storage costs
-        // 2. reset approvals to what previous owner had set before call to nft_transfer_call
+        // Approval Management extension를 사용하고 있다면
         if let Some(by_id) = &mut self.approvals_by_id {
+            // 스토리지 비용 환불
             if let Some(receiver_approvals) = by_id.get(&token_id) {
                 refund_approved_account_ids(receiver_id.clone(), &receiver_approvals);
             }
+            // 이전 approval로 돌려놓는다.
             if let Some(previous_owner_approvals) = approved_account_ids {
                 by_id.insert(&token_id, &previous_owner_approvals);
             }

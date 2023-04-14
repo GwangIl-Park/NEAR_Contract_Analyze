@@ -9,12 +9,15 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 near-sdk = "4.0.0"
+serde = "1"
+serde_json = "1"
 uint = { version = "0.9.3", default-features = false }
 nep_171 = { path="../../NEPs/nep_171" }
 nep_177 = { path="../../NEPs/nep_177" }
 nep_178 = { path="../../NEPs/nep_178" }
 nep_181 = { path="../../NEPs/nep_181" }
+nep_199 = { path="../../NEPs/nep_199" }
 nep_297 = { path="../../NEPs/nep_297" }
 
 [workspace]
-members = []
+members = ["src/hello"]

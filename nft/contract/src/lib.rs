@@ -19,10 +19,12 @@ NOTES:
 pub mod approval_impl;
 pub mod core_impl;
 pub mod enumeration_impl;
+pub mod royalty_impl;
 
 use core_impl::NonFungibleToken;
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
 use near_sdk::collections::LazyOption;
+use near_sdk::json_types::U128;
 use near_sdk::{
     env, near_bindgen, AccountId, BorshStorageKey, PanicOnDefault, Promise, PromiseOrValue,
 };
@@ -30,6 +32,7 @@ use nep_171::token::{Token, TokenId};
 use nep_177::{
     NFTContractMetadata, NonFungibleTokenMetadataProvider, TokenMetadata, NFT_METADATA_SPEC,
 };
+use std::collections::HashMap;
 
 #[near_bindgen]
 #[derive(BorshDeserialize, BorshSerialize, PanicOnDefault)]
@@ -47,6 +50,7 @@ enum StorageKey {
     TokenMetadata,
     Enumeration,
     Approval,
+    Royalty,
 }
 
 #[near_bindgen]
@@ -80,6 +84,7 @@ impl Contract {
                 Some(StorageKey::TokenMetadata),
                 Some(StorageKey::Enumeration),
                 Some(StorageKey::Approval),
+                Some(StorageKey::Royalty),
             ),
             metadata: LazyOption::new(StorageKey::Metadata, Some(&metadata)),
         }
@@ -99,9 +104,10 @@ impl Contract {
         token_id: TokenId,
         receiver_id: AccountId,
         token_metadata: TokenMetadata,
+        royalties: HashMap<AccountId, U128>,
     ) -> Token {
         self.tokens
-            .mint(token_id, receiver_id, Some(token_metadata))
+            .mint(token_id, receiver_id, Some(token_metadata), Some(royalties))
     }
 }
 
@@ -110,6 +116,7 @@ pub mod macros;
 impl_non_fungible_token_core!(Contract, tokens);
 impl_non_fungible_token_approval!(Contract, tokens);
 impl_non_fungible_token_enumeration!(Contract, tokens);
+impl_non_fungible_token_royalty!(Contract, tokens);
 
 #[near_bindgen]
 impl NonFungibleTokenMetadataProvider for Contract {
